@@ -1,0 +1,4 @@
+site_name: SEDOS Project
+nav:
+    - Home: index.md
+    - Datamodel: datamodel.md
