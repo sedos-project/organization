@@ -1,1 +1,4 @@
-site_name: Organization and Documentation of the SEDOS project
+site_name: SEDOS Project
+nav:
+    - Home: index.md
+    - Datamodel: datamodel.md
