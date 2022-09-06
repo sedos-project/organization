@@ -1,4 +1,6 @@
 site_name: SEDOS Project
 nav:
-    - Home: index.md
-    - Datamodel: datamodel.md
+    - Home: 'index.md'
+    - 'Data requirements':
+       - 'Datamodel': 'datamodel.md'
+       - 'Licensing': 'licensing.md'
