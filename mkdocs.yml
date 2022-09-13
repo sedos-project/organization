@@ -2,5 +2,10 @@ site_name: SEDOS Project
 nav:
     - Home: 'index.md'
     - 'Data requirements':
-       - 'Datamodel': 'datamodel.md'
-       - 'Licensing': 'licensing.md'
+       - 'Process and upload input data': 'data_requirements/input_data.md'
+       - 'Datamodel': 'data_requirements/datamodel.md'
+       - 'Ontology': 'data_requirements/data_annotation_ontology.md'
+       - 'Metadata': 'data_requirements/metadata.md'
+       - 'Licensing': 'data_requirements/licensing.md'
+       
+       

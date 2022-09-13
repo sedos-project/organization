@@ -1,15 +1,15 @@
-## Data Licensing
+# Data Licensing
 
 Open Data is one of the main criteria of the Reference Energy System (RES) which we will develop within the SEDOS project. Thus, the input and output data sets should follow the [FAIR principles](https://www.nature.com/articles/sdata201618) and require open licensing.
 
-### Which data licenses are suitable for RES?
+## Which data licenses are suitable for RES?
 
 1. For the data collection in WP3-8, you should use data published under one of the listed licenses below. 
 2. Add the license spdx-id and/or correct attribution to the respective metadata.
 3. If your data is published under an open license which is not listed below, please contact *sarah.berendes@rl-institut.de.* **Please note:** non-conformant clauses such as NC (non commercial) and ND (no derivates) are **NOT** open data licenses and should not be used. 
 
 
-#### **Public Domain:** All rights granted.
+**Public Domain:** All rights granted.
 
 
 - [CC0-1.0](https://creativecommons.org/licenses/by/4.0/legalcode) | recommended 
@@ -20,7 +20,7 @@ Open Data is one of the main criteria of the Reference Energy System (RES) which
 
 - [CC-PDDC](https://creativecommons.org/licenses/publicdomain/) | not recommended 
 
-#### **Attribution/Permissive:** Use rights and relicensing granted. Proprietisation possible. Correct attribution required (see license link).
+**Attribution/Permissive:** Use rights and relicensing granted. Proprietisation possible. Correct attribution required (see license link).
 
 - [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode)                            | recommended                             
 - [ODC-By-1.0](https://opendatacommons.org/licenses/by/1-0/)                           | recommended                             
@@ -37,7 +37,7 @@ Open Data is one of the main criteria of the Reference Energy System (RES) which
 
 For further information on licenses, see: [OEP Tutorial on Open-Data Licenses](https://openenergy-platform.org/tutorials/jupyter/tutorial_open-data-licenses/), <https://github.com/ifrOSS/ifrOSS/blob/master/OpenDataLicenses.md> and <https://opendefinition.org/licenses/>.
 
-### Using data without an open license?
+## Using data without an open license?
 
 If you want to use a data set without a license or without an open data license, try the following steps: 
 
