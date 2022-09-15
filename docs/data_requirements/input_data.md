@@ -3,9 +3,9 @@
 Parameter names (to specify technologies, constraints or techno-economic values) can basically be choosen freely. 
 However, it of utmost importance that every parameter name is linked to a suitable ontological concept via the metadata to enable its clear interpretation.
 
-For more background information regarding for linking parameter names and ontology concepts see [here](data_annotation_ontology.md#Ontological annotation of data).
+For more background information regarding for linking parameter names and ontology concepts, using OEM, see [here](data_annotation_ontology.md#Ontological annotation of data).
 
-For a practical manual linking parameter names to a suitable ontology concepts see [here](data_annotation_ontology.md#Link a parameter name to a suitable ontology concept).
+For a practical manual linking parameter names to a suitable ontology concepts, using MetaCreator or OAT, see [here](data_annotation_ontology.md#Link a parameter name to a suitable ontology concept).
 
 ### Parameter naming in case of missing suitable ontology concept
 
@@ -14,11 +14,11 @@ It is likey that not every parameter concept is already covered by an ontology. 
 It might, however, be indirectly possible, by linking it to a distinct selection of related ontology concepts. 
 In this case you would link your parameter name to multiple related concepts.
 
-For a practical manual linking parameter names to multiple related ontology concepts see [here](data_annotation_ontology.md#Link a parameter name to multiple related ontology concepts).
+For a practical manual linking parameter names to multiple related ontology concepts, using MetaCreator or OAT, see [here](data_annotation_ontology.md#Link a parameter name to multiple related ontology concepts).
 
 ## Data structure and naming conventions
 
-**Data structure**
+### Data structure
 
 For providing input data of any kind we require the structure of the [oeparameter-model](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter).
 
@@ -26,7 +26,7 @@ The columns for the providing scalars are described [here](https://github.com/se
 
 The columns for the providing timeseries are described [here](https://github.com/sedos-project/oedatamodel#timeseries-description) and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
 
-**Naming of tables**
+### Table naming
 
 Input data tables will be made available on the OpenEnergyPlatform (OEP) and registered in the databus. \
 Thus, for better discoverability and searchability, we require the following table naming convention:
