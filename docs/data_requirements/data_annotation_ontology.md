@@ -1,6 +1,6 @@
-## Ontological annotation of parameters 
+## Ontological annotation of data
 
-Ontological annotation of parameters means that parameter names are linked to ontological concepts in the metadata. 
+Ontological annotation of data means that data is linked to ontological concepts in the metadata. 
 
 In SEDOS we use the [oemetadata v.1.5.1](metadata.md). For more context about the metadata fields see [here](https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/metadata_key_description.md#metadata-keys-with-a-description-and-example)
 

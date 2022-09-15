@@ -3,18 +3,18 @@
 Parameter names (to specify technologies, constraints or techno-economic values) can basically be choosen freely. 
 However, it of utmost importance that every parameter name is linked to a suitable ontological concept via the metadata to enable its clear interpretation.
 
-For more background information regarding see [here](data_annotation_ontology.md).
+For more background information regarding for linking parameter names and ontology concepts see [here](data_annotation_ontology.md#Ontological annotation of data).
 
-For linking parameter names to a suitable ontology concepts see [here](data_annotation_ontology.md#Link a parameter name to a suitable ontology concept).
+For a practical manual linking parameter names to a suitable ontology concepts see [here](data_annotation_ontology.md#Link a parameter name to a suitable ontology concept).
 
 ### Parameter naming in case of missing suitable ontology concept
 
 It is likey that not every parameter concept is already covered by an ontology. In this case linking your parameter name to a suitable ontology concept is not directly possible.
 
-It might however be indirectly possible, by linking it to a distinct selection of related ontology concepts. 
+It might, however, be indirectly possible, by linking it to a distinct selection of related ontology concepts. 
 In this case you would link your parameter name to multiple related concepts.
 
-For linking parameter names to multiple related ontology concepts see [here](data_annotation_ontology.md#Link a parameter name to multiple related ontology concepts).
+For a practical manual linking parameter names to multiple related ontology concepts see [here](data_annotation_ontology.md#Link a parameter name to multiple related ontology concepts).
 
 ## Data structure and naming conventions
 
@@ -40,6 +40,8 @@ For example:
 * **sedos_tech**_wind_turbine
 * **sedos_demand**_household_residential
 * **sedos_constraint**_co2_emission_yearly
+
+todo: tables need to be ontologically annotated in the subject field
 
 **Naming of column headers**
 
