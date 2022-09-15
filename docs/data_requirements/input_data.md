@@ -1,20 +1,4 @@
-## Parameter naming
-
-Parameter names (to specify technologies, constraints or techno-economic values) can basically be choosen freely. 
-However, it of utmost importance that every parameter name is linked to a suitable ontological concept via the metadata to enable its clear interpretation.
-
-For more background information regarding for linking parameter names and ontology concepts, using OEM, see [here](./data_annotation_ontology.md#Ontological annotation of data).
-
-For a practical manual linking parameter names to a suitable ontology concepts, using MetaCreator or OAT, see [here](./data_annotation_ontology.md#Link a parameter name to a suitable ontology concept).
-
-### Parameter naming in case of missing suitable ontology concept
-
-It is likey that not every parameter concept is already covered by an ontology. In this case linking your parameter name to a suitable ontology concept is not directly possible.
-
-It might, however, be indirectly possible, by linking it to a distinct selection of related ontology concepts. 
-In this case you would link your parameter name to multiple related concepts.
-
-For a practical manual linking parameter names to multiple related ontology concepts, using MetaCreator or OAT, see [here](./data_annotation_ontology.md#Link a parameter name to multiple related ontology concepts).
+# Input data conventions
 
 ## Data structure and naming conventions
 
@@ -43,15 +27,26 @@ For example:
 
 todo: tables need to be ontologically annotated in the subject field
 
-**Naming of column headers**
+### Naming of column headers
 
 todo: nach Klärung im DZ 19.09
 
 
-## Upload OEP
 
-- harmonize with datamodel.md
+## Parameter naming
 
-## Registration databus
+Parameter names (to specify technologies, constraints or techno-economic values) can basically be choosen freely. 
+However, it of utmost importance that every parameter name is linked to a suitable ontological concept via the metadata to enable its clear interpretation.
 
-- harmonize with datamodel.md
+For more background information regarding for linking parameter names and ontology concepts, using OEM, see [here](./data_annotation_ontology.md#Ontological annotation of data).
+
+For a practical manual linking parameter names to a suitable ontology concepts, using MetaCreator or OAT, see [here](./data_annotation_ontology.md#Link a parameter name to a suitable ontology concept).
+
+### Parameter naming in case of missing suitable ontology concept
+
+It is likey that not every parameter concept is already covered by an ontology. In this case linking your parameter name to a suitable ontology concept is not directly possible.
+
+It might, however, be indirectly possible, by linking it to a distinct selection of related ontology concepts. 
+In this case you would link your parameter name to multiple related concepts.
+
+For a practical manual linking parameter names to multiple related ontology concepts, using MetaCreator or OAT, see [here](./data_annotation_ontology.md#Link a parameter name to multiple related ontology concepts).
