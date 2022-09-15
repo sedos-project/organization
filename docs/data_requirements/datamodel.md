@@ -18,7 +18,7 @@ As this guide is meant for developers of AP4-8, the **Extended datamodel** will 
 All data must be provided along with metadata. Metadata on the OEP is in the JSON format. 
 In this project the metadata version v1.5.1 will be used.
 
-Metadata can be created/edited using the [Metadata Creator](https://meta.rl-institut.de/meta_creator/151) 
+Metadata can be created/edited using the [MetaCreator](https://meta.rl-institut.de/meta_creator/151) 
 (in order to edit metadata, copy metadata JSON, click on button "Edit JSON" and paste your metadata there).
 
 There already exists a starting metadata for [scalars](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_scalars.json) and [timeseries](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
