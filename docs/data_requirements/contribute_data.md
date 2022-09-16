@@ -5,7 +5,7 @@
 
 todo: Add general text concerning APs
 
-Data sets should be provided in a tabular data format following the [input data conventions](./input_data.md#Input data conventions).
+Data sets should be provided in a tabular data format following the [input data conventions](input_data.md#Input-data-conventions).
 
 ## Creating metadata
 All data must be provided along with metadata. Metadata on the OEP is in the JSON format. 

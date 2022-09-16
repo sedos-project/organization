@@ -19,5 +19,5 @@ In SEDOS data conventions are defined to ensure a seemlees working experience.
 
 ## Summary of SEDOS conventions
 
-1. [Data structure](./input_data.md#Data structure)
-2. [Table naming](./input_data.md#Table naming)
+1. [Data structure](input_data.md#Data-structure)
+2. [Table naming](input_data.md#Table-naming)
