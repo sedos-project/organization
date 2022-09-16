@@ -29,8 +29,18 @@ todo: tables need to be ontologically annotated in the subject field
 
 ### Naming of column headers
 
-todo: nach Klärung im DZ 19.09
+#### Do's
+* use ASCII characters only
+* only use lower case
+* use the singular instead of the plural.
+* use underscores
 
+#### Don'ts
+
+* no points, no commas
+* no spaces
+* avoid dates
+* don't start column header with a number
 
 
 ## Parameter naming
