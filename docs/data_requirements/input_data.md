@@ -29,6 +29,11 @@ todo: tables need to be ontologically annotated in the subject field
 
 ### Naming of column headers
 
+Column headers naming conventions are in place due to technical reasons of the underlying relational postgre-sql database on the OEP. 
+
+The following conventions will be automatically checked when uploading a table on the OEP and error messages raised in case of their violation.
+Users need to correct them, as their compliance is mandatory.
+
 #### Do's
 * use ASCII characters only
 * only use lower case
@@ -41,6 +46,7 @@ todo: tables need to be ontologically annotated in the subject field
 * no spaces
 * avoid dates
 * don't start column header with a number
+
 
 
 ## Parameter naming
