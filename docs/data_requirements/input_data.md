@@ -1,6 +1,4 @@
-# Input data conventions
-
-## Data structure and naming conventions
+# Data structure and naming conventions (Input data)
 
 ### Data structure
 
@@ -12,7 +10,7 @@ The columns for the providing timeseries are described [here](https://github.com
 
 ### Table naming
 
-Input data tables will be made available on the OpenEnergyPlatform (OEP) and registered in the databus. \
+Input data tables should be uploaded on the OpenEnergyPlatform (OEP) and registered in the databus.
 Thus, for better discoverability and searchability, we require the following table naming convention:
 
 * **sedos_tech**_
