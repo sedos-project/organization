@@ -1,4 +1,6 @@
-## Ontological annotation of data
+# Ontological annotation of data
+
+## Basic annotation knowledge with OEM 
 
 Ontological annotation of data means that data is linked to ontological concepts in the metadata. 
 
@@ -102,7 +104,7 @@ Parameters can occur in the column header or as column value, when dealing with 
 3. _Internationalized Resource Identifier (IRI)_ is put in _path_ (OEM-key 15.6.1.6.3)
 
 **For example: A column containing various types of fuels:** \
-_(Note: The parameter describing the content of the column (column header), is linked using "isAbout")_
+> Note: The parameter describing the content of the column (column header), is linked using "isAbout")
 ```
 "resources": [
         {
@@ -147,6 +149,24 @@ _(Note: The parameter describing the content of the column (column header), is l
         ]
 ```
 
+
+## Annotation conventions for automatic data processing
+
+In SEDOS automatic data reasoning and processing is largely based on ontological annotations in the metadata. 
+Thus, thorough annotation and following the annotation conventions is important for frictionless data processing.
+
+* A) technology and technology_type (oem-key 6.1-2)
+* B) for MiMo technologies the input and output energy vectors (oem-key 15.6.1.5.1-2)
+* C) parameter names (oem-key 15.6.1.6.1-3)
+
+### A) technology and technology_type
+
+### B) for MiMo technologies the input and output energy vectors
+
+### C) parameter names
+
+
+
 ### Link a parameter name to a suitable ontology concept
 
 #### Via MetaCreator
@@ -158,23 +178,6 @@ _(Note: The parameter describing the content of the column (column header), is l
 #### Via MetaCreator
 
 #### In local .json
-```
-{
 
-"name": "CHP",
-
-"path": "http://openenergy-platform.org/ontology/oeo/OEO_00000308"
-
-},
-
-{
-
-"name": "small",
-
-"path": null
-
-}
-
-```
 ``
 

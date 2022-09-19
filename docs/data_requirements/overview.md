@@ -22,3 +22,4 @@ In SEDOS data conventions are defined to ensure a seemlees working experience.
 1. [Data structure](input_data.md#Data-structure)
 2. [Table naming](input_data.md#Table-naming)
 3. [Mandatory metadata information](metadata.md#Mandatory-set-of-metadata-information)
+4. [Annotation conventions for automatic data processing](data_annotation_ontoology#Annotation-conventions-for-automatic-data-processing)
