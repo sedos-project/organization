@@ -4,31 +4,31 @@ In the SEDOS project data is collected, preprocessed and published by workpackag
 A generalized representation of a data bundle is shown in the figure below. 
 
 These input data bundles will be regularily checked for updates and processed to one scenario data bundle by the SEDOS Data Pipeline, once it is triggered. The scenario bundle will also be pusblished on the OEP. 
-The partners in WP9 downloaded the scenario bundle from the OEP and use it to set up, parameterize and solve the energy system model. The modelling results will be posprocessed and uploaded to the OEP by the partners of WP9.
+The partners in WP9 will download the scenario bundle from the OEP and use it to set up, parameterize and solve the energy system model. The modelling results will be posprocessed and uploaded to the OEP by the partners of WP9.
 
 
 ![Contributing Input Data to SEDOS](../graphics/data_bundle.jpg)
 
-**AP4-8:** To contribute data, please follow the steps: 
+	
 ## 1. Create data tables
 
-todo: Add general text concerning APs
+- Collect and preprocess data into the tabular [oeparameter-model]() by following the [input data conventions](input_data.md#Input-data-conventions)
+- **Note** timeseries data and scalar data are stored in two different tables
 
-Data sets should be provided in a tabular data format following the [input data conventions](input_data.md#Input-data-conventions).
 
 ## 2. Create metadata
-All data must be provided along with metadata. Metadata on the OEP is in the JSON format. 
-In this project the metadata version v1.5.1 will be used.
 
-Metadata can be created/edited using the [MetaCreator](https://meta.rl-institut.de/meta_creator/151) 
-(in order to edit metadata, copy metadata JSON, click on button "Edit JSON" and paste your metadata there).
-
-A metadata template already exists for [scalars](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_scalars.json) and [timeseries](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
-> **Note:** All necessary metadata fields are already present in the template. <br> Please visit the [required metadata information](metadata.md#Required-metadata-information) section for more information about which fields have to be filled and adapted.
+- Create the metadata according to the [OEMetadata v.1.5.1](https://github.com/OpenEnergyPlatform/oemetadata#open-energy-family---open-energy-metadata-oemetadata) for each data table
+- Use the [MetaCreator](https://meta.rl-institut.de/meta_creator/151) to create and edit your metadata (in order to edit metadata, copy metadata JSON, click on button "Edit JSON" and paste your metadata there)
+- Use the [scalar meta template](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_scalars.json) and the [timeseries meta template](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
+- Fill in as many fields as possible, but at least a minimum of the [required metadata information](metadata.md#Required-metadata-information)
+- Annotate the fields 'subject', 'isAbout' and/or 'valueRefernce' with useful ontological concepts by applying the Open Annotation Tool (OAT). [**TODO@CM: write step-by-step guide on how to do this**]
+- List all data sources in the form of Bibtex-keys under the "sources" field
+- Add necessary license information to the sources according to the [licensing guide](http://127.0.0.1:8000/data_requirements/licensing/#data-licencing)
 
 Even though a minimum mandatory set of metadata information is required, please fill in as much additional metadata information as possible to improve the subsequent use of your submitted data.
 
-## 3. Publish data and metadata on the OEP
+## 3. Publish bundles (data and metadata) on the OEP
 
 The following step-by-step guide will show how to store data on the OEP and make it publicly available.
 As this guide is meant for developers of AP4-8, the **Extended datamodel** will be used in the following.
