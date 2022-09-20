@@ -7,5 +7,6 @@ nav:
        - 'Metadata': 'data_requirements/metadata.md'
        - 'Ontology': 'data_requirements/data_annotation_ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'
-       
-       
+markdown_extensions:
+    - toc:
+        permalink: "#"
