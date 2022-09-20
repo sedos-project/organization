@@ -13,6 +13,7 @@ The partners in WP9 will download the scenario bundle from the OEP and use it to
 ## 1. Create data tables
 
 - Collect and preprocess data into the tabular [oeparameter-model]() by following the [input data conventions](input_data.md#Input-data-conventions)
+- Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
 - **Note** timeseries data and scalar data are stored in two different tables
 
 
@@ -26,7 +27,6 @@ The partners in WP9 will download the scenario bundle from the OEP and use it to
 - List all data sources in the form of Bibtex-keys under the "sources" field
 - Add necessary license information to the sources according to the [licensing guide](http://127.0.0.1:8000/data_requirements/licensing/#data-licencing)
 
-Even though a minimum mandatory set of metadata information is required, please fill in as much additional metadata information as possible to improve the subsequent use of your submitted data.
 
 ## 3. Publish bundles (data and metadata) on the OEP
 
