@@ -10,7 +10,7 @@ The partners in WP9 will download the scenario bundle from the OEP and use it to
 ![Contributing Input Data to SEDOS](../graphics/data_bundle.jpg)
 
 	
-## 1. Create data tables
+## 1. Create input data tables
 
 - Collect and preprocess data into the tabular [oeparameter-model]() by following the [input data conventions](input_data.md#Input-data-conventions)
 - Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
@@ -41,6 +41,10 @@ Once the metadata is set up, the corresponding table(s) on the OEP can be create
 ### Uploading data to the OEP
 
 ### Releasing data on the databus
+
+## 1. Create output data tables
+
+- Collect and postprocess modelling results into the tabular [OEDatamodel](https://github.com/sedos-project/oedatamodel)) by following the output data conventions](input_data.md#Output-data-conventions)
 
 ## Glossary
 
