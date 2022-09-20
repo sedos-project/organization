@@ -4,39 +4,40 @@ This repository holds the documentation files of the SEDOS project and is also u
 
 ## How to use sedos-project/.github and sedos-project/organisation?
 
- 1. Clone repositories
+1. Clone repositories
 
- 2. setup your local environment and install mkdocs
-open your environment manager, e.g. miniconda3:
+2. create new environment
 
- 2.1 create new environment
-$ conda create -n d_py310_sedos python=3.10
+   $ conda create -n d_py310_sedos python=3.10
 
- 2.2 install mkdocs
-$ pip install mkdocs
+3. install mkdocs
 
-3. create or modify .md files in `organisation/docs`
+   $ pip install mkdocs
 
-4. render documentation locally
+4. create or modify .md files in `organisation/docs`
 
-4.1. navigate to the path, in which you stored ../sedos-project/organisation
+5. navigate to the path, in which you stored ../sedos-project/organisation
 
-4.2. run mkdocs and copy url into your browser
-$ mkdocs serve
+   $ cd [USERPATH/sedos-project/organisation]
 
-5. Publish your changes on github
+6. render documentation locally by running mkdocs and copy url into your browser
 
-5.1 Add all your local changes to commit
-$ git add .
+   $ mkdocs serve
 
-5. Commit your local changes
-$ git commit -m 'Extend documentation'
+7. Add all your local changes to commit
 
-6. Push commit
-$ git push
+   $ git add .
+
+8. Commit your local changes
+
+   $ git commit -m 'Extend documentation'
+
+9. Push commit
+
+   $ git push
 
 
 ## How to upload new .md files? 
 
-[TODO:write detailed documentation]
+[**TODO:write detailed documentation**]
 
