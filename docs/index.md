@@ -1,5 +1,3 @@
-# Welcome the SEDOS project
+# SEDOS Documentation
 
-Documentation about:
-
-- [Datamodels](./datamodel)
+Welcome to the documentation of the SEDOS project. A detailed description will follow shortly.
