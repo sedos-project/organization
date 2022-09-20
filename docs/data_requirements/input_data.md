@@ -3,29 +3,34 @@
 
 ## Datamodel
 
-The **oeparameter-model** is used for preprocessed input data. For a full documentation see [oeparameter-model](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter).
-This datamodel is supposed to be used by AP4-8 in order to store data on the OpenEnergyPlatform (OEP).
+- The **OEparameter-model** has to be used for preprocessed input data. 
+- See [oeparameter-model documentation](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter) for detailed information. 
+- This datamodel consits of two table types- "scalar" or "timeseries". Please choose the table type accordingly depedning on the data you want to upload
+	- The columns for the providing scalars are described [here](https://github.com/sedos-project/oedatamodel#scalar-description) and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_scalars.json).
+	- The columns for the providing timeseries are described [here](https://github.com/sedos-project/oedatamodel#timeseries-description) and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
+	
 
-The columns for the providing scalars are described [here](https://github.com/sedos-project/oedatamodel#scalar-description) and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_scalars.json).
+## Data tables and table naming conventions
 
-The columns for the providing timeseries are described [here](https://github.com/sedos-project/oedatamodel#timeseries-description) and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
+**IMPORTANT**: 
 
-## Table naming
+- Create a new bundle for each technology e.g. wind_onshore, chp, ...
+- You can use a single bundle for demand data and constraints (tech-independent parameters), e.g. emission limit, natural domestic limit, WACC, if table size is sufficcient. 
 
-Input data tables should be uploaded on the OpenEnergyPlatform (OEP) and registered in the databus.
-Thus, for better discoverability and searchability, we require the following table naming convention:
+To increase discoverability and searchability od the data, we require the following table naming convention:
 
-* **sedos_tech**_
-* **sedos_demand**_
-* **sedos_constraint**_
+* **sedos_tech**_[technologyname, e.g. wind_turbine]
+* **sedos_demand**_[demandname, e.g. household_residential]
+* **sedos_constraint**_[constraintname, e.g co2_emission-yearly]
 
-For example:
+For example: 
 
 * **sedos_tech**_wind_turbine
 * **sedos_demand**_household_residential
-* **sedos_constraint**_co2_emission_yearly
+* **sedos_constraint**_co2_emission-yearly
 
-todo: tables need to be ontologically annotated in the subject field
+
+todo: tables need to be ontologically annotated in the subject field [---> move this to ontology.md?]
 
 ## Naming of column headers
 
