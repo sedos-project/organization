@@ -1,9 +1,15 @@
 # How to contribute data?
 
+In the SEDOS project data is collected, preprocessed and published by workpackages (WPs) 4 to 8. Therefore partners working in WPs 4-8 create mutliple input data bundles and upload them to the OEP. A data bundle consists of tabular data, a file holding the tabular data sturcture (generated automatically from the metadata), and metadata. 
+A generalized representation of a data bundle is shown in the figure below. 
 
-![Contributing Data in SEDOS](../graphics/data_bundle.jpg)
+These input data bundles will be regularily checked for updates and processed to one scenario data bundle by the SEDOS Data Pipeline, once it is triggered. The scenario bundle will also be pusblished on the OEP. 
+The partners in WP9 downloaded the scenario bundle from the OEP and use it to set up, parameterize and solve the energy system model. The modelling results will be posprocessed and uploaded to the OEP by the partners of WP9.
 
 
+![Contributing Input Data to SEDOS](../graphics/data_bundle.jpg)
+
+**AP4-8:** To contribute data, please follow the steps: 
 ## 1. Create data tables
 
 todo: Add general text concerning APs
@@ -22,7 +28,7 @@ A metadata template already exists for [scalars](https://github.com/sedos-projec
 
 Even though a minimum mandatory set of metadata information is required, please fill in as much additional metadata information as possible to improve the subsequent use of your submitted data.
 
-## 3. Publish data metadata on the OEP
+## 3. Publish data and metadata on the OEP
 
 The following step-by-step guide will show how to store data on the OEP and make it publicly available.
 As this guide is meant for developers of AP4-8, the **Extended datamodel** will be used in the following.
