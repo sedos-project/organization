@@ -1,14 +1,16 @@
-# Data structure and naming conventions (Input data)
+# Input Data Conventions
 
-### Data structure
 
-For providing input data of any kind we require the structure of the [oeparameter-model](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter).
+## Datamodel
+
+The **oeparameter-model** is used for preprocessed input data. For a full documentation see [oeparameter-model](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter).
+This datamodel is supposed to be used by AP4-8 in order to store data on the OpenEnergyPlatform (OEP).
 
 The columns for the providing scalars are described [here](https://github.com/sedos-project/oedatamodel#scalar-description) and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_scalars.json).
 
 The columns for the providing timeseries are described [here](https://github.com/sedos-project/oedatamodel#timeseries-description) and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
 
-### Table naming
+## Table naming
 
 Input data tables should be uploaded on the OpenEnergyPlatform (OEP) and registered in the databus.
 Thus, for better discoverability and searchability, we require the following table naming convention:
@@ -25,20 +27,20 @@ For example:
 
 todo: tables need to be ontologically annotated in the subject field
 
-### Naming of column headers
+## Naming of column headers
 
 Column headers naming conventions are in place due to technical reasons of the underlying relational postgre-sql database on the OEP. 
 
 The following conventions will be automatically checked when uploading a table on the OEP and error messages raised in case of their violation.
 Users need to correct them, as their compliance is mandatory.
 
-#### Do's
+### Do's
 * use ASCII characters only
 * only use lower case
 * use the singular instead of the plural.
 * use underscores
 
-#### Don'ts
+### Don'ts
 
 * no points, no commas
 * no spaces
@@ -64,3 +66,11 @@ It might, however, be indirectly possible, by linking it to a distinct selection
 In this case you would link your parameter name to multiple related concepts.
 
 For a practical manual linking parameter names to multiple related ontology concepts, using MetaCreator or OAT, see [here](data_annotation_ontology.md#Link-a-parameter-name-to-multiple-related-ontology-concepts).
+
+# Output Data Conventions
+
+## Datamodel
+
+Datamodel: The **OEDatamodel** is used to represent input/output data for energysystem modelling. 
+Further information about the OEDatamodel can be found in the documentation at [sedos-project/oedatamodel](https://github.com/sedos-project/oedatamodel).
+
