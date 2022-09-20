@@ -2,12 +2,10 @@ site_name: SEDOS Project
 nav:
     - Home: 'index.md'
     - 'Data requirements':
-       - 'Overview': 'data_requirements/overview.md'
-       - '1. Data Structure (Input) ': 'data_requirements/input_data.md'
-       - '2. Datamodel': 'data_requirements/datamodel.md'
-       - '3. Ontology': 'data_requirements/data_annotation_ontology.md'
-       - '4. Upload data to OEP': 'data_requirements/contribute_data.md'
-       - '5. Metadata': 'data_requirements/metadata.md'
-       - '6. Licensing': 'data_requirements/licensing.md'
+       - 'How to contribute data?': 'data_requirements/overview.md'
+       - 'Input/Output Data Conventions': 'data_requirements/input_data.md'
+       - 'Metadata': 'data_requirements/metadata.md'
+       - 'Ontology': 'data_requirements/data_annotation_ontology.md'
+       - 'Licensing': 'data_requirements/licensing.md'
        
        
