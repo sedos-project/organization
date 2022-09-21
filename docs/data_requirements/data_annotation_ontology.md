@@ -6,7 +6,7 @@ Ontological annotation of data means that data is linked to ontological concepts
 
 In SEDOS we use the [oemetadata v.1.5.1](metadata.md) (OEM) as metadata standard. For more context about the OEM-keys in oemetadata v.1.5.1, see [here](https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/metadata_key_description.md#metadata-keys-with-a-description-and-example).
 
-In energy systems modelling data is fed into a model via parameters and their associated values.  In the following, when we speak about ontological annotation, we therefore speak of parameter names, which are linked to an ontological concept for definition.
+In energy systems modelling, data is fed into a model via parameters and their associated values. In the following, when we speak about ontological annotation, we, therefore, speak of parameter names, which are linked to an ontological concept for definition.
 
 
 The linkage of parameter name and ontological concept in OEM has three elements:
@@ -16,10 +16,10 @@ The linkage of parameter name and ontological concept in OEM has three elements:
 
 Below the resource section of the oemetadata v1.5.1, [relevant for ontological annotation of parameter names](https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/metadata_key_description.md#resource-keys---schema), is shown.
 
-Parameters can occur in the column header or as column value, when dealing with tabular data.  
+Parameters can occur in the column header or as column value when dealing with tabular data.  
 
 * A) Parameters in the column headers are annotated in the _"isAbout"_ field.
-* B) Parameters occuring within a column are annotated in the _"valueReference"_ field.
+* B) Parameters occurring within a column are annotated in the _"valueReference"_ field.
 
 ```
 "resources": [
@@ -152,8 +152,8 @@ Parameters can occur in the column header or as column value, when dealing with 
 
 ## Annotation conventions for automatic data processing
 
-In SEDOS automatic data reasoning and processing is largely based on ontological annotations in the metadata. 
-Thus, thorough annotation and following the annotation conventions is important for frictionless data processing.
+In SEDOS, automatic data reasoning and processing are based mainly on ontological annotations in the metadata. 
+Thus, thorough annotation and following the conventions are important for frictionless data processing.
 
 * A) technology and technology_type (oem-key 6.1-2)
 * B) for MiMo technologies the input and output energy vectors (oem-key 15.6.1.5.1-2)
@@ -161,7 +161,7 @@ Thus, thorough annotation and following the annotation conventions is important 
 
 ### A) technology and technology_type
 
-### B) for MiMo technologies the input and output energy vectors
+### B) input and output energy vectors for MiMo technologies
 
 ### C) parameter names
 

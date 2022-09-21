@@ -5,6 +5,7 @@ In SEDOS the metadata standard [OEMetadata v.1.5.1](https://github.com/OpenEnerg
 ## Required metadata information 
 
 In SEDOS a minimal mandatory set of metadata information is required to:
+
 1. automatically process the input data in the data pipeline,
 2. to provide useful context for data interpretation, and
 3. to fulfil legal requirements.
