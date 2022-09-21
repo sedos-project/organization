@@ -20,21 +20,27 @@ This repository holds the documentation files of the SEDOS project and is also u
 
    $ cd [USERPATH/sedos-project/organisation]
 
-6. render documentation locally by running mkdocs and copy url into your browser
+6. render documentation locally by running mkdocs 
 
    $ mkdocs serve
 
-7. Add all your local changes to commit
+   and copy **url** from the INFO message into your browser, e.g.
+   
+   INFO     -  [11:25:42] Serving on **http://127.0.0.1:8000/**
+
+   Once started, mkdocs shows your local edits live in the browser without further do.
+
+8. Add all your local changes to commit
 
    $ git add .
 
-8. Commit your local changes
+9. Commit your local changes
 
    $ git commit -m 'Extend documentation'
 
-9. Push commit
+10. Push commit
 
-   $ git push
+    $ git push
 
 
 ## How to upload new .md files? 
