@@ -60,9 +60,9 @@ Users need to correct them, as their compliance is mandatory.
 Parameter names (to specify technologies, constraints or techno-economic values) can basically be chosen freely. 
 However, it is of utmost importance that every parameter name is linked to a suitable ontological concept via the metadata to enable its clear interpretation.
 
-For more background information regarding for linking parameter names and ontology concepts, using OEM, see [here](data_annotation_ontology.md#Ontological-annotation-of-data).
+For more background information regarding for linking parameter names and ontology concepts, using OEM, see [here](ontology.md#Ontological-annotation-of-data).
 
-For a practical manual linking parameter names to a suitable ontology concepts, using MetaCreator or OAT, see [here](data_annotation_ontology.md#Link-a-parameter-name-to-a-suitable-ontology-concept).
+For a practical manual linking parameter names to a suitable ontology concepts, using MetaCreator or OAT, see [here](ontology.md#Link-a-parameter-name-to-a-suitable-ontology-concept).
 
 ### Parameter naming in case of missing suitable ontology concept
 
@@ -71,7 +71,7 @@ It is likely that not every parameter concept is already covered by an ontology.
 It might, however, be indirectly possible by linking it to a distinct selection of related ontology concepts. 
 In this case you would link your parameter name to multiple related concepts.
 
-For a practical manual linking parameter names to multiple related ontology concepts, using MetaCreator or OAT, see [here](data_annotation_ontology.md#Link-a-parameter-name-to-multiple-related-ontology-concepts).
+For a practical manual linking parameter names to multiple related ontology concepts, using MetaCreator or OAT, see [here](ontology.md#Link-a-parameter-name-to-multiple-related-ontology-concepts).
 
 # Output Data Conventions
 
