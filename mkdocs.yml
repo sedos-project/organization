@@ -2,11 +2,12 @@ site_name: SEDOS Project
 nav:
     - Home: 'index.md'
     - 'Data requirements':
-       - 'How to contribute data?': 'data_requirements/overview.md'
        - 'Input/Output Data Conventions': 'data_requirements/input_data.md'
        - 'Metadata': 'data_requirements/metadata.md'
        - 'Ontology': 'data_requirements/ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'
+    - 'How to contribute data?':
+       - 'Step-by-step instructions': 'data_requirements/overview.md'
 markdown_extensions:
     - toc:
         permalink: "#"
