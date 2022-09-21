@@ -4,46 +4,60 @@ This repository holds the documentation files of the SEDOS project and is also u
 
 ## How to use sedos-project/.github and sedos-project/organisation?
 
-1. Clone repositories
+1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository
 
-2. create new environment
 
-   $ conda create -n d_py310_sedos python=3.10
+2. Navigate to the path, in which you stored ../sedos-project/organisation
 
-3. install mkdocs
 
-   $ pip install mkdocs
+      $ cd [USERPATH/sedos-project/organisation]
 
-4. create or modify .md files in `organisation/docs`
 
-5. navigate to the path, in which you stored ../sedos-project/organisation
+3. Create new environment by using pre-defined settings from environment.yml and activate it after successful installation
+ 
 
-   $ cd [USERPATH/sedos-project/organisation]
+      $ conda env create -f environment.yml
 
-6. render documentation locally by running mkdocs 
+      $ conda activate d_py310_sedos
 
-   $ mkdocs serve
+4. Modify .md files in `organisation/docs` or create new .md files by creating a new file and renaming the file extension `.md`.
+
+
+5. Render documentation locally by running mkdocs 
+
+   
+      $ mkdocs serve
 
    and copy **url** from the INFO message into your browser, e.g.
    
-   INFO     -  [11:25:42] Serving on **http://127.0.0.1:8000/**
+
+   > INFO     -  [11:25:42] Serving on http://127.0.0.1:8000/
 
    Once started, mkdocs shows your local edits live in the browser without further do.
 
-8. Add all your local changes to commit
 
-   $ git add .
+6. Add all your local changes
 
-9. Commit your local changes
+   
+      $ git add .
 
-   $ git commit -m 'Extend documentation'
+7. Commit your local changes
 
-10. Push commit
+   
+      $ git commit -m 'Extend documentation'
 
-    $ git push
+8. Check if other SEDOS members uploaded changes before pushing yours
+
+   
+      $ git pull   
+
+9. Push your commits, to share them with the team
+
+    
+      $ git push
 
 
 ## How to upload new .md files? 
 
 [**TODO:write detailed documentation**]
-
+###### @SB isn't this section dealt with 4. above?
