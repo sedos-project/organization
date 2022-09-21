@@ -1,6 +1,13 @@
-# How to contribute data?
+# Data architecture
 
-In the SEDOS project data is collected, preprocessed and published by work packages (WPs) 4 to 8. Therefore partners working in WPs 4-8 create multiple input data bundles and upload them to the OEP. A data bundle consists of tabular data, a data structure file (generated automatically from the metadata), and metadata. <br> 
+In the SEDOS project data is collected, preprocessed and published by work packages (WPs) 4 to 8. 
+Therefore partners working in WPs 4-8 create multiple input data bundles and upload them to the OEP. <br> 
+A data bundle consists of:
+
+* tabular data, 
+* a data structure file (generated automatically from the metadata), and 
+* metadata. 
+
 A generalized representation of a data bundle is shown in the figure below. 
 
 These input data bundles will be automatically checked for updates and processed to one scenario data bundle by the SEDOS Data Pipeline. The scenario bundle will also be published on the OEP. 
@@ -9,10 +16,14 @@ The partners in WP9 will download the scenario bundle from the OEP and use it to
 
 ![Contributing Input Data to SEDOS](../graphics/data_bundle.jpg)
 
+# How to contribute data?
+
+The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
+
    
 ## 1. Create input data tables
 
-- Collect and preprocess data into the tabular [oeparameter-model]() by following the [input data conventions](input_data.md#Input-data-conventions)
+- Collect and preprocess data into the tabular [oedatamodel-parameter](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter) by following the [input data conventions](input_data.md#Input-data-conventions)
 - Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
 - **Note** timeseries data and scalar data are stored in two different tables
 

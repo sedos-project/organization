@@ -3,8 +3,8 @@
 
 ## Datamodel
 
-- The **OEparameter-model** has to be used for preprocessed input data. 
-- See [oeparameter-model documentation](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter) for detailed information. 
+- The **oedatamodel-parameter** has to be used for preprocessed input data. 
+- See [oedatamodel-parameter documentation](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter) for detailed information. 
 - This datamodel consists of two table types- "scalar" or "timeseries". Please choose the table type accordingly depending on the data you want to upload
    - The columns for the providing scalars are described [here](https://github.com/sedos-project/oedatamodel#scalar-description), and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_scalars.json).
    - The columns for the providing timeseries are described [here](https://github.com/sedos-project/oedatamodel#timeseries-description), and corresponding meta information can be found [here](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
