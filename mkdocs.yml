@@ -6,8 +6,8 @@ nav:
        - 'Metadata': 'data_requirements/metadata.md'
        - 'Ontology': 'data_requirements/ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'
-    - 'How to contribute data?':
-       - 'Step-by-step instructions': 'data_requirements/overview.md'
+    - 'How to contribute data?': 'data_requirements/overview.md'
+    - 'Glossary': 'glossary.md'
 markdown_extensions:
     - toc:
         permalink: "#"
