@@ -2,7 +2,7 @@ site_name: SEDOS Project
 nav:
     - Home: 'index.md'
     - 'Data requirements':
-       - 'Input/Output Data Conventions': 'data_requirements/input_data.md'
+       - 'Data': 'data_requirements/input_data.md'
        - 'Metadata': 'data_requirements/metadata.md'
        - 'Ontology': 'data_requirements/ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'
@@ -10,4 +10,7 @@ nav:
     - 'Glossary': 'glossary.md'
 markdown_extensions:
     - toc:
-        permalink: "#"
+        separator: "#"
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
