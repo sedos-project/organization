@@ -21,6 +21,8 @@ Parameters can occur in the column header or as column value when dealing with t
 * A) Parameters in the column headers are annotated in the _"isAbout"_ field.
 * B) Parameters occurring within a column are annotated in the _"valueReference"_ field.
 
+todo: tables need to be ontologically annotated in the subject field [---> move this to ontology.md?]
+
 ```
 "resources": [
         {
@@ -104,7 +106,9 @@ Parameters can occur in the column header or as column value when dealing with t
 3. _Internationalized Resource Identifier (IRI)_ is put in _path_ (OEM-key 15.6.1.6.3)
 
 **For example: A column containing various types of fuels:** \
+
 > Note: The parameter describing the content of the column (column header), is linked using "isAbout")
+
 ```
 "resources": [
         {
