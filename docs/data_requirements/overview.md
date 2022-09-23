@@ -13,13 +13,23 @@ The following instructions will guide you through the process of contributing da
 ## 2. Create metadata
 
 * Create the metadata according to the [OEMetadata v.1.5.1](https://github.com/OpenEnergyPlatform/oemetadata#open-energy-family---open-energy-metadata-oemetadata) for each data table
-* Use the [oemetadata builder](https://meta.rl-institut.de/meta_creator/151) to create and edit your metadata (in order to edit metadata, copy metadata JSON, click on button "Edit JSON" and paste your metadata there)
-* Use the [scalar meta template](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) and the [timeseries meta template](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json).
-* Fill in as many fields as possible, but at least a minimum of the [required metadata information](metadata.md#Required-metadata-information)
-* Annotate the fields 'subject', 'isAbout' and/or 'valueReference' with useful ontological concepts by applying the Open Annotation Tool (OAT). [**TODO@CM: write step-by-step guide on how to do this**]
-* List all data sources in the form of Bibtex-keys under the "sources" field
+* Use the [scalar meta template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_scalars.json) and the [timeseries meta template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_timeseries.json) to build your metadata
+* Use the [oemetadata builder](https://meta.rl-institut.de/meta_creator/151) to create and edit your metadata 
+    * -> copy scalar/timeseries meta template
+    * -> click on blue button "Edit JSON" 
+    * -> click in opening window, with CTRL+A select all and paste scalar/timeseries meta template
+    * -> click "save" to confirm
+* Fill in as many keys as possible, but at least the minimum [required metadata information](metadata.md#Required-metadata-information)
+* Annotate the keys `subject`, `isAbout` and/or `valueReference` with useful ontological concepts using the oemetadata builder 
+    * -> go to the column you want to annotate
+    * -> click on blue button "Add isAbout" or "Add Value reference" or "Add Subject"
+    * -> click into the `name` line 
+    * -> choose a suitable ontology concept from the dropdown menu
+      * -> click to confirm
+    * todo: check if gif is suitable to show steps
+* List all data sources in the form of Bibtex-keys under the `sources` key
 * Add necessary license information to the sources according to the [licensing guide](http://127.0.0.1:8000/data_requirements/licensing/#data-licencing)
-
+* todo @JH-rli: Will there be a save metadata button or does the user go back to the "Edit JSON" button to extract the metadata?
 
 ## 3. Publish datapackages on the OEP
 
