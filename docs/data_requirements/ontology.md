@@ -10,18 +10,44 @@ In energy systems modelling, data is fed into a model via parameters and their a
 
 
 The linkage of parameter name and ontological concept in OEM has three elements:
+
 1. _user-defined parameter name_
 2. _human-readable ontological concept name_
 3. _Internationalized Resource Identifier (IRI)_ 
 
-Below the resource section of the oemetadata v1.5.1, [relevant for ontological annotation of parameter names](https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/metadata_key_description.md#resource-keys---schema), is shown.
+Below the general section of the oemetadata v1.5.1 is shown, [relevant for the ontological annotation of the table content itself](https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/metadata_key_description.md#general-keys).
+
+* The general content of the table is annotated in the `subject` key
+
+```
+    "name": null,
+    "title": null,
+    "id": null,
+    "description": null,
+    "language": [
+        null
+    ],
+    "subject": [
+        {
+            "name": null,
+            "path": null
+        }
+    ],
+    "keywords": [
+        null
+    ],
+    "publicationDate": null,
+```
+Below the resource section of the oemetadata v1.5.1 is shown, [relevant for ontological annotation of parameter names](https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/metadata_key_description.md#resource-keys---schema).
+
+## Link a parameter name to a suitable ontology concept
+
+### Background know-how
 
 Parameters can occur in the column header or as column value when dealing with tabular data.  
 
-* A) Parameters in the column headers are annotated in the _"isAbout"_ field.
-* B) Parameters occurring within a column are annotated in the _"valueReference"_ field.
-
-todo: tables need to be ontologically annotated in the subject field [---> move this to ontology.md?]
+* A) Parameters in the column headers are annotated in the `isAbout` key.
+* B) Parameters occurring within a column are annotated in the `valueReference` key.
 
 ```
 "resources": [
@@ -59,7 +85,8 @@ todo: tables need to be ontologically annotated in the subject field [---> move 
 
 
 
-**A) Regarding parameters in the column headers** - using "isAbout":
+**A) Parameters in the column headers** - using `isAbout`:
+
 1. _user-defined parameter name_ is put in _name_ (OEM-key 15.6.1.1), 
 2. a suitable  _human-readable ontological concept name_ is put in _name_ (OEM-key 15.6.1.5.1),
 3. _Internationalized Resource Identifier (IRI)_ is put in _path_ (OEM-key 15.6.1.5.2)
@@ -100,14 +127,17 @@ todo: tables need to be ontologically annotated in the subject field [---> move 
 ```
 
 
-**B) Regarding parameters within a column** - using "valueReference":
+**B) Parameters within a column** - using `valueReference`:
+
 1. _user-defined parameter name_ is put in _value_ (OEM-key 15.6.1.6.1), 
 2. a suitable  _human-readable ontological concept name_ is put in _name_ (OEM-key 15.6.1.6.2),
 3. _Internationalized Resource Identifier (IRI)_ is put in _path_ (OEM-key 15.6.1.6.3)
 
-**For example: A column containing various types of fuels:** \
+**For example: A column containing various types of fuels:** 
 
-> Note: The parameter describing the content of the column (column header), is linked using "isAbout")
+!!! Note
+
+        The parameter describing the content of the column (column header), is linked using `isAbout`
 
 ```
 "resources": [
@@ -153,6 +183,9 @@ todo: tables need to be ontologically annotated in the subject field [---> move 
         ]
 ```
 
+### With oemetadata builder
+
+![wf](https://user-images.githubusercontent.com/7637364/191807277-712057b8-153c-4178-94a2-341ad8f010fd.gif)
 
 ## Annotation conventions for automatic data processing
 
@@ -165,23 +198,113 @@ Thus, thorough annotation and following the conventions are important for fricti
 
 ### A) technology and technology_type
 
+The technology and technology_type columns from the oedatamodel-concrete are filled with the information from the `subject` key.
+
 ### B) input and output energy vectors for MiMo technologies
+
+The input and output energy vectors of technologies in SEDOS' reference energy system are defined in an external table.
+
+For technologies with multiple input and/or output energy vectors it is not clear to which energy vector a parameter column refers.
+To account for this the energy vector shall be annotate as a second concept in the `isAbout` key.
+
+For example: A CHP plant table entailing two efficiency columns - for the eletrical and thermal efficiency.
 
 ### C) parameter names
 
+#### Case1 
+**_In cases where there is a single suitable ontology concept in the OEO_** we'll use the keys `isAbout`, `valueReference` as explained above.
+
+#### Case2 
+**_In cases where there are multiple ontology concepts in the OEO that are suitable by using them compoundly_** we'll use them as list in the `name` key.
+
+For example: _thermal efficiency_ of a heat power plant (as column in a tabular data set)
+
+The concept _thermal efficiency_ is not (yet, as of 23.09.22) available in the OEO, but the concepts:
+
+- 'heat generation process' <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
+- 'energy conversion efficiency' <http://openenergy-platform.org/ontology/oeo/OEO_00140049>
+
+```
+"resources": [
+        {
+            "profile": null,
+            "name": null,
+            "path": null,
+            "format": null,
+            "encoding": null,
+            "schema": {
+                "fields": [
+                    {
+                        "name": "thermal efficiency",
+                        "description": "The column holds the values of the thermal efficiency of a heat power plant",
+                        "type": null,
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "name": "['heat generation process' <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>, 'energy conversion efficiency' <http://openenergy-platform.org/ontology/oeo/OEO_00140049>]",
+                                "path": null
+                            }
+                        ],
+                        "valueReference": [
+                            {
+                                "value": null,
+                                "name": null,
+                                "path": null
+                            }
+                        ]
+                    },
+```
+
+todo: @JH-rli check with oemetadata builder functionalities
+
+#### Case3
+**_In cases where there is NO suitable ontology concept in the OEO_** we'll copy the term used in the data directly to the `name`key for further data processing in SEDOS.
+
+!!! Note
+
+        This is SEDOS-specific and needed for data processing. Normally one would leave the annotation in `isAbout` empty.
+
+For example: _fantasy power plant paramter_
+
+```
+"resources": [
+        {
+            "profile": null,
+            "name": null,
+            "path": null,
+            "format": null,
+            "encoding": null,
+            "schema": {
+                "fields": [
+                    {
+                        "name": "fantasy power plant paramter",
+                        "description": "The column holds values of a parameter, whose concept is not yet available in the OEO, of a fantasy power plant ",
+                        "type": null,
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "name": "fantasy power plant parameter",
+                                "path": null
+                            }
+                        ],
+                        "valueReference": [
+                            {
+                                "value": null,
+                                "name": null,
+                                "path": null
+                            }
+                        ]
+                    },
+```
 
 
-### Link a parameter name to a suitable ontology concept
 
-#### Via MetaCreator
 
-#### In local .json
+## Link a parameter name to multiple related ontology concepts
+todo: decide on workflow, considering oemetadata builder yet limitied functionality
 
-### Link a parameter name to multiple related ontology concepts
-
-#### Via MetaCreator
-
-#### In local .json
+### Via oemetadata builder
+todo: decide on workflow, considering oemetadata builder yet limitied functionality
 
 ``
 
