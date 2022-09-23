@@ -13,7 +13,7 @@ The documentation is structured in two main parts
 
 ## Data architecture
 
-This section provides an introductory overview of SEDOS' data architecture and its elements, which you will find explained in more detail in further parts of the documentation.
+This section provides an introductory overview of SEDOS' data architecture and its elements, which you will find explained more detailed in further parts of the documentation.
 
 In the SEDOS project data is collected, preprocessed and published by work packages (WPs) 4 to 8. 
 Therefore partners working in WPs 4-8 create multiple input data datapackages and upload them to the OEP. <br> 
