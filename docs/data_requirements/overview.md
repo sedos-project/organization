@@ -24,9 +24,10 @@ The following instructions will guide you through the process of contributing da
     * -> go to the column you want to annotate
     * -> click on blue button "Add isAbout" or "Add Value reference" or "Add Subject"
     * -> click into the `name` line 
+    * -> type in the concept you're looking for
     * -> choose a suitable ontology concept from the dropdown menu
-      * -> click to confirm
-    * todo: check if gif is suitable to show steps
+    * -> click to confirm
+    * ![wf](https://user-images.githubusercontent.com/7637364/191807277-712057b8-153c-4178-94a2-341ad8f010fd.gif)
 * List all data sources in the form of Bibtex-keys under the `sources` key
 * Add necessary license information to the sources according to the [licensing guide](http://127.0.0.1:8000/data_requirements/licensing/#data-licencing)
 * todo @JH-rli: Will there be a save metadata button or does the user go back to the "Edit JSON" button to extract the metadata?
