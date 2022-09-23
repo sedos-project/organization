@@ -13,7 +13,7 @@ The following instructions will guide you through the process of contributing da
 ## 2. Create metadata
 
 * Create the metadata according to the [OEMetadata v.1.5.1](https://github.com/OpenEnergyPlatform/oemetadata#open-energy-family---open-energy-metadata-oemetadata) for each data table
-* Use the [MetaCreator](https://meta.rl-institut.de/meta_creator/151) to create and edit your metadata (in order to edit metadata, copy metadata JSON, click on button "Edit JSON" and paste your metadata there)
+* Use the [oemetadata builder](https://meta.rl-institut.de/meta_creator/151) to create and edit your metadata (in order to edit metadata, copy metadata JSON, click on button "Edit JSON" and paste your metadata there)
 * Use the [scalar meta template](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) and the [timeseries meta template](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json).
 * Fill in as many fields as possible, but at least a minimum of the [required metadata information](metadata.md#Required-metadata-information)
 * Annotate the fields 'subject', 'isAbout' and/or 'valueReference' with useful ontological concepts by applying the Open Annotation Tool (OAT). [**TODO@CM: write step-by-step guide on how to do this**]

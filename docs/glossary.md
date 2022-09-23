@@ -9,7 +9,7 @@ Quick reference for tools.
 |        |  OEdatamodel    |        OED      |       [ docs ](https://github.com/sedos-project/oedatamodel)      |
 | | [OEdatamodel-API](https://modex.rl-institut.de/upload_datapackage/) | | [ docs ](https://modex.rl-institut.de/) |
 |    🌾   |   OpenAnnotationTool   |       OAT       |               |
-|        |   [MetaCreator](https://meta.rl-institut.de/meta_creator/151)    |              |               |
+|        |   [oemetadata builder](https://meta.rl-institut.de/meta_creator/151)    |              |               |
 | 🌠 | [databus](https://energy.databus.dbpedia.org/)  | | |
 | 📙 | [Protégé](https://protege.stanford.edu/) | | [docs](http://protegeproject.github.io/protege/) |
 | | | | |
