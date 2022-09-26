@@ -5,10 +5,11 @@
 
 ## Datamodel
 
-- The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter)) has to be used to provide input data in SEDOS. This choice was made to allow ontological annotation of data.
-  - This datamodel consists of two table types- "[scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv)" or "[timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)". Please choose the table type accordingly depending on the data you want to upload
-    - scalar-columns are described [here](https://github.com/sedos-project/oedatamodel#scalar-description), and corresponding meta information [here](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json).
-    - timeseries-columns are described [here](https://github.com/sedos-project/oedatamodel#timeseries-description), and corresponding meta information [here](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json).
+The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter)) has to be used to provide input data in SEDOS. This choice was made to allow ontological annotation of data. This data model consists of two table types "[scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv)" and "[timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)". Please choose the table type accordingly depending on the data you want to upload:
+
+- Use scalar tables to provide parameters with no time relationships. To properly fill them read the [scalar model column description](https://github.com/sedos-project/oedatamodel#scalar-description). Use the [example scalar package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) to write your own.
+- To provide parameters with time relationships use a timeseries table. Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to orient yourself with the fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
+
    
 
 ## Data tables and table naming conventions
