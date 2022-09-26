@@ -205,9 +205,9 @@ The technology and technology_type columns from the oedatamodel-concrete are fil
 The input and output energy vectors of technologies in SEDOS' reference energy system are defined in an external table.
 
 For technologies with multiple input and/or output energy vectors it is not clear to which energy vector a parameter column refers.
-To account for this the energy vector shall be annotate as a second concept in the `isAbout` key.
+To account for this the energy vector shall be annotated as a second concept in the `isAbout` key.
 
-For example: A CHP plant table entailing two efficiency columns - for the eletrical and thermal efficiency.
+For example: A CHP plant table entailing two efficiency columns - for the electrical and thermal efficiency.
 
 ### C) parameter names
 
@@ -215,7 +215,7 @@ For example: A CHP plant table entailing two efficiency columns - for the eletri
 **_In cases where there is a single suitable ontology concept in the OEO_** we'll use the keys `isAbout`, `valueReference` as explained above.
 
 #### Case2 
-**_In cases where there are multiple ontology concepts in the OEO that are suitable by using them compoundly_** we'll use them as list in the `name` key.
+**_In cases where there are multiple ontology concepts in the OEO that are suitable by using them in composition_** we'll use them as list in the `name` key.
 
 For example: _thermal efficiency_ of a heat power plant (as column in a tabular data set)
 
@@ -264,7 +264,7 @@ todo: @JH-rli check with oemetadata builder functionalities
 
         This is SEDOS-specific and needed for data processing. Normally one would leave the annotation in `isAbout` empty.
 
-For example: _fantasy power plant paramter_
+For example: _fantasy power plant parameter_
 
 ```
 "resources": [
@@ -301,10 +301,10 @@ For example: _fantasy power plant paramter_
 
 
 ## Link a parameter name to multiple related ontology concepts
-todo: decide on workflow, considering oemetadata builder yet limitied functionality
+todo: decide on workflow, considering oemetadata builder yet limited functionality
 
 ### Via oemetadata builder
-todo: decide on workflow, considering oemetadata builder yet limitied functionality
+todo: decide on workflow, considering oemetadata builder yet limited functionality
 
 ``
 
