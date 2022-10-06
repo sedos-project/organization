@@ -34,12 +34,3 @@ The partners in WP9 will download the scenario bundle from the OEP and use it to
 By applying the architecture above, we follow the [frictionless data](https://specs.frictionlessdata.io/data-package/) conventions.
 
 
-
-# Summary of SEDOS conventions
-
-In SEDOS data conventions are defined to ensure a seamless working experience.
-
-1. [Data structure](data_requirements/input_data.md#Data-structure)
-2. [Table naming](data_requirements/input_data.md#Table-naming)
-3. [Mandatory metadata information](data_requirements/metadata.md#Mandatory-set-of-metadata-information)
-4. [Annotation conventions for automatic data processing](data_requirements/ontology#Annotation-conventions-for-automatic-data-processing)
