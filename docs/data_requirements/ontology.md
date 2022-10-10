@@ -127,17 +127,20 @@ Parameters can occur in the column header or as column value when dealing with t
 ```
 
 
-**B) Parameters within a column** - using `valueReference`:
+**B) Parameters within a column** - using `valueReference` and `isAbout`:
+
+_`valueReference`_<br>
 
 1. _user-defined parameter name_ is put in _value_ (OEM-key 15.6.1.6.1), 
 2. a suitable  _human-readable ontological concept name_ is put in _name_ (OEM-key 15.6.1.6.2),
 3. _Internationalized Resource Identifier (IRI)_ is put in _path_ (OEM-key 15.6.1.6.3)
 
+_`isAbout`_<br>
+
+When annotating using `valueReference`, don't forget to annotate the column itself in `isAbout`, as described in A).
+
 **For example: A column containing various types of fuels:** 
 
-!!! Note
-
-        The parameter describing the content of the column (column header), is linked using `isAbout`
 
 ```
 "resources": [
