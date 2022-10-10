@@ -1,6 +1,5 @@
 site_name: SEDOS Project
 nav:
-    - Home: 'index.md'
     - 'Data requirements':
        - 'Data': 'data_requirements/input_data.md'
        - 'Metadata': 'data_requirements/metadata.md'
