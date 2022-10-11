@@ -32,7 +32,7 @@ The following instructions will guide you through the process of contributing da
 * Add necessary license information to the sources according to the [licensing guide](http://127.0.0.1:8000/data_requirements/licensing/#data-licencing)
 * todo @JH-rli: Will there be a save metadata button or does the user go back to the "Edit JSON" button to extract the metadata?
 
-## 3. Publish datapackages on the OEP
+## 3. Publish datapackages
 
 The following step-by-step guide will show how to store data on the OEP and make it publicly available.
 As this guide is meant for developers of AP4-8, the **oedatamodel-parameter** will be used in the following.
@@ -57,10 +57,6 @@ Thus,
 ### 3.2 Release data on the databus
 **@HeHu-review&update** <br>
 The oedatamodel-API can also register your datapackages in the databus. 
-
-!!! Note
-
-        Releasing your datapackage on the databus is only possible during the upload process in 3.1.
 
 Before clicking `Datei absenden` to upload your data to the OEP
 
