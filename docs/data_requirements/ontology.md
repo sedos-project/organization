@@ -97,6 +97,15 @@ Parameters can occur in the column header or as column value when dealing with t
 3. _Internationalized Resource Identifier (IRI)_ is put in _path_ (OEM-key 15.6.1.5.2)
 
 **For example: A column with values for the rotor diameter of a wind turbine:**
+
+| id | wind_turbine | ro_diam |
+|----|--------------|---------|
+| 1  | type A       | 50      |
+| 2  | type A       | 60      |
+| 3  | type A       | 70      |
+| 4  | type B       | 80      |
+| 5  | type B       | 110     |
+
 ```json
 {
   "resources": [
@@ -109,10 +118,29 @@ Parameters can occur in the column header or as column value when dealing with t
       "schema": {
         "fields": [
           {
-            "name": "ro_diam",
+            "name": "wind_turbine",
             "description": null,
             "type": null,
             "unit": null,
+            "isAbout": [
+              {
+                "name": "wind energy converting unit",
+                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000044"
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "path": null
+              }
+            ]
+          },
+          {
+            "name": "ro_diam",
+            "description": null,
+            "type": null,
+            "unit": "meter",
             "isAbout": [
               {
                 "name": "rotor diameter",
@@ -149,6 +177,11 @@ When annotating using `valueReference`, don't forget to annotate the column itse
 
 **For example: A column containing various types of fuels:** 
 
+| id | various_types_of_energy_carriers |
+|----|----------------------------------|
+| 1  | coal_HCV                         |
+| 2  | green_diesel                     |
+| 3  | coal_LCV                         |
 
 ```json
 {
@@ -237,6 +270,8 @@ The concept _thermal efficiency_ is not (yet, as of 23.09.22) available in the O
 
 - 'heat generation process' <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
 - 'energy conversion efficiency' <http://openenergy-platform.org/ontology/oeo/OEO_00140049>
+
+
 
 ```json
 {
