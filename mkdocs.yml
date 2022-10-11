@@ -1,11 +1,12 @@
 site_name: SEDOS Project
 nav:
     - 'Data requirements':
+       - 'Overview': 'data_requirements/overview.md'
        - 'Data': 'data_requirements/input_data.md'
        - 'Metadata': 'data_requirements/metadata.md'
        - 'Ontology': 'data_requirements/ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'
-    - 'How to contribute data?': 'data_requirements/overview.md'
+    - 'How to contribute data?': 'how_to_contribute_data.md'
     - 'Glossary': 'glossary.md'
 markdown_extensions:
     - toc:
