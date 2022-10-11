@@ -1,3 +1,17 @@
+# Data architecture
+
+In the SEDOS project data is collected, preprocessed and published by work packages (WPs) 4 to 8. 
+Therefore partners working in WPs 4-8 create multiple input data bundles and upload them to the OEP. <br> 
+A data bundle consists of:
+
+* tabular data, 
+* a data structure file (generated automatically from the metadata), and 
+* metadata. 
+
+
+The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
+
+
 # How to contribute data?
 
 The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
@@ -54,6 +68,7 @@ Thus,
 * Insert your token and select your zipped datapackage 
 * Click `Datei absenden` to upload
 
+
 ### 3.2 Release data on the databus
 **@HeHu-review&update** <br>
 The oedatamodel-API can also register your datapackages in the databus. 
@@ -67,4 +82,5 @@ Before clicking `Datei absenden` to upload your data to the OEP
 **@HeHu & CM expand when process is clear** <br>
 
 * Collect and postprocess modelling results into the tabular [OEDatamodel](https://github.com/sedos-project/oedatamodel) by following the output data conventions](input_data.md#Output-data-conventions)
+
 

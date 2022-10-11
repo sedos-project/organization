@@ -35,5 +35,3 @@ The partners in WP9 will download the scenario bundle from the OEP and use it to
 ![Contributing Input Data to SEDOS](../graphics/datapackage.jpg)
 
 By applying the architecture above, we follow the [frictionless data](https://specs.frictionlessdata.io/data-package/) conventions.
-
-
