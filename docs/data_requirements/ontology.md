@@ -256,8 +256,12 @@ The concept _thermal efficiency_ is not (yet, as of 23.09.22) available in the O
             "unit": null,
             "isAbout": [
               {
-                "name": "['heat generation process' <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>, 'energy conversion efficiency' <http://openenergy-platform.org/ontology/oeo/OEO_00140049>]",
-                "path": null
+                "name": "heat generation process",
+                "path": "http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248"
+              },
+              {
+                "name": "energy conversion efficiency",
+                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00140049"
               }
             ],
             "valueReference": [
