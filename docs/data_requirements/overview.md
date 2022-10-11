@@ -32,38 +32,63 @@ The following instructions will guide you through the process of contributing da
 * Add necessary license information to the sources according to the [licensing guide](http://127.0.0.1:8000/data_requirements/licensing/#data-licencing)
 * todo @JH-rli: Will there be a save metadata button or does the user go back to the "Edit JSON" button to extract the metadata?
 
-## 3. Publish datapackages
+## 3. Initialize table on the OEP
+
+In order to add data to an OEP table, the (empty) table must be initialized on the OEP in the first place.
+In order to create the table, the resource from metadata is used, 
+whereby the name of the resource is used to define the OEP schema and the table name (i.e. "name": "model_draft.sedos_tech_wind_turbine") and 
+the fields from resource schema are used to create the related columns of the table.
+Initializing OEP table is done via: 
+
+* Visit [oedatamodel-API](https://modex.rl-institut.de/create_table/)
+* Insert your OEP Username and Token 
+* Select metadata file to create OEP table from
+* Submit 
+
+## 4. Publish datapackages
 
 The following step-by-step guide will show how to store data on the OEP and make it publicly available.
 As this guide is meant for developers of AP4-8, the **oedatamodel-parameter** will be used in the following.
 
 !!! warning "Prerequisite for publishing on OEP"
 
-        1. Data exists in **oedatamodel-parameter** format 
+        1. Data exists in **oedatamodel-parameter** format as CSV file
         2. Metadata exists with [mandatory set of metadata information](metadata.md#Mandatory-set-of-metadata-information) filled
-        3. OEP [user account](https://openenergy-platform.org/user/register)        
+        3. OEP [user account](https://openenergy-platform.org/user/register)
+        4. Table has been created on OEP
 
-### 3.1 Upload data to OEP with oedatamodel-API
+### 4.1 Upload data to OEP with oedatamodel-API
 
-**@HeHu-review&update** <br>
-The oedatamodel-API uploads zipped datapackages to the OEP. 
+The oedatamodel-API uploads CSV files to the OEP. While uploading, incoming data is checked against 
+metadata schema from related table.
 Thus, 
 
-* The first step is to create .zip file from the data, datapackage and metadata.
-* Then open the [oedatamodel-API](https://modex.rl-institut.de/upload_datapackage/)
-* Insert your token and select your zipped datapackage 
+* Prepare upload data in CSV file according to metadata in related table
+* Then open the [oedatamodel-API](https://modex.rl-institut.de/upload/)
+* Insert your token, enter table name and schema (defaults to "model_draft") and select your CSV file
 * Click `Datei absenden` to upload
 
-### 3.2 Release data on the databus
-**@HeHu-review&update** <br>
-The oedatamodel-API can also register your datapackages in the databus. 
+In case upload data contains errors (format, naming, etc.) an error report is returned. 
+Otherwise, data is appended to given table on the OEP.
 
-Before clicking `Datei absenden` to upload your data to the OEP
+### 4.2 Release data on the databus
 
-* Check the box `Release data on databus` in the [oedatamodel-API](https://modex.rl-institut.de/upload_datapackage/) for releasing your data on the databus
+The oedatamodel-API can also register your datapackages on the databus. 
+Registering data on the databus must be done everytime, a new version of the data is available on the OEP.
+In order to register your new data you have to:
+
+* Open the [oedatamodel-API](https://modex.rl-institut.de/databus/)
+* Enter your username and API Token
+* Enter table name and schema (defaults to "model_draft")
+* Enter new version string (at least one row in your table must be present with given string in column "version")
+* Submit it.
+
+Now, your data should be registered and available on the databus. 
+As the SEDOS pipeline regularly checks for updates on the databus, 
+your new data version should be considered in next pipeline build.
 
 
-## 4. Create output data tables
+## 5. Create output data tables
 **@HeHu & CM expand when process is clear** <br>
 
 * Collect and postprocess modelling results into the tabular [OEDatamodel](https://github.com/sedos-project/oedatamodel) by following the output data conventions](input_data.md#Output-data-conventions)
