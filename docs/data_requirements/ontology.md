@@ -19,24 +19,26 @@ Below the general section of the oemetadata v1.5.1 is shown, [relevant for the o
 
 * The general content of the table is annotated in the `subject` key
 
-```
-    "name": null,
-    "title": null,
-    "id": null,
-    "description": null,
-    "language": [
-        null
-    ],
-    "subject": [
-        {
-            "name": null,
-            "path": null
-        }
-    ],
-    "keywords": [
-        null
-    ],
-    "publicationDate": null,
+```json
+{
+  "name": null,
+  "title": null,
+  "id": null,
+  "description": null,
+  "language": [
+    null
+  ],
+  "subject": [
+    {
+      "name": null,
+      "path": null
+    }
+  ],
+  "keywords": [
+    null
+  ],
+  "publicationDate": null
+}
 ```
 Below the resource section of the oemetadata v1.5.1 is shown, [relevant for ontological annotation of parameter names](https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/metadata_key_description.md#resource-keys---schema).
 
@@ -49,38 +51,41 @@ Parameters can occur in the column header or as column value when dealing with t
 * A) Parameters in the column headers are annotated in the `isAbout` key.
 * B) Parameters occurring within a column are annotated in the `valueReference` key.
 
-```
-"resources": [
-        {
-            "profile": null,
+```json
+{
+  "resources": [
+    {
+      "profile": null,
+      "name": null,
+      "path": null,
+      "format": null,
+      "encoding": null,
+      "schema": {
+        "fields": [
+          {
             "name": null,
-            "path": null,
-            "format": null,
-            "encoding": null,
-            "schema": {
-                "fields": [
-                    {
-                        "name": null,
-                        "description": null,
-                        "type": null,
-                        "unit": null,
-                        "isAbout": [
-                            {
-                                "name": null,
-                                "path": null
-                            }
-                        ],
-                        "valueReference": [
-                            {
-                                "value": null,
-                                "name": null,
-                                "path": null
-                            }
-                        }
-                    ]
-                }
-            } 
+            "description": null,
+            "type": null,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "path": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "path": null
+              }
+            ]
+          }
         ]
+      }
+    }
+  ]
+}
 ```
 
 
@@ -92,38 +97,41 @@ Parameters can occur in the column header or as column value when dealing with t
 3. _Internationalized Resource Identifier (IRI)_ is put in _path_ (OEM-key 15.6.1.5.2)
 
 **For example: A column with values for the rotor diameter of a wind turbine:**
-```
-"resources": [
-        {
-            "profile": null,
-            "name": null,
-            "path": null,
-            "format": null,
-            "encoding": null,
-            "schema": {
-                "fields": [
-                    {
-                        "name": "ro_diam",
-                        "description": null,
-                        "type": null,
-                        "unit": null,
-                        "isAbout": [
-                            {
-                                "name": "rotor diameter",
-                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00020144"
-                            }
-                        ],
-                        "valueReference": [
-                            {
-                                "value": null,
-                                "name": null,
-                                "path": null
-                            }
-                        }
-                    ]
-                }
-            } 
+```json
+{
+  "resources": [
+    {
+      "profile": null,
+      "name": null,
+      "path": null,
+      "format": null,
+      "encoding": null,
+      "schema": {
+        "fields": [
+          {
+            "name": "ro_diam",
+            "description": null,
+            "type": null,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": "rotor diameter",
+                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00020144"
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "path": null
+              }
+            ]
+          }
         ]
+      }
+    }
+  ]
+}
 ```
 
 
@@ -142,48 +150,51 @@ When annotating using `valueReference`, don't forget to annotate the column itse
 **For example: A column containing various types of fuels:** 
 
 
-```
-"resources": [
-        {
-            "profile": null,
-            "name": null,
-            "path": null,
-            "format": null,
-            "encoding": null,
-            "schema": {
-                "fields": [
-                    {
-                        "name": "various_types_of_energy_carriers",
-                        "description": null,
-                        "type": null,
-                        "unit": null,
-                        "isAbout": [
-                            {
-                                "name": "portion of matter",
-                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000331"
-                            }
-                        ],
-                        "valueReference": [
-                            {
-                                "value": "coal_HCV",
-                                "name": "anthracite",
-                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000058"
-                            },
-                            {
-                                "value": "green_diesel",
-                                "name": "biodiesel",
-                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000071"
-                            },
-                            {
-                                "value": "coal_LCV",
-                                "name": "lignite",
-                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000251"
-                            }
-                        }
-                    ]
-                }
-            } 
+```json
+{
+  "resources": [
+    {
+      "profile": null,
+      "name": null,
+      "path": null,
+      "format": null,
+      "encoding": null,
+      "schema": {
+        "fields": [
+          {
+            "name": "various_types_of_energy_carriers",
+            "description": null,
+            "type": null,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": "portion of matter",
+                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000331"
+              }
+            ],
+            "valueReference": [
+              {
+                "value": "coal_HCV",
+                "name": "anthracite",
+                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000058"
+              },
+              {
+                "value": "green_diesel",
+                "name": "biodiesel",
+                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000071"
+              },
+              {
+                "value": "coal_LCV",
+                "name": "lignite",
+                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000251"
+              }
+            ]
+          }
         ]
+      }
+    }
+  ]
+}
 ```
 
 ### With oemetadata builder
@@ -227,35 +238,42 @@ The concept _thermal efficiency_ is not (yet, as of 23.09.22) available in the O
 - 'heat generation process' <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
 - 'energy conversion efficiency' <http://openenergy-platform.org/ontology/oeo/OEO_00140049>
 
-```
-"resources": [
-        {
-            "profile": null,
-            "name": null,
-            "path": null,
-            "format": null,
-            "encoding": null,
-            "schema": {
-                "fields": [
-                    {
-                        "name": "thermal efficiency",
-                        "description": "The column holds the values of the thermal efficiency of a heat power plant",
-                        "type": null,
-                        "unit": null,
-                        "isAbout": [
-                            {
-                                "name": "['heat generation process' <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>, 'energy conversion efficiency' <http://openenergy-platform.org/ontology/oeo/OEO_00140049>]",
-                                "path": null
-                            }
-                        ],
-                        "valueReference": [
-                            {
-                                "value": null,
-                                "name": null,
-                                "path": null
-                            }
-                        ]
-                    },
+```json
+{
+  "resources": [
+    {
+      "profile": null,
+      "name": null,
+      "path": null,
+      "format": null,
+      "encoding": null,
+      "schema": {
+        "fields": [
+          {
+            "name": "thermal efficiency",
+            "description": "The column holds the values of the thermal efficiency of a heat power plant",
+            "type": null,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": "['heat generation process' <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>, 'energy conversion efficiency' <http://openenergy-platform.org/ontology/oeo/OEO_00140049>]",
+                "path": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "path": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
 ```
 
 todo: @JH-rli check with oemetadata builder functionalities
@@ -269,35 +287,41 @@ todo: @JH-rli check with oemetadata builder functionalities
 
 For example: _fantasy power plant parameter_
 
-```
-"resources": [
-        {
-            "profile": null,
-            "name": null,
-            "path": null,
-            "format": null,
-            "encoding": null,
-            "schema": {
-                "fields": [
-                    {
-                        "name": "fantasy power plant paramter",
-                        "description": "The column holds values of a parameter, whose concept is not yet available in the OEO, of a fantasy power plant ",
-                        "type": null,
-                        "unit": null,
-                        "isAbout": [
-                            {
-                                "name": "fantasy power plant parameter",
-                                "path": null
-                            }
-                        ],
-                        "valueReference": [
-                            {
-                                "value": null,
-                                "name": null,
-                                "path": null
-                            }
-                        ]
-                    },
+```json
+{
+  "resources": [
+    {
+      "profile": null,
+      "name": null,
+      "path": null,
+      "format": null,
+      "encoding": null,
+      "schema": {
+        "fields": [
+          {
+            "name": "fantasy power plant paramter",
+            "description": "The column holds values of a parameter, whose concept is not yet available in the OEO, of a fantasy power plant ",
+            "type": null,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": "fantasy power plant parameter",
+                "path": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "path": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
 ```
 
 
