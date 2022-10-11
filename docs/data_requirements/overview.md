@@ -1,17 +1,3 @@
-# Data architecture
-
-In the SEDOS project data is collected, preprocessed and published by work packages (WPs) 4 to 8. 
-Therefore partners working in WPs 4-8 create multiple input data bundles and upload them to the OEP. <br> 
-A data bundle consists of:
-
-* tabular data, 
-* a data structure file (generated automatically from the metadata), and 
-* metadata. 
-
-
-The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
-
-
 # How to contribute data?
 
 The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
