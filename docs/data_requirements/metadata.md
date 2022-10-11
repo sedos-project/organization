@@ -10,7 +10,7 @@ In SEDOS a minimal mandatory set of metadata information is required to:
 2. to provide useful context for data interpretation, and
 3. to fulfil legal requirements.
 
-### Mandatory set of metadata information
+## Mandatory set of metadata information
 
 Providing the following oem-keys when submitting your metadata is mandatory.
 
