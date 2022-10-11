@@ -1,59 +1,23 @@
-# Data architecture
+# Overview of the SEDOS data architecture
+
+This section provides an introductory overview of SEDOS' data architecture and its elements, which you will find explained more detailed in further parts of the documentation.
 
 In the SEDOS project data is collected, preprocessed and published by work packages (WPs) 4 to 8. 
-Therefore partners working in WPs 4-8 create multiple input data bundles and upload them to the OEP. <br> 
-A data bundle consists of:
+Therefore, partners working in WPs 4-8 create multiple input data datapackages and upload them to the OEP via the OEDatamodel-API. 
+By applying the descirbed data architecture, we follow the [frictionless data](https://specs.frictionlessdata.io/data-package/) conventions.
+Everytime new data is uploaded to the OEP, the partners also have to register the new data version on the databus via the OEDatamodel-API. 
+By this process, the latest versions from all WPs are available on the databus in order to be further processed by the SEDOS pipeline. 
+Input datapackages generated and  published by WP 4-8 will be automatically checked for updates and processed to one datapackage holding all input data by the SEDOS Data Pipeline. 
+This input datapackage will also be published on the OEP. 
+The partners in WP9 will then download the input datapackage from the OEP and use it to set up, parameterize and solve their energy system model. 
+The modelling results will be postprocessed and uploaded to the OEP by the partners of WP9. 
 
-* tabular data, 
-* a data structure file (generated automatically from the metadata), and 
-* metadata. 
+A generalized representation of a datapackage is shown in the figure below. A datapackage consists of:
 
-A generalized representation of a data bundle is shown in the figure below. 
-
-These input data bundles will be automatically checked for updates and processed to one scenario data bundle by the SEDOS Data Pipeline. The scenario bundle will also be published on the OEP. 
-The partners in WP9 will download the scenario bundle from the OEP and use it to set up, parameterize and solve their energy system model. The modelling results will be postprocessed and uploaded to the OEP by the partners of WP9.
-
-
-![Contributing Input Data to SEDOS](../graphics/data_bundle.jpg)
-
-# How to contribute data?
-
-The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
-
-   
-## 1. Create input data tables
-
-- Collect and preprocess data into the tabular [oedatamodel-parameter](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter) by following the [input data conventions](input_data.md#Input-data-conventions)
-- Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
-- **Note** timeseries data and scalar data are stored in two different tables
+* **data** - containing parameters and values for modelling, and
+* **metadata** - describing the structure of the datamodel, and providing context to the data. 
 
 
-## 2. Create metadata
+![datapackage](../graphics/datapackage.jpg)
 
-- Create the metadata according to the [OEMetadata v.1.5.1](https://github.com/OpenEnergyPlatform/oemetadata#open-energy-family---open-energy-metadata-oemetadata) for each data table
-- Use the [MetaCreator](https://meta.rl-institut.de/meta_creator/151) to create and edit your metadata (in order to edit metadata, copy metadata JSON, click on button "Edit JSON" and paste your metadata there)
-- Use the [scalar meta template](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_scalars.json) and the [timeseries meta template](https://github.com/sedos-project/oedatamodel/blob/main/extended_datamodel/datamodel_timeseries.json).
-- Fill in as many fields as possible, but at least a minimum of the [required metadata information](metadata.md#Required-metadata-information)
-- Annotate the fields 'subject', 'isAbout' and/or 'valueReference' with useful ontological concepts by applying the Open Annotation Tool (OAT). [**TODO@CM: write step-by-step guide on how to do this**]
-- List all data sources in the form of Bibtex-keys under the "sources" field
-- Add necessary license information to the sources according to the [licensing guide](http://127.0.0.1:8000/data_requirements/licensing/#data-licencing)
-
-
-## 3. Publish bundles (data and metadata) on the OEP
-
-The following step-by-step guide will show how to store data on the OEP and make it publicly available.
-As this guide is meant for developers of AP4-8, the **Extended datamodel** will be used in the following.
-
-todo: mit @henhuy absprechen fpr die nächsten 3 Kapitel
-
-### Creating a table on the OEP
-Once the metadata is set up, the corresponding table(s) on the OEP can be created using the [OEDatamodel API](https://modex.rl-institut.de).
-
-### Uploading data to the OEP
-
-### Releasing data on the databus
-
-## 1. Create output data tables
-
-- Collect and postprocess modelling results into the tabular [OEDatamodel](https://github.com/sedos-project/oedatamodel)) by following the output data conventions](input_data.md#Output-data-conventions)
 
