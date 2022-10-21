@@ -13,7 +13,9 @@ The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamod
 
    
 
-## Data tables and table naming conventions
+## Data tables 
+
+### Table naming conventions
 
 !!! warning "Note" 
 
@@ -35,7 +37,7 @@ For example:
 
 
 
-## Naming of column headers
+### Naming of column headers
 !!! warning "Note" 
 
     * Column headers naming conventions are in place due to technical reasons of the underlying relational postgre-sql database on the OEP. 
@@ -43,13 +45,13 @@ For example:
 The following conventions will be automatically checked when uploading a table on the OEP, and error messages will be raised in case of violation.
 Users need to correct them and their compliance is mandatory.
 
-### Do's
+#### Do's
 * use ASCII characters only
 * use lower case only 
 * use the singular instead of the plural.
 * use underscores
 
-### Don'ts
+#### Don'ts
 
 * no points
 * no commas
@@ -57,7 +59,9 @@ Users need to correct them and their compliance is mandatory.
 * avoid dates
 * don't start column header with a number
 
+### Delimiter 
 
+Use semicolon `;` as the column delimiter. 
 
 ## Parameter naming
 
