@@ -37,10 +37,10 @@ For example:
 
 
 
-### Naming of column headers
+### Naming of column headers and table name
 !!! warning "Note" 
 
-    * Column headers naming conventions are in place due to technical reasons of the underlying relational postgre-sql database on the OEP. 
+    * Column headers and table naming conventions are in place due to technical reasons of the underlying relational postgre-sql database on the OEP. 
 
 The following conventions will be automatically checked when uploading a table on the OEP, and error messages will be raised in case of violation.
 Users need to correct them and their compliance is mandatory.
@@ -53,10 +53,12 @@ Users need to correct them and their compliance is mandatory.
 
 #### Don'ts
 
+* table name must not maximal character limit = 50
 * no points
 * no commas
 * no spaces
 * avoid dates
+  * if dates then without `-`e.g.: 2022-10-21 will through an error. Use underscore instead!
 * don't start column header with a number
 
 ### Delimiter 
