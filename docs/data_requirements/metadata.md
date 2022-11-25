@@ -14,7 +14,7 @@ In SEDOS a minimal mandatory set of metadata information is required to:
 
 !!! Note "OEMetadata templates exist"
 
-        Metadata templates ([scalar template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_scalars.json) and the [timeseries template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_timeseries.json)) are provided that you can build upon.
+        You can build upon metadata templates ([scalar template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_scalars.json) and [timeseries template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_timeseries.json)).
 
 Providing the following oem-keys when submitting your metadata is mandatory.
 
@@ -77,6 +77,8 @@ Information about changes on the metadata.
 
 
 **Resource Keys**
+
+Needed to process the csv-table for the OEP.
 
 |   #  |    Key    |                                                                                                                                                                                                Description                                                                                                                                                                                               |                                  Example                                 |
 |:----:|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|

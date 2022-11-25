@@ -15,7 +15,37 @@ The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamod
 
 ## Data tables 
 
-### Table naming conventions
+
+### Naming conventions for data tables and parameters
+!!! warning "Note" 
+
+    * Parameter name and table name conventions are in place due to technical reasons of the underlying relational postgre-sql database on the OEP. 
+
+The following conventions will be automatically checked when uploading a table on the OEP, and error messages will be raised in case of violation.
+Users need to correct them and their compliance is mandatory.
+
+#### Do's
+* use ASCII characters only
+* use lower case only 
+* use the singular instead of the plural.
+* use underscores
+
+#### Don'ts
+
+* table name must not maximal character limit = 50
+* no points
+* no commas
+* no spaces
+* no special characters
+* avoid dates
+* if dates are used, then without `-`! E.g.: 2022-10-21 will through an error. Use underscore instead!
+* don't start parameter name with a number
+
+### Delimiter 
+
+Use semicolon `;` as the column delimiter. 
+
+### Table naming
 
 !!! warning "Note" 
 
@@ -35,36 +65,6 @@ For example:
 * **sedos_constraint**_co2_emission-yearly
 
 
-
-
-### Naming of column headers and table name
-!!! warning "Note" 
-
-    * Column headers and table naming conventions are in place due to technical reasons of the underlying relational postgre-sql database on the OEP. 
-
-The following conventions will be automatically checked when uploading a table on the OEP, and error messages will be raised in case of violation.
-Users need to correct them and their compliance is mandatory.
-
-#### Do's
-* use ASCII characters only
-* use lower case only 
-* use the singular instead of the plural.
-* use underscores
-
-#### Don'ts
-
-* table name must not maximal character limit = 50
-* no points
-* no commas
-* no spaces
-* avoid dates
-  * if dates then without `-`e.g.: 2022-10-21 will through an error. Use underscore instead!
-* don't start column header with a number
-
-### Delimiter 
-
-Use semicolon `;` as the column delimiter. 
-
 ## Parameter naming
 
 !!! warning "Note" 
@@ -73,6 +73,8 @@ Use semicolon `;` as the column delimiter.
 
 Parameter names (to specify technologies, constraints or techno-economic values) can basically be chosen freely. 
 However, it is of utmost importance that every parameter name is linked to a suitable ontological concept via the metadata to enable its clear interpretation.
+<br> In case you cannot find a suitable ontology concept (e.g. because it's not in the ontology yet), please make sure 
+your chosen parameter name is clear and common in the domain. In this case avoid acronyms.
 
 For more background information regarding for linking parameter names and ontology concepts, using OEM, see [here](ontology.md#Ontological-annotation-of-data).
 
