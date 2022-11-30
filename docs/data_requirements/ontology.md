@@ -315,8 +315,6 @@ The concept _thermal efficiency_ is not (yet, as of 23.09.22) available in the O
 
 ```
 
-todo: @JH-rli check with oemetadata builder functionalities
-
 #### Case3
 **_In cases where there is NO suitable ontology concept in the OEO_** we'll copy the term used in the data directly to the `name`key for further data processing in SEDOS.
 
@@ -363,14 +361,4 @@ For example: _fantasy power plant parameter_
 }
 ```
 
-
-
-
-## Link a parameter name to multiple related ontology concepts
-todo: decide on workflow, considering oemetadata builder yet limited functionality
-
-### Via oemetadata builder
-todo: decide on workflow, considering oemetadata builder yet limited functionality
-
-``
 

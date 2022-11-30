@@ -14,7 +14,7 @@ The following instructions will guide you through the process of contributing da
 
 * Create the metadata according to the [OEMetadata v.1.5.1](https://github.com/OpenEnergyPlatform/oemetadata#open-energy-family---open-energy-metadata-oemetadata) for each data table
 * Use the [scalar meta template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_scalars.json) and the [timeseries meta template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_timeseries.json) to build your metadata
-* Use the [oemetadata builder](https://meta.rl-institut.de/meta_creator/151) to create and edit your metadata 
+* Use the [oemetadata builder](https://openenergy-platform.org/dataedit/oemetabuilder/) to create and edit your metadata 
     * -> copy scalar/timeseries meta template
     * -> click on blue button "Edit JSON" 
     * -> click in opening window, with CTRL+A select all and paste scalar/timeseries meta template
