@@ -32,7 +32,7 @@ Users need to correct them and their compliance is mandatory.
 
 #### Don'ts
 
-* table name must not maximal character limit = 50
+* table name must not exceed maximal character limit = 50
 * no points
 * no commas
 * no spaces
