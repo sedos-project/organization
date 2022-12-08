@@ -61,3 +61,16 @@ This repository holds the documentation files of the SEDOS project and is also u
 
 [**TODO:write detailed documentation**]
 ###### @SB isn't this section dealt with 4. above?
+
+## How to update documentation on sedos-project.github.io/.github/ ?
+
+1. On your local machine, navigate to `~/.github`
+1. Run `git pull` to download latest docs-version and to avoid merge conflicts later
+1. On your local machine, navigate to `~/organization`
+1. In your local conda environment run `mkdocs build -d ../.github` (or specify the absolute path to `.github`)
+1. Run `git add .` to add all updated files
+1. Run `git commit -am 'Update docs with PR #'` and add PR-number from organisation repo to track changes better. 
+   If changes were implemented without PR, write helpful commit message. All changes are now saved to one commit.
+1. Run `git push` to update docs on github pages
+1. Go to `sedos-project.github.io/.github/` and press `CTRL + F5` to reload page ignoring browser cache
+1. You should now see the updated documentation.
