@@ -108,3 +108,15 @@ Information about each column in the csv.
 | 15.6.1.6.1 | value          | The name of the value in the column.                                                                                                                                                     | onshore                                                   |
 | 15.6.1.6.2 | name           | The class label of the OEO terms.                                                                                                                                                        | onshore wind farm                                         |
 | 15.6.1.6.3 | path           | The URI of the class.                                                                                                                                                                    | https://openenergy-platform.org/ontology/oeo/OEO_00000311 |
+
+**Resource datatypes- Schema**
+
+Available datatypes and corresponding formatting examples:
+
+
+| dtype | example |                                   comment                        |
+|:-----:|:-------:|:----------------------------------------------------------------:|
+| json | "{""key1"": ""text"", ""key2"": ""text""}"      |                     **csv** seperator should not be ","          |
+| float array     | [float, float]  | arrays with strings should be formatted as strings ("['string1', 'string2']" |
+| text     |"text"  |   String data should have text as datatype (text serves as "string") |
+| integer     |integer  |                   |
