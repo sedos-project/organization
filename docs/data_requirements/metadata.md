@@ -20,15 +20,20 @@ Providing the following oem-keys when submitting your metadata is mandatory.
 
 **General Keys**
 
-|  #  |       Key       |                                                                    Description                                                                   |                                Example                               |
+|  #  |       Key       |                                                                   Description                                                                    |                               Example                                |
 |:---:|:---------------:|:------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| 1   | name            | A file name or database table name.                                                                                                              | oep_metadata_table_example_v15                                       |
-| 2   | title           | A human readable full title including author.                                                                                                    | RLI - OEMetadata - Metadata example table                            |
-| 4   | description     | A description or abstract of the package. It should be usable as  summary information for the entire package that is described by the  metadata. | Example table used to illustrate the metadata structure and meaning. |
-| 6   | subject         | An array of objects with topics of the data in OEO terms.                                                                                        |                                                                      |
-| 6.1 | name            | The class label of the OEO terms.                                                                                                                | energy                                                               |
-| 6.2 | path            | The URI of the class.                                                                                                                            | https://openenergy-platform.org/ontology/oeo/OEO_00000150            |
-| 8   | publicationDate | A date of publishing of the data or metadata. Date format is ISO 8601 (YYYY-MM-DD).                                                              | 2019-02-06                                                           |
+|  1  |      name       |                                                       A file name or database table name.                                                        |                    oep_metadata_table_example_v15                    |
+|  2  |      title      |                                                  A human readable full title including author.                                                   |              RLI - OEMetadata - Metadata example table               |
+|  4  |   description   | A description or abstract of the package. It should be usable as  summary information for the entire package that is described by the  metadata. | Example table used to illustrate the metadata structure and meaning. |
+|  6  |     subject     |                                            An array of objects with topics of the data in OEO terms.                                             |                                                                      |
+| 6.1 |      name       |                                                        The class label of the OEO terms.                                                         |                                energy                                |
+| 6.2 |      path       |                                                              The URI of the class.                                                               |      https://openenergy-platform.org/ontology/oeo/OEO_00000150       |
+|  8  | publicationDate |                               A date of publishing of the data or metadata. Date format is ISO 8601 (YYYY-MM-DD).                                |                              2019-02-06                              |
+|  9  |    @context     |                                             Necessary for registering Data on the Databus and to be SPARQL-able                                             |                           see below table*                           |
+*: https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/master/metadata/latest/context.json
+
+
+
 
 **Source Keys**
 
