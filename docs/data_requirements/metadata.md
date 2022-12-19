@@ -18,7 +18,7 @@ In SEDOS a minimal mandatory set of metadata information is required to:
 
 Providing the following oem-keys when submitting your metadata is mandatory.
 
-**General Keys**
+### General Keys
 
 |  #  |       Key       |                                                                   Description                                                                    |                               Example                                |
 |:---:|:---------------:|:------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
@@ -29,13 +29,13 @@ Providing the following oem-keys when submitting your metadata is mandatory.
 | 6.1 |      name       |                                                        The class label of the OEO terms.                                                         |                                energy                                |
 | 6.2 |      path       |                                                              The URI of the class.                                                               |      https://openenergy-platform.org/ontology/oeo/OEO_00000150       |
 |  8  | publicationDate |                               A date of publishing of the data or metadata. Date format is ISO 8601 (YYYY-MM-DD).                                |                              2019-02-06                              |
-|  9  |    @context     |                                             Necessary for registering Data on the Databus and to be SPARQL-able                                             |                           see below table*                           |
+|  9  |    @context     |                                       Necessary for registering Data on the Databus and to be SPARQL-able                                        |                              see here*                               |
 *: https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/master/metadata/latest/context.json
 
 
 
 
-**Source Keys**
+### Source Keys
 
 Information about the individual sources the data stems from.
 
@@ -53,7 +53,7 @@ Information about the individual sources the data stems from.
 | 12.4.5 | attribution | The copyright owner of the source. If attribution licenses are used, that name must be acknowledged. | © Intergovernmental Panel on Climate Change 2014                                                                                                                                                    |
 
 
-**License Keys**
+### License Keys
 
 The license of your entire csv.
 
@@ -67,7 +67,7 @@ The license of your entire csv.
 | 13.5 | attribution | The copyright owner of the data. If attribution licenses are used, that name must be acknowledged.                                                                                                          | © Reiner Lemoine Institut                                                                                                                                                                           |
 
 
-**Provenience Keys**
+### Provenience Keys
 
 Information about changes on the metadata.
 
@@ -81,40 +81,40 @@ Information about changes on the metadata.
 | 14.5 | comment      | A free text commentary on what has been done.                                                                                                                                                                                                           | Fixed a typo in the title. |
 
 
-**Resource Keys**
+### Resource Keys
 
 Needed to process the csv-table for the OEP.
 
-|   #  |    Key    |                                                                                                                                                                                                Description                                                                                                                                                                                               |                                  Example                                 |
-|:----:|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
-| 15   | resources | An array of objects of the data. It describes the data resource as an individual file or (database) table.                                                                                                                                                                                                                                                                                               |                                                                          |
-| 15.1 | profile   | The profile of this descriptor according to the profiles  specification. This information is retained in order to comply with the  "Tabular Data Package" standard. Use "tabular-data-resource" for all  tables.                                                                                                                                                                                         | tabular-data-resource                                                    |
-| 15.2 | name      | A name for the entire data package. To comply with the data package  standard it must consist of only lowercase alphanumeric character plus  ".", "-" and "_". It may not start with a number. In a database, this  will be the name of the table within the  schema containing it. The name  usually corresponds to the file name (minus the file-extension) of the  data file describing the resource. | openstreetmap.osm_deu_line                                               |
-| 15.3 | path      | A URL that should be a permanent http(s) address or other path directly linking to the resource.                                                                                                                                                                                                                                                                                                         | https://openenergy-platform.org/dataedit/view/openstreetmap/osm_deu_line |
-| 15.4 | format    | The file extension. 'csv', 'xls', 'json' etc. would be expected to  be the standard file extension for this type of resource. When you  upload your data to the OEDB, in the shown metadata string, the format  will be changed accordingly to 'PostgreSQL', since the data there are  stored in a database.                                                                                             | PostgreSQL                                                               |
-| 15.5 | encoding  | Specifies the character encoding of the resource's data file. The values should be one of the "Preferred MIME Names" for a character encoding registered with IANA. If no value for this key is specified then the default is UTF-8.                                                                                                                                                                     | UTF-8                                                                    |
+|   #  |    Key    |                                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                                  |                                  Example                                 |
+|:----:|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
+| 15   | resources |                                                                                                                                                                                                  An array of objects of the data. It describes the data resource as an individual file or (database) table.                                                                                                                                                                                                   |                                                                          |
+| 15.1 | profile   |                                                                                                                                               The profile of this descriptor according to the profiles  specification. This information is retained in order to comply with the  "Tabular Data Package" standard. Use "tabular-data-resource" for all  tables.                                                                                                                                                | tabular-data-resource                                                    |
+| 15.2 | name      | A name for the entire data package. To comply with the data package  standard it must consist of only lowercase alphanumeric character plus, "-" and "_". It may not start with a number. In a database, this  will be the name of the table within the  schema containing it. The name  usually corresponds to the file name (minus the file-extension) of the  data file describing the resource. Name also contains information about the [shema](https://openenergy-platform.org/dataedit/schemas) on the OEP, use "." to seperate shema from table name. | openstreetmap.osm_deu_line                                               |
+| 15.3 | path      |                                                                                                                                                                                                       A URL that should be a permanent http(s) address or other path directly linking to the resource.                                                                                                                                                                                                        | https://openenergy-platform.org/dataedit/view/openstreetmap/osm_deu_line |
+| 15.4 | format    |                                                                                                 The file extension. 'csv', 'xls', 'json' etc. would be expected to  be the standard file extension for this type of resource. When you  upload your data to the OEDB, in the shown metadata string, the format  will be changed accordingly to 'PostgreSQL', since the data there are  stored in a database.                                                                                                  | PostgreSQL                                                               |
+| 15.5 | encoding  |                                                                                                                                     Specifies the character encoding of the resource's data file. The values should be one of the "Preferred MIME Names" for a character encoding registered with IANA. If no value for this key is specified then the default is UTF-8.                                                                                                                                      | UTF-8                                                                    |
 
-**Resource Keys - Schema**
+### Resource Keys - Schema
 
 Information about each column in the csv.
 
-|      #     |       Key      |                                                                                        Description                                                                                       |                          Example                          |
+|      #     |       Key      |                                                                                       Description                                                                                        |                          Example                          |
 |:----------:|:--------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------:|
-| 15.6       | schema         | An object that describes the structure of the present data. It  contains all fields (columns of the table), the primary key and optional  foreign keys.                                  |                                                           |
-| 15.6.1     | fields         | An array of objects describing a column and providing name, description, type and unit.                                                                                                  |                                                           |
-| 15.6.1.1   | name           | The name of the field.                                                                                                                                                                   | year                                                      |
-| 15.6.1.2   | description    | A text describing the field.                                                                                                                                                             | Reference year for which the data were collected.         |
-| 15.6.1.3   | type           | The data type of the field. In case of a geom column in a database, also indicate the shape and CRS.                                                                                     | geometry(Point, 4326)                                     |
+| 15.6       | schema         |                 An object that describes the structure of the present data. It  contains all fields (columns of the table), the primary key and optional  foreign keys.                  |                                                           |
+| 15.6.1     | fields         |                                                 An array of objects describing a column and providing name, description, type and unit.                                                  |                                                           |
+| 15.6.1.1   | name           |                                                                                  The name of the field.                                                                                  | year                                                      |
+| 15.6.1.2   | description    |                                                                               A text describing the field.                                                                               | Reference year for which the data were collected.         |
+| 15.6.1.3   | type           |              The [data type](data_requirements/metadata.md#Resource#datatypes#Shema) of the field. In case of a geom column in a database, also indicate the shape and CRS.              | geometry(Point, 4326)                                     |
 | 15.6.1.4   | unit           | The unit, preferably SI-unit, that values in this field are mapped  to. If 'unit' doesn't apply to a field, use 'null'. If the unit is given  in a seperate field, reference this field. | MW                                                        |
-| 15.6.1.5   | isAbout        | An array of objects with describe the field in OEO terms.                                                                                                                                |                                                           |
-| 15.6.1.5.1 | name           | The class label of the OEO terms.                                                                                                                                                        | wind energy converting unit                               |
-| 15.6.1.5.2 | path           | The URI of the class.                                                                                                                                                                    | https://openenergy-platform.org/ontology/oeo/OEO_00000044 |
-| 15.6.1.6   | valueReference | An array of objects for an extended description of the values in the column in OEO terms.                                                                                                |                                                           |
-| 15.6.1.6.1 | value          | The name of the value in the column.                                                                                                                                                     | onshore                                                   |
-| 15.6.1.6.2 | name           | The class label of the OEO terms.                                                                                                                                                        | onshore wind farm                                         |
-| 15.6.1.6.3 | path           | The URI of the class.                                                                                                                                                                    | https://openenergy-platform.org/ontology/oeo/OEO_00000311 |
+| 15.6.1.5   | isAbout        |                                                                An array of objects with describe the field in OEO terms.                                                                 |                                                           |
+| 15.6.1.5.1 | name           |                                                                            The class label of the OEO terms.                                                                             | wind energy converting unit                               |
+| 15.6.1.5.2 | path           |                                                                                  The URI of the class.                                                                                   | https://openenergy-platform.org/ontology/oeo/OEO_00000044 |
+| 15.6.1.6   | valueReference |                                                An array of objects for an extended description of the values in the column in OEO terms.                                                 |                                                           |
+| 15.6.1.6.1 | value          |                                                                           The name of the value in the column.                                                                           | onshore                                                   |
+| 15.6.1.6.2 | name           |                                                                            The class label of the OEO terms.                                                                             | onshore wind farm                                         |
+| 15.6.1.6.3 | path           |                                                                                  The URI of the class.                                                                                   | https://openenergy-platform.org/ontology/oeo/OEO_00000311 |
 
-**Resource datatypes- Schema**
+### Resource datatypes Schema
 
 Available datatypes and corresponding formatting examples:
 

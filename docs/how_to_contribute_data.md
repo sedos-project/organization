@@ -36,8 +36,10 @@ The following instructions will guide you through the process of contributing da
 
 In order to add data to an OEP table, the (empty) table must be initialized on the OEP in the first place.
 In order to create the table, the resource from metadata is used, 
-whereby the name of the resource is used to define the OEP schema and the table name (i.e. "name": "model_draft.sedos_tech_wind_turbine") and 
-the fields from resource schema are used to create the related columns of the table.
+whereby the [name of the resource](data_requirements/metadata.md#Resource#Keys) is used to define the OEP schema and the table name (table_name, to avoid spaces) 
+in a pattern of ```"shema.table_name"``` (i.e. "name": "model_draft.sedos_tech_wind_turbine") 
+
+And the fields from resource schema are used to create the related columns of the table. 
 Initializing OEP table is done via: 
 
 * Visit [oedatamodel-API](https://modex.rl-institut.de/create_table/)
