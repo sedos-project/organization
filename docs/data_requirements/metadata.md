@@ -104,7 +104,7 @@ Information about each column in the csv.
 | 15.6.1     | fields         |                                                 An array of objects describing a column and providing name, description, type and unit.                                                  |                                                           |
 | 15.6.1.1   | name           |                                                                                  The name of the field.                                                                                  | year                                                      |
 | 15.6.1.2   | description    |                                                                               A text describing the field.                                                                               | Reference year for which the data were collected.         |
-| 15.6.1.3   | type           |              The [data type](data_requirements/metadata.md#Resource#datatypes#Shema) of the field. In case of a geom column in a database, also indicate the shape and CRS.              | geometry(Point, 4326)                                     |
+| 15.6.1.3   | type           |                               The [data type](#datatypes) of the field. <br/>In <br/>case of a geom column in a database, also indicate the shape and CRS.                               | geometry(Point, 4326)                                     |
 | 15.6.1.4   | unit           | The unit, preferably SI-unit, that values in this field are mapped  to. If 'unit' doesn't apply to a field, use 'null'. If the unit is given  in a seperate field, reference this field. | MW                                                        |
 | 15.6.1.5   | isAbout        |                                                                An array of objects with describe the field in OEO terms.                                                                 |                                                           |
 | 15.6.1.5.1 | name           |                                                                            The class label of the OEO terms.                                                                             | wind energy converting unit                               |
@@ -114,14 +114,15 @@ Information about each column in the csv.
 | 15.6.1.6.2 | name           |                                                                            The class label of the OEO terms.                                                                             | onshore wind farm                                         |
 | 15.6.1.6.3 | path           |                                                                                  The URI of the class.                                                                                   | https://openenergy-platform.org/ontology/oeo/OEO_00000311 |
 
-### Resource datatypes Schema
+
+
+##Datatypes
 
 Available datatypes and corresponding formatting examples:
 
-
-| dtype | example |                                   comment                        |
-|:-----:|:-------:|:----------------------------------------------------------------:|
-| json | "{""key1"": ""text"", ""key2"": ""text""}"      |                     **csv** seperator should not be ","          |
-| float array     | [float, float]  | arrays with strings should be formatted as strings ("['string1', 'string2']" |
-| text     |"text"  |   String data should have text as datatype (text serves as "string") |
-| integer     |integer  |                   |
+| dtype |                  example                   |                                   comment                                    |
+|:-----:|:------------------------------------------:|:----------------------------------------------------------------------------:|
+| json | "{""key1"": ""text"", ""key2"": ""text""}" |                       **csv** seperator should be ";"                        |
+| float array     |             [0.02, 279.5]              | arrays with strings should be formatted as strings ("['string1', 'string2']" |
+| text     |                   "text"                   |      String data should have text as datatype (text serves as "string")      |
+| integer     |                     27                     |                                                                              |
