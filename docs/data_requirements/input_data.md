@@ -5,13 +5,17 @@
 
 ## Datamodel
 
-
 The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter)) has to be used to provide input data in SEDOS. This choice was made to allow ontological annotation of data. This data model consists of two table types "[scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv)" and "[timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)". Please choose the table type accordingly depending on the data you want to upload:
 
 - Use scalar tables to provide parameters with no time relationships. To properly fill them read the [scalar model column description](https://github.com/sedos-project/oedatamodel#scalar-description). Use the [example scalar package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) to write your own (see section [How to contribute data - 2. Create metadata](http://127.0.0.1:8000/data_requirements/overview/#2#create#metadata)
 - To provide parameters with time relationships use a timeseries table. Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to orient yourself with the fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
 
-   
+### Input and output energy vectors
+The input and output energy vectors of technologies in SEDOS' reference energy system are defined in an external table.
+
+For technologies with multiple input and/or output energy vectors it is not clear to which energy vector a parameter column refers.
+
+To account for this the inputs and outputs of processes will be collected in separate tables ([ERD diagram](https://kroki.io/erd/svg/eNqLzswrKC2Jzy8tAVKxXFqZKVx5ibmpXFzRBUX5yanFxanFqKKJRUBGSWoRVBiqKh6Liniw0TB1CNEUruT83Nz8lMySShAHWQfEGYS1wN2moKWra6iAcBRCE7oU1DV4FEAt50LXomCoq6ulgBxOXBiasKgBAGKJfYo=)).
 
 ## Data tables 
 

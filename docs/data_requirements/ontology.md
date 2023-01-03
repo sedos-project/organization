@@ -249,12 +249,7 @@ The technology and technology_type columns from the oedatamodel-concrete are fil
 
 ### B) input and output energy vectors for MiMo technologies
 
-The input and output energy vectors of technologies in SEDOS' reference energy system are defined in an external table.
-
-For technologies with multiple input and/or output energy vectors it is not clear to which energy vector a parameter column refers.
-To account for this the energy vector shall be annotated as a second concept in the `isAbout` key.
-
-For example: A CHP plant table entailing two efficiency columns - for the electrical and thermal efficiency.
+Moved to [Input and output energy vectors](input_data.md#Input-and-output-energy-vectors).
 
 ### C) parameter names
 
