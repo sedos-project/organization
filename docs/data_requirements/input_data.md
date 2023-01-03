@@ -49,6 +49,10 @@ Users need to correct them and their compliance is mandatory.
 
 Use semicolon `;` as the column delimiter. 
 
+### Decimal separator 
+
+Use point `.` as decimal separator. 
+
 ### Table naming
 
 !!! warning "Note" 
