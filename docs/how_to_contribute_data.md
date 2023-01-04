@@ -58,8 +58,8 @@ As this guide is meant for developers of AP4-8, the **oedatamodel-parameter** wi
         2. Metadata exists with [mandatory set of metadata information](../data_requirements/metadata/#mandatory#set#of#metadata#information) filled
         3. OEP [user account](https://openenergy-platform.org/user/register)
         4. Databus [user account](https://energy.databus.dbpedia.org/) (Create account on "Login" button)
-        5. Databus API (On Databus go to Profile -> Settings -> Scroll down to "Create New API Key" to generate key)
-        4. Table has been created on OEP
+        5. Databus API Key (On Databus go to Profile -> Settings -> Scroll down to "Create New API Key" to generate key)
+        6. Table has been created on OEP
 
 ### 4.1 Upload data to OEP with oedatamodel-API
 
