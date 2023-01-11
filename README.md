@@ -2,7 +2,7 @@
 
 This repository holds the documentation files of the SEDOS project and is also used for managing organizational issues. 
 
-## How to use sedos-project/.github and sedos-project/organisation?
+## How to set up the documentation on your local machine?
 
 1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository
 
@@ -19,6 +19,7 @@ This repository holds the documentation files of the SEDOS project and is also u
       $ conda env create -f environment.yml
 
       $ conda activate d_py310_sedos
+      
 
 4. Modify .md files in `organisation/docs` or create new .md files by creating a new file and renaming the file extension `.md`.
 
@@ -56,11 +57,6 @@ This repository holds the documentation files of the SEDOS project and is also u
     
       $ git push
 
-
-## How to upload new .md files? 
-
-[**TODO:write detailed documentation**]
-###### @SB isn't this section dealt with 4. above?
 
 ## How to update documentation on sedos-project.github.io/.github/ ?
 
