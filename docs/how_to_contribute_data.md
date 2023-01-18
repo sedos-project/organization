@@ -36,8 +36,10 @@ The following instructions will guide you through the process of contributing da
 
 In order to add data to an OEP table, the (empty) table must be initialized on the OEP in the first place.
 In order to create the table, the resource from metadata is used, 
-whereby the name of the resource is used to define the OEP schema and the table name (i.e. "name": "model_draft.sedos_tech_wind_turbine") and 
-the fields from resource schema are used to create the related columns of the table.
+whereby the [name of the resource](data_requirements/metadata.md#resource-keys) is used to define the OEP schema and the table name (table_name, to avoid spaces) 
+in a pattern of ```"shema.table_name"``` (i.e. "name": "model_draft.sedos_tech_wind_turbine") 
+
+And the fields from resource schema are used to create the related columns of the table. 
 Initializing OEP table is done via: 
 
 * Visit [oedatamodel-API](https://modex.rl-institut.de/create_table/)
@@ -55,7 +57,9 @@ As this guide is meant for developers of AP4-8, the **oedatamodel-parameter** wi
         1. Data exists in **oedatamodel-parameter** format as CSV file
         2. Metadata exists with [mandatory set of metadata information](../data_requirements/metadata/#mandatory#set#of#metadata#information) filled
         3. OEP [user account](https://openenergy-platform.org/user/register)
-        4. Table has been created on OEP
+        4. Databus [user account](https://energy.databus.dbpedia.org/) (Create account on "Login" button)
+        5. Databus API Key (On Databus go to Profile -> Settings -> Scroll down to "Create New API Key" to generate key)
+        6. Table has been created on OEP
 
 ### 4.1 Upload data to OEP with oedatamodel-API
 
@@ -78,7 +82,7 @@ Registering data on the databus must be done everytime, a new version of the dat
 In order to register your new data you have to:
 
 * Open the [oedatamodel-API](https://modex.rl-institut.de/databus/)
-* Enter your username and API Token
+* Enter your username (username is not email address) and API Token
 * Enter table name and schema (defaults to "model_draft")
 * Enter new version string (at least one row in your table must be present with given string in column "version")
 * Submit it.

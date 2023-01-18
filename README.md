@@ -2,62 +2,51 @@
 
 This repository holds the documentation files of the SEDOS project and is also used for managing organizational issues. 
 
-## How to use sedos-project/.github and sedos-project/organisation?
+## How to set up the documentation on your local machine?
 
-1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository
+1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository 
+
+      `git clone https://github.com/sedos-project/organization.git`
 
 
 2. Navigate to the path, in which you stored ../sedos-project/organisation
 
-
-      $ cd [USERPATH/sedos-project/organisation]
+      `cd [USERPATH/sedos-project/organisation]`
 
 
 3. Create new environment by using pre-defined settings from environment.yml and activate it after successful installation
  
+      `conda env create -f environment.yml`
 
-      $ conda env create -f environment.yml
-
-      $ conda activate d_py310_sedos
+      `conda activate d_py310_sedos`
+      
 
 4. Modify .md files in `organisation/docs` or create new .md files by creating a new file and renaming the file extension `.md`.
 
-
-5. Render documentation locally by running mkdocs 
-
-   
-      $ mkdocs serve
-
-   and copy **url** from the INFO message into your browser, e.g.
+5. Render documentation locally by running mkdocs `mkdocs serve` and copy **url** from the INFO message into your browser, e.g.
    
 
    > INFO     -  [11:25:42] Serving on http://127.0.0.1:8000/
 
    Once started, mkdocs shows your local edits live in the browser without further do.
 
+6. Add all your local changes `git add .`
 
-6. Add all your local changes
+7. Commit your local changes `git commit -m 'Extend documentation`
 
-   
-      $ git add .
+8. Check if other SEDOS members uploaded changes before pushing yours `git pull`  
 
-7. Commit your local changes
-
-   
-      $ git commit -m 'Extend documentation'
-
-8. Check if other SEDOS members uploaded changes before pushing yours
-
-   
-      $ git pull   
-
-9. Push your commits, to share them with the team
-
-    
-      $ git push
+9. Push your commits, to share them with the team `git push`
 
 
-## How to upload new .md files? 
+## How to update documentation on sedos-project.github.io/.github/ ?
 
-[**TODO:write detailed documentation**]
-###### @SB isn't this section dealt with 4. above?
+1. On your local machine, navigate to `~/.github`
+1. Run `git pull` to download latest docs-version and to avoid merge conflicts later
+1. On your local machine, navigate to `~/organization` and in your local conda environment run `mkdocs build -d ../.github` (or specify the absolute path to `.github`)
+1. Navigate to `~/.github` and run `git add .` to add all updated files
+1. Run `git commit -am 'Update docs with PR #'` and add PR-number from organisation repo to track changes better. 
+   If changes were implemented without PR, write helpful commit message. All changes are now saved to one commit.
+1. Run `git push` to update docs on github pages
+1. Go to `sedos-project.github.io/.github/` and press `CTRL + F5` to reload page ignoring browser cache
+1. You should now see the updated documentation.
