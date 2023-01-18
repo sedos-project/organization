@@ -13,9 +13,12 @@ The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamod
 ### Input and output energy vectors
 The input and output energy vectors of technologies in SEDOS' reference energy system are defined in an external table.
 
-For technologies with multiple input and/or output energy vectors it is not clear to which energy vector a parameter column refers.
+For technologies with multiple input and/or output energy vectors it is not clear to which energy vector a 
+parameter column refers.
 
-To account for this the inputs and outputs of processes will be collected in separate tables ([ERD diagram](https://kroki.io/erd/svg/eNqLzswrKC2Jzy8tAVKxXFqZKVx5ibmpXFzRBUX5yanFxanFqKKJRUBGSWoRVBiqKh6Liniw0TB1CNEUruT83Nz8lMySShAHWQfEGYS1wN2moKWra6iAcBRCE7oU1DV4FEAt50LXomCoq6ulgBxOXBiasKgBAGKJfYo=)).
+To account for this the inputs and outputs of process parameters will be collected in separate tables in the 
+database (see below).
+![mimo_tables](../graphics/mimo_tables.jpg)
 
 ## Data tables 
 
