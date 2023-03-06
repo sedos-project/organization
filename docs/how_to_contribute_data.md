@@ -30,7 +30,6 @@ The following instructions will guide you through the process of contributing da
     * ![wf](https://user-images.githubusercontent.com/7637364/191807277-712057b8-153c-4178-94a2-341ad8f010fd.gif)
 * List all data sources in the form of Bibtex-keys under the `sources` key
 * Add necessary license information to the sources according to the [licensing guide](../data_requirements/licensing/#data-licencing)
-* todo @JH-rli: Will there be a save metadata button or does the user go back to the "Edit JSON" button to extract the metadata?
 
 ## 3. Initialize table on the OEP
 
@@ -79,6 +78,8 @@ Otherwise, data is appended to given table on the OEP.
 
 The oedatamodel-API can also register your datapackages on the databus. 
 Registering data on the databus must be done everytime, a new version of the data is available on the OEP.
+In doing so, other users will be able to query the most recent data from the OEP or to query for a specific data 
+version.
 In order to register your new data you have to:
 
 * Open the [oedatamodel-API](https://modex.rl-institut.de/databus/)
