@@ -63,18 +63,7 @@ Use point `.` as decimal separator.
     * Create a new datapackage for each technology, e.g. wind_onshore, chp, ... <br>
     * You can use a single datapackage for both demand data and constraints (tech-independent parameters) if the table size is sufficient, e.g.:<br> * emission limit,<br> * natural domestic limit,<br> * WACC 
 
-To increase the discoverability and searchability of the data, we require the following table naming convention:
-
-* **sedos_tech**_[technologyname, e.g. wind_turbine]
-* **sedos_demand**_[demandname, e.g. household_residential]
-* **sedos_constraint**_[constraintname, e.g co2_emission-yearly]
-
-For example: 
-
-* **sedos_tech**_wind_turbine
-* **sedos_demand**_household_residential
-* **sedos_constraint**_co2_emission-yearly
-
+Follow the [nomenclature](nomenclature.md) when naming tables.
 
 ## Parameter naming
 
