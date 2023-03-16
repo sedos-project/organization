@@ -5,10 +5,16 @@
 
 ## Datamodel
 
-The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter)) has to be used to provide input data in SEDOS. This choice was made to allow ontological annotation of data. This data model consists of two table types "[scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv)" and "[timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)". Please choose the table type accordingly depending on the data you want to upload:
+The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter)) has to 
+be used to provide input data in SEDOS. This choice was made to allow ontological annotation of data. The data 
+model consists of two table types: "[scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv)" and "[timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)". Please choose the table type accordingly, depending on the data you want to upload:
 
-- Use scalar tables to provide parameters with no time relationships. To properly fill them read the [scalar model column description](https://github.com/sedos-project/oedatamodel#scalar-description). Use the [example scalar package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) to write your own (see section [How to contribute data - 2. Create metadata](http://127.0.0.1:8000/data_requirements/overview/#2#create#metadata)
-- To provide parameters with time relationships use a timeseries table. Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to orient yourself with the fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
+- Use scalar tables to provide parameters with no relation to a timeindex. To properly fill the table, read the 
+  [scalar model column description](https://github.com/sedos-project/oedatamodel#scalar-description). Use the 
+  [example scalar package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) to write your own metadata 
+  (see section [How to contribute data - 2. Create metadata](http://127.0.0.1:8000/data_requirements/overview/#2#create#metadata)
+- Use a timeseries table to provide parameters with relation to a timeindex. Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to make yourself familiar with the 
+  fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
 
 ### Input and output energy vectors
 The input and output energy vectors of technologies in SEDOS' reference energy system are defined in an external table.
@@ -60,10 +66,10 @@ Use point `.` as decimal separator.
 
 !!! warning "Note" 
 
-    * Create a new datapackage for each technology, e.g. wind_onshore, chp, ... <br>
+    * Create a new datapackage for each process, e.g. wind_onshore, chp, ... <br>
     * You can use a single datapackage for both demand data and constraints (tech-independent parameters) if the table size is sufficient, e.g.:<br> * emission limit,<br> * natural domestic limit,<br> * WACC 
 
-Follow the [nomenclature](nomenclature.md) when naming tables.
+Follow the [nomenclature](nomenclature.md) for table and process naming.
 
 ## Parameter naming
 
