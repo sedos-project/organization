@@ -62,6 +62,28 @@ Use semicolon `;` as the column delimiter.
 
 Use point `.` as decimal separator. 
 
+### Versioning convention
+
+Version your data with letter `v` and arabic number, e.g.: v1
+
+Increase the version when you want to update data that has been already uploaded to the OEP.
+Example: 
+| id | region | year | lifetime | bandwidth_type | version | method | source | comment |
+|----|--------|------|----------|----------------|---------|--------|--------|---------|
+| 1  | DE     | 2020 | 5        |                | v1      |        |        |         |
+| 2  | DE     | 2025 | 6        |                | v1      |        |        |         |
+| 3  | DE     | 2020 | 5        |                | v2      |        |        |         |
+| 4  | DE     | 2025 | 6        |                | v2      |        |        |         |
+| 5  | DE     | 2030 | 8        |                | v2      |        |        |         |
+| 6  | DE     | 2020 | 5        |                | v3      |        |        |         |
+| 7  | DE     | 2025 | 6        |                | v3      |        |        |         |
+| 8  | DE     | 2030 | 15       |                | v3      |        |        |         |
+
+**Adding data** to your csv table requires a new version `v2` for the new row (id=5), but also a copy of the existing 
+data from `v1`. This way ..
+
+**Change data**
+
 ### Table naming
 
 !!! warning "Note" 
