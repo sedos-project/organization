@@ -40,11 +40,11 @@ parameter of the process in the [input_output](https://bwsyncandshare.kit.edu/f/
 
 input_output sheet
 
-| parameter                             | process                       | input             | output                                         |   |
-|---------------------------------------|-------------------------------|-------------------|------------------------------------------------|---|
-| energy_conversion_efficiency_diesel   | mob_road_mcar_ice_pass_diesel | diesel            | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
-| energy_conversion_efficiency_bioiesel | mob_road_mcar_ice_pass_diesel | biodiesel         | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
-| emission_factor                       | mob_road_mcar_ice_pass_diesel | diesel, biodiesel | CO2                                            |   |
+| parameter                              | process                       | input             | output                                         |   |
+|----------------------------------------|-------------------------------|-------------------|------------------------------------------------|---|
+| energy_conversion_efficiency_diesel    | mob_road_mcar_ice_pass_diesel | diesel            | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
+| energy_conversion_efficiency_biodiesel | mob_road_mcar_ice_pass_diesel | biodiesel         | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
+| emission_factor                        | mob_road_mcar_ice_pass_diesel | diesel, biodiesel | CO2                                            |   |
 
 In the [processes](https://bwsyncandshare.kit.edu/f/2458081675) sheet, the process is assigned to:
 
@@ -57,7 +57,8 @@ However, the process has different efficiencies depending on the fuel. <br>
 
 All other process parameters of _mob_road_mcar_ice_pass_diesel_, such as: _investment_cost, operational_life_time, 
 mileage, occupancy_rate, market_share_ are assigned to the `default` inputs (diesel, syndiesel_ren, syndiesel_conv, 
-biodiesel) and outputs (pkm_road_mcar_short_exo, pkm_road_mcar_long_exo, CO2) in the backend.  <br>
+biodiesel) and outputs (pkm_road_mcar_short_exo, pkm_road_mcar_long_exo, CO2) in the backend from the table sheet 
+[processes](https://bwsyncandshare.kit.edu/f/2458081675).  <br>
 
 It is for the data providers (WP4-8) to assess whether this is correct for each process with respect to the 
 modelling.  <br>
