@@ -63,26 +63,49 @@ Use semicolon `;` as the column delimiter.
 Use point `.` as decimal separator. 
 
 ### Versioning convention
+!!! Note "Versioning pattern"
 
-Version your data with letter `v` and arabic number, e.g.: v1
+    * `v` + `number` 
 
-Increase the version when you want to update data that has been already uploaded to the OEP.
+
+Version your data with **lowercase** letter `v` and arabic number, e.g.: v1
+
+**Increase the version when** you want to **add or update data** to a table that has been already uploaded to the OEP. 
+<br>
+
+**Reasoning:** By following the versioning convention the end-user only needs to know the latest data version of a 
+given process. Thus, querying the latest process data version will return a full set of coherent input data. 
+<br>
+Conversely, users only need to know one version number when querying older data versions to work with a full 
+set of coherent input data for a process. 
+
 Example: 
-| id | region | year | lifetime | bandwidth_type | version | method | source | comment |
-|----|--------|------|----------|----------------|---------|--------|--------|---------|
-| 1  | DE     | 2020 | 5        |                | v1      |        |        |         |
-| 2  | DE     | 2025 | 6        |                | v1      |        |        |         |
-| 3  | DE     | 2020 | 5        |                | v2      |        |        |         |
-| 4  | DE     | 2025 | 6        |                | v2      |        |        |         |
-| 5  | DE     | 2030 | 8        |                | v2      |        |        |         |
-| 6  | DE     | 2020 | 5        |                | v3      |        |        |         |
-| 7  | DE     | 2025 | 6        |                | v3      |        |        |         |
-| 8  | DE     | 2030 | 15       |                | v3      |        |        |         |
 
-**Adding data** to your csv table requires a new version `v2` for the new row (id=5), but also a copy of the existing 
-data from `v1`. This way ..
+| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 1  | DE     | 2020 | **<span style="color:blue"> 1 </span>**   | **<span style="color:blue"> 5 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| 2  | DE     | 2025 | **<span style="color:blue"> 1.5 </span>** | **<span style="color:blue"> 6 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| 3  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 4  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 5  | DE     | 2030 | **<span style="color:green"> 2 </span>**  | **<span style="color:green"> 8 </span>** |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 6  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 7  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 8  | DE     | 2030 | 2                                         | **<span style="color:red"> 15 </span>**  |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 9  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 10 | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 11 | DE     | 2030 | **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
 
-**Change data**
+**<span style="color:blue"> v1 </span>**: **Initial data**
+
+**<span style="color:green"> v2 </span>**: **Adding data** to your csv table requires a new version `v2` for new 
+datapoints (capital_cost and lifetime in 2030, row=5), including a copy the existing data from `v1` as version `v2` 
+(reasoning see above)
+
+**<span style="color:red"> v3 </span>**: **Updating a datapoint** (lifetime, row=8) requires a new version 
+`v3`, including a copy the existing data from `v2` as version `v3`
+
+**<span style="color:orange"> v4 </span>**: **Updating a datapoint** (capital_costs, row=11) requires a new 
+version `v4`, including a copy the existing data from `v3` as version `v4`
 
 ### Table naming
 
