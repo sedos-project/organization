@@ -5,20 +5,66 @@
 
 ## Datamodel
 
-The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter)) has to be used to provide input data in SEDOS. This choice was made to allow ontological annotation of data. This data model consists of two table types "[scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv)" and "[timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)". Please choose the table type accordingly depending on the data you want to upload:
+The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter)) has to 
+be used to provide input data in SEDOS. This choice was made to allow ontological annotation of data. The data 
+model consists of two table types: "[scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv)" and "[timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)". Please choose the table type accordingly, depending on the data you want to upload:
 
-- Use scalar tables to provide parameters with no time relationships. To properly fill them read the [scalar model column description](https://github.com/sedos-project/oedatamodel#scalar-description). Use the [example scalar package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) to write your own (see section [How to contribute data - 2. Create metadata](http://127.0.0.1:8000/data_requirements/overview/#2#create#metadata)
-- To provide parameters with time relationships use a timeseries table. Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to orient yourself with the fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
+- Use scalar tables to provide parameters with no relation to a timeindex. To properly fill the table, read the 
+  [scalar model column description](https://github.com/sedos-project/oedatamodel#scalar-description). Use the 
+  [example scalar package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) to write your own metadata 
+  (see section [How to contribute data - 2. Create metadata](http://127.0.0.1:8000/data_requirements/overview/#2#create#metadata)
+- Use a timeseries table to provide parameters with relation to a timeindex. Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to make yourself familiar with the 
+  fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
 
 ### Input and output energy vectors
-The input and output energy vectors of technologies in SEDOS' reference energy system are defined in an external table.
 
-For technologies with multiple input and/or output energy vectors it is not clear to which energy vector a 
-parameter column refers.
 
-To account for this the inputs and outputs of process parameters will be collected in separate tables in the 
-database (see below).
-![mimo_tables](../graphics/mimo_tables.jpg)
+The input and output energy vectors of processes in SEDOS' reference energy system are defined in an external 
+table on the BW Sync&Share, in the sheet [input_output](https://bwsyncandshare.kit.edu/f/2458081675).
+
+For processes with multiple input and/or output energy vectors it might not clear to which energy vector a 
+parameter column refers. Thus, the information has to be specified if needed.
+
+By `default`, **all** parameters of a process as assigned to all inputs and outputs of a process from the BW 
+Sync&Share table, sheet [processes](https://bwsyncandshare.kit.edu/f/2458081675)
+(the `default` does not appear in the input_output sheet, but is used in the backend of the data pipeline). <br> 
+<br>
+If needed, the `default` can be overwritten, simply by assigning other input(s) and output(s) to a specific 
+parameter of the process in the [input_output](https://bwsyncandshare.kit.edu/f/2458081675) sheet.
+
+!!! Note "input_output insertion conventions"
+
+    * separate inputs or outputs with `,` (comma) as in the input_output sheet below
+
+**Example** process: mob_road_mcar_ice_pass_diesel
+
+input_output sheet
+
+| parameter                              | process                       | input             | output                                         |   |
+|----------------------------------------|-------------------------------|-------------------|------------------------------------------------|---|
+| energy_conversion_efficiency_diesel    | mob_road_mcar_ice_pass_diesel | diesel            | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
+| energy_conversion_efficiency_biodiesel | mob_road_mcar_ice_pass_diesel | biodiesel         | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
+| emission_factor                        | mob_road_mcar_ice_pass_diesel | diesel, biodiesel | CO2                                            |   |
+
+In the [processes](https://bwsyncandshare.kit.edu/f/2458081675) sheet, the process is assigned to:
+
+| Input                                              | Process                       | Output                                              |
+|----------------------------------------------------|-------------------------------|-----------------------------------------------------|
+| [diesel, syndiesel_ren, syndiesel_conv, biodiesel] | mob_road_mcar_ice_pass_diesel | pkm_road_mcar_short_exo+ pkm_road_mcar_long_exo+CO2 |
+
+In the example it is assumed that the _mob_road_mcar_ice_pass_diesel_ emits the same amount of CO2 when using diesel or biodiesel as fuel.
+However, the process has different efficiencies depending on the fuel. <br>
+
+All other process parameters of _mob_road_mcar_ice_pass_diesel_, such as: _investment_cost, operational_life_time, 
+mileage, occupancy_rate, market_share_ are assigned to the `default` inputs (diesel, syndiesel_ren, syndiesel_conv, 
+biodiesel) and outputs (pkm_road_mcar_short_exo, pkm_road_mcar_long_exo, CO2) in the backend from the table sheet 
+[processes](https://bwsyncandshare.kit.edu/f/2458081675).  <br>
+
+It is for the data providers (WP4-8) to assess whether this is correct for each process with respect to the 
+modelling.  <br>
+If the `default` is incorrect, the [input_output](https://bwsyncandshare.kit.edu/f/2458081675) sheet 
+should be used to specify process parameters' inputs and outputs accordingly.
+
 
 ## Data tables 
 
@@ -56,25 +102,59 @@ Use semicolon `;` as the column delimiter.
 
 Use point `.` as decimal separator. 
 
+### Versioning convention
+!!! Note "Versioning pattern"
+
+    * `v` + `number` 
+
+
+Version your data with **lowercase** letter `v` and arabic number, e.g.: v1
+
+**Increase the version when** you want to **add or update data** to a table that has been already uploaded to the OEP. 
+<br>
+
+**Reasoning:** By following the versioning convention the end-user only needs to know the latest data version of a 
+given process. Thus, querying the latest process data version will return a full set of coherent input data. 
+<br>
+Conversely, users only need to know one version number when querying older data versions to work with a full 
+set of coherent input data for a process. 
+
+Example: 
+
+| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 1  | DE     | 2020 | **<span style="color:blue"> 1 </span>**   | **<span style="color:blue"> 5 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| 2  | DE     | 2025 | **<span style="color:blue"> 1.5 </span>** | **<span style="color:blue"> 6 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| 3  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 4  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 5  | DE     | 2030 | **<span style="color:green"> 2 </span>**  | **<span style="color:green"> 8 </span>** |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 6  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 7  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 8  | DE     | 2030 | 2                                         | **<span style="color:red"> 15 </span>**  |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 9  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 10 | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 11 | DE     | 2030 | **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+
+**<span style="color:blue"> v1 </span>**: **Initial data**
+
+**<span style="color:green"> v2 </span>**: **Adding data** to your csv table requires a new version `v2` for new 
+datapoints (capital_cost and lifetime in 2030, row=5), including a copy the existing data from `v1` as version `v2` 
+(reasoning see above)
+
+**<span style="color:red"> v3 </span>**: **Updating a datapoint** (lifetime, row=8) requires a new version 
+`v3`, including a copy the existing data from `v2` as version `v3`
+
+**<span style="color:orange"> v4 </span>**: **Updating a datapoint** (capital_costs, row=11) requires a new 
+version `v4`, including a copy the existing data from `v3` as version `v4`
+
 ### Table naming
 
 !!! warning "Note" 
 
-    * Create a new datapackage for each technology, e.g. wind_onshore, chp, ... <br>
+    * Create a new datapackage for each process, e.g. wind_onshore, chp, ... <br>
     * You can use a single datapackage for both demand data and constraints (tech-independent parameters) if the table size is sufficient, e.g.:<br> * emission limit,<br> * natural domestic limit,<br> * WACC 
 
-To increase the discoverability and searchability of the data, we require the following table naming convention:
-
-* **sedos_tech**_[technologyname, e.g. wind_turbine]
-* **sedos_demand**_[demandname, e.g. household_residential]
-* **sedos_constraint**_[constraintname, e.g co2_emission-yearly]
-
-For example: 
-
-* **sedos_tech**_wind_turbine
-* **sedos_demand**_household_residential
-* **sedos_constraint**_co2_emission-yearly
-
+Follow the [nomenclature](nomenclature.md) for table and process naming.
 
 ## Parameter naming
 
@@ -82,7 +162,7 @@ For example:
 
     * Parameter names must be linked to a concept in an ontology
 
-Parameter names (to specify technologies, constraints or techno-economic values) can basically be chosen freely. 
+Parameter names (to specify processes, constraints or techno-economic values) can basically be chosen freely. 
 However, it is of utmost importance that every parameter name is linked to a suitable ontological concept via the metadata to enable its clear interpretation.
 <br> In case you cannot find a suitable ontology concept (e.g. because it's not in the ontology yet), please make sure 
 your chosen parameter name is clear and common in the domain. In this case avoid acronyms.

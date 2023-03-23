@@ -3,6 +3,7 @@ nav:
     - 'Data requirements':
        - 'Overview': 'data_requirements/overview.md'
        - 'Data': 'data_requirements/input_data.md'
+       - 'Nomenclature': 'data_requirements/nomenclature.md'
        - 'Metadata': 'data_requirements/metadata.md'
        - 'Ontology': 'data_requirements/ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'

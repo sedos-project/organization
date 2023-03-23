@@ -30,21 +30,21 @@ The following instructions will guide you through the process of contributing da
     * ![wf](https://user-images.githubusercontent.com/7637364/191807277-712057b8-153c-4178-94a2-341ad8f010fd.gif)
 * List all data sources in the form of Bibtex-keys under the `sources` key
 * Add necessary license information to the sources according to the [licensing guide](../data_requirements/licensing/#data-licencing)
-* todo @JH-rli: Will there be a save metadata button or does the user go back to the "Edit JSON" button to extract the metadata?
 
 ## 3. Initialize table on the OEP
 
 In order to add data to an OEP table, the (empty) table must be initialized on the OEP in the first place.
 In order to create the table, the resource from metadata is used, 
-whereby the [name of the resource](data_requirements/metadata.md#resource-keys) is used to define the OEP schema and the table name (table_name, to avoid spaces) 
-in a pattern of ```"shema.table_name"``` (i.e. "name": "model_draft.sedos_tech_wind_turbine") 
+whereby the [name of the resource](data_requirements/metadata.md#resource#keys) (OEM-key 15.2) is used to define the 
+OEP schema and the table name (table_name, to avoid spaces) in a pattern of ```"schema.table_name"``` (i.e. "name": 
+"model_draft.sedos_tech_wind_turbine") 
 
-And the fields from resource schema are used to create the related columns of the table. 
-Initializing OEP table is done via: 
+The fields from [resource schema](data_requirements/metadata.md#resource#keys#-#schema) are used to create the 
+columns of the table. Initializing OEP table is done via: 
 
 * Visit [oedatamodel-API](https://modex.rl-institut.de/create_table/)
 * Insert your OEP Username and Token 
-* Select metadata file to create OEP table from
+* Select metadata file to create OEP table
 * Submit 
 
 ## 4. Publish datapackages
@@ -59,7 +59,7 @@ As this guide is meant for developers of AP4-8, the **oedatamodel-parameter** wi
         3. OEP [user account](https://openenergy-platform.org/user/register)
         4. Databus [user account](https://energy.databus.dbpedia.org/) (Create account on "Login" button)
         5. Databus API Key (On Databus go to Profile -> Settings -> Scroll down to "Create New API Key" to generate key)
-        6. Table has been created on OEP
+        6. Table has been created on OEP (3. Initialize table on the OEP)
 
 ### 4.1 Upload data to OEP with oedatamodel-API
 
@@ -79,13 +79,15 @@ Otherwise, data is appended to given table on the OEP.
 
 The oedatamodel-API can also register your datapackages on the databus. 
 Registering data on the databus must be done everytime, a new version of the data is available on the OEP.
+In doing so, other users will be able to query the most recent data from the OEP or to query for a specific data 
+version.
 In order to register your new data you have to:
 
 * Open the [oedatamodel-API](https://modex.rl-institut.de/databus/)
 * Enter your username (username is not email address) and API Token
 * Enter table name and schema (defaults to "model_draft")
 * Enter new version string (at least one row in your table must be present with given string in column "version")
-* Submit it.
+* Submit
 
 Now, your data should be registered and available on the databus. 
 As the SEDOS pipeline regularly checks for updates on the databus, 
@@ -93,6 +95,4 @@ your new data version should be considered in next pipeline build.
 
 
 ## 5. Create output data tables
-**@HeHu & CM expand when process is clear** <br>
-
-* Collect and postprocess modelling results into the tabular [OEDatamodel](https://github.com/sedos-project/oedatamodel) by following the output data conventions](input_data.md#Output-data-conventions)
+@HeHu & CM expand when process is clear 
