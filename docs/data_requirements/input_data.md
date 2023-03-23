@@ -17,14 +17,53 @@ model consists of two table types: "[scalar](https://github.com/sedos-project/oe
   fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
 
 ### Input and output energy vectors
-The input and output energy vectors of technologies in SEDOS' reference energy system are defined in an external table.
 
-For technologies with multiple input and/or output energy vectors it might not clear to which energy vector a 
+
+The input and output energy vectors of processes in SEDOS' reference energy system are defined in an external 
+table on the BW Sync&Share, in the sheet [input_output](https://bwsyncandshare.kit.edu/f/2458081675).
+
+For processes with multiple input and/or output energy vectors it might not clear to which energy vector a 
 parameter column refers. Thus, the information has to be specified if needed.
 
-When assigning the parameter `default` to a process, the subsequent specified input(s) and output(s) are assigned to 
-**all** parameters in the corresponding process-csv. The `default` can be overwritten, simply by assigning other input(s) and output(s) to a specific parameter of 
-the process.
+By `default`, **all** parameters of a process as assigned to all inputs and outputs of a process from the BW 
+Sync&Share table, sheet [processes](https://bwsyncandshare.kit.edu/f/2458081675)
+(the `default` does not appear in the input_output sheet, but is used in the backend of the data pipeline). <br> 
+<br>
+If needed, the `default` can be overwritten, simply by assigning other input(s) and output(s) to a specific 
+parameter of the process in the [input_output](https://bwsyncandshare.kit.edu/f/2458081675) sheet.
+
+!!! Note "input_output insertion conventions"
+
+    * separate inputs or outputs with `,` (comma) as in the input_output sheet below
+
+**Example** process: mob_road_mcar_ice_pass_diesel
+
+input_output sheet
+
+| parameter                             | process                       | input             | output                                         |   |
+|---------------------------------------|-------------------------------|-------------------|------------------------------------------------|---|
+| energy_conversion_efficiency_diesel   | mob_road_mcar_ice_pass_diesel | diesel            | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
+| energy_conversion_efficiency_bioiesel | mob_road_mcar_ice_pass_diesel | biodiesel         | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
+| emission_factor                       | mob_road_mcar_ice_pass_diesel | diesel, biodiesel | CO2                                            |   |
+
+In the [processes](https://bwsyncandshare.kit.edu/f/2458081675) sheet, the process is assigned to:
+
+| Input                                              | Process                       | Output                                              |
+|----------------------------------------------------|-------------------------------|-----------------------------------------------------|
+| [diesel, syndiesel_ren, syndiesel_conv, biodiesel] | mob_road_mcar_ice_pass_diesel | pkm_road_mcar_short_exo+ pkm_road_mcar_long_exo+CO2 |
+
+In the example it is assumed that the _mob_road_mcar_ice_pass_diesel_ emits the same amount of CO2 when using diesel or biodiesel as fuel.
+However, the process has different efficiencies depending on the fuel. <br>
+
+All other process parameters of _mob_road_mcar_ice_pass_diesel_, such as: _investment_cost, operational_life_time, 
+mileage, occupancy_rate, market_share_ are assigned to the `default` inputs (diesel, syndiesel_ren, syndiesel_conv, 
+biodiesel) and outputs (pkm_road_mcar_short_exo, pkm_road_mcar_long_exo, CO2) in the backend.  <br>
+
+It is for the data providers (WP4-8) to assess whether this is correct for each process with respect to the 
+modelling.  <br>
+If the `default` is incorrect, the [input_output](https://bwsyncandshare.kit.edu/f/2458081675) sheet 
+should be used to specify process parameters' inputs and outputs accordingly.
+
 
 ## Data tables 
 
@@ -122,7 +161,7 @@ Follow the [nomenclature](nomenclature.md) for table and process naming.
 
     * Parameter names must be linked to a concept in an ontology
 
-Parameter names (to specify technologies, constraints or techno-economic values) can basically be chosen freely. 
+Parameter names (to specify processes, constraints or techno-economic values) can basically be chosen freely. 
 However, it is of utmost importance that every parameter name is linked to a suitable ontological concept via the metadata to enable its clear interpretation.
 <br> In case you cannot find a suitable ontology concept (e.g. because it's not in the ontology yet), please make sure 
 your chosen parameter name is clear and common in the domain. In this case avoid acronyms.
