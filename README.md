@@ -45,7 +45,7 @@ This repository holds the documentation files of the SEDOS project and is also u
 1. Run `git pull` to download latest docs-version and to avoid merge conflicts later
 1. On your local machine, navigate to `~/organization` and checkout branch `main`
 2. Run `git pull`
-3. In your local conda environment run `mkdocs build -d ../.github` (or specify the absolute path to `.github`)
+3. In `~/organization, In your local conda environment run `mkdocs build -d ../.github` (or specify the absolute path to `.github`)
 4. Navigate to `~/.github` and run `git add .` to add all updated files
 5. Run `git commit -am 'Update docs with PR #'` and add PR-number from organisation repo to track changes better. 
    If changes were implemented without PR, write helpful commit message. All changes are now saved to one commit.
