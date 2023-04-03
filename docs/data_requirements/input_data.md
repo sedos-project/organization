@@ -96,7 +96,7 @@ Users need to correct them and their compliance is mandatory.
 
 ### Delimiter 
 
-Use comma `,` as the column delimiter. 
+Use semicolon `;` as the column delimiter. 
 
 ### Decimal separator 
 
