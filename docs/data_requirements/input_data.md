@@ -110,7 +110,8 @@ Use point `.` as decimal separator.
 
 Version your data with **lowercase** letter `v` and arabic number, e.g.: v1
 
-**Increase the version when** you want to **add or update data** to a table that has been already uploaded to the OEP. 
+**Increase the version when** you want to **add or update data** to a table that has been already uploaded to the OEP.
+The oedatamodel-API will append new data versions to an existing OEP table.
 <br>
 
 **Reasoning:** By following the versioning convention the end-user only needs to know the latest data version of a 
@@ -119,7 +120,42 @@ given process. Thus, querying the latest process data version will return a full
 Conversely, users only need to know one version number when querying older data versions to work with a full 
 set of coherent input data for a process. 
 
-Example: 
+**<span style="color:blue"> v1 </span>**: **Initial data**
+
+| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 1  | DE     | 2020 | **<span style="color:blue"> 1 </span>**   | **<span style="color:blue"> 5 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| 2  | DE     | 2025 | **<span style="color:blue"> 1.5 </span>** | **<span style="color:blue"> 6 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+
+**<span style="color:green"> v2 </span>**: **Adding data** to your csv table requires a new version `v2` for new 
+datapoints (capital_cost and lifetime in 2030, row=5), including a copy the existing data from `v1` as version `v2` 
+(reasoning see above)
+
+| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 3  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 4  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 5  | DE     | 2030 | **<span style="color:green"> 2 </span>**  | **<span style="color:green"> 8 </span>** |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+
+**<span style="color:red"> v3 </span>**: **Updating a datapoint** (lifetime, row=8) requires a new version 
+`v3`, including a copy the existing data from `v2` as version `v3`
+
+| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 6  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 7  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 8  | DE     | 2030 | 2                                         | **<span style="color:red"> 15 </span>**  |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+
+**<span style="color:orange"> v4 </span>**: **Updating a datapoint** (capital_costs, row=11) requires a new 
+version `v4`, including a copy the existing data from `v3` as version `v4`
+
+| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 9  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 10 | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 11 | DE     | 2030 | **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+
+Result on OEP: 
 
 | id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
 |----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
@@ -135,17 +171,19 @@ Example:
 | 10 | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
 | 11 | DE     | 2030 | **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
 
-**<span style="color:blue"> v1 </span>**: **Initial data**
 
-**<span style="color:green"> v2 </span>**: **Adding data** to your csv table requires a new version `v2` for new 
-datapoints (capital_cost and lifetime in 2030, row=5), including a copy the existing data from `v1` as version `v2` 
-(reasoning see above)
 
-**<span style="color:red"> v3 </span>**: **Updating a datapoint** (lifetime, row=8) requires a new version 
-`v3`, including a copy the existing data from `v2` as version `v3`
+### Datatypes
 
-**<span style="color:orange"> v4 </span>**: **Updating a datapoint** (capital_costs, row=11) requires a new 
-version `v4`, including a copy the existing data from `v3` as version `v4`
+Available datatypes and corresponding formatting examples:
+
+|    dtype    |                  example                   |                                                                           comment                                                                            |
+|:-----------:|:------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|    json     | "{""key1"": ""text"", ""key2"": ""text""}" |                      {"key1": "text", ...} might work as well. If you're using an table edititor make sure to use ASCII characters only                      |                                         |
+| float array |               [0.02, 279.5]                |                                         arrays with strings should be formatted as strings ("['string1', 'string2']"                                         |
+|    text     |                   "text"                   |                                              String data should have text as datatype (text serves as "string")                                              |
+|   integer   |                     27                     |                                                                                                                                                              |
+| text array  |              "[""TH"", ""BW""]"              |                           ["TH","BW"] might work as well. If you're using an table edititor make sure to use ASCII characters only                           |
 
 ### Table naming
 

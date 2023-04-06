@@ -11,3 +11,8 @@ The documentation is structured in two main parts
 2. [Instructions on how to contribute data](./data_requirements/overview.md)
 
 
+!!! Note "Latest version"
+
+    * The documentation is steadily improved. Press `CTRL + F5` to refresh your browser's cache and load the 
+    latest version of the documentation 
+
