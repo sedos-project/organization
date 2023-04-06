@@ -111,7 +111,7 @@ Use point `.` as decimal separator.
 Version your data with **lowercase** letter `v` and arabic number, e.g.: v1
 
 **Increase the version when** you want to **add or update data** to a table that has been already uploaded to the OEP.
-The oedatamodel-api will append new data versions to an existing OEP table.
+The oedatamodel-API will append new data versions to an existing OEP table.
 <br>
 
 **Reasoning:** By following the versioning convention the end-user only needs to know the latest data version of a 
