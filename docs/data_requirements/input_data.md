@@ -173,6 +173,18 @@ Result on OEP:
 
 
 
+### Datatypes
+
+Available datatypes and corresponding formatting examples:
+
+|    dtype    |                  example                   |                                                                           comment                                                                            |
+|:-----------:|:------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|    json     | "{""key1"": ""text"", ""key2"": ""text""}" |                      {"key1": "text", ...} might work as well. If you're using an table edititor make sure to use ASCII characters only                      |                                         |
+| float array |               [0.02, 279.5]                |                                         arrays with strings should be formatted as strings ("['string1', 'string2']"                                         |
+|    text     |                   "text"                   |                                              String data should have text as datatype (text serves as "string")                                              |
+|   integer   |                     27                     |                                                                                                                                                              |
+| text array  |              "[""TH"", ""BW""]"              |                           ["TH","BW"] might work as well. If you're using an table edititor make sure to use ASCII characters only                           |
+
 ### Table naming
 
 !!! warning "Note" 
