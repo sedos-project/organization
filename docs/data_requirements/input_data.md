@@ -172,6 +172,11 @@ Result on OEP:
 | 11 | DE     | 2030 | **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
 
 
+!!! Note "Versioning note"
+
+    * Uploading a row which exists already in: "region, type, year, version" results in an error. 
+    * Otherwise single or multiple rows can be added to already existing versions
+
 
 ### Datatypes
 
