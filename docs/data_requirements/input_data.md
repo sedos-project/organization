@@ -214,6 +214,12 @@ For more background information regarding for linking parameter names and ontolo
 
 For a practical manual linking parameter names to a suitable ontology concepts, using oemetadata builder, see [here](ontology.md#Link-a-parameter-name-to-a-suitable-ontology-concept).
 
+## Example
+
+The example shows the full capabilities of the oedatamodel-parameter. Explanations and further information are 
+documented in the "comment" column in the example.
+
+
 ### Parameter naming in case of missing suitable ontology concept
 
 It is likely that not every parameter concept is already covered by an ontology. In this case, linking your parameter name to a suitable ontology concept is not directly possible.
