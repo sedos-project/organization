@@ -16,6 +16,11 @@ model consists of two table types: "[scalar](https://github.com/sedos-project/oe
 - Use a timeseries table to provide parameters with relation to a timeindex. Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to make yourself familiar with the 
   fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
 
+**Datamodel features**
+
+- [bandwidth_type](https://github.com/sedos-project/oedatamodel#bandwidth-types-and-cell-methods) - specify how the 
+  data bandwidths are interpreted
+
 ### Input and output energy vectors
 
 
