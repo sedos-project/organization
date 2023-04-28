@@ -2,13 +2,15 @@
 
 The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
 
-   
+*An [example]() showing the final result of the individual steps is used to clarify the instructions.*
+
 ## 1. Create input data tables
 
 * Collect and preprocess data into the tabular [oedatamodel-parameter](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter) ([scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv) or [timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)) thereby following the [input data conventions](data_requirements/input_data.md#Input-data-conventions)
 * Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
 * **Note** timeseries data and scalar data are stored in two different tables
 
+*Result: [scalar]() & [timeseries]() csv*
 
 ## 2. Create metadata
 
@@ -31,6 +33,8 @@ The following instructions will guide you through the process of contributing da
 * List all data sources in the form of Bibtex-keys under the `sources` key
 * Add necessary license information to the sources according to the [licensing guide](../data_requirements/licensing/#data-licencing)
 
+*Result: [metadata]() for each csv table*
+
 ## 3. Initialize table on the OEP
 
 In order to add data to an OEP table, the (empty) table must be initialized on the OEP in the first place.
@@ -46,6 +50,8 @@ columns of the table. Initializing OEP table is done via:
 * Insert your OEP Username and Token 
 * Select metadata file to create OEP table
 * Submit 
+
+*Result: empty [scalar]() and [timeseries]() tables on the OEP*
 
 ## 4. Publish datapackages
 
@@ -75,6 +81,8 @@ Thus,
 In case upload data contains errors (format, naming, etc.) an error report is returned. 
 Otherwise, data is appended to given table on the OEP.
 
+*Result: [scalar]() and [timeseries]() tables on the OEP*
+
 ### 4.2 Release data on the databus
 
 The oedatamodel-API can also register your datapackages on the databus. 
@@ -93,6 +101,7 @@ Now, your data should be registered and available on the databus.
 As the SEDOS pipeline regularly checks for updates on the databus, 
 your new data version should be considered in next pipeline build.
 
+*Result: OEP tables registered on the [databus]()*
 
 ## 5. Create output data tables
 @HeHu & CM expand when process is clear 
