@@ -2,7 +2,7 @@
 
 The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
 
-*An [example]() showing the final result of the individual steps is used to clarify the instructions.*
+*An [example](https://github.com/sedos-project/organization/tree/develop/docs/example) showing the final result of the individual steps is used to clarify the instructions.*
 
 ## 1. Create input data tables
 
