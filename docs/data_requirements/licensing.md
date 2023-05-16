@@ -23,7 +23,7 @@ By the end of this section, you'll be able to licence your input data adequately
 - [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode)                            | recommended                             
 - [ODC-By-1.0](https://opendatacommons.org/licenses/by/1-0/)                           | recommended                             
 - [CDLA-Permissive-1.0](https://cdla.io/permissive-1-0/)                          
-- [dl-de/by-2-0](https://www.govdata.de/dl-de/by-2-0)   (no official spdx-id) | granted only by the German   government
+- [DL-DE-BY-2.0](https://www.govdata.de/dl-de/by-2-0) | granted only by the German   government
 - [GeoZG ](https://www.gesetze-im-internet.de/geozg/index.html) (no official spdx-id)        | granted by German government            |
 
 - [GeoNutzV](https://www.gesetze-im-internet.de/geonutzv/index.html)                             | granted by German government            
