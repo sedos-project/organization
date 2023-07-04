@@ -8,6 +8,7 @@ nav:
        - 'Ontology': 'data_requirements/ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'
     - 'How to contribute data?': 'how_to_contribute_data.md'
+    - 'Data preface': 'data_preface.md'
     - 'Glossary': 'glossary.md'
 markdown_extensions:
     - toc:
