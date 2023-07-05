@@ -5,6 +5,11 @@ and various aggregation levels.
 
 This *data preface* provides additional information about the syntax of parameters and units in SRD.
 
+??? note "Monetary value"
+    
+    If not further specified the base year for the monatary value is 2021.
+    
+
 ## Units
 
 | Symbol | Name     | Range   | Description                                       |
