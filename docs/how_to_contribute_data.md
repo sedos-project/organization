@@ -10,7 +10,7 @@ The following instructions will guide you through the process of contributing da
 * Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
 * **Note** timeseries data and scalar data are stored in two different tables
 
-*Result: [scalar]() & [timeseries]() csv*
+*Result: [scalar](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_scalar_step1.csv) & [timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_timeseries_step1.csv) csv*
 
 ## 2. Create metadata
 
@@ -33,7 +33,7 @@ The following instructions will guide you through the process of contributing da
 * List all data sources in the form of Bibtex-keys under the `sources` key
 * Add necessary license information to the sources according to the [licensing guide](../data_requirements/licensing/#data-licencing)
 
-*Result: [metadata]() for each csv table*
+*Result: [Metadata scalar](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_2/example_scalar_step2.json) and [metadata timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_2/example_timeseries_step2.json)*
 
 ## 3. Initialize table on the OEP
 
