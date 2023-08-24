@@ -1,7 +1,7 @@
 {
-    "name": "model_draft.example_timeseries_step1",
+    "name": "model_draft.example_timeseries_step2",
     "title": "Techno-economic parameter m-sized electric cars",
-    "id": "http://openenergyplatform.org/dataedit/view/model_draft/example_timeseries_step1",
+    "id": "http://openenergyplatform.org/dataedit/view/model_draft/example_timeseries_step2",
     "description": "Techno-economic parameter for medium sized electric cars.",
     "language": ["en-GB"],
     "subject": [{"name": null, "path": null}],
@@ -79,7 +79,7 @@
     "resources": [
         {
             "profile": "tabular-data-resource",
-            "name": "model_draft.example_timeseries_step1",
+            "name": "model_draft.example_timeseries_step2",
             "path": null,
             "format": "PostgreSQL",
             "encoding": "UTF-8",
@@ -95,7 +95,7 @@
                     },
                     {
                         "name": "region",
-                        "description": "Country or regionx",
+                        "description": "Country or region",
                         "type": "text",
                         "unit": null,
                         "isAbout": [],
@@ -163,14 +163,25 @@
                         "type": "float array",
                         "unit": "Percent",
                         "isAbout": [],
-                        "valueReference": [],
+                        "valueReference": [{
+                                "name": "charging",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00320064"
+                            }
+                        ],
                     },
                     {
                         "name": "min_battery",
                         "description": "Timeseries for minimal vehicle battery storage level",
                         "type": "float array",
                         "unit": "Percent",
-                        "isAbout": [],
+                        "isAbout": [{
+                                "name": "charging",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00320064"
+                            },
+						{
+                                "name": "maximum value",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00010256"
+                            }],
                         "valueReference": [],
                     },
                     {
