@@ -51,7 +51,7 @@ columns of the table. Initializing OEP table is done via:
 * Select metadata file to create OEP table
 * Submit 
 
-*Result: empty [scalar]() and [timeseries]() tables on the OEP*
+*Result: empty [scalar](https://openenergy-platform.org/dataedit/view/model_draft/example_scalar_step2) and [timeseries](https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step2) tables on the OEP*
 
 ## 4. Publish datapackages
 
@@ -81,7 +81,7 @@ Thus,
 In case upload data contains errors (format, naming, etc.) an error report is returned. 
 Otherwise, data is appended to given table on the OEP.
 
-*Result: [scalar]() and [timeseries]() tables on the OEP*
+*Result: [scalar](https://openenergy-platform.org/dataedit/view/model_draft/example_scalar_step4) and [timeseries](https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step4) tables on the OEP*
 
 ### 4.2 Release data on the databus
 
