@@ -9,7 +9,7 @@ Quick reference for tools.
 |        |  OEdatamodel    |        OED      |       [ docs ](https://github.com/sedos-project/oedatamodel)      |
 | | [OEdatamodel-API](https://modex.rl-institut.de/upload_datapackage/) | | [ docs ](https://modex.rl-institut.de/) |
 |        |   [oemetadata builder](https://openenergy-platform.org/dataedit/oemetabuilder/)    |              |               |
-| 🌠 | [databus](https://energy.databus.dbpedia.org/)  | | |
+| 🌠 | [databus](https://databus.openenergyplatform.org/)  | | |
 | 📙 | [Protégé](https://protege.stanford.edu/) | | [docs](http://protegeproject.github.io/protege/) |
 | | | | |
 
