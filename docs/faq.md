@@ -9,8 +9,8 @@
         **Question:** Can I simply enter 'investment_cost': {'Bibtex X', 'Bibtex Y', 'Bibtex Z'} in the "source" 
         column to achieve an assignment to the values [600, 700, 500-800]?
 
-        **Answer:** Specify a dict in the source column with a list as value: {'investment_costs': ['Bibtex X', 
-        'Bibtex Y', 'Bibtex Z']} in the order of related data points. 
+        **Answer:** Specify a dict in the source column with a list as value: {'investment_costs': 'Bibtex X, 
+        Bibtex Y, Bibtex Z'} in the order of related data points. 
 
 1. ??? note "Where is the difference between column type "float" and "float array"?"
 
