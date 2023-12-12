@@ -1,0 +1,340 @@
+{
+	"name": "model_draft.example_scalar_step2",
+	"title": "Techno-economic parameter m-sized electric cars",
+	"id": "http://openenergyplatform.org/dataedit/view/model_draft/example_scalar_step2",
+	"description": "Techno-economic parameter for medium sized electric cars.",
+	"language": [
+		"en-GB"
+	],
+	"subject": [
+		{
+			"name": null,
+			"path": null
+		}
+	],
+	"keywords": [
+		"SEDOS",
+		"oedatamodel-parameter",
+		"input_data",
+		"mobility",
+		"example"
+	],
+	"publicationDate": "2023-08-09",
+	"context": {
+		"homepage": "https://sedos-project.github.io/.github/",
+		"documentation": "https://sedos-project.github.io/.github/",
+		"sourceCode": "https://github.com/sedos-project",
+		"contact": "hedda.gardian@dlr.de",
+		"grantNo": "03EI1040D",
+		"fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+		"fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg",
+		"publisherLogo": null
+	},
+	"spatial": {
+		"location": null,
+		"extent": null,
+		"resolution": null
+	},
+	"temporal": {
+		"referenceDate": null,
+		"timeseries": [
+			{
+				"start": null,
+				"end": null,
+				"resolution": null,
+				"alignment": null,
+				"aggregationType": null
+			}
+		]
+	},
+	"sources": [
+		{
+			"title": "OEDatamodel-parameter",
+			"description": "Parameter data model for secondary input scalars and timeseries",
+			"path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+			"licenses": [
+				{
+					"name": "CC0-1.0",
+					"title": "Creative Commons Zero v1.0 Universal",
+					"path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+					"instruction": "You are free: To Share, To Create, To Adapt",
+					"attribution": null
+				}
+			]
+		},
+		{
+			"title": "Impact of electric vehicles on a future renewable energy-based power system in Europe with a focus on Germany",
+			"description": "Paper on novel modelling approach comprising a detailed representation of electric vehicles based on real driving patterns and interactions between the power systems of Germany and other European regions.",
+			"path": "https://doi.org/10.1002/er.4056",
+			"licenses": [
+				{
+					"attribution": "Copyright © 2018 John Wiley & Sons, Ltd."
+				}
+			]
+		},
+		{
+			"title": "Mobilität in Deutschland: Tabellarische Grundauswertung",
+			"description": "Mobilität in Deutschland (MiD) ist eine bundesweite Befragung von Haushalten zu ihrem alltäglichen Verkehrsverhalten im Auftrag des Bundesministeriums für Digitales und Verkehr (BMDV).",
+			"path": "https://bmdv.bund.de/SharedDocs/DE/Anlage/G/mid-2017-tabellenband.pdf?__blob=publicationFile",
+			"licenses": [
+				{}
+			]
+		}
+	],
+	"licenses": [
+		{
+			"name": null,
+			"title": null,
+			"path": null,
+			"instruction": null,
+			"attribution": null
+		}
+	],
+	"contributors": [
+		{
+			"title": "Christoph Muschner",
+			"email": "christoph.muschner@rl-institut.de",
+			"object": "data and metadata",
+			"comment": "Example preparation",
+			"date": "2023-08-09"
+		}
+	],
+	"resources": [
+		{
+			"profile": "tabular-data-resource",
+			"name": "model_draft.example_scalar_step2",
+			"path": null,
+			"format": "PostgreSQL",
+			"encoding": "UTF-8",
+			"schema": {
+				"fields": [
+					{
+						"name": "id",
+						"description": "Unique identifier",
+						"type": "bigint",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "region",
+						"description": "Country or region",
+						"type": "text",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "year",
+						"description": "Year",
+						"type": "integer",
+						"isAbout": [],
+						"valueReference": [],
+						"unit": "a"
+					},
+					{
+						"name": "storage_capacity",
+						"description": "Battery storage capacity",
+						"type": "float",
+						"isAbout": [{
+                                "name": "energy storage capacity",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00230000"
+                            }],
+						"valueReference": [],
+						"unit": "kWh"
+					},
+					{
+						"name": "charging_power",
+						"description": "AC charging power",
+						"type": "float",
+						"isAbout": [{
+                                "name": "power",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00000333"
+                            }],
+						"valueReference": [],
+						"unit": "kW"
+					},
+					{
+						"name": "fixed_cost",
+						"description": "Fixed maintanance costs as well as insurance cost.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "fixed cost",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00020168"
+                            }],
+						"valueReference": [],
+						"unit": "% of investment_cost"
+					},
+					{
+						"name": "variable_cost",
+						"description": "Variable maintanance cost such as workshop cost.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "variable cost",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00020145"
+                            }],
+						"valueReference": [],
+						"unit": "EUR/km"
+					},
+					{
+						"name": "investment_cost",
+						"description": "Car investment cost.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "investment cost",
+                                "path": "<http://openenergy-platform.org/ontology/oeo/OEO_00020167"
+                            }],
+						"valueReference": [],
+						"unit": "EUR/car"
+					},
+					{
+						"name": "operational_life_time",
+						"description": "Lifetime of car in operation.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "operational life time",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00020178"
+                            }],
+						"valueReference": [],
+						"unit": "a"
+					},
+					{
+						"name": "mileage",
+						"description": "Average mileage per year.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "transport performance value",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00320000"
+                            }],
+						"valueReference": [],
+						"unit": "km/a"
+					},
+					{
+						"name": "occupancy_rate",
+						"description": "Average occupancy rate of car type.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "transport performance value",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00320000"
+                            }],
+						"valueReference": [],
+						"unit": "persons/car"
+					},
+					{
+						"name": "market_share",
+						"description": "Market share range in which the market share can be optimized.",
+						"type": "float",
+						"isAbout": [{
+                                "name": null,
+                                "path": null
+                            }],
+						"valueReference": [],
+						"unit": "percent"
+					},
+					{
+						"name": "charging_efficiency",
+						"description": "Efficiency in the charging of the car battery.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "charging",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00320064"
+                            },
+						{
+                                "name": "efficiency value",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00140050"
+                            }],
+						"valueReference": [],
+						"unit": "percent"
+					},
+					{
+						"name": "feed_in_efficiency",
+						"description": "Efficiency in feeding back the electricity from the car battery.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "efficiency value",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00140050"
+                            }],
+						"valueReference": [],
+						"unit": "percent"
+					},
+					{
+						"name": "energy_conversion_efficiency",
+						"description": "Engine efficiency in converting electricity into person-kilometers.",
+						"type": "float",
+						"isAbout": [{
+                                "name": "energy conversion efficiency",
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00140049"
+                            }],
+						"valueReference": [],
+						"unit": "kWh/pkm"
+					},
+					{
+						"name": "bandwidth_type",
+						"description": "Bandwidth Type",
+						"type": "json",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "version",
+						"description": "Version",
+						"type": "text",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "method",
+						"description": "Method",
+						"type": "json",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "source",
+						"description": "Source",
+						"type": "json",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "comment",
+						"description": "Comment",
+						"type": "text",
+						"isAbout": [],
+						"valueReference": []
+					}
+				],
+				"primaryKey": [
+					"id"
+				],
+				"foreignKeys": []
+			},
+			"dialect": {
+				"delimiter": ";",
+				"decimalSeparator": "."
+			}
+		}
+	],
+	"@id": null,
+	"@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/develop/metadata/latest/context.json",
+	"review": {
+		"path": null,
+		"badge": null
+	},
+	"metaMetadata": {
+		"metadataVersion": "oemetadata_v1.5.1",
+		"metadataLicense": {
+			"name": "CC0-1.0",
+			"title": "Creative Commons Zero v1.0 Universal",
+			"path": "https://creativecommons.org/publicdomain/zero/1.0/"
+		}
+	},
+	"_comment": {
+		"metadata": "Metadata documentation and explanation (https://github.com/OpenEnergyPlatform/oemetadata)",
+		"dates": "Dates and time must follow the ISO8601 including time zone (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss±hh)",
+		"units": "Use a space between numbers and units (100 m)",
+		"languages": "Languages must follow the IETF (BCP47) format (en-GB, en-US, de-DE)",
+		"licenses": "License name must follow the SPDX License List (https://spdx.org/licenses/)",
+		"review": "Following the OEP Data Review (https://github.com/OpenEnergyPlatform/data-preprocessing/blob/master/data-review/manual/review_manual.md)",
+		"null": "If not applicable use: null",
+		"todo": "If a value is not yet available, use: todo"
+	}
+}

@@ -16,6 +16,12 @@ model consists of two table types: "[scalar](https://github.com/sedos-project/oe
 - Use a timeseries table to provide parameters with relation to a timeindex. Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to make yourself familiar with the 
   fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
 
+**Datamodel features**
+
+- [type]() - use to specify multiple processes in one csv table (see [exmaple]()) 
+- [bandwidth_type](https://github.com/sedos-project/oedatamodel#bandwidth-types-and-cell-methods) - specify how the 
+  data bandwidths are interpreted
+
 ### Input and output energy vectors
 
 
@@ -122,55 +128,60 @@ set of coherent input data for a process.
 
 **<span style="color:blue"> v1 </span>**: **Initial data**
 
-| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
-|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
-| 1  | DE     | 2020 | **<span style="color:blue"> 1 </span>**   | **<span style="color:blue"> 5 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
-| 2  | DE     | 2025 | **<span style="color:blue"> 1.5 </span>** | **<span style="color:blue"> 6 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| id | region | year | type | capital_costs                            | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 1  | DE     | 2020 |      | **<span style="color:blue"> 1 </span>**   | **<span style="color:blue"> 5 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| 2  | DE     | 2025 |      | **<span style="color:blue"> 1.5 </span>** | **<span style="color:blue"> 6 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
 
 **<span style="color:green"> v2 </span>**: **Adding data** to your csv table requires a new version `v2` for new 
 datapoints (capital_cost and lifetime in 2030, row=5), including a copy the existing data from `v1` as version `v2` 
 (reasoning see above)
 
-| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
-|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
-| 3  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
-| 4  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
-| 5  | DE     | 2030 | **<span style="color:green"> 2 </span>**  | **<span style="color:green"> 8 </span>** |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| id | region | year | type | capital_costs                            | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|------|------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 3  | DE     | 2020 |      | 1                                        | 5                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 4  | DE     | 2025 |      | 1.5                                      | 6                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 5  | DE     | 2030 |      | **<span style="color:green"> 2 </span>** | **<span style="color:green"> 8 </span>** |                | **<span style="color:green"> v2 </span>**  |       |        |         |
 
 **<span style="color:red"> v3 </span>**: **Updating a datapoint** (lifetime, row=8) requires a new version 
 `v3`, including a copy the existing data from `v2` as version `v3`
 
-| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
-|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
-| 6  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
-| 7  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
-| 8  | DE     | 2030 | 2                                         | **<span style="color:red"> 15 </span>**  |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| id | region | year | type | capital_costs | lifetime| bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|------|---------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 6  | DE     | 2020 |      | 1             | 5                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 7  | DE     | 2025 |      | 1.5           | 6                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 8  | DE     | 2030 |      | 2             | **<span style="color:red"> 15 </span>**  |                | **<span style="color:red"> v3 </span>**    |       |        |         |
 
 **<span style="color:orange"> v4 </span>**: **Updating a datapoint** (capital_costs, row=11) requires a new 
 version `v4`, including a copy the existing data from `v3` as version `v4`
 
-| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
-|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
-| 9  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
-| 10 | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
-| 11 | DE     | 2030 | **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| id | region | year | type | capital_costs                            | lifetime| bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|------|------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 9  | DE     | 2020 |      | 1                                        | 5                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 10 | DE     | 2025 |      | 1.5                                      | 6                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 11 | DE     | 2030 |      | **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
 
 Result on OEP: 
 
-| id | region | year | capital_costs                             | lifetime                                 | bandwidth_type | version                                    | method | source | comment |
-|----|--------|------|-------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
-| 1  | DE     | 2020 | **<span style="color:blue"> 1 </span>**   | **<span style="color:blue"> 5 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
-| 2  | DE     | 2025 | **<span style="color:blue"> 1.5 </span>** | **<span style="color:blue"> 6 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
-| 3  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
-| 4  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
-| 5  | DE     | 2030 | **<span style="color:green"> 2 </span>**  | **<span style="color:green"> 8 </span>** |                | **<span style="color:green"> v2 </span>**  |       |        |         |
-| 6  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
-| 7  | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
-| 8  | DE     | 2030 | 2                                         | **<span style="color:red"> 15 </span>**  |                | **<span style="color:red"> v3 </span>**    |       |        |         |
-| 9  | DE     | 2020 | 1                                         | 5                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
-| 10 | DE     | 2025 | 1.5                                       | 6                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
-| 11 | DE     | 2030 | **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| id | region | year | type | capital_costs                              | lifetime| bandwidth_type | version                                    | method | source | comment |
+|----|--------|------|------|--------------------------------------------|------------------------------------------|----------------|--------------------------------------------|-------|--------|---------|
+| 1  | DE     | 2020 |      | **<span style="color:blue"> 1 </span>**    | **<span style="color:blue"> 5 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| 2  | DE     | 2025 |      | **<span style="color:blue"> 1.5 </span>**  | **<span style="color:blue"> 6 </span>**  |                | **<span style="color:blue"> v1 </span>**   |       |        |         |
+| 3  | DE     | 2020 |      | 1                                          | 5                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 4  | DE     | 2025 |      | 1.5                                        | 6                                        |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 5  | DE     | 2030 |      | **<span style="color:green"> 2 </span>**   | **<span style="color:green"> 8 </span>** |                | **<span style="color:green"> v2 </span>**  |       |        |         |
+| 6  | DE     | 2020 |      | 1                                          | 5                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 7  | DE     | 2025 |      | 1.5                                        | 6                                        |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 8  | DE     | 2030 |      | 2                                          | **<span style="color:red"> 15 </span>**  |                | **<span style="color:red"> v3 </span>**    |       |        |         |
+| 9  | DE     | 2020 |      | 1                                          | 5                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 10 | DE     | 2025 |      | 1.5                                        | 6                                        |                | **<span style="color:orange"> v4 </span>** |       |        |         |
+| 11 | DE     | 2030 |      |  **<span style="color:orange"> 4 </span>** | 15                                       |                | **<span style="color:orange"> v4 </span>** |       |        |         |
 
+
+!!! Note "Versioning note"
+
+    * Uploading a row which exists already in: "region, type, year, version" results in an error. 
+    * Otherwise single or multiple rows can be added to already existing versions
 
 
 ### Datatypes
@@ -208,6 +219,12 @@ your chosen parameter name is clear and common in the domain. In this case avoid
 For more background information regarding for linking parameter names and ontology concepts, using OEM, see [here](ontology.md#Ontological-annotation-of-data).
 
 For a practical manual linking parameter names to a suitable ontology concepts, using oemetadata builder, see [here](ontology.md#Link-a-parameter-name-to-a-suitable-ontology-concept).
+
+## Example
+
+The example shows the full capabilities of the oedatamodel-parameter. Explanations and further information are 
+documented in the "comment" column in the example.
+
 
 ### Parameter naming in case of missing suitable ontology concept
 
