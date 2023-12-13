@@ -40,7 +40,16 @@ parameter of the process in the [input_output](https://bwsyncandshare.kit.edu/f/
 
 !!! Note "input_output insertion conventions"
 
+    * Enclose substituting inputs or outputs in squared brackets `[ ]`. E.g. 
+    
+      | parameter                              | process                       | input     | output                 |   |
+      |-------------------    ---------------------|-------------------------------|-----------|--------------------------------------------------|---|
+      |  parameter1   | process 1  |     [cane, honeymelon], heat, power      | [sugar, cinnamon], waste  |   |
+
+
+
     * separate inputs or outputs with `,` (comma) as in the input_output sheet below
+    *
 
 **Example** process: mob_road_mcar_ice_pass_diesel
 
@@ -48,8 +57,8 @@ input_output sheet
 
 | parameter                              | process                       | input     | output                                           |   |
 |----------------------------------------|-------------------------------|-----------|--------------------------------------------------|---|
-| energy_conversion_efficiency_diesel    | mob_road_mcar_ice_pass_diesel | diesel    | [pkm_road_mcar_short_exo, pkm_road_mcar_long_ex] |   |
-| energy_conversion_efficiency_syndiesel | mob_road_mcar_ice_pass_diesel | syndiesel | [pkm_road_mcar_short_exo, pkm_road_mcar_long_ex] |   |
+| energy_conversion_efficiency_diesel    | mob_road_mcar_ice_pass_diesel |           | [pkm_road_mcar_short_exo, pkm_road_mcar_long_ex] |   |
+| energy_conversion_efficiency_syndiesel | mob_road_mcar_ice_pass_diesel |           | [pkm_road_mcar_short_exo, pkm_road_mcar_long_ex] |   |
 | emission_factor_diesel                 | mob_road_mcar_ice_pass_diesel | diesel    | CO2                                              |   |
 | emission_factor_syndiesel              | mob_road_mcar_ice_pass_diesel | syndiesel | CO2                                              |   |
 
