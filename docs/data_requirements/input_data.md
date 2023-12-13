@@ -46,17 +46,18 @@ parameter of the process in the [input_output](https://bwsyncandshare.kit.edu/f/
 
 input_output sheet
 
-| parameter                              | process                       | input             | output                                         |   |
-|----------------------------------------|-------------------------------|-------------------|------------------------------------------------|---|
-| energy_conversion_efficiency_diesel    | mob_road_mcar_ice_pass_diesel | diesel            | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
-| energy_conversion_efficiency_biodiesel | mob_road_mcar_ice_pass_diesel | biodiesel         | pkm_road_mcar_short_exo, pkm_road_mcar_long_ex |   |
-| emission_factor                        | mob_road_mcar_ice_pass_diesel | diesel, biodiesel | CO2                                            |   |
+| parameter                              | process                       | input     | output                                           |   |
+|----------------------------------------|-------------------------------|-----------|--------------------------------------------------|---|
+| energy_conversion_efficiency_diesel    | mob_road_mcar_ice_pass_diesel | diesel    | [pkm_road_mcar_short_exo, pkm_road_mcar_long_ex] |   |
+| energy_conversion_efficiency_syndiesel | mob_road_mcar_ice_pass_diesel | syndiesel | [pkm_road_mcar_short_exo, pkm_road_mcar_long_ex] |   |
+| emission_factor_diesel                 | mob_road_mcar_ice_pass_diesel | diesel    | CO2                                              |   |
+| emission_factor_syndiesel              | mob_road_mcar_ice_pass_diesel | syndiesel | CO2                                              |   |
 
 In the [processes](https://bwsyncandshare.kit.edu/f/2458081675) sheet, the process is assigned to:
 
-| Input                                              | Process                       | Output                                              |
-|----------------------------------------------------|-------------------------------|-----------------------------------------------------|
-| [diesel, syndiesel_ren, syndiesel_conv, biodiesel] | mob_road_mcar_ice_pass_diesel | pkm_road_mcar_short_exo+ pkm_road_mcar_long_exo+CO2 |
+| Input                          | Process                       | Output                                                 |
+|--------------------------------|-------------------------------|--------------------------------------------------------|
+| [diesel, syndiesel, biodiesel] | mob_road_mcar_ice_pass_diesel | [pkm_road_mcar_short_exo, pkm_road_mcar_long_exo], CO2 |
 
 In the example it is assumed that the _mob_road_mcar_ice_pass_diesel_ emits the same amount of CO2 when using diesel or biodiesel as fuel.
 However, the process has different efficiencies depending on the fuel. <br>
