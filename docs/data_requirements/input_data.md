@@ -110,13 +110,19 @@ Use semicolon `;` as the column delimiter.
 Use point `.` as decimal separator. 
 
 ### Versioning convention
-!!! Note "Versioning pattern"
-
-    * `v` + `number` 
-
-
-Version your data with **lowercase** letter `v` and arabic number, e.g.: v1
-
+??? Note "Versioning pattern"
+    
+    <br>**For SEDOS Reference Dataset** (SRD)<br><br>
+    `v` + `number` <br>
+    Version your data with **lowercase** letter `v` and arabic number, e.g.: v1, v2, v3, v4, ..., v12, v13
+    <br><br>
+    **For SEDOS Scenarios** <br><br>
+    When the data for the SRD is final, specific scenarios will be uploaded to showcase the SRD in practice. <br>
+    It's done by selecting specific values from SRD's bandwidths and appending them with a `scenario version` to 
+    respective tables. <br><br> 
+    `s` + `number` <br>
+    Version your data with **lowercase** letter `s` and arabic number, e.g.: s1, s2, s3, s4, ..., s12, s13
+    
 **Increase the version when** you want to **add or update data** to a table that has been already uploaded to the OEP.
 The oedatamodel-API will append new data versions to an existing OEP table.
 <br>
