@@ -18,7 +18,7 @@ model consists of two table types: "[scalar](https://github.com/sedos-project/oe
 
 **Datamodel features**
 
-- [type]() - use to specify multiple processes in one csv table (see [exmaple]()) 
+- [type]() - use to specify multiple processes in one csv table (see [example](https://github.com/sedos-project/oedatamodel#example-table)) 
 - [bandwidth_type](https://github.com/sedos-project/oedatamodel#bandwidth-types-and-cell-methods) - specify how the 
   data bandwidths are interpreted
 
