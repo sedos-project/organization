@@ -2,7 +2,8 @@
 
 The following instructions will guide you through the process of contributing data in the SEDOS project. Hyperlinks direct you to more detailed information regarding the subject.
 
-*An [example](https://github.com/sedos-project/organization/tree/develop/docs/example) showing the final result of the individual steps is used to clarify the instructions.*
+:track_next: *An [example](https://github.com/sedos-project/organization/tree/develop/docs/example) showing the 
+final result of the individual steps is used to clarify the instructions.*
 
 ## 1. Create input data tables
 
@@ -10,30 +11,33 @@ The following instructions will guide you through the process of contributing da
 * Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
 * **Note** timeseries data and scalar data are stored in two different tables
 
-*Result: [scalar](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_scalar_step1.csv) & [timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_timeseries_step1.csv) csv*
+:track_next: *Result: [scalar](https://github.
+com/sedos-project/organization/blob/develop/docs/example/result_step_1
+ /example_scalar_step1.csv) & [timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_timeseries_step1.csv) csv*
 
 ## 2. Create metadata
 
 * Create the metadata according to the [OEMetadata v.1.5.1](https://github.com/OpenEnergyPlatform/oemetadata#open-energy-family---open-energy-metadata-oemetadata) for each data table
 * Use the [scalar meta template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_scalars.json) and the [timeseries meta template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_timeseries.json) to build your metadata
 * Use the [oemetadata builder](https://openenergy-platform.org/dataedit/oemetabuilder/) to create and edit your metadata 
-    * -> copy scalar/timeseries meta template
-    * -> click on blue button "Edit JSON" 
-    * -> click in opening window, with CTRL+A select all and paste scalar/timeseries meta template
-    * -> click "save" to confirm
+    * copy scalar/timeseries meta template
+    * click on blue button "Edit JSON" 
+    * click in opening window, with CTRL+A select all and paste scalar/timeseries meta template
+    * click "save" to confirm
 * Fill in as many keys as possible, but at least the minimum [required metadata information](../data_requirements/metadata/#required#metadata#information)
 * Annotate the keys `subject`, `isAbout` and/or `valueReference` with useful ontological concepts using the oemetadata builder 
-    * -> go to the column you want to annotate
-    * -> click on blue button "Add isAbout" or "Add Value reference" or "Add Subject"
-    * -> click into the `name` line 
-    * -> type in the concept you're looking for
-    * -> choose a suitable ontology concept from the dropdown menu
-    * -> click to confirm
+    * go to the column you want to annotate
+    * click on blue button "Add isAbout" or "Add Value reference" or "Add Subject"
+    * click into the `name` line 
+    * type in the concept you're looking for
+    * choose a suitable ontology concept from the dropdown menu
+    * click to confirm
     * ![wf](https://user-images.githubusercontent.com/7637364/191807277-712057b8-153c-4178-94a2-341ad8f010fd.gif)
 * List all data sources in the form of Bibtex-keys under the `sources` key
 * Add necessary license information to the sources according to the [licensing guide](../data_requirements/licensing/#data-licencing)
 
-*Result: [Metadata scalar](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_2/example_scalar_step2.json) and [metadata timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_2/example_timeseries_step2.json)*
+:track_next: *Result: [Metadata scalar](https://github.
+com/sedos-project/organization/blob/develop/docs/example/result_step_2/example_scalar_step2.json) and [metadata timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_2/example_timeseries_step2.json)*
 
 ## 3. Initialize table on the OEP
 
@@ -51,7 +55,8 @@ columns of the table. Initializing OEP table is done via:
 * Select metadata file to create OEP table
 * Submit 
 
-*Result: empty [scalar]() and [timeseries]() tables on the OEP*
+:track_next: *Result: empty [scalar](https://openenergy-platform.org/dataedit/view/model_draft/example_scalar_step2) 
+and [timeseries](https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step2) tables on the OEP*
 
 ## 4. Publish datapackages
 
@@ -81,7 +86,8 @@ Thus,
 In case upload data contains errors (format, naming, etc.) an error report is returned. 
 Otherwise, data is appended to given table on the OEP.
 
-*Result: [scalar]() and [timeseries]() tables on the OEP*
+:track_next: *Result: [scalar](https://openenergy-platform.org/dataedit/view/model_draft/example_scalar_step4) and 
+[timeseries](https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step4) tables on the OEP*
 
 ### 4.2 Release data on the databus
 
@@ -101,7 +107,14 @@ Now, your data should be registered and available on the databus.
 As the SEDOS pipeline regularly checks for updates on the databus, 
 your new data version should be considered in next pipeline build.
 
-*Result: OEP tables registered on the [databus]()*
+:track_next: *Result: OEP tables registered on the [databus]()*
+
+
+<!-- 
+
+@CM, HeHu, others uncomment and add section when time has come ..... :/
 
 ## 5. Create output data tables
 @HeHu & CM expand when process is clear 
+
+-->

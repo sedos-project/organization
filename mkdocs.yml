@@ -1,9 +1,10 @@
 site_name: SEDOS Project
+
 nav:
     - 'Data requirements':
        - 'Overview': 'data_requirements/overview.md'
        - 'Data': 'data_requirements/input_data.md'
-       - 'Nomenclature': 'data_requirements/nomenclature.md'
+       #- 'Nomenclature': 'data_requirements/nomenclature.md'
        - 'Metadata': 'data_requirements/metadata.md'
        - 'Ontology': 'data_requirements/ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'
@@ -11,10 +12,13 @@ nav:
     - 'Data preface': 'data_preface.md'
     - 'FAQ': 'faq.md'
     - 'Glossary': 'glossary.md'
+
+
 markdown_extensions:
     - toc:
         permalink: True
         separator: "#"
+        toc_depth: 3
     - admonition
     - pymdownx.details
     - pymdownx.superfences
@@ -23,3 +27,83 @@ markdown_extensions:
     - def_list
     - pymdownx.tasklist:
         custom_checkbox: true
+
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - admonition
+    - pymdownx.arithmatex:
+        generic: true
+    - footnotes
+    - pymdownx.details
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.mark
+    - attr_list
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.tabbed:
+        alternate_style: true
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - toc.integrate
+  language: en
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/eye
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/eye-outline
+        name: Switch to light mode
+
+  icon:
+    repo: fontawesome/brands/github
+  logo: graphics/sedos.png
+  favicon: graphics/sedos_favicon.png
+
+extra_css:
+  - stylesheets/extra.css
+
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_root_heading: true
+            show_source: false
+            docstring_style: numpy
+            docstring_section_style: spacy
+  - include-markdown
+
+repo_url: https://github.com/sedos-project/organization
+site_description: The documentation of the SEDOS data management
+
+copyright: |
+  &copy; 2024 - SEDOS Project Team
+
+# in case hyperlinks are wanted
+#<a href="https://reiner-lemoine-institut.de/"  target="_blank" rel="noopener">RLI</a> and <a
+#href="https://fortiss.org"  target="_blank" rel="noopener">fortiss GmbH</a>

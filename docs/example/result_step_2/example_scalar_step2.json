@@ -180,7 +180,7 @@
 						"type": "float",
 						"isAbout": [{
                                 "name": "investment cost",
-                                "path": "<http://openenergy-platform.org/ontology/oeo/OEO_00020167"
+                                "path": "http://openenergy-platform.org/ontology/oeo/OEO_00020167"
                             }],
 						"valueReference": [],
 						"unit": "EUR/car"
@@ -221,7 +221,7 @@
 					{
 						"name": "market_share",
 						"description": "Market share range in which the market share can be optimized.",
-						"type": "float",
+						"type": "float array",
 						"isAbout": [{
                                 "name": null,
                                 "path": null

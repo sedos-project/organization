@@ -8,11 +8,11 @@ In the project, we aim to establish a streamlined data management process with a
 The documentation is structured in two main parts 
 
 1. [SEDOS-specific data requirements](./data_requirements/input_data.md) 
-2. [Instructions on how to contribute data](./data_requirements/overview.md)
+2. [Instructions on how to contribute data](./how_to_contribute_data.md)
 
 
-!!! Note "Latest version"
+!!! question "Latest version"
 
-    * The documentation is steadily improved. Press `CTRL + F5` to refresh your browser's cache and load the 
-    latest version of the documentation 
+    :sparkles: The documentation will be steadily improved.
+    Press `CTRL + F5` to refresh your browser's cache and load the latest version of the documentation 
 
