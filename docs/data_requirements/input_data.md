@@ -258,10 +258,16 @@ In this case you would link your parameter name to multiple related concepts.
 
 For a practical manual linking parameter names to multiple related ontology concepts, using oemetadata builder, see [**here**](ontology.md#Link-a-parameter-name-to-multiple-related-ontology-concepts).
 
-# Output Data
+<!-- 
+
+@CM, HeHu, others uncomment and add section when time has come ..... :/
+
+# Output Data 
+
 
 ## Output Datamodel
 
 Datamodel: The **OEDatamodel** is used to represent input/output data for energysystem modelling. 
 Further information about the OEDatamodel can be found in the documentation at [sedos-project/oedatamodel](https://github.com/sedos-project/oedatamodel).
 
+-->
