@@ -6,18 +6,19 @@ This is the FAQ section. It will be updated from the Questions from the SEDOS Ma
 
 This section centers around the data model usage.
 
-1. ??? question "Why do I get an error when registering my OEP table with my metadata?"
- 
-         This can have many reasons. Please check, if:        
+1. ??? question "I am currently unsure what I should enter for OEP token. Have I overlooked any instructions?"
 
-         * The last entry in a dictionary has no `,` behind the value. Try to format your JSON in Notepad++ before 
-         uploading. If it passes the error will not occur.
-
-
-
-
+         * You can find your API-Token in your OEP profile -> in the top-right corner of the OEP website -> under your 
+         name -> settings -> API-Token. See [**here**](how_to_contribute_data.md#3#initialize#table#on#the#oep)
 
 ### **Scalar data**
+
+
+1. ??? question "Why do I get an error when uploading my CSV to OEP ?"
+
+         * The double-quotes of the JSONs were unfortunately not correct 
+         TODO: @FELIX - Was ist die solution hier???
+
 
 1. ??? question "How to connect data points with sources?"
 
@@ -45,6 +46,24 @@ This section centers around the data model usage.
 ### **Timeseries data**
 
 ## Metadata
+
+1. ??? question "Why do I get an error when registering an OEP table with my metadata?"
+ 
+         This can have many reasons. Please check, if:        
+
+         * The last entry in a dictionary has no `,` (comma) behind the value. Try to format your JSON in Notepad++ 
+         before uploading. If it passes the error will not occur.
+
+         * "id": null, - The key wasn't there
+
+         * "description" key wasn't there - every column needs a description key. It can be `null` though.
+
+         * "name": "model_draft.hea_hh_heater_boil_dual_biomass", - it must be **"model_draft"** and **not 
+         "model-draft"**. See [**here**](data_requirements/metadata.md#resource#keys) 
+
+         * The double-quotes of the JSONs were unfortunately not correct
+
+         * "type": "string", - string with small s; and not "type": "String"
 
 1. ??? question "Do the resources/schema/fields have to be in the correct order, or does it not matter?"
 
@@ -82,4 +101,16 @@ This section centers around the data model usage.
 1. ??? question "Should the unit of percent be specified in the metadata as in the Parameter_Set sheet on BWSync with "%" or as described in the AP1-pad as "percent" ( 3. [E] "unit": "percent", [0,100])?"
 
         **Answer:** In the metadata you should use the symbol `%`. (Group decision -> more convenient)
+
+1. ??? question "Is it problematic that all data uploaded there can be viewed without restriction before our publication?"
+
+        **Answer:** When uploading your data to the OEP it is still listed as a "draft". This means that although they are already available for viewing, they are not prominently displayed (this only happens after a peer review). As long as the data is not published by us, nobody will accidentally come across it. But it is not impossible.
+
+
+1. ??? question "Do the SEDOS-gits runs on an RLI or a German server?"
+
+        **Answer:** Our [SEDOS repos](https://github.com/sedos-project) are all on GitHub.com right now. <br>
+        The data is stored on the [OpenEnergyPlatform](https://openenergy-platform.org/dataedit/view/model_draft?query=sedos&tags=246), the website only takes the data and forwards it to the OEP and also registers it on the [Databus](https://databus.openenergyplatform.org/) (the data is only linked there). The OEP itself is located on a server at the University of Magdeburg.
+
+
 

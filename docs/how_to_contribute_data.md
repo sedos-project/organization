@@ -52,6 +52,7 @@ columns of the table. Initializing OEP table is done via:
 
 * Visit [oedatamodel-API](https://modex.rl-institut.de/create_table/)
 * Insert your OEP Username and Token 
+* You can find your API-Token in your OEP profile -> in the top-right corner of the OEP website -> under your name -> settings -> API-Token 
 * Select metadata file to create OEP table
 * Submit 
 
