@@ -1,8 +1,12 @@
 # Frequently Asked Questions (FAQ)
 
-# Data model usage
+This is the FAQ section. It will be updated from the Questions from the SEDOS Matrix Chat.
 
-## **Scalar data**
+## Data model usage
+
+This section centers around the data model usage.
+
+### **Scalar data**
 
 1. ??? note "How to connect data points with sources?"
 
@@ -27,9 +31,9 @@
          "float array".
 
 
-## **Timeseries data**
+### **Timeseries data**
 
-# Other
+## Other
 
 1. ??? note "What do "f" and "p" mean in the commodities?"
 
