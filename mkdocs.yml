@@ -64,20 +64,25 @@ theme:
     - toc.integrate
   language: en
   palette:
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
     # Palette toggle for light mode
     - scheme: default
       toggle:
-        icon: material/brightness-7
+        icon: material/eye
         name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/eye-outline
+        name: Switch to light mode
+
   icon:
     repo: fontawesome/brands/github
   logo: graphics/sedos.png
   favicon: graphics/sedos_favicon.png
+
+extra_css:
+  - stylesheets/extra.css
+
 
 plugins:
   - search
@@ -95,3 +100,10 @@ plugins:
 
 repo_url: https://github.com/sedos-project/organization
 site_description: The documentation of the SEDOS data management
+
+copyright: |
+  &copy; 2024 - SEDOS Project Team
+
+# in case hyperlinks are wanted
+#<a href="https://reiner-lemoine-institut.de/"  target="_blank" rel="noopener">RLI</a> and <a
+#href="https://fortiss.org"  target="_blank" rel="noopener">fortiss GmbH</a>
