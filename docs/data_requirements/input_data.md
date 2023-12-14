@@ -98,7 +98,7 @@ Users need to correct them and their compliance is mandatory.
 * no spaces
 * no special characters
 * avoid dates
-* if dates are used, then without `-`! E.g.: 2022-10-21 will through an error. Use underscore instead!
+* no hyphens. If dates are used, then without `-`! E.g.: 2022-10-21 will through an error. Use underscore instead!
 * don't start parameter name with a number
 
 ### Delimiter 
