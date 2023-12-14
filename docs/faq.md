@@ -44,17 +44,24 @@ This section centers around the data model usage.
 
 ### **Timeseries data**
 
-## Other
+## Metadata
 
-1. ??? question "What do "f" and "p" mean in the commodities?"
+1. ??? question "Do the resources/schema/fields have to be in the correct order, or does it not matter?"
 
-        **Answer:** This distinguishes fuel-specific emissions ("f") from process-specific emissions ("p"). This is mainly relevant for some industrial processes.
+        **Answer:** The order of the fields must be the same as the order of the columns in the CSV.
 
 
 1. ??? question "If a document does not have a licence, does it automatically has a CC-BY licence or a copyright?"
 
         **Answer:** If no licence is given, copyright applies. Follow [this pattern](data_requirements/licensing.md#missing#licence#-#using#data#without#an#open#licence) for documentation.
 
+
+
+## Other
+
+1. ??? question "What do "f" and "p" mean in the commodities?"
+
+        **Answer:** This distinguishes fuel-specific emissions ("f") from process-specific emissions ("p"). This is mainly relevant for some industrial processes.
 
  
 1. ??? question "My process-table-name and parameter names contain hyphens `-`, is that allowed?"
