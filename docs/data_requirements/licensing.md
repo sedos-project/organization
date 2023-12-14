@@ -9,7 +9,7 @@ By the end of this section, you'll be able to licence your input data adequately
 ??? note "How to document licences in OEMetadata?"
     
       
-      If your data set has no licence, please **indicate the licence as "unknown"** in the licence-name field of the metadata. <br>
+      If your data set has a licence, follow this example. <br>
       <br>
       For example:      
 
@@ -31,33 +31,20 @@ By the end of this section, you'll be able to licence your input data adequately
                   ]
               },
               {
-                  "title": "Impact of electric vehicles on a future renewable energy-based power system in Europe with a focus on Germany",
-                  "description": "Paper on novel modelling approach comprising a detailed representation of electric vehicles based on real driving patterns and interactions between the power systems of Germany and other European regions.",
-                  "path": "https://doi.org/10.1002/er.4056",
+                  "title": "Code exposed: Review of five open-source frameworks for modeling renewable energy systems",
+                  "description": "Energy system modeling is a commonly used method to provide policy recommendations and insight to transformation pathways of energy systems. However, the low open-source availability of the frameworks in practice often leads to low interpretability and transparency of energy modeling system configurations. The configuration of an energy model entails how its system components, such as power plants, storage systems and grids operate, and which parameters are used to define them. In order to understand the impact of different model configurations and working principles on the model output, a thorough comparison between various modeling frameworks is necessary. This work thereby consists of a comparison of five open-source energy system modeling frameworks (OS-ESMFs) oemof, GENeSYS-MOD, Balmorel, urbs and GENESYS-2 on the mathematical level and spotlights selected methodological differences in renewable energy system modeling. The comparison shows diversity in the complexity of selected system components and helps to define the best use-cases and scales of application for each framework. Impacts of modeled features on the results were demonstrated by implementing two harmonized scenarios depicting the German electricity system using each framework. While similar model results were obtained for both scenarios, some differences were present, especially in the long-term expansion planning model. Some of those differences could be traced back to the identified modeling differences.",
+                  "path": "https://doi.org/10.1016/j.rser.2022.112272",
                   "licenses": [
                       {
-                          "name": "unknown",
-                          "title": null,
-                          "path": null,
-                          "instruction": null,
-                          "attribution": "Copyright © 2018 John Wiley & Sons, Ltd."
-                      }
-                  ]
-              },
-              {
-                  "title": "Mobilität in Deutschland: Tabellarische Grundauswertung",
-                  "description": "Mobilität in Deutschland (MiD) ist eine bundesweite Befragung von Haushalten zu ihrem alltäglichen Verkehrsverhalten im Auftrag des Bundesministeriums für Digitales und Verkehr (BMDV).",
-                  "path": "https://bmdv.bund.de/SharedDocs/DE/Anlage/G/mid-2017-tabellenband.pdf?__blob=publicationFile",
-                  "licenses": [
-                      {
-                          "name": "unknown",
-                          "title": null,
-                          "path": null,
-                          "instruction": null,
+                          "name": "CC-BY-4.0",
+                          "title": "Creative Commons Attribution 4.0 International",
+                          "path": "https://creativecommons.org/licenses/by/4.0/",
+                          "instruction": "You are free: To Share, To Create, To Adapt",
                           "attribution": null
                       }
                   ]
               }
+                  
           ]
       }
       ```
@@ -99,7 +86,8 @@ For further information on licences, see <br>
 ??? note "How to indicate missing licences in OEMetadata?"
     
       
-      If your data set has no licence, please **indicate the licence as "unknown"** in the licence-name field of the metadata. <br>
+      If your data set has no licence, please **indicate this in the attribution**, using this pattern: <br>
+      `"attribution": "copyright. AuthorSurname1, AuthorSurname2, AuthorSurname3 OR Institut1,Institut2,Institut3. Year"`<br>
       <br>
       For example:      
 
@@ -112,11 +100,11 @@ For further information on licences, see <br>
                   "path": "https://doi.org/10.1002/er.4056",
                   "licenses": [
                       {
-                          "name": "unknown",
+                          "name": null,
                           "title": null,
                           "path": null,
                           "instruction": null,
-                          "attribution": "Copyright © 2018 John Wiley & Sons, Ltd."
+                          "attribution": "copyright. Miller, Heinz, Rutrecht. 2021"
                       }
                   ]
               },
@@ -126,11 +114,11 @@ For further information on licences, see <br>
                   "path": "https://bmdv.bund.de/SharedDocs/DE/Anlage/G/mid-2017-tabellenband.pdf?__blob=publicationFile",
                   "licenses": [
                       {
-                          "name": "unknown",
+                          "name": null,
                           "title": null,
                           "path": null,
                           "instruction": null,
-                          "attribution": null
+                          "attribution": "copyright. Reiner Lemoine Institut, RKI. 1991"
                       }
                   ]
               }
