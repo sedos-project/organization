@@ -183,55 +183,55 @@ Information about each column in the csv.
 		"timeseries": [
 			{
 				"start": "2021-01-01",
-				"end": "2024-12-31",
+				"end": "2021-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
 			{
 				"start": "2024-01-01",
-				"end": "2027-12-31",
+				"end": "2024-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
 			{
 				"start": "2027-01-01",
-				"end": "2030-12-31",
+				"end": "2027-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
 			{
 				"start": "2030-01-01",
-				"end": "2035-12-31",
+				"end": "2030-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
 			{
 				"start": "2035-01-01",
-				"end": "2040-12-31",
+				"end": "2035-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
 			{
 				"start": "2040-01-01",
-				"end": "2045-12-31",
+				"end": "2040-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
 			{
 				"start": "2045-01-01",
-				"end": "2050-12-31",
+				"end": "2045-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
 			{
 				"start": "2050-01-01",
-				"end": "2060-12-31",
+				"end": "2050-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
 			{
 				"start": "2060-01-01",
-				"end": "2070-12-31",
+				"end": "2060-12-31",
 				"resolution": "hourly",
 				"alignment": "left"
 			},
