@@ -1,7 +1,7 @@
 site_name: SEDOS Project
 
 nav:
-    - 'Data requirements':
+    - '(Meta)data requirements':
        - 'Overview': 'data_requirements/overview.md'
        - 'Data': 'data_requirements/input_data.md'
        #- 'Nomenclature': 'data_requirements/nomenclature.md'
