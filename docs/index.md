@@ -11,8 +11,8 @@ The documentation is structured in two main parts
 2. [Instructions on how to contribute data](./how_to_contribute_data.md)
 
 
-!!! Note "Latest version"
+!!! question "Latest version"
 
-    * The documentation will be steadily improved. Press `CTRL + F5` to refresh your browser's cache and load the 
-    latest version of the documentation 
+    :sparkles: The documentation will be steadily improved.
+    Press `CTRL + F5` to refresh your browser's cache and load the latest version of the documentation 
 
