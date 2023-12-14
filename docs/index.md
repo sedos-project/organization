@@ -13,6 +13,6 @@ The documentation is structured in two main parts
 
 !!! Note "Latest version"
 
-    * The documentation is steadily improved. Press `CTRL + F5` to refresh your browser's cache and load the 
+    * The documentation will be steadily improved. Press `CTRL + F5` to refresh your browser's cache and load the 
     latest version of the documentation 
 
