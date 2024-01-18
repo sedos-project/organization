@@ -9,10 +9,8 @@ nav:
        - 'Ontology': 'data_requirements/ontology.md'
        - 'Licensing': 'data_requirements/licensing.md'
     - 'How to contribute data?': 'how_to_contribute_data.md'
-    - 'FAQ': 'faq.md'
     - 'Data preface': 'data_preface.md'
-    - 'Scenarios': 'scenarios.md'
-    - 'Results': 'results.md'
+    - 'FAQ': 'faq.md'
     - 'Glossary': 'glossary.md'
 
 
@@ -57,7 +55,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.path
     - navigation.top
     - search.suggest
     - search.highlight
