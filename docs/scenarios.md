@@ -1,8 +1,8 @@
-A scenario summary is accessible on the OpenEnergyPlatform [Scenario Bundle for SEDOS](https://openenergy-platform.org/scenario-bundles/id/9387d4a9-85f1-52e9-ce79-0168f25dd5e0).
+# Scenarios
 
+!!! info "SEDOS - Scenario frame details"
 
-
-# Scenario descriptions
+    Find scenario details, such as temporal and spatial scope, sectors and technologies, in the [SEDOS Scenario Bundle](https://openenergy-platform.org/scenario-bundles/id/9387d4a9-85f1-52e9-ce79-0168f25dd5e0).
 
 More information will follow.
 
