@@ -208,7 +208,7 @@
 					{
 						"name": "operational_life_time",
 						"description": "Lifetime of car in operation.",
-						"type": "float",
+						"type": "float array",
 						"isAbout": [
 							{
 								"name": "operational life time",
@@ -295,6 +295,40 @@
 							{
 								"name": "energy conversion efficiency",
 								"path": "http://openenergy-platform.org/ontology/oeo/OEO_00140049"
+							}
+						],
+						"valueReference": [],
+						"unit": "kWh/pkm"
+					},
+					{
+						"name": "emission_factor_gasoline",
+						"description": "Engine efficiency in converting electricity into person-kilometers.",
+						"type": "text",
+						"isAbout": [
+							{
+								"name": "emission factor",
+								"path": "http://openenergy-platform.org/ontology/oeo/OEO_00000148"
+							},
+							{
+								"name": "gasoline fuel",
+								"path": "http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010241"
+							}
+						],
+						"valueReference": [],
+						"unit": "kWh/pkm"
+					},
+					{
+						"name": "emission_factor_diesel",
+						"description": "Engine efficiency in converting electricity into person-kilometers.",
+						"type": "text",
+						"isAbout": [
+							{
+								"name": "emission factor",
+								"path": "http://openenergy-platform.org/ontology/oeo/OEO_00000148"
+							},
+							{
+								"name": "diesel fuel",
+								"path": "http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242"
 							}
 						],
 						"valueReference": [],
