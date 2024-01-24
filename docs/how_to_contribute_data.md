@@ -54,8 +54,8 @@ columns of the table. Initializing OEP table is done via:
 * Select metadata file to create OEP table
 * Submit 
 
-:track_next: *Result: empty [scalar](https://openenergy-platform.org/dataedit/view/model_draft/example_scalar_step2) 
-and [timeseries](https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step2) tables on the OEP*
+:track_next: *Result: empty [scalar](https://openenergy-platform.org/dataedit/view/model_draft/example_scalar_step3) 
+and [timeseries](https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step3) tables on the OEP*
 
 ## 4. Publish datapackages
 
