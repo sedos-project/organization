@@ -146,9 +146,9 @@
 	],
 	"licenses": [
 		{
-			"name": null,
+			"name": "example_dummy_licence",
 			"title": null,
-			"path": null,
+			"path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
 			"instruction": null,
 			"attribution": null
 		}
