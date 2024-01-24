@@ -11,9 +11,7 @@ final result of the individual steps is used to clarify the instructions.*
 * Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
 * **Note** timeseries data and scalar data are stored in two different tables
 
-:track_next: *Result: [scalar](https://github.
-com/sedos-project/organization/blob/develop/docs/example/result_step_1
- /example_scalar_step1.csv) & [timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_timeseries_step1.csv) csv*
+:track_next: *Result: [scalar](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_scalar_step1.csv) & [timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_timeseries_step1.csv) csv*
 
 ## 2. Create metadata
 
