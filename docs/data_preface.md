@@ -49,7 +49,6 @@ This *data preface* provides additional information about the syntax of paramete
       ```python
       | id   | region   | type   | timeindex_start       | timeindex_stop        | timeindex_resolution   | exo_pkm_road_mcar   | version   | method   | source   | comment   |
       |------|----------|--------|-----------------------|-----------------------|------------------------|---------------------|-----------|----------|----------|-----------|
-      | ---- | -------- | ------ | --------------------- | --------------------- | ---------------------- | ------------------- | --------- | -------- | -------- | --------- |
       | 1    | DE       |        | 2021-01-01 00:00:00   | 2021-12-31 23:00:00   | 1h                     | [1,2,3,…,8760]      | v1        |          |          |           |
       | 2    | DE       |        | 2024-01-01 00:00:00   | 2024-12-30 23:00:00   | 1h                     | [1,2,3,…,8760]      | v1        |          |          |           |
       | 3    | DE       |        | 2027-01-01 00:00:00   | 2027-12-31 23:00:00   | 1h                     | [1,2,3,…,8760]      | v1        |          |          |           |
@@ -76,7 +75,7 @@ This *data preface* provides additional information about the syntax of paramete
       2. `<sector>_timeseries` <br>
       3. `<sector>_demand` <br>
 
-      This is explained below using the example of the transport sector.
+      The structure is exemplified on the transport sector below.
       
     === "`tra_scalars`"
          The table collects all sector process-unspecific scalars. <br>
@@ -222,7 +221,7 @@ This *data preface* provides additional information about the syntax of paramete
     
         **Upper and lower bound paramters have empty cells if unrestricted**. <br> This convention was made to avoid 
         high or low dummy values for upper or lower bounds.<br><br>
-        In the example above, new capacity invesments (`capacity_p_abs_new_max`) for the processes are not restricted: <br>
+        In the example above, new capacity investments (`capacity_p_abs_new_max`) for the processes are not restricted: <br>
         ```python
         | id | region | year | type                                 | capacity_p_abs_new_max |
         |----|--------|------|--------------------------------------|------------------------|
@@ -242,7 +241,6 @@ This *data preface* provides additional information about the syntax of paramete
         ```python
         | SEDOS parameter name     | Recommended unit   | Description                                                                                |
         |--------------------------|--------------------|--------------------------------------------------------------------------------------------|
-        | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------ |
         | capacity_p_abs_new_max   | MW                 | Absolute upper bound on level of investment in new power output capacity for a period.     |
         | capacity_e_abs_new_max   | MWh                | Absolute upper bound on level of investment in new storage energy capacity for a period.   |
         | capacity_w_abs_new_max   | Mt                 | Absolute upper bound on level of investment in new weight capacity for a period.           |
@@ -301,8 +299,8 @@ This *data preface* provides additional information about the syntax of paramete
     ```
 
     To avoid ambiguities in the data, the processes are specified as precisely as possible. <br> This means, for 
-    example, for investment processes for all support years are given, even if an investment process is available from 
-    later years, e.g 2035, as opposed to missing rows for 2021, 2024, 2027 and 2030. 
+    example, for investment processes all years are specified in the data, even if an investment process is only
+    available from later years, e.g 2035, as opposed to missing rows for 2021, 2024, 2027 and 2030. 
     <br>
     ```python
     | id | region | year | type                                 | capacity_p_inst | capacity_p_abs_new_max | conversion_factor_sec_elec | lifetime | cost_inv_capacity_p | cb_coefficient | cv_coefficient | bandwidth_type | version | method | source | comment |
@@ -322,7 +320,8 @@ This *data preface* provides additional information about the syntax of paramete
     Conversely, existing capacities are explicitly declared as 0 as soon as they are no longer in the system, as opposed to missing rows for 2060 and 2070.
     <br>
     ```python
-    | id | region | year | type                                 | capacity_p_inst | capacity_p_abs_new_max | conversion_factor_sec_elec | lifetime | cost_inv_capacity_p | cb_coefficient | cv_coefficient | bandwidth_type | version | method | source | comment |    
+    | id | region | year | type                                 | capacity_p_inst | capacity_p_abs_new_max | conversion_factor_sec_elec | lifetime | cost_inv_capacity_p | cb_coefficient | cv_coefficient | bandwidth_type | version | method | source | comment |  
+    |----|--------|------|--------------------------------------|-----------------|------------------------|----------------------------|----------|---------------------|----------------|----------------|----------------|---------|--------|--------|---------|
     | 21 | DE     | 2021 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
     | 22 | DE     | 2024 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
     | 23 | DE     | 2027 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
