@@ -1,3 +1,6 @@
 mkdocs-material==9.5.13
 mkdocs
 pymdown-extensions
+mkdocs-autorefs
+mkdocstrings
+mkdocs-include-markdown-plugin

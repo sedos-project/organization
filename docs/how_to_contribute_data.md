@@ -22,7 +22,7 @@ final result of the individual steps is used to clarify the instructions.*
     * click on blue button "Edit JSON" 
     * click in opening window, with CTRL+A select all and paste scalar/timeseries meta template
     * click "save" to confirm
-* Fill in as many keys as possible, but at least the minimum [required metadata information](../data_requirements/metadata/#required#metadata#information)
+* Fill in as many keys as possible, but at least the minimum [required metadata information](data_requirements/metadata.md#required#metadata#information)
 * Annotate the keys `subject`, `isAbout` and/or `valueReference` with useful ontological concepts using the oemetadata builder 
     * go to the column you want to annotate
     * click on blue button "Add isAbout" or "Add Value reference" or "Add Subject"
@@ -32,7 +32,7 @@ final result of the individual steps is used to clarify the instructions.*
     * click to confirm
     * ![wf](https://user-images.githubusercontent.com/7637364/191807277-712057b8-153c-4178-94a2-341ad8f010fd.gif)
 * List all data sources in the form of Bibtex-keys under the `sources` key
-* Add necessary license information to the sources according to the [licensing guide](../data_requirements/licensing/#data-licencing)
+* Add necessary license information to the sources according to the [licensing guide](data_requirements/licensing.md#data-licencing)
 
 :track_next: *Result: [Metadata scalar](https://github.
 com/sedos-project/organization/blob/develop/docs/example/result_step_2/example_scalar_step2.json) and [metadata timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_2/example_timeseries_step2.json)*
