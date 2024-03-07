@@ -4,6 +4,7 @@ The SEDOS Reference Dataset (SRD) entails technology data across five sectors (p
 and various aggregation levels.
 
 This *data preface* provides additional information about the syntax of parameters and units in SRD.
+## Nomenclature
 
 **SEDOS sectors**
 
@@ -15,6 +16,22 @@ This *data preface* provides additional information about the syntax of paramete
 | ind                 | Industry   | AP7               |
 | tra                 | Transport  | AP8               |
 
+
+??? note "Existing and investment processes"
+      
+            
+    === "Existing processes"
+        Processes that were existing before the base year 2021 can be identified on their name. They end with `_0`
+        <br>
+        Example: `pow_combustion_gt_hydrogen_0`
+
+    === "Investment processes"
+        Processes that were not existing before the base year 2021 and that the model can invest in can be 
+        identified on their name. They end with `_1`
+        <br>
+        Example: `pow_combustion_cc_chp_ccs_biomass_1`
+
+## Data
 
 ??? note "Monetary value"
     
@@ -142,6 +159,8 @@ This *data preface* provides additional information about the syntax of paramete
          | 39 | DE     | 2060 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
          | 40 | DE     | 2070 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
          ```
+
+
 
 ??? note "Empty cells and value 0"
 
