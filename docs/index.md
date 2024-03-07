@@ -11,7 +11,12 @@ The documentation is structured in two main parts
 2. [Instructions on how to contribute data](./how_to_contribute_data.md)
 
 
-!!! question "Latest version"
+!!! question "Just here for the data?" 
+
+    Find the SEDOS Reference Dataset on the **[Databus](https://databus.openenergyplatform.org/sedos-project/collections/sedos-project)** or the **[OpenEnergyPlatform](https://openenergy-platform.org/dataedit/view/model_draft?query=sedos&tags=246)**
+
+
+??? info "Latest documentation version"
 
     :sparkles: The documentation will be steadily improved.
     Press `CTRL + F5` to refresh your browser's cache and load the latest version of the documentation 

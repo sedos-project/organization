@@ -1,0 +1,1 @@
+The results and reference energy system can be explored using the [dashboard](https://sedos.apps.rl-institut.de/).

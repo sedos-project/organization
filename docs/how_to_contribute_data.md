@@ -11,9 +11,7 @@ final result of the individual steps is used to clarify the instructions.*
 * Store data sources in [BIB-file](https://bwsyncandshare.kit.edu/f/2388204355) and fill Bibtex-keys in "source"-column of the data table.
 * **Note** timeseries data and scalar data are stored in two different tables
 
-:track_next: *Result: [scalar](https://github.
-com/sedos-project/organization/blob/develop/docs/example/result_step_1
- /example_scalar_step1.csv) & [timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_timeseries_step1.csv) csv*
+:track_next: *Result: [scalar](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_scalar_step1.csv) & [timeseries](https://github.com/sedos-project/organization/blob/develop/docs/example/result_step_1/example_timeseries_step1.csv) csv*
 
 ## 2. Create metadata
 
@@ -56,8 +54,8 @@ columns of the table. Initializing OEP table is done via:
 * Select metadata file to create OEP table
 * Submit 
 
-:track_next: *Result: empty [scalar](https://openenergy-platform.org/dataedit/view/model_draft/example_scalar_step2) 
-and [timeseries](https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step2) tables on the OEP*
+:track_next: *Result: empty [scalar](https://openenergy-platform.org/dataedit/view/model_draft/example_scalar_step3) 
+and [timeseries](https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step3) tables on the OEP*
 
 ## 4. Publish datapackages
 
@@ -104,11 +102,13 @@ In order to register your new data you have to:
 * Enter new version string (at least one row in your table must be present with given string in column "version")
 * Submit
 
+Group name: SEDOS - <Sector> sector | e.g. SEDOS - Mobility sector | SEDOS - Industry sector 
+
 Now, your data should be registered and available on the databus. 
 As the SEDOS pipeline regularly checks for updates on the databus, 
 your new data version should be considered in next pipeline build.
 
-:track_next: *Result: OEP tables registered on the [databus]()*
+:track_next: *Result: OEP tables registered on the [databus](https://databus.openenergyplatform.org/)*
 
 
 <!-- 
