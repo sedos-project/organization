@@ -24,7 +24,7 @@ This *data preface* provides additional information about the syntax of paramete
     _currency_A(year_x) -> currency_B(year_x) -> currency_B(year_z)_ <br><br>
     e.g. USD2010 -> EUR2010 -> EUR2021 
 
-??? note "Leap year"
+??? note "Leap years"
 
       Leap years are considered in timeseries data by setting the timeindex_stop for **2024, 2040, 2060** to 
       the **30.12.** <br> The timesseries has only 8760 instead of 8784 timesteps (-> the 31.12 is missing).
@@ -143,54 +143,101 @@ This *data preface* provides additional information about the syntax of paramete
          | 40 | DE     | 2070 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
          ```
 
-??? note "Empty cells vs 0 vs omission of data for processes"
+??? note "Empty cells and value 0"
 
-      Empty cells: This parameter value does not exist for the process  the parameter for the year is not relevant for 
-      the process
-      0: This parameter value exists for the process and year  the parameter for the year and the process assumes the value 0 <br>
-      
-      1. omission of data for processes <br>
-      a.	Decision A) applies in order to be as explicit as possible in the data specification. 
-      This also applies, for example, to existing technologies where capacity is lost over the years - this can vary greatly per process and would lead to a fragmentation of the data set with regard to the support years if irrelevant years do not appear. 
-      In this way, we want to avoid guesswork for us and subsequent users as to whether the process capacity has been forgotten here or whether it has been deliberately included or excluded. 
-      e.g. Wind_onshore_0 | Capacity (MW)
+    **Example table**: <br>
+    ```python
+    | id | region | year | type                                 | capacity_p_inst | capacity_p_abs_new_max | conversion_factor_sec_elec | lifetime | cost_inv_capacity_p | cb_coefficient | cv_coefficient | bandwidth_type | version | method | source | comment |
+    |----|--------|------|--------------------------------------|-----------------|------------------------|----------------------------|----------|---------------------|----------------|----------------|----------------|---------|--------|--------|---------|
+    | 1  | DE     | 2021 | pow_combustion_cc_chp_ccs_biomass_1 |                 | 0                      | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
+    | 2  | DE     | 2024 | pow_combustion_cc_chp_ccs_biomass_1 |                 | 0                      | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
+    | 3  | DE     | 2027 | pow_combustion_cc_chp_ccs_biomass_1 |                 | 0                      | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
+    | 4  | DE     | 2030 | pow_combustion_cc_chp_ccs_biomass_1 |                 | 0                      | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
+    | 5  | DE     | 2035 | pow_combustion_cc_chp_ccs_biomass_1 |                 |                        | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
+    | 6  | DE     | 2040 | pow_combustion_cc_chp_ccs_biomass_1 |                 |                        | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
+    | 7  | DE     | 2045 | pow_combustion_cc_chp_ccs_biomass_1 |                 |                        | 0.8                        | 25       | 800                 | 0.4            | 0.6            |                |         |        |        |         |
+    | 8  | DE     | 2050 | pow_combustion_cc_chp_ccs_biomass_1 |                 |                        | 0.8                        | 30       | 800                 | 0.4            | 0.6            |                |         |        |        |         |
+    | 9  | DE     | 2060 | pow_combustion_cc_chp_ccs_biomass_1 |                 |                        | 0.8                        | 30       | 800                 | 0.4            | 0.6            |                |         |        |        |         |
+    | 10 | DE     | 2070 | pow_combustion_cc_chp_ccs_biomass_1 |                 |                        | 0.8                        | 30       | 600                 | 0.4            | 0.6            |                |         |        |        |         |
+    | 11 | DE     | 2021 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
+    | 12 | DE     | 2024 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
+    | 13 | DE     | 2027 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
+    | 14 | DE     | 2030 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
+    | 15 | DE     | 2035 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
+    | 16 | DE     | 2040 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
+    | 17 | DE     | 2045 | pow_geothermal_st_1                  |                 |                        | 0.4                        | 25       | 800                 |                |                |                |         |        |        |         |
+    | 18 | DE     | 2050 | pow_geothermal_st_1                  |                 |                        | 0.4                        | 30       | 800                 |                |                |                |         |        |        |         |
+    | 19 | DE     | 2060 | pow_geothermal_st_1                  |                 |                        | 0.4                        | 30       | 800                 |                |                |                |         |        |        |         |
+    | 20 | DE     | 2070 | pow_geothermal_st_1                  |                 |                        | 0.4                        | 30       | 600                 |                |                |                |         |        |        |         |
+    | 21 | DE     | 2021 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 22 | DE     | 2024 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 23 | DE     | 2027 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 24 | DE     | 2030 | pow_combustion_gt_hydrogen_0         | 3300            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 25 | DE     | 2035 | pow_combustion_gt_hydrogen_0         | 3000            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 26 | DE     | 2040 | pow_combustion_gt_hydrogen_0         | 2700            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 27 | DE     | 2045 | pow_combustion_gt_hydrogen_0         | 1500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 28 | DE     | 2050 | pow_combustion_gt_hydrogen_0         | 200             |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 29 | DE     | 2060 | pow_combustion_gt_hydrogen_0         | 0               |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    | 30 | DE     | 2070 | pow_combustion_gt_hydrogen_0         | 0               |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
+    ```
+              
 
-      ```python
-      | id | region | year | type                                 | capacity_p_inst | capacity_p_abs_new_max | conversion_factor_sec_elec | lifetime | cost_inv_capacity_p | cb_coefficient | cv_coefficient | bandwidth_type | version | method | source | comment |
-      |----|--------|------|--------------------------------------|-----------------|------------------------|----------------------------|----------|---------------------|----------------|----------------|----------------|---------|--------|--------|---------|
-      | 1  | DE     | 2021 | pow_combustion_cc_chp_ccs_biomassl_1 |                 | 0                      | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
-      | 2  | DE     | 2024 | pow_combustion_cc_chp_ccs_biomassl_1 |                 | 0                      | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
-      | 3  | DE     | 2027 | pow_combustion_cc_chp_ccs_biomassl_1 |                 | 0                      | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
-      | 4  | DE     | 2030 | pow_combustion_cc_chp_ccs_biomassl_1 |                 | 0                      | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
-      | 5  | DE     | 2035 | pow_combustion_cc_chp_ccs_biomassl_1 |                 |                        | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
-      | 6  | DE     | 2040 | pow_combustion_cc_chp_ccs_biomassl_1 |                 |                        | 0.8                        | 25       | 1000                | 0.4            | 0.6            |                |         |        |        |         |
-      | 7  | DE     | 2045 | pow_combustion_cc_chp_ccs_biomassl_1 |                 |                        | 0.8                        | 25       | 800                 | 0.4            | 0.6            |                |         |        |        |         |
-      | 8  | DE     | 2050 | pow_combustion_cc_chp_ccs_biomassl_1 |                 |                        | 0.8                        | 30       | 800                 | 0.4            | 0.6            |                |         |        |        |         |
-      | 9  | DE     | 2060 | pow_combustion_cc_chp_ccs_biomassl_1 |                 |                        | 0.8                        | 30       | 800                 | 0.4            | 0.6            |                |         |        |        |         |
-      | 10 | DE     | 2070 | pow_combustion_cc_chp_ccs_biomassl_1 |                 |                        | 0.8                        | 30       | 600                 | 0.4            | 0.6            |                |         |        |        |         |
-      | 11 | DE     | 2021 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
-      | 12 | DE     | 2024 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
-      | 13 | DE     | 2027 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
-      | 14 | DE     | 2030 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
-      | 15 | DE     | 2035 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
-      | 16 | DE     | 2040 | pow_geothermal_st_1                  |                 | 0                      | 0.4                        | 25       | 1000                |                |                |                |         |        |        |         |
-      | 17 | DE     | 2045 | pow_geothermal_st_1                  |                 |                        | 0.4                        | 25       | 800                 |                |                |                |         |        |        |         |
-      | 18 | DE     | 2050 | pow_geothermal_st_1                  |                 |                        | 0.4                        | 30       | 800                 |                |                |                |         |        |        |         |
-      | 19 | DE     | 2060 | pow_geothermal_st_1                  |                 |                        | 0.4                        | 30       | 800                 |                |                |                |         |        |        |         |
-      | 20 | DE     | 2070 | pow_geothermal_st_1                  |                 |                        | 0.4                        | 30       | 600                 |                |                |                |         |        |        |         |
-      | 21 | DE     | 2021 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 22 | DE     | 2024 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 23 | DE     | 2027 | pow_combustion_gt_hydrogen_0         | 3500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 24 | DE     | 2030 | pow_combustion_gt_hydrogen_0         | 3300            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 25 | DE     | 2035 | pow_combustion_gt_hydrogen_0         | 3000            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 26 | DE     | 2040 | pow_combustion_gt_hydrogen_0         | 2700            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 27 | DE     | 2045 | pow_combustion_gt_hydrogen_0         | 1500            |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 28 | DE     | 2050 | pow_combustion_gt_hydrogen_0         | 200             |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 29 | DE     | 2060 | pow_combustion_gt_hydrogen_0         | 0               |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      | 30 | DE     | 2070 | pow_combustion_gt_hydrogen_0         | 0               |                        | 0.6                        | 20       | 500                 |                |                |                |         |        |        |         |
-      ```
+    === "Empty cells"
+        **Parameter values that do not exist for a given year, process and parameter combination have no relevance for a process.** <br><br>
+        Example:
+        ```python
+        | id | region | year | type                                | capacity_p_inst    |
+        |----|--------|------|-------------------------------------|--------------------|
+        | 1  | DE     | 2021 | pow_combustion_cc_chp_ccs_biomass_1 |                    | 
+        | 2  | DE     | 2024 | pow_combustion_cc_chp_ccs_biomass_1 |                    |
+        ```
+    
+        <span style="color:red"> **Exception**: Unrestricted bound parameters </span>
+    
+        **Upper and lower bound paramters have empty cells if unrestricted**. <br> This convention was made to avoid 
+        high or low dummy values for upper or lower bounds.<br><br>
+        In the example above, new capacity invesments (`capacity_p_abs_new_max`) for the processes are not restricted: <br>
+        ```python
+        | id | region | year | type                                 | capacity_p_abs_new_max |
+        |----|--------|------|--------------------------------------|------------------------|
+        | 5  | DE     | 2035 | pow_combustion_cc_chp_ccs_biomassl_1 |                        |
+        | 6  | DE     | 2040 | pow_combustion_cc_chp_ccs_biomassl_1 |                        |
+        | 7  | DE     | 2045 | pow_combustion_cc_chp_ccs_biomassl_1 |                        |
+        | 8  | DE     | 2050 | pow_combustion_cc_chp_ccs_biomassl_1 |                        |
+        | 9  | DE     | 2060 | pow_combustion_cc_chp_ccs_biomassl_1 |                        |
+        | 10 | DE     | 2070 | pow_combustion_cc_chp_ccs_biomassl_1 |                        |
+        | 17 | DE     | 2045 | pow_geothermal_st_1                  |                        |
+        | 18 | DE     | 2050 | pow_geothermal_st_1                  |                        |
+        | 19 | DE     | 2060 | pow_geothermal_st_1                  |                        |
+        | 20 | DE     | 2070 | pow_geothermal_st_1                  |                        |
+        ```
+        <br>
+        **Other bounds parameters**
+        ```python
+        | SEDOS parameter name     | Recommended unit   | Description                                                                                |
+        |--------------------------|--------------------|--------------------------------------------------------------------------------------------|
+        | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------ |
+        | capacity_p_abs_new_max   | MW                 | Absolute upper bound on level of investment in new power output capacity for a period.     |
+        | capacity_e_abs_new_max   | MWh                | Absolute upper bound on level of investment in new storage energy capacity for a period.   |
+        | capacity_w_abs_new_max   | Mt                 | Absolute upper bound on level of investment in new weight capacity for a period.           |
+        | activity_bound_min       | Mt/year            | Lower bound on the activity level of a process.                                            |
+        | activity_bound_fix       | Mt/year            | Fix bound on the activity level of a process.                                              |
+        | activity_bound_max       | Mt/year            | Upper bound on the activity level of a process.                                            |
+        | demand_timeseries_lower  | MWh, pkm, tkm      | Lower bound for demand timeseries.                                                         |
+        | demand_timeseries_upper  | MWh, pkm, tkm      | Upper bound for demand timeseries.                                                         |
+        ```
+  
+    === "Value 0"
+        **The value is actually zero for a given year, process and parameter.**<br><br>
+        Example: Existing capacity for `pow_combustion_gt_hydrogen_0` in 2060 is zero. <br>
+        ```python
+        | id | region | year | type                                 | capacity_p_inst    |   
+        |----|--------|------|--------------------------------------|--------------------|
+        | 29 | DE     | 2060 | pow_combustion_gt_hydrogen_0         | 0                  |   
+        ```
+    
 
-      
+
 
 ## Units
 
