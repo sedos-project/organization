@@ -26,7 +26,8 @@ This *data preface* provides additional information about the syntax of paramete
 
 ??? note "Leap year"
 
-      Note that leap years are considered in time series data by setting the timeindex_stop for 2024, 2040, 2060 to the 30.12.
+      Leap years are considered in timeseries data by setting the timeindex_stop for **2024, 2040, 2060** to 
+      the **30.12.** <br> The timesseries has only 8760 instead of 8784 timesteps (-> the 31.12 is missing).
 
       ```python
       | id   | region   | type   | timeindex_start       | timeindex_stop        | timeindex_resolution   | exo_pkm_road_mcar   | version   | method   | source   | comment   |
