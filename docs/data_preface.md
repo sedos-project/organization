@@ -62,6 +62,13 @@ This *data preface* provides additional information about the syntax of paramete
       | 10   | DE       |        | 2070-01-01 00:00:00   | 2070-12-31 23:00:00   | 1h                     | [1,2,3,…,8760]      | v1        |          |          |           |
       ```
 
+??? note "Linking data with foreign keys"
+
+    The note below `Structure of energy demands` exemplifies how data in the SRD is linked via foreign keys. <br>
+    The `tra_demand` table uses a foreign key mapping to the tables`tra_scalars` and `tra_timeseries`.<br><br>
+    The mapping structure is: <br>
+    `<table_name>_<column_name>`
+
 ??? note "Structure of energy demands"
       
       Demands per sector are provided via three tables: <br>
@@ -112,52 +119,52 @@ This *data preface* provides additional information about the syntax of paramete
        
     === "`tra_demand`"
          In column "demand_annual" the scalar demand is mapped via foreign-key & also the units via the metadata from 
-         the `tra_scalars` table
-         The normalised timeseries are mapped in the "demand_profile" column via Foreign-key
+         the `tra_scalars` table.
+         The normalised timeseries are mapped in the "demand_timeseries_fixed" column via Foreign-key.
         
          ```python
          | id | region | year | type                           | demand_annual                 | demand_timeseries_fixed          | bandwidth_type | version | method | source | comment |
          |----|--------|------|--------------------------------|-------------------------------|-----------------------------------|----------------|---------|--------|--------|---------|
-         | 1  | DE     | 2021 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 2  | DE     | 2024 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 3  | DE     | 2027 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 4  | DE     | 2030 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 5  | DE     | 2035 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 6  | DE     | 2040 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 7  | DE     | 2045 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 8  | DE     | 2050 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 9  | DE     | 2060 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 10 | DE     | 2070 | helper_sink_exo_tkm_rail       | tra_scalar.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
-         | 11 | DE     | 2021 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 12 | DE     | 2024 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 13 | DE     | 2027 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 14 | DE     | 2030 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 15 | DE     | 2035 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 16 | DE     | 2040 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 17 | DE     | 2045 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 18 | DE     | 2050 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 19 | DE     | 2060 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 20 | DE     | 2070 | helper_sink_exo_tkm_rail_short | tra_scalar.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
-         | 21 | DE     | 2021 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 22 | DE     | 2024 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 23 | DE     | 2027 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 24 | DE     | 2030 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 25 | DE     | 2035 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 26 | DE     | 2040 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 27 | DE     | 2045 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 28 | DE     | 2050 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 29 | DE     | 2060 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 30 | DE     | 2070 | helper_sink_exo_pkm_road_mcar  | tra_scalar.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
-         | 31 | DE     | 2021 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 32 | DE     | 2024 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 33 | DE     | 2027 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 34 | DE     | 2030 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 35 | DE     | 2035 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 36 | DE     | 2040 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 37 | DE     | 2045 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 38 | DE     | 2050 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 39 | DE     | 2060 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
-         | 40 | DE     | 2070 | helper_sink_exo_pkm_road_lcar  | tra_scalar.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 1  | DE     | 2021 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 2  | DE     | 2024 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 3  | DE     | 2027 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 4  | DE     | 2030 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 5  | DE     | 2035 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 6  | DE     | 2040 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 7  | DE     | 2045 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 8  | DE     | 2050 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 9  | DE     | 2060 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 10 | DE     | 2070 | helper_sink_exo_tkm_rail       | tra_scalars.exo_tkm_rail       | tra_timeseries.exo_tkm_rail       |                |         |        |        |         |
+         | 11 | DE     | 2021 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 12 | DE     | 2024 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 13 | DE     | 2027 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 14 | DE     | 2030 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 15 | DE     | 2035 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 16 | DE     | 2040 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 17 | DE     | 2045 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 18 | DE     | 2050 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 19 | DE     | 2060 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 20 | DE     | 2070 | helper_sink_exo_tkm_rail_short | tra_scalars.exo_tkm_rail_short | tra_timeseries.exo_tkm_rail_short |                |         |        |        |         |
+         | 21 | DE     | 2021 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 22 | DE     | 2024 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 23 | DE     | 2027 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 24 | DE     | 2030 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 25 | DE     | 2035 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 26 | DE     | 2040 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 27 | DE     | 2045 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 28 | DE     | 2050 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 29 | DE     | 2060 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 30 | DE     | 2070 | helper_sink_exo_pkm_road_mcar  | tra_scalars.exo_pkm_road_mcar  | tra_timeseries.exo_pkm_road_mcar  |                |         |        |        |         |
+         | 31 | DE     | 2021 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 32 | DE     | 2024 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 33 | DE     | 2027 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 34 | DE     | 2030 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 35 | DE     | 2035 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 36 | DE     | 2040 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 37 | DE     | 2045 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 38 | DE     | 2050 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 39 | DE     | 2060 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
+         | 40 | DE     | 2070 | helper_sink_exo_pkm_road_lcar  | tra_scalars.exo_pkm_road_lcar  | tra_timeseries.exo_pkm_road_lcar  |                |         |        |        |         |
          ```
 
 
