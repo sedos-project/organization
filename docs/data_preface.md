@@ -40,7 +40,7 @@ This *data preface* provides additional information about the syntax of paramete
     If monatary conversion were performed, the following logic was applied: <br>
     _currency_A(year_x) -> currency_B(year_x) -> currency_B(year_z)_ <br><br>
     e.g. USD2010 -> EUR2010 -> EUR2021 
-
+    <br>
     The original years of the sources can be documented in the Method column - e.g. {`Investment costs`:`Conversion from USD2019`}
 
 ??? note "Leap years"
