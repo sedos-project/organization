@@ -1,4 +1,4 @@
-# Data preface
+# Data preface for SEDOS developer
 
 The SEDOS Reference Dataset (SRD) entails technology data across five sectors (power, heat, PtX, industry, mobility) 
 and various aggregation levels.
@@ -38,10 +38,57 @@ This *data preface* provides additional information about the syntax of paramete
     If not further specified the base year for the monatary value is 2021.
 
     If monatary conversion were performed, the following logic was applied: <br>
-    _currency_A(year_x) -> currency_B(year_x) -> currency_B(year_z)_ <br><br>
-    e.g. USD2010 -> EUR2010 -> EUR2021 
+    _currency_A(year_x) -> currency_B(year_x) -> currency_B(year_z)_ <br>
+    e.g. USD2010 -> EUR2010 -> EUR2021 <br>
+    For the conversion please use the provided table "Kurse_Umrechnungen_DE" at the sharepoint. The conversion is based
+    on data from the ECB for the exchange rates and from the StBA for the harmonised index of consumer prices.
     <br>
     The original years of the sources can be documented in the Method column - e.g. {`Investment costs`:`Conversion from USD2019`}
+
+[//]: # (??? note "Emission factors")
+
+[//]: # (    )
+[//]: # (    The...)
+
+[//]: # ()
+[//]: # (??? note "heating value/calorific value")
+
+[//]: # (    )
+[//]: # (    The...)
+
+??? note "Parameter_Input-Output"
+    
+    The Parameter_Input-Output relations are important to link Parameters and their values to specific input/output commodities 
+    of a MIMO process. Due to the high number of MIMO processes in our model structure we defined the following defaults for relations: <br>
+    Some such as the costs are directly related to the throughput power/energy capacity/unit based on the given primary commodity (first output of a process with conversion_factor = 1) <br>
+    
+    Others will be directly derived from the parameter names in your uploaded data. <br>
+    - `conversion_factor_<commodity>` <br>
+    - `emission_factor_<commodity>_<commodity_emission>` <br>
+    Please make sure that the names accurately fit to this schema. Otherwise, the data adapter will not recognize the 
+    uploaded data and the relation of the parameters can not be defined. <br>
+
+    For exceptions to these defaults please use the "Parameter_Input-Output" sheet to clearly indicate that the parameter relations do not follow these defaults.
+    e.g. The investment costs of an electrolyzer.
+    
+??? note "Information on special parameters"
+
+    Some parameters need extra elaboration in this note: <br>
+
+    1. **conversion_factor_<commodity>**:
+       As we have many MIMO processes in out model structure, efficiencies are considered with the parameter "conversion_factor".
+       We use the same naming convention for all parameters that describe the ratios of inputs and outputs in relation to the primary commodity. 
+       **The primary commodity** (conversion_factor = 1) is per default the first output of the process. <br>
+       The TIMES adapter needs to convert these into their parameter conventions and an automatic identification of the commodity groups to give them a name. <br>
+    2. **flow_share_min/max/fix **:
+       This parameter can be defined to bound flow_shares within the commodity groups of MIMO processes that by default have flexible ratios.
+       e.g. for a hydrogen-ready gas turbine (than can burn either methane or h2 in the MIMO-process) the flow for every timestep could be restricted to upto 50% of h2. <br>
+    3. **capacity_p_abs_new_max**:
+       Growth rates of processes should be considered with the `capacity_p_abs_new_max` parameter. It describes absolute upper bounds for
+       the expansion of capacities per milestone year. Please consider the deviating period lengths for different milestone years. <br>
+       This parameter should be given for a process only if it is based on reasonable assumptions or data. 
+       Please include its background in your AP specific documentation. The transport sector considers growth rates with the market shares.
+       
 
 ??? note "Leap years"
 
