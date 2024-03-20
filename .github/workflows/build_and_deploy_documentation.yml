@@ -1,0 +1,35 @@
+name: Deploy mkdocs on GitHub pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Install Dependencies
+        run: pip install --upgrade -r requirements.txt
+
+      - name: Build MkDocs
+        run: mkdocs build  
+
+      - name: Deployment
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+
+      - run: mkdocs gh-deploy --force
