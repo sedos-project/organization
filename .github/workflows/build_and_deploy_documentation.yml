@@ -27,7 +27,7 @@ jobs:
         run: mkdocs build  
 
       - name: Deployment
-      - uses: actions/cache@v2
+        uses: actions/cache@v2
         with:
           key: ${{ github.ref }}
           path: .cache
