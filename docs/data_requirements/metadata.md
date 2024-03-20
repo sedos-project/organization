@@ -14,11 +14,11 @@ In SEDOS a minimal mandatory set of metadata information is required to:
 
 !!! Note "OEMetadata templates exist"
 
-        **Many metadata fields are already prefilled, if** you can build upon metadata templates ([scalar template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_scalars.json) and [timeseries template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_timeseries.json)).
+    **Many metadata fields are already prefilled, if** you can build upon metadata templates ([scalar template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_scalars.json) and [timeseries template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_timeseries.json)).
 
 !!! Danger "Technical upload requirement"
 
-        OEM-key 15.2 is technically required for upload with oedatamodel-API
+    OEM-key 15.2 is technically required for upload with oedatamodel-API
 
 Providing the following oem-keys when submitting your metadata is mandatory.
 
