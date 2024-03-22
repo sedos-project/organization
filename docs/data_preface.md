@@ -33,6 +33,53 @@ This *data preface* provides additional information about the syntax of paramete
 
 ## Data
 
+??? note "Information on special parameters"
+
+    === "`conversion_factor_<commodity>`"
+       Having many MIMO processes in the model structure, efficiencies are considered with the parameter `conversion_factor`.
+       We use the same naming convention for all parameters that describe the ratios of inputs and outputs in relation to the primary commodity. <br>
+       The primary commodity (conversion_factor = 1) is per default the first output of the process. <br>
+
+       For consistency please check that the calorific values (heating values) that your conversion factors are based on, are consistent with the
+       values defined in "calorific_values_SEDOS" in the supplementary files at the sharepoint.<br>
+
+       The TIMES adapter needs to convert the conversion factors into their parameter conventions and an automatic identification and naming of the commodity groups.
+       as required by the framework.
+
+    === "`flow_share_min/max/fix`"
+       This parameter can be defined to bound flow shares within the commodity groups of MIMO processes that by default have flexible ratios. <br>
+       e.g. for a hydrogen-ready gas turbine (that can either burn methane or h2 in the MIMO-process) the hydrogen flow for every 
+       timestep could be restricted to a ratio of 0.3 with `flow_share_max=0.3`.
+
+    === "`capacity_p_abs_new_max`"
+
+       Growth rates of processes should be considered with the `capacity_p_abs_new_max` / `capacity_e_abs_new_max` parameter. 
+       It describes absolute upper bounds for the expansion of capacities per milestone year. Please consider the deviating 
+       period lengths for different milestone years when you determine the upper bounds.
+       This parameter should be given for a process only if it is based on reasonable assumptions or data.
+       Please include its background in your AP specific documentation. The transport sector considers growth rates with the market shares.
+
+    === "`wacc`"
+
+       The weighted average cost of capital (wacc) gives the interest rate (%) of costs for capital after taxes. 
+       As we follow a macro-economic approach in SEDOS it is globally defined for all technologies with a value of 2 percent.
+       Please link it to the `global_scalars` table as explained in the note `Linking data with foreign keys`.
+
+??? note "Parameter_Input-Output"
+    
+    The Parameter_Input-Output relations are important to link relevant flow-specific parameters to input or output commodities 
+    of a MIMO process. Due to the high number of MIMO processes in our model structure we defined defaults for these relations: <br>
+    Cost parameters are directly related to the throughput power capacity based on the given primary commodity (first output of a process with conversion_factor = 1). <br>
+    Moreover, the following parameters are per default directly derived from the parameter names in your uploaded data. <br>
+    - `conversion_factor_<commodity>` <br>
+    - `flow_share_max_<commodity>` <br>
+    - `emission_factor_<commodity>_<emission_commodity>` <br>
+    Please make sure that the names accurately fit to this schema. Otherwise, the data adapter will not recognize the 
+    uploaded data and the relation of the parameters can not be defined. <br>
+
+    For exceptions to these defaults please use the "Parameter_Input-Output" sheet to clearly indicate that the parameter relations do not follow these defaults.
+    e.g. the investment costs of an electrolyzer that are defined in relation to the input power capacity.
+
 ??? note "Monetary value"
     
     If not further specified the base year for the monatary value is 2021.
@@ -40,55 +87,10 @@ This *data preface* provides additional information about the syntax of paramete
     If monatary conversion were performed, the following logic was applied: <br>
     _currency_A(year_x) -> currency_B(year_x) -> currency_B(year_z)_ <br>
     e.g. USD2010 -> EUR2010 -> EUR2021 <br>
-    For the conversion please use the provided table "Kurse_Umrechnungen_DE" at the sharepoint. The conversion is based
-    on data from the ECB for the exchange rates and from the StBA for the harmonised index of consumer prices.
-    <br>
-    The original years of the sources can be documented in the Method column - e.g. {`Investment costs`:`Conversion from USD2019`}
 
-[//]: # (??? note "Emission factors")
-
-[//]: # (    )
-[//]: # (    The...)
-
-[//]: # ()
-[//]: # (??? note "heating value/calorific value")
-
-[//]: # (    )
-[//]: # (    The...)
-
-??? note "Parameter_Input-Output"
-    
-    The Parameter_Input-Output relations are important to link Parameters and their values to specific input/output commodities 
-    of a MIMO process. Due to the high number of MIMO processes in our model structure we defined the following defaults for relations: <br>
-    Some such as the costs are directly related to the throughput power/energy capacity/unit based on the given primary commodity (first output of a process with conversion_factor = 1) <br>
-    
-    Others will be directly derived from the parameter names in your uploaded data. <br>
-    - `conversion_factor_<commodity>` <br>
-    - `emission_factor_<commodity>_<commodity_emission>` <br>
-    Please make sure that the names accurately fit to this schema. Otherwise, the data adapter will not recognize the 
-    uploaded data and the relation of the parameters can not be defined. <br>
-
-    For exceptions to these defaults please use the "Parameter_Input-Output" sheet to clearly indicate that the parameter relations do not follow these defaults.
-    e.g. The investment costs of an electrolyzer.
-    
-??? note "Information on special parameters"
-
-    Some parameters need extra elaboration in this note: <br>
-
-    1. **conversion_factor_<commodity>**:
-       As we have many MIMO processes in out model structure, efficiencies are considered with the parameter "conversion_factor".
-       We use the same naming convention for all parameters that describe the ratios of inputs and outputs in relation to the primary commodity. 
-       **The primary commodity** (conversion_factor = 1) is per default the first output of the process. <br>
-       The TIMES adapter needs to convert these into their parameter conventions and an automatic identification of the commodity groups to give them a name. <br>
-    2. **flow_share_min/max/fix **:
-       This parameter can be defined to bound flow_shares within the commodity groups of MIMO processes that by default have flexible ratios.
-       e.g. for a hydrogen-ready gas turbine (than can burn either methane or h2 in the MIMO-process) the flow for every timestep could be restricted to upto 50% of h2. <br>
-    3. **capacity_p_abs_new_max**:
-       Growth rates of processes should be considered with the `capacity_p_abs_new_max` parameter. It describes absolute upper bounds for
-       the expansion of capacities per milestone year. Please consider the deviating period lengths for different milestone years. <br>
-       This parameter should be given for a process only if it is based on reasonable assumptions or data. 
-       Please include its background in your AP specific documentation. The transport sector considers growth rates with the market shares.
-       
+    For the conversion please use the provided table "monetary_conversion" in the supplementary files at the sharepoint. 
+    The conversion is based on data from the ECB for the exchange rates and from the StBA for the harmonised index of consumer prices. <br>
+    The original years of the sources can be documented in the method column - e.g. {`Investment costs`:`Conversion from USD2019`}
 
 ??? note "Leap years"
 
@@ -110,12 +112,34 @@ This *data preface* provides additional information about the syntax of paramete
       | 10   | DE       |        | 2070-01-01 00:00:00   | 2070-12-31 23:00:00   | 1h                     | [1,2,3,…,8760]      | v1        |          |          |           |
       ```
 
+??? note "Emission factors"
+    
+    The following emission types are considered: co2, ch4 & n2o. <br>
+    The 100-year time horizon global warming potentials (GWP) relative to CO2 according to the fourth IPCC assessment report (AR4) are taken as suggested 
+    by the UWB at the time of the definition in 2023: `gwp_ch4 : 25`, `gwp_n2o : 298` <br>
+ 
+    Whenever possible the assumed co2 emission factors should be consistent for same commodities across sectors. Therefore, we defined a global table
+    `global_emission_factors`. <br>
+    These are defined based on the values from the National Inventory Report for the German Greenhouse Gas Inventory from 1990-2021 (NRI). <br>
+    Please link the emission factor column of the processes to this table and the correct column via a foreign key as explained in the note below `Linking data with foreign keys`. <br>
+
+    Emission factors for ch4 and n2o are to be defined sector- or process-specific as they are more related to attributes such as firing temperature and humidity.
+    Therefore you can directly enter numbers in the respective emission column. If you still want to define ch4 values globally e.g. for similar processes, you can
+    add an extra column to the `global_emission_factors` adding <_ch4> or <_n2o> to the column names. <br>
+
+    If you need to aggregate emission factors from multiple fuels, please add a new column to the table indicating the different
+    fuel emission factors as well as their share in the aggregation based on the assumed potentials.`agg_<percentage>_<factor1>_<percentage>_<factor2>` <br>
+    e.g. agg_30_waste_wood_wood_scraps_industry_70_waste_wood_wood_scraps_commercial_institutional"
+
+
 ??? note "Linking data with foreign keys"
+
+    The general mapping structure is: <br>
+    `<table_name>_<column_name>` <br>
 
     The note below `Structure of energy demands` exemplifies how data in the SRD is linked via foreign keys. <br>
     The `tra_demand` table uses a foreign key mapping to the tables`tra_scalars` and `tra_timeseries`.<br><br>
-    The mapping structure is: <br>
-    `<table_name>_<column_name>`
+
 
 ??? note "Structure of energy demands"
       
