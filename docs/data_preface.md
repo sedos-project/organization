@@ -36,40 +36,41 @@ This *data preface* provides additional information about the syntax of paramete
 ??? note "Information on special parameters"
 
     === "`conversion_factor_<commodity>`"
-       Having many MIMO processes in the model structure, efficiencies are considered with the parameter `conversion_factor`.
-       We use the same naming convention for all parameters that describe the ratios of inputs and outputs in relation to the primary commodity. <br>
-       The primary commodity (conversion_factor = 1) is per default the first output of the process. <br>
-
-       For consistency please check that the calorific values (heating values) that your conversion factors are based on, are consistent with the
-       values defined in "calorific_values_SEDOS" in the supplementary files at the sharepoint.<br>
-
-       The TIMES adapter needs to convert the conversion factors into their parameter conventions and an automatic identification and naming of the commodity groups.
-       as required by the framework.
+        Having many MIMO processes in the model structure, efficiencies are considered with the parameter `conversion_factor`.
+        We use the same naming convention for all parameters that describe the ratios of inputs and outputs in relation to the primary commodity. <br>
+        The primary commodity (conversion_factor = 1) is per default the first output of the process. <br>
+        
+        For consistency please check that the calorific values (heating values) that your conversion factors are based on, are consistent with the
+        values defined in "calorific_values_SEDOS" in the supplementary files at the sharepoint.<br>
+        
+        The TIMES adapter needs to convert the conversion factors into their parameter conventions and an automatic identification and naming of the commodity groups.
+        as required by the framework.
 
     === "`flow_share_min/max/fix`"
-       This parameter can be defined to bound flow shares within the commodity groups of MIMO processes that by default have flexible ratios. <br>
-       e.g. for a hydrogen-ready gas turbine (that can either burn methane or h2 in the MIMO-process) the hydrogen flow for every 
-       timestep could be restricted to a ratio of 0.3 with `flow_share_max=0.3`.
+        This parameter can be defined to bound flow shares within the commodity groups of MIMO processes that by default have flexible ratios. <br>
+        e.g. for a hydrogen-ready gas turbine (that can either burn methane or h2 in the MIMO-process) the hydrogen flow for every 
+        timestep could be restricted to a ratio of 0.3 with `flow_share_max=0.3`.
 
     === "`capacity_p_abs_new_max`"
 
-       Growth rates of processes should be considered with the `capacity_p_abs_new_max` / `capacity_e_abs_new_max` parameter. 
-       It describes absolute upper bounds for the expansion of capacities per milestone year. Please consider the deviating 
-       period lengths for different milestone years when you determine the upper bounds.
-       This parameter should be given for a process only if it is based on reasonable assumptions or data.
-       Please include its background in your AP specific documentation. The transport sector considers growth rates with the market shares.
+        Growth rates of processes should be considered with the `capacity_p_abs_new_max` / `capacity_e_abs_new_max` parameter. 
+        It describes absolute upper bounds for the expansion of capacities per milestone year. Please consider the deviating 
+        period lengths for different milestone years when you determine the upper bounds.
+        This parameter should be given for a process only if it is based on reasonable assumptions or data.
+        Please include its background in your AP specific documentation. The transport sector considers growth rates with the market shares.
 
     === "`wacc`"
 
-       The weighted average cost of capital (wacc) gives the interest rate (%) of costs for capital after taxes. 
-       As we follow a macro-economic approach in SEDOS it is globally defined for all technologies with a value of 2 percent.
-       Please link it to the `global_scalars` table as explained in the note `Linking data with foreign keys`.
+        The weighted average cost of capital (wacc) gives the interest rate (%) of costs for capital after taxes. 
+        As we follow a macro-economic approach in SEDOS it is globally defined for all technologies with a value of 2 percent.
+        Please link it to the `global_scalars` table as explained in the note `Linking data with foreign keys`.
 
 ??? note "Parameter_Input-Output"
     
     The Parameter_Input-Output relations are important to link relevant flow-specific parameters to input or output commodities 
-    of a MIMO process. Due to the high number of MIMO processes in our model structure we defined defaults for these relations: <br>
-    Cost parameters are directly related to the throughput power capacity based on the given primary commodity (first output of a process with conversion_factor = 1). <br>
+    of a MIMO process. Due to the high number of MIMO processes in our model structure we defined defaults for these relations: <br><br>
+    **Cost parameters are directly related to the throughput power capacity based on the given primary commodity** 
+    (first output of a process with conversion_factor = 1). <br><br>
     Moreover, the following parameters are per default directly derived from the parameter names in your uploaded data. <br>
     - `conversion_factor_<commodity>` <br>
     - `flow_share_max_<commodity>` <br>
@@ -114,14 +115,15 @@ This *data preface* provides additional information about the syntax of paramete
 
 ??? note "Emission factors"
     
-    The following emission types are considered: co2, ch4 & n2o. <br>
+    The following emission types are considered: **co2, ch4 & n2o**. <br>
     The 100-year time horizon global warming potentials (GWP) relative to CO2 according to the fourth IPCC assessment report (AR4) are taken as suggested 
     by the UWB at the time of the definition in 2023: `gwp_ch4 : 25`, `gwp_n2o : 298` <br>
  
-    Whenever possible the assumed co2 emission factors should be consistent for same commodities across sectors. Therefore, we defined a global table
-    `global_emission_factors`. <br>
+    Whenever possible the assumed co2 emission factors should be consistent for same commodities across sectors. <br> 
+    **Therefore, we defined a global table `global_emission_factors`**. <br><br>
     These are defined based on the values from the National Inventory Report for the German Greenhouse Gas Inventory from 1990-2021 (NRI). <br>
-    Please link the emission factor column of the processes to this table and the correct column via a foreign key as explained in the note below `Linking data with foreign keys`. <br>
+    Please, link the emission factor column of the processes to this table and the correct column via a foreign key 
+    as explained in the note below `Linking data with foreign keys`. <br>
 
     Emission factors for ch4 and n2o are to be defined sector- or process-specific as they are more related to attributes such as firing temperature and humidity.
     Therefore you can directly enter numbers in the respective emission column. If you still want to define ch4 values globally e.g. for similar processes, you can
