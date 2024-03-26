@@ -129,9 +129,9 @@ This *data preface* provides additional information about the syntax of paramete
     Therefore you can directly enter numbers in the respective emission column. If you still want to define ch4 values globally e.g. for similar processes, you can
     add an extra column to the `global_emission_factors` adding <_ch4> or <_n2o> to the column names. <br>
 
-    If you need to aggregate emission factors from multiple fuels, please add a new column to the table indicating the different
-    fuel emission factors as well as their share in the aggregation based on the assumed potentials.`agg_<percentage>_<factor1>_<percentage>_<factor2>` <br>
-    e.g. agg_30_waste_wood_wood_scraps_industry_70_waste_wood_wood_scraps_commercial_institutional"
+    If you need to aggregate emission factors from multiple fuels, please add a new column to the table and give it an appropriate name (e.g. waste_wood_wood_scraps_all).
+    Please indicate the different fuel emission factors as well as their share in the aggregation based on the assumed potentials in the metadata description of the column in the following format: `agg_<percentage>_<factor1>_<percentage>_<factor2>`. <br>
+    e.g. "description": "agg_30_waste_wood_wood_scraps_industry_70_waste_wood_wood_scraps_commercial_institutional"
 
 
 ??? note "Linking data with foreign keys"
