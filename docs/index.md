@@ -21,3 +21,4 @@ The documentation is structured in two main parts
     :sparkles: The documentation will be steadily improved.
     Press `CTRL + F5` to refresh your browser's cache and load the latest version of the documentation 
 
+!!! example "Use the search bar to find information quicker!" 
