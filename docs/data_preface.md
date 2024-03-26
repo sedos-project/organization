@@ -36,7 +36,7 @@ This *data preface* provides additional information about the syntax of paramete
 ??? note "Information on special parameters"
 
     === "`conversion_factor_<commodity>`"
-        Having many MIMO processes in the model structure, efficiencies are considered with the parameter `conversion_factor`.
+        Having many Multiple-Input-Multiple-Output (MIMO) processes in the model structure, efficiencies are considered with the parameter `conversion_factor`.
         We use the same naming convention for all parameters that describe the ratios of inputs and outputs in relation to the primary commodity. <br>
         The primary commodity (conversion_factor = 1) is per default the first output of the process. <br>
         
@@ -53,7 +53,7 @@ This *data preface* provides additional information about the syntax of paramete
 
     === "`capacity_p_abs_new_max`"
 
-        Growth rates of processes should be considered with the `capacity_p_abs_new_max` / `capacity_e_abs_new_max` parameter. 
+        Growth rates of processes should be considered with `capacity_p_abs_new_max` or `capacity_e_abs_new_max` parameter. 
         It describes absolute upper bounds for the expansion of capacities per milestone year. Please consider the deviating 
         period lengths for different milestone years when you determine the upper bounds.
         This parameter should be given for a process only if it is based on reasonable assumptions or data.
