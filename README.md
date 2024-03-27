@@ -2,6 +2,15 @@
 
 This repository holds the documentation files of the SEDOS project and is also used for managing organizational issues. 
 
+## Documenation release
+
+The documentation will be released with a push on the `main` branch to this [website](https://sedos-project.github.io/organization/). Wait ~ 2min until you can see changes.
+
+The [documentation](https://sedos-project.github.io/organization/) is automatically deployed by the [workflow](https://github.com/sedos-project/organization/blob/main/.github/workflows/build_and_deploy_documentation.yml) on 
+the branch `gh-pages`. In the GitHub-pages settings, this branch has been chosen to be the branch from which the 
+documentation is deployed. The workflow is triggered with a push to `main` or can be triggered manually in 
+GitHub actions.
+
 ## How to set up the documentation on your local machine?
 
 1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository 
@@ -39,7 +48,7 @@ This repository holds the documentation files of the SEDOS project and is also u
 9. Push your commits, to share them with the team `git push`
 
 
-## How to update documentation on sedos-project.github.io/.github/ ?
+## DEPRECIATED - How to update documentation on sedos-project.github.io/.github/ ?
 
 1. On your local machine, navigate to `~/.github`
 1. On `main` brachen, run `git pull` to download latest docs-version and to avoid merge conflicts later
