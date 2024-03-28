@@ -277,8 +277,8 @@ This *data preface* provides additional information about the syntax of paramete
     |    | 26     | DE   | 2040 | pow_combustion_gt_hydrogen_0        | 2700                   |                            | 0.6      | 20                  | 500            |                |                |         |        |        |         |   |
     |    | 27     | DE   | 2045 | pow_combustion_gt_hydrogen_0        | 1500                   |                            | 0.6      | 20                  | 500            |                |                |         |        |        |         |   |
     |    | 28     | DE   | 2050 | pow_combustion_gt_hydrogen_0        | 200                    |                            | 0.6      | 20                  | 500            |                |                |         |        |        |         |   |
-    |    | 29     | DE   | 2060 | pow_combustion_gt_hydrogen_0        | 0                      |                            | 0.6      | 20                  | 500            |                |                |         |        |        |         |   |
-    |    | 30     | DE   | 2070 | pow_combustion_gt_hydrogen_0        | 0                      |                            | 0.6      | 20                  | 500            |                |                |         |        |        |         |   |
+    |    | 29     | DE   | 2060 | pow_combustion_gt_hydrogen_0        | 0                      |                            |          |                     |                |                |                |         |        |        |         |   |
+    |    | 30     | DE   | 2070 | pow_combustion_gt_hydrogen_0        | 0                      |                            |          |                     |                |                |                |         |        |        |         |   |
     ```
               
 
@@ -375,7 +375,9 @@ This *data preface* provides additional information about the syntax of paramete
 
     To avoid ambiguities in the data, the processes are specified as precisely as possible. <br> This means, for 
     example, for investment processes all years are specified in the data, even if an investment process is only
-    available from later years, e.g 2035, as opposed to missing rows for 2021, 2024, 2027 and 2030. 
+    available from later years, e.g 2035, as opposed to missing rows for 2021, 2024, 2027 and 2030. <br>    
+    To avoid data misinterpretation, the techno-economic parameter values for 2021, 2024, 2027 and 2030 are empty, 
+    since the process does not exist yet in such years.
     <br>
     ```python
     | id | region | year     | type   | capacity_p_inst                        | capacity_p_abs_new_max | conversion_factor_sec_elec | lifetime                     | cost_inv_capacity_p | cb_coefficient        | cv_coefficient   | bandwidth_type   | version          | method    | source   | comment  |           |
@@ -392,7 +394,10 @@ This *data preface* provides additional information about the syntax of paramete
     |    | 10     | DE       | 2070   | pow_combustion_cc_chp_ccs_biomass_1    |                        |                            | 0.8                          | 30                  | 600                   | 0.4              | 0.6              |                  |           |          |          |           |
     ```
 
-    Conversely, existing capacities are explicitly declared as 0 as soon as they are no longer in the system, as opposed to missing rows for 2060 and 2070.
+    Conversely, existing capacities are explicitly declared as 0 as soon as they are no longer in the system, as 
+    opposed to missing rows for 2060 and 2070. <br>
+    To avoid data misinterpretation, the techno-economic parameter values for 2060 and 2070 are empty, 
+    since the process does not exist anymore in such years.
     <br>
     ```python
     | id | region | year     | type   | capacity_p_inst                        | capacity_p_abs_new_max | conversion_factor_sec_elec | lifetime                     | cost_inv_capacity_p | cb_coefficient        | cv_coefficient   | bandwidth_type   | version          | method    | source   | comment  |           |
