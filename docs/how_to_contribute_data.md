@@ -102,7 +102,7 @@ In order to register your new data you have to:
 * Enter new version string (at least one row in your table must be present with given string in column "version")
 * Submit
 
-Group name: `SEDOS - <Sector> sector` | e.g. SEDOS - Mobility sector | SEDOS - Industry sector 
+Group name: `SEDOS_<sector>_sector` | e.g. SEDOS_mobility_sector | SEDOS_industry_sector 
 
 Now, your data should be registered and available on the databus. 
 As the SEDOS pipeline regularly checks for updates on the databus, 
