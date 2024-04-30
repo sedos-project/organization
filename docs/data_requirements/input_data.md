@@ -202,7 +202,7 @@ Example result on OEP:
 For the RDS, the following version tags apply:
 
 * **rds_range_v1**: Final SEDOS RDS with ranges to include parametric uncertainty from different sources. 
-* **rds_range_v<x>**: Updated SEDOS RDS, after project end. 
+* **rds_range_v2**: Updated SEDOS RDS, after project end. 
 * **rds_point_sedos**: SEDOS-specific values from rds_range_v1 that serve as a basis for all scnearios. 
 
 ### Datatypes
