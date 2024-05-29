@@ -197,6 +197,14 @@ Example result on OEP:
     * Otherwise single or multiple rows can be added to already existing versions
 
 
+#### SEDOS Reference Dataset (SRD) versioning
+
+For the SRD, the following version tags apply:
+
+* **srd_range_sedos**: Final SRD with ranges to include parametric uncertainty from different sources. 
+* **srd_range_v1**: Updated SRD, after project end. 
+* **srd_point_sedos**: SEDOS-specific values from srd_range_sedos that serve as a basis for all scnearios. 
+
 ### Datatypes
 
 Available datatypes and corresponding formatting examples:
