@@ -137,7 +137,7 @@ This *data preface* provides additional information about the syntax of paramete
 ??? note "Linking data with foreign keys"
 
     The general mapping structure is: <br>
-    `<table_name>_<column_name>` <br>
+    `<table_name>.<column_name>` <br>
 
     The note below `Structure of energy demands` exemplifies how data in the SRD is linked via foreign keys. <br>
     The `tra_demand` table uses a foreign key mapping to the tables`tra_scalars` and `tra_timeseries`.<br><br>
