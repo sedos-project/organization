@@ -7,8 +7,8 @@ In the project, we aim to establish a streamlined data management process with a
 
 The documentation is structured in two main parts 
 
-1. [SEDOS-specific data requirements](./data_requirements/input_data.md) 
-2. [Instructions on how to contribute data](./how_to_contribute_data.md)
+1. [SEDOS-specific data requirements](./developer/data_requirements/input_data.md) 
+2. [Instructions on how to contribute data](./developer/how_to_contribute_data.md)
 
 
 !!! question "Just here for the data?" 

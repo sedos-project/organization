@@ -8,7 +8,6 @@ More information will follow.
 
 ## Basisszenario ToKo – Technologieoffen & Kostenoptimal
 
-
 ## Scenario variation 1. Reduzierte Importabhängigkeit bei fossilem Gas (RIGa)
 
 ## Scenario variation 2. Sektorintegration (SIN)
