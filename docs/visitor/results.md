@@ -1,0 +1,3 @@
+The results and reference energy system can be explored using the [dashboard](https://sedos.apps.rl-institut.de/).
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=1&energy=GWh&power=GW&power_per_hour=MW%2Fh&mass=Gt&mass_per_year=Gt%2Fa&labels-TOTAL_FORMS=1&labels-INITIAL_FORMS=0&labels-MIN_NUM_FORMS=0&labels-MAX_NUM_FORMS=1000&labels-0-label_key=&labels-0-label_value=&chart_type=sankey&nodes=process&inflow=input_commodity&outflow=output_commodity&colors-TOTAL_FORMS=1&colors-INITIAL_FORMS=0&colors-MIN_NUM_FORMS=0&colors-MAX_NUM_FORMS=1000&colors-0-color_key=&colors-0-color_value=%23000000&font_size=&title_text=" width="800" height="600"></iframe>
