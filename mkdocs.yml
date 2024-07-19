@@ -1,9 +1,26 @@
 site_name: SEDOS Project
 
-
 nav:
-    - Home: index.md
-    - Developer:
+    - Welcome: index.md
+    - 'Reference Energy System':
+        - 'Overview': 'visitor/structure/overview.md'
+        - 'Model Base': 'visitor/structure/model_frame.md'
+        - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
+        - 'Model Structure': ''
+        - 'Aggregations': ''
+    - 'Reference Dataset':
+        - 'Overview': 'visitor/data/overview.md'
+        - 'Data': 'visitor/data/input_data.md'
+        - 'Metadata': 'visitor/data/metadata.md'
+        - 'Ontology': 'visitor/data/ontology.md'
+        - 'Licensing': 'visitor/data/licensing.md'
+        - 'Data Preface': 'developer/data_preface.md'
+        - 'Nomenclature': 'visitor/nomenclature.md'
+    - 'Model Application':
+        - 'Scenarios': 'visitor/model/scenarios.md'
+        - 'Results': 'visitor/model/results.md'
+        - 'GUI': ''
+    - SEDOS Developer:
         - '(Meta)data requirements':
             - 'Overview': 'developer/data_requirements/overview.md'
             - 'Data': 'developer/data_requirements/input_data.md'
@@ -13,11 +30,6 @@ nav:
         - 'How to contribute data?': 'developer/how_to_contribute_data.md'
         - 'Data preface': 'developer/data_preface.md'
         - 'FAQ': 'developer/faq.md'
-    - Visitor:
-        - 'Preface': 'visitor/lastenheft.md'
-        - 'Scenarios': 'visitor/scenarios.md'
-        - 'Results': 'visitor/results.md'
-        - 'Nomenclature': 'visitor/nomenclature.md'
     - 'Glossary': 'glossary.md'
 
 markdown_extensions:
