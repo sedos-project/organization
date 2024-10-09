@@ -2,25 +2,15 @@
 
 In SEDOS the metadata standard [OEMetadata v.1.5.1](https://github.com/OpenEnergyPlatform/oemetadata#open-energy-family---open-energy-metadata-oemetadata) is used.
 
-## Required metadata information 
-
-In SEDOS a minimal mandatory set of metadata information is required to:
+In SEDOS a minimal mandatory set of metadata information is provided to:
 
 1. automatically process the input data in the data pipeline,
 2. to provide useful context for data interpretation, and
 3. to fulfil legal requirements.
 
+The following oem-keys have been provided in the metadata of our reference dataset.
+
 ## Mandatory set of metadata information
-
-!!! Note "OEMetadata templates exist"
-
-    **Many metadata fields are already prefilled, if** you can build upon metadata templates ([scalar template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_scalars.json) and [timeseries template](https://raw.githubusercontent.com/sedos-project/oedatamodel/main/oedatamodel-parameter/datamodel_timeseries.json)).
-
-!!! Danger "Technical upload requirement"
-
-    OEM-key 15.2 is technically required for upload with oedatamodel-API
-
-Providing the following oem-keys when submitting your metadata is mandatory.
 
 ### General Keys
 
@@ -45,7 +35,7 @@ Information about the individual sources the data stems from.
 | 12.2   | description | A free text description of the data set.                                                             | Scientific climate change report by the UN                                                                                                                                                          |                                                                                                                                   |
 | 12.3   | path        | A URL to the original source.                                                                        | https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_full.pdf                                                                                                                               |                                                                                                                                   |
 | 12.4   | licenses    | An array of objects under which the source is provided.                                              |                                                                                                                                                                                                     |                                                                                                                                   |
-| 12.4.1 | name        | The SPDX identifier.                                                                       <br/>          | ODbL-1.0                                                                                                                                                                                            | <span style="color:red;"> In case of [missing licence](licensing.md#missing#licence#-#using#data#without#an#open#licence) </span> |
+| 12.4.1 | name        | The SPDX identifier.                                                                       <br/>          | ODbL-1.0                                                                                                                                                                                            |  |
 | 12.4.2 | title       | The official (human readable) title of the license.                                                  | Open Data Commons Open Database License 1.0                                                                                                                                                         |                                                                                                                                   |
 | 12.4.3 | path        | A link to the license text.                                                                          | https://opendatacommons.org/licenses/odbl/1-0/index.html                                                                                                                                            |                                                                                                                                   |
 | 12.4.4 | instruction | A short description of rights and restrictions. The use of tl;drLegal is recommended.                | You are free to share and change, but you must attribute, and share derivations under the same license. See https://tldrlegal.com/license/odc-open-database-license-(odbl) for further information. |                                                                                                                                   |

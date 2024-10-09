@@ -1,9 +1,9 @@
-# Overview of the SEDOS data architecture
+# Overview of the SEDOS data
+
+## Sectors
 
 The SEDOS Reference Dataset (SRD) entails technology data across five sectors (power, heat, x2x, industry, mobility) 
-and various aggregation levels.
-
-**SEDOS sectors**
+and various aggregation levels. The sectors and the used abbreviations within the data are listed below:
 
 | Sector abbreviation | Sector     | SEDOS workpackage |
 |---------------------|------------|-------------------|
@@ -12,6 +12,11 @@ and various aggregation levels.
 | x2x                 | Power to X | AP5               |
 | ind                 | Industry   | AP7               |
 | tra                 | Transport  | AP8               |
+
+[//]: # (## TODO: Umfang der Daten beschreiben)
+
+
+## Data Architecture
 
 Multiple input data packages are created and uploaded onthe [OEP](https://openenergy-platform.
 org/dataedit/view/model_draft?query=sedos&tags=246) via the [OEDatamodel-API](https://modex.rl-institut.de/create_table/).
@@ -24,5 +29,3 @@ conventions. A generalized representation of a datapackage is shown in the figur
 
 
 ![datapackage](../../graphics/datapackage.jpg)
-
-
