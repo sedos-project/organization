@@ -18,6 +18,10 @@ The documentation is structured in the following four main parts
 
     Find the SEDOS Reference Dataset on the **[Databus](https://databus.openenergyplatform.org/sedos-project/collections/sedos-project)** or the **[OpenEnergyPlatform](https://openenergy-platform.org/dataedit/view/model_draft?query=sedos&tags=246)**
 
+!!! info "How to cite our work?"
+
+    In case you use our model structure and the related data in a scientific publication we kindly request you to cite our publications listed in the further reading section.
+[//]: # (    TODO: Ergänzen mit Info zu gesamten Datensatz wie zitieren? Metadaten zu den Metadaten &#40;siehe Mail Christoph an Jonas RLI&#41;)
 
 ??? info "Latest documentation version"
 
