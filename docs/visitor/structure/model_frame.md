@@ -1,65 +1,29 @@
 # Model Base
 
-The specifications, a result of thorough discussions and definitions in the 3rd working package of the SEDOS project, provide a clear and accessible series of assumptions and requirements. This clarity sets the basic framework for the modeling in the project. The transparency also ensures that the model can be solved with different model generators.
+As a result of thorough discussions in the 3rd working package of the SEDOS project, the following list
+provides assumptions and requirements to understand the model base. 
+This sets the basic framework for modeling with the provided model structure also with different model generators.
+The key points of the model base are:
 
-## Alignment
-
-The SEDOS focus is on understanding...
-
-- The overall system,
-- The technical foundation in the sectors,
-- The possible relations and interactions due to sector coupling.
-
-The model structure is used in three frameworks oemof, FINE and TIMES.
-
-## Key Facts
-
-- Deterministic model formulation with Linear Programming Optimization
+- Deterministic model formulation with Linear Programming Optimization.
 - Intertemporal Time-Span modeling with perfect foresight.
-- Central planner solving perspective for macro-economic optimization. Business/regulatory aspects are neglected as far as possible, 
-- Brownfield approach: Differentiation between existing technology stock (0X) vs new technology expansion (1X)
-  if necessary, taxes are deducted from the prices and a global WACC of 2% has been defined for all technologies.
-- Long-Term time horizon until 2070
-- To enable the internal and external calculability of SEDOS-based models, additional aggregation levels are introduced 
-  due to the high level of detail in the sectors. This allows the user to focus their model on individual sectors while 
-  other sectors are modeled simplified.
-- Hourly time resolution with time series aggregation using the tsam tool [TODO: Link]
+- Central planner solving perspective for macro-economic optimization. Business/regulatory aspects are neglected as far as possible.
+  A consistent Weighted Average Cost of Capital (WACC) of 2% has been defined for all technologies and if necessary, taxes are deducted from the prices.
+- Brownfield approach: Differentiation between existing technology stock (0X) vs new technology expansion (1X).
+- Long-Term time horizon until 2070.
+- Hourly time resolution with time series aggregation using the [tsam](https://tsam.readthedocs.io/en/latest/index.html) tool
+- The SEDOS data are provided for a 1-region Germany model. Cost parameters for the electricity grid are to be estimated 
+for the overall system, considering demand and renewable energy supply.
 - A distinction is made between three energy categories: primary energy, secondary energy, and model exogenous energy demand. 
 - The exogenous demand in the model is defined in such a way that the model has maximum degrees of freedom to choose between 
 the technologies to meet the demand. The final energy in the system is thus determined as far as possible endogenously in the model.
 - For the processes, a distinction is made between complementary inputs/outputs with a fixed ratio to each other and 
 substitutive inputs/outputs with a flexible ratio to each other. This should also allow processes to be modeled that 
 can choose their energy sources endogenously.
+- To ease the feasibility of SEDOS-based models, additional aggregation levels are introduced due to the high level of 
+  detail in the sectors. This allows the user to focus their model on individual sectors while other sectors are simplified.
 - Capacity expansion limits have been defined per milestone years.
-- The SEDOS data are provided for a 1-region Germany model. Cost parameters for the electricity grid are to be estimated 
-for the overall system, considering demand and renewable energy supply.
 - The European electricity market is considered but modeled in a simplified manner.
-
-## 2.6 Emissions
-
-General information:
-- Emission types: CO2, methane & N2O
-- The emission values should be standardised from the NRI Inventory table "global_emission_factors.xlsx".
-- CO2 equivalents: The following factors are used for a consistent conversion into CO2 equivalents:
-  - CH4: 25
-  - N2O: 298
-- Realisation of negative emissions in the model structure via additional commodities per sector (see "Commodity_Set" spreadsheet)
-- Add emission concept graphic [CHECK]
-
-Emission balancing:
-
-- balancing during combustion & offsetting if necessary
-  - Biogen: CO2 emissions from combustion & negative emissions from production/source processes of biogenic energy sources
-  - Synthetic: CO2 emissions during combustion & model-endogenous negative emissions for production with carbon capture
-  - Fossil: CO2 emissions during combustion
-
-Differentiation of emissions:
-
-- Global (CO2): Foreign key mapping to the global table with emission factors per energy source. Specification with a foreign key on the global table
-- Process-specific (methane & N2O): Sector/process-specific emission factors due to higher dependence on process conditions 
-- (e.g., firing temperature N2O, material moisture CH4 ...) Direct specification with a numerical value
-
-
 
 [//]: # ()
 [//]: # (### 2.3.3 Temporal aggregation method)
