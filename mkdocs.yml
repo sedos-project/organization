@@ -1,20 +1,36 @@
 site_name: SEDOS Project
 
 nav:
-    - '(Meta)data requirements':
-       - 'Overview': 'data_requirements/overview.md'
-       - 'Data': 'data_requirements/input_data.md'
-       # - 'Nomenclature': 'data_requirements/nomenclature.md'
-       - 'Metadata': 'data_requirements/metadata.md'
-       - 'Ontology': 'data_requirements/ontology.md'
-       - 'Licensing': 'data_requirements/licensing.md'
-    - 'How to contribute data?': 'how_to_contribute_data.md'
-    - 'FAQ': 'faq.md'
-    - 'Data preface': 'data_preface.md'
-    - 'Scenarios': 'scenarios.md'
-    - 'Results': 'results.md'
+    - Welcome: index.md
+    - 'Model Structure':
+        - 'Overview': 'visitor/structure/overview.md'
+        - 'Model Base': 'visitor/structure/model_frame.md'
+        - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
+        - 'Emissions': 'visitor/structure/emissions.md'
+#        - 'Model Structure': ''
+#        - 'Aggregations': ''
+    - 'Reference Dataset':
+        - 'Overview': 'visitor/data/overview.md'
+        - 'Nomenclature': 'visitor/data/nomenclature.md'
+        - 'Data Conventions': 'visitor/data/data_conventions.md'
+        - 'Metadata': 'visitor/data/metadata.md'
+        - 'Ontology': 'visitor/data/ontology.md'
+    - 'Model Application':
+        - 'Scenarios': 'visitor/model/scenarios.md'
+        - 'GUI': 'visitor/model/gui.md'
+        - 'Results': 'visitor/model/results.md'
+        - 'How to contribute data?': 'developer/how_to_contribute_data.md'
+        - 'Data preface': 'developer/data_preface.md'
+        - 'FAQ': 'developer/faq.md'
     - 'Glossary': 'glossary.md'
-
+    - Developer Instructions:
+        - '(Meta)data requirements':
+            - 'Overview': 'developer/data_requirements/overview.md'
+            - 'Data': 'developer/data_requirements/input_data.md'
+            - 'Metadata': 'developer/data_requirements/metadata.md'
+            - 'Ontology': 'developer/data_requirements/ontology.md'
+            - 'Licensing': 'developer/data_requirements/licensing.md'
+    - 'Further reading': 'publications.md'
 
 markdown_extensions:
     - toc:
