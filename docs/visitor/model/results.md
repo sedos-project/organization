@@ -1,6 +1,10 @@
 # Results
 
-Beispiel Test 1:
+## Changes in technology
+
+One interesting question is how the technologies used in the industry will change over the decades. 
+The two sub-sectors of copper and aluminum were selected for a closer look at this development. 
+The following diagrams show the installed capacity per year in each case, with the colored background describing the technology used.
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
@@ -23,5 +27,28 @@ A new technology was introduced in the sec sector as early as 2025, which will t
 A similar thing happens in the pri sector, where in 2035 a new and highly innovative technology is introduced and takes over the total capacity for this sector within the next 10 years.
 
 
+## Energy flow and use of hydrogen
 
-Hydrogen:
+Another topic that will be considered below is energy flow of the subsectors in the industry.
+In connection with that analysis, the development of the use of hydrogen in the industrial sector can also be examined.
+Therefor three diagrams were created showing the energy flow in the individual subsectors of the industry.
+Here can be seen that while currently no hydrogen is being used in the indsutry sectors, 
+it will already play a major role in 2045 and thus the use of coal and methane can be drastically reduced
+
+
+Year 2024:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=749" width="800" height="500"></iframe>
+
+Year 2045:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=751" width="800" height="500"></iframe>
+
+Year 2070:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=755" width="800" height="500"></iframe>
+
+
+
+
+
