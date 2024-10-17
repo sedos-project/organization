@@ -6,11 +6,11 @@ Beispiel Test 1:
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Graph for copper</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=7&parameters_id=620" width="800" height="750"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=734" width="800" height="750"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Graph for aluminium</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=7&parameters_id=625" width="800" height="750"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=736" width="800" height="750"></iframe>
     </div>
   </div>
 </div>
