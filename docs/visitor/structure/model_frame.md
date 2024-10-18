@@ -25,6 +25,12 @@ can choose their energy sources endogenously.
 - Capacity expansion limits have been defined per milestone years.
 - The European electricity market is considered but modeled in a simplified manner.
 
+<br>
+The central assumptions are additionally highlighted in the figure below:
+<br>
+![sector_overview](../../graphics/model-frame-decisions_v3.jpg)
+
+
 [//]: # ()
 [//]: # (### 2.3.3 Temporal aggregation method)
 

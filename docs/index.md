@@ -8,19 +8,20 @@ open source structure.
 
 The documentation is structured in the following four main parts 
 
-1. [Reference Energy System](visitor/structure/model_frame.md)
+1. [Model Structure](visitor/structure/model_frame.md)
 2. [Reference Dataset](./visitor/data_requirements/input_data.md)
 3. [Model Application](./visitor/data_requirements/input_data.md)
-4. [SEDOS developer](./developer/how_to_contribute_data.md)
+4. [Developer Instructions](./developer/how_to_contribute_data.md)
 
 
-!!! question "Just here for the data?" 
+??? question "Just here for the data?" 
 
     Find the SEDOS Reference Dataset on the **[Databus](https://databus.openenergyplatform.org/sedos-project/collections/sedos-project)** or the **[OpenEnergyPlatform](https://openenergy-platform.org/dataedit/view/model_draft?query=sedos&tags=246)**
 
-!!! info "How to cite our work?"
+??? info "How to cite our work?"
 
-    In case you use our model structure and the related data in a scientific publication we kindly request you to cite our publications listed in the further reading section.
+    In case you use our model structure and the related data in a scientific publication we kindly ask you to cite our 
+    publications listed in the [Further Reading](publications.md) section.
 [//]: # (    TODO: Ergänzen mit Info zu gesamten Datensatz wie zitieren? Metadaten zu den Metadaten &#40;siehe Mail Christoph an Jonas RLI&#41;)
 
 ??? info "Latest documentation version"
