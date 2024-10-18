@@ -26,6 +26,6 @@ A generalized representation of a datapackage is shown in the figure below. A da
 * **metadata** - describing the structure of the datamodel, and providing context to the data. 
 
 
-![datapackage](../graphics/datapackage.jpg)
+![datapackage](../../graphics/datapackage.jpg)
 
 

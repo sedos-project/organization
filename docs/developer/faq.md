@@ -91,7 +91,7 @@ This section centers around the data model usage.
 1. ??? question "In which form should the sources be entered in the CSV tables?"
 
         **Answer:** Please set your bibtexkey as the following pattern: <br><br>
-         **[AP-number][author][year]** <br><br>
+         **(AP-number)(author)(year)** <br><br>
          ```
          {'capacity_e_inst': '8Kraft2021b, 8ADAC2023', 'capacity_tra_connection_flex_max': '8Kraft2021b, 8ADAC2023', 'capacity_tra_vehicles_inst': '8S&PG2023', 'cost_fix_tra': '8Kraft2023, 8ADAC2023, 8ADAC2023b', 'cost_inv_tra': '8Kraft2021b, 8ADAC2023', 'cost_var': '8Kraft2023, 8ADAC2023, 8ADAC2023b', 'efficiency_sto_in': '8Keil2017', 'efficiency_sto_out': '8Keil2017', 'efficiency_tra_electrical': '8Kraft2021b, 8ADAC2023', 'efficiency_tra_g2v': '8RuckeSchoe2022', 'efficiency_tra_v2g': '8RuckeSchoe2022', 'lifetime': '8Kraft2011', 'mileage': '8BaumeHautz2014, 8Progn2021', 'occupancy_rate': '8infas2018, 8AdolfBalze2014', 'sto_init': 'ownAssumption', 'sto_self_discharge': '8XuBehre2023'}
          ```
