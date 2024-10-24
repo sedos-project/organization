@@ -1,3 +1,29 @@
+# Description GUI
+
+Structure: 
+
+- Scenario: select the data to be displayed
+
+- Other: if necessary, the scaling of the y-axis can be changed here by changing the unit
+
+- Graph: selection of the plot type and display
+
+- Display: illustration and labeling
+
+- Load Filter Settings: load ready-made and saved diagrams
+
+- Render chart and table: load chart
+
+- Chart: displays diagram
+
+- Table: list of the data used
+
+Other Notes:
+
+- Make sure that the units of the selected data match 
+
+- If you only want to represent input or output data and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram
+
 # Results
 
 ## Changes in technology
