@@ -1,5 +1,12 @@
 # Description GUI
 
+What can the GUI do?
+
+The data fed in can be displayed graphically using the GUI. 
+This can be filtered in various degrees of detail to adapt the display to your own requirements. 
+In this way, it is possible to display anything from a general overview of an entire sector to a detailed representation of an individual process.
+
+
 Structure: 
 
 - Scenario: select the data to be displayed
