@@ -113,6 +113,40 @@ More complex sankey variations:
 <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=785" width="1000" height="750"></iframe>
 
 
+
+
+
+# Emissions
+
+The following four diagrams show the different emissions of the processes aluminum_sec_0 and its successor aluminum_sec_1. 
+In general, it can be seen that the emissions decrease over the years and level off at a relatively constant value.
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>aluminium_sec CO2</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1010" width="800" height="450"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>aluminium_sec N2O</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1014" width="800" height="450"></iframe>
+    </div>
+  </div>
+</div>
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>aluminium_sec CH4</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1017" width="800" height="450"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>aluminium_sec total</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1022" width="800" height="450"></iframe>
+    </div>
+  </div>
+</div>
+
 [//]: # ()
 [//]: # (sec-pri-inputs to process to sec waste heat output:)
 
