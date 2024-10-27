@@ -147,6 +147,39 @@ In general, it can be seen that the emissions decrease over the years and level 
   </div>
 </div>
 
+
+Same for glass_spec:
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>glass_spec CO2_f</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1027" width="800" height="450"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>glass_spec CO2_p</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1030" width="800" height="450"></iframe>
+    </div>
+  </div>
+</div>
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>glass_spec N2O</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1034" width="800" height="450"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>glass_spec CH4</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1036" width="800" height="450"></iframe>
+    </div>
+  </div>
+</div>
+
+glass_spec total emissions: 
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1040" width="800" height="450"></iframe>
+
+
 [//]: # ()
 [//]: # (sec-pri-inputs to process to sec waste heat output:)
 
