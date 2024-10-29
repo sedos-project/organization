@@ -13,9 +13,9 @@ Structure:
 
 - Other: if necessary, the scaling of the y-axis can be changed here by changing the unit
 
-- Graph: selection of the plot type and display
+- Graph: selection of the plot type and display; if required, add subplots; define x- and y-axis and if helpful change the coloring depending on the different choosing options under scenario
 
-- Display: illustration and labeling
+- Display: illustration and labeling; change x- and y-title and add a legend if required
 
 - Load Filter Settings: load ready-made and saved diagrams
 
@@ -30,6 +30,9 @@ Other Notes:
 - Make sure that the units of the selected data match 
 
 - If you only want to represent input or output data and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram
+
+- for bar and line plots: make sure to change the x- and y-axis to the right value you want to plot
+
 
 # Results
 
