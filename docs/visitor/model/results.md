@@ -6,8 +6,15 @@ The data fed in can be displayed graphically using the GUI.
 This can be filtered in various degrees of detail to adapt the display to your own requirements. 
 In this way, it is possible to display anything from a general overview of an entire sector to a detailed representation of an individual process.
 
+Structure of the data:
 
-Structure: 
+The data describe different sectors with the respective processes and their input and output groups. 
+The processes can be aggregated, on the one hand with the help of categories that divide the sectors into individual areas, or through the specifications
+A distinction is also made between different parameters, depending on the type of data being considered.
+In addition, the data is available for several years over decades, which makes it possible to analyze the development
+
+
+Structure of the GUI: 
 
 - Scenario: select the data to be displayed
 
@@ -19,15 +26,25 @@ Structure:
 
 - Load Filter Settings: load ready-made and saved diagrams
 
+- Save Filer Settings: If you have filter settings that you want to save for later analysis, you can enter a title in the box next to this button and save it after you have finished setting the filters
+
 - Render chart and table: load chart
 
 - Chart: displays diagram
 
 - Table: list of the data used
 
-Other Notes:
+How to create a plot:
 
-- Make sure that the units of the selected data match 
+- there are three types of plots, all with different advantages and disadvantages, depending on what you want to display:
+    - bar
+    - line
+    - sankey: "flow-diagram", especially helpful for representing input and output flows of processes, categories in general etc.
+
+
+- especially for plots that take different processes, inputs/outputs etc. in consideration, coloring can be very helpful. You can set the characteristic by which the colors are to be differentiated, depending on what you want to display
+
+- Make sure that the units of the selected data match
 
 - If you only want to represent input or output data and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram
 
