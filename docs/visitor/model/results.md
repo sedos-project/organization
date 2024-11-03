@@ -1,46 +1,58 @@
 # Description GUI
 
-What can the GUI do?
+## What can the GUI do?
 
 The data fed in can be displayed graphically using the GUI. 
 This can be filtered in various degrees of detail to adapt the display to your own requirements. 
 In this way, it is possible to display anything from a general overview of an entire sector to a detailed representation of an individual process.
 
-Structure of the data:
+## Structure of the data:
 
 The data describe different sectors with the respective processes and their input and output groups. 
 The processes can be aggregated, on the one hand with the help of categories that divide the sectors into individual areas, or through the specifications
 A distinction is also made between different parameters, depending on the type of data being considered.
 In addition, the data is available for several years over decades, which makes it possible to analyze the development
 
+## Structure of the GUI: 
 
-Structure of the GUI: 
+- **Scenario**: select the data to be displayed
 
-- Scenario: select the data to be displayed
+- **Other**: if necessary, the scaling of the y-axis can be changed here by changing the unit
 
-- Other: if necessary, the scaling of the y-axis can be changed here by changing the unit
+- **Graph**: selection of the plot type and display; if required, add subplots; define x- and y-axis and if helpful change the coloring depending on the different choosing options under scenario
 
-- Graph: selection of the plot type and display; if required, add subplots; define x- and y-axis and if helpful change the coloring depending on the different choosing options under scenario
+- **Display**: illustration and labeling; change x- and y-title and add a legend if required
 
-- Display: illustration and labeling; change x- and y-title and add a legend if required
+- **Load Filter Settings**: load ready-made and saved diagrams
 
-- Load Filter Settings: load ready-made and saved diagrams
+- **Save Filer Settings**: If you have filter settings that you want to save for later analysis, you can enter a title in the box next to this button and save it after you have finished setting the filters
 
-- Save Filer Settings: If you have filter settings that you want to save for later analysis, you can enter a title in the box next to this button and save it after you have finished setting the filters
+- **Render chart and table**: load chart
 
-- Render chart and table: load chart
+- **Chart**: displays diagram
 
-- Chart: displays diagram
+- **Table**: list of the data used
 
-- Table: list of the data used
+## How to create a plot:
 
-How to create a plot:
+There are three types of plots, all with different advantages and disadvantages, depending on what you want to display:
 
-- there are three types of plots, all with different advantages and disadvantages, depending on what you want to display:
-    - bar
-    - line
-    - sankey: "flow-diagram", especially helpful for representing input and output flows of processes, categories in general etc.
+- bar: 
+    - simple, easy to interpret
+    - representation of discrete data
+- line:
+      - simple, easy to interpret, 
+      - representation of continuous data
+      - suitable for displaying temporal progressions
+- sankey:
+      - "flow-diagram"
+      - especially helpful for representing input and output flows of processes, categories in general etc.
 
+Thus while bar and line charts are well suited for comparing discrete/continuous data, sankey Diagrams can be used to visualize more complex flows and relationships
+
+So before starting to create a plot, think about what type of diagram best suits your simulation and depending on that choose the right filters.
+
+Other tips:
 
 - especially for plots that take different processes, inputs/outputs etc. in consideration, coloring can be very helpful. You can set the characteristic by which the colors are to be differentiated, depending on what you want to display
 
