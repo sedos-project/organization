@@ -17,7 +17,7 @@ nav:
         - 'Ontology': 'visitor/data/ontology.md'
     - 'Model Application':
         - 'Scenarios': 'visitor/model/scenarios.md'
-#        - 'GUI': 'visitor/model/gui.md'
+        - 'GUI': 'visitor/model/gui.md'
         - 'Results': 'visitor/model/results.md'
     - Developer Instructions:
         - '(Meta)Data Requirements':
