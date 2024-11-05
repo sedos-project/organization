@@ -27,16 +27,29 @@ To do this, a scenario must first be selected at the bottom right of the start p
 
 ### What the GUI can do
 
-The data fed in can be displayed graphically using the GUI. 
+The result data fed in can be displayed graphically using the GUI. 
 This can be filtered in various degrees of detail to adapt the display to your own requirements. 
 In this way, it is possible to display anything from a general overview of an entire sector to a detailed representation of an individual process.
 
 ### Structure of the data
 
-The data describe different sectors with the respective processes and their input and output groups. 
+The result data describe different sectors with the respective processes and their input and output groups. 
 The processes can be aggregated, on the one hand with the help of categories that divide the sectors into individual areas, or through the specifications.
-A distinction is also made between different parameters, depending on the type of data being considered.
+A distinction is also made between different parameters, depending on the type of data being considered:
+
+- flow_volume
+- losses
+- costs_investment
+- costs_variable
+- costs_fixed
+- capacity_inst
+- capacity_new
+
+Whereby the first two parameters refer to flows while the others describe processes.
+
 In addition, the data is available for several years over decades, which makes it possible to analyze the development.
+
+For the Nomenclature of the result data please click [here](http://127.0.0.1:8000/visitor/data/nomenclature/).
 
 ### Structure of the GUI
 
@@ -73,7 +86,7 @@ There are three types of plots, all with different advantages and disadvantages,
       - suitable for displaying temporal progressions
 - sankey:
       - "flow-diagram"
-      - especially helpful for representing input and output flows of processes, categories etc.
+      - especially helpful for representing input and output flows of processes, categories etc. and for the representation of energy balances
 
 Thus while bar and line charts are well suited for comparing discrete/continuous data, sankey Diagrams can be used to visualize more complex flows and relationships.
 
