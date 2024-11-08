@@ -1,12 +1,4 @@
-# GUI
-
-The results and reference energy system can be explored using the [GUI](https://sedos.apps.rl-institut.de/).
-
-
-[//]: # (<span style="color:red">TODO: description of the GUI </span>)
-
-
-[//]: # (# Description GUI)
+# [GUI](https://sedos.apps.rl-institut.de/)
 
 ## Why this GUI?
 To improve the transparency and reproducibility of the open source structure this GUI provides a few basic functionalities to explore the derived modeling base:
