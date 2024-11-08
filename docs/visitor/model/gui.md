@@ -1,4 +1,5 @@
-# [GUI](https://sedos.apps.rl-institut.de/)
+# GUI
+!!! example "Try out our interactive SEDOS [GUI](https://sedos.apps.rl-institut.de/)"
 
 ## Why this GUI?
 To improve the transparency and reproducibility of the open source structure this GUI provides a few basic functionalities to explore the derived modeling base:
@@ -7,26 +8,33 @@ To improve the transparency and reproducibility of the open source structure thi
 
 - Exploring the underlying input data of our model with an integrated table view.
 
-- See the aggregations steps defined in our model structure and download the different levels of detail .
+- See the aggregation steps defined in our model structure and download the different levels of detail for modeling.
 
-- Create charts based on possible model results as an outcome of different frameworks and scenarios using the same data.
+- Create charts based on model results as an outcome of different frameworks and scenarios using the same reference dataset.
 
-In the following, the last point, the presentation of the data in the form of charts, will be examined in more detail.
+In the following, the last point, the visualization of the data in the form of charts, will be examined in more detail as the user has a variety of options here to create tailored plots.
 
-To do this, a scenario must first be selected at the bottom right of the start page under “Explore the Model results” and the gui for creating charts can be accessed by clicking on “Explore Diagrams”.
+## Explore the Model Structure
 
-## Explore the Model results
+## Explore the Model Results
 
-### What the GUI can do
+### Overview
 
-The result data fed in can be displayed graphically using the GUI. 
-This can be filtered in various degrees of detail to adapt the display to your own requirements. 
-In this way, it is possible to display anything from a general overview of an entire sector to a detailed representation of an individual process.
+The GUI enables graphical visualization of the result data, which can be filtered to various levels of detail to meet specific requirements.
 
-### Structure of the data
+This allows you to display anything from a broad sector overview to a detailed view of individual processes.
 
-The result data describe different sectors with the respective processes and their input and output groups. 
-The processes can be aggregated, on the one hand with the help of categories that divide the sectors into individual areas, or through the specifications.
+To begin, select a scenario at the bottom right of the start page under "Explore Model Results." 
+
+Access the chart creation interface by clicking on "Explore Diagrams."
+
+### Result Data
+
+The result data can be aggregated on the following levels according to the [Nomenclature](../data/nomenclature.md):
+
+Sectors &rarr; Categories &rarr; Specifications &rarr; Processes
+
+This hierarchy allows for flexible data breakdowns, enabling customized configurations tailored to different plotting needs.
 A distinction is also made between different parameters, depending on the type of data being considered:
 
 - flow_volume
@@ -37,63 +45,65 @@ A distinction is also made between different parameters, depending on the type o
 - capacity_inst
 - capacity_new
 
-Whereby the first two parameters refer to flows while the others describe processes.
-
+Whereby the first two parameters refer to process flows which are defined in the input/output groups while the other parameters describe the process itself.
 In addition, the data is available for several years over decades, which makes it possible to analyze the development.
 
-For the Nomenclature of the result data please click [here](http://127.0.0.1:8000/visitor/data/nomenclature/).
+### GUI structure
 
-### Structure of the GUI
+<ins>Four different tabs are available to define a plot:</ins>
 
-- **Scenario**: set the filters to get the data to be displayed
+- **Scenario**: Set the filters to get the result data of a specific scenario to be displayed.
 
-- **Other**: if necessary, the scaling of the y-axis can be changed here by changing the unit as well as a change in the order e.g. of the bars in a bar diagram can be made; labels can be added and the data can be normalized
+- **Other**: Adjust the y-axis scaling by changing units, reorder items (e.g., bar chart elements), add labels, and normalize data if necessary.
 
-- **Graph**: selection of the plot type and display; if required, add subplots; define x- and y-axis and if helpful change the coloring depending on the different choosing options under scenario
+- **Graph**: Choose the plot type and display options, add subplots if needed, define the x- and y-axes, and adjust colors based on the available choices in the scenario pane.
 
-- **Display**: illustration of the plot; change x- and y-title and add a legend if required
+- **Display**: Illustration settings of the plot; change x- and y-title and add a legend if required.
 
-- **Load Filter Settings**: load ready-made and saved diagrams
+<ins>The basic buttons to create and see your data are:</ins>
 
-- **Save Filer Settings**: If you have filter settings that you want to save for later analysis, you can enter a title in the box next to this button and save it after you have finished setting the filters
+- **Render chart and table**: Display the chart based on the applied filters.
 
-- **Render chart and table**: load the chart
+- **Chart**: Visual representation of the data.
 
-- **Chart**: displays the diagram
+- **Table**: Tabular display of the data used in the chart.
 
-- **Table**: list of the data used in the diagram
+<ins>Additional features to ease the use of this GUI are:</ins>
 
-- **Embed Chart**: 
+- **Save Filer Settings**: To save your filter settings for later use, enter a title and save the configuration once filters are set.
+
+- **Load Filter Settings**: Load saved filter settings to create ready-made diagrams.
+
+- **Embed Chart**: The "Embed Chart" feature generates a unique link for a customized chart by storing the parameter settings in a central database, allowing users to easily revisit or share it. 
+Opening the link recreates the chart with the exact same settings. This makes sharing data insights simple and accessible. 
 
 ### How to create a plot
 
-There are three types of plots, all with different advantages and disadvantages, depending on what you want to display:
+<ins>Choose from three basic plot types for visualization:</ins>
 
-- bar: 
-    - simple, easy to interpret
-    - representation of discrete data
-- line:
-      - simple, easy to interpret
-      - representation of continuous data
-      - suitable for displaying temporal progressions
-- sankey:
-      - "flow-diagram"
-      - especially helpful for representing input and output flows of processes, categories etc. and for the representation of energy balances
+- **Bar Chart**: 
+    - Simple and easy to interpret.
+    - Suitable for discrete data developments.
+    - Stacked plots allow to keep track of the total values while showing the contribution single processes.
+- **Line Chart**:
+    - Simple and easy to interpret.
+    - Suitable for displaying temporal developments.
+- **Sankey Diagram**:
+    - Flow diagram representing input and output flows across selected node levels as described above.
+    - Effective for visualizing complex flows and energy balances.
 
-Thus while bar and line charts are well suited for comparing discrete/continuous data, sankey Diagrams can be used to visualize more complex flows and relationships.
+<ins>Other tips:</ins>
 
-So before starting to create a plot, think about what type of diagram best suits your simulation and depending on that choose the right filters.
+- Especially for plots that take different processes, inputs/outputs etc. in consideration, coloring can be very helpful. 
+You can set the characteristic by which the colors are to be differentiated, depending on what you want to display.
 
-Other tips:
+- Make sure that the units of the selected data match.
 
-- especially for plots that take different processes, inputs/outputs etc. in consideration, coloring can be very helpful. You can set the characteristic by which the colors are to be differentiated, depending on what you want to display
+- You can adjust the x- and y-axis for bar and line plots to the right value you want to plot.
 
-- Make sure that the units of the selected data match
+- If you only want to represent input or output data in a sankey and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram.
 
-- If you only want to represent input or output data and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram
-
-- for bar and line plots: make sure to change the x- and y-axis to the right value you want to plot
-
+- Make use of subplots to compare different scenarios, years or sectors.
 
 
 
