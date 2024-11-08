@@ -4,7 +4,10 @@ nav:
     - Welcome: index.md
     - 'Model Structure':
         - 'Overview': 'visitor/structure/overview.md'
-        - 'Model Base': 'visitor/structure/model_frame.md'
+        - 'Model Base': 
+            - 'General features': 'visitor/structure/model_frame.md'
+            - 'Sectors':
+                -'Transport': 'visitor/structure/transport.md'
         - 'Emission Concept': 'visitor/structure/emissions.md'
         - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
 #        - 'Model Structure': ''
