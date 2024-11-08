@@ -41,7 +41,7 @@ GitHub actions.
 
 6. Add all your local changes `git add .`
 
-7. Commit your local changes `git commit -m 'Extend documentation`
+7. Commit your local changes `git commit -m 'Extend documentation'`
 
 8. Check if other SEDOS members uploaded changes before pushing yours `git pull`  
 
