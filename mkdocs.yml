@@ -7,7 +7,7 @@ nav:
         - 'Model Base': 
             - 'General features': 'visitor/structure/model_frame.md'
             - 'Sectors':
-                -'Transport': 'visitor/structure/transport.md'
+                - 'Transport': 'visitor/structure/transport.md'
         - 'Emission Concept': 'visitor/structure/emissions.md'
         - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
 #        - 'Model Structure': ''
