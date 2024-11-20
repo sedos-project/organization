@@ -16,6 +16,49 @@ In the following, the last point, the visualization of the data in the form of c
 
 ## Explore the Model Structure
 
+Under this section the structure of the data can be displayed graphically.
+
+There are five different sectors:
+
+- mobility
+- heat
+- power
+- industry
+- X2X
+
+Whereby the first four describe the different energy sectors and the last one includes those processes where the output of one sector is used as input in the other sector as well as the import and export of commodities.
+
+Furthermore there are four main categories of commodities: 
+
+- primary energy carriers (pri)
+- secondary energy carriers (sec)
+- exogenous demand (exo)
+- industrial intermediate products (iip)
+
+
+### GUI structure
+
+There are four different buttons that lead you to the corresponding GUIs:
+
+**Generate Networks:** 
+
+- Here the data structure and their interrelations can be graphically displayed.
+- Therefor various filters are available on the left side of the GUI to adjust the clarity, e.g. with the help of aggregations.
+- This means, for example, that only selected sectors or processes can be displayed.
+
+**Look at Processes:**
+
+- Here the corresponding data can be found
+
+**Look at Artifacts:** 
+
+- Here the corresponding data can be found
+
+**Aggregation Graph:** 
+
+- the defined aggregations can her be displayed graphically to get an overview over which processes are mapped to which aggregation.
+- At the top of the GUI, you can filter by the desired level of detail and select the sector to be displayed.
+
 ## Explore the Model Results
 
 ### Overview
