@@ -16,9 +16,9 @@ In the following, the last point, the visualization of the data in the form of c
 
 ## Explore the Model Structure
 
-Under this section the structure of the data can be displayed graphically.
+In this part, the structure of the data can be displayed graphically to build a better understanding of how the data is related
 
-There are five different sectors:
+First of all there are five different sectors:
 
 - mobility
 - heat
@@ -28,7 +28,7 @@ There are five different sectors:
 
 Whereby the first four describe the different energy sectors and the last one includes those processes where the output of one sector is used as input in the other sector as well as the import and export of commodities.
 
-Furthermore there are four main categories of commodities: 
+Furthermore, there are four main categories of commodities that occur in the respective processes: 
 
 - primary energy carriers (pri)
 - secondary energy carriers (sec)
@@ -36,27 +36,29 @@ Furthermore there are four main categories of commodities:
 - industrial intermediate products (iip)
 
 
+
+
 ### GUI structure
 
-There are four different buttons that lead you to the corresponding GUIs:
+To take a closer look at the structure of the data, there are the following four different buttons on the start page that will take you to the respective GUI:
 
 **Generate Networks:** 
 
-- Here the data structure and their interrelations can be graphically displayed.
-- Therefor various filters are available on the left side of the GUI to adjust the clarity, e.g. with the help of aggregations.
+- Click here to display the data structure and their interrelations graphically.
+- Therefore, various filters are available on the left side of the GUI to adjust the clarity, e.g. with the help of aggregations.
 - This means, for example, that only selected sectors or processes can be displayed.
 
 **Look at Processes:**
 
-- Here the corresponding data can be found
+- Click here to find the corresponding data
 
 **Look at Artifacts:** 
 
-- Here the corresponding data can be found
+- Click here to find the corresponding data
 
 **Aggregation Graph:** 
 
-- the defined aggregations can her be displayed graphically to get an overview over which processes are mapped to which aggregation.
+- Click here to display the defined aggregations graphically, which will help you to get an overview over which processes are mapped to which aggregation.
 - At the top of the GUI, you can filter by the desired level of detail and select the sector to be displayed.
 
 ## Explore the Model Results
@@ -135,18 +137,14 @@ Opening the link recreates the chart with the exact same settings. This makes sh
     - Flow diagram representing input and output flows across selected node levels as described above.
     - Effective for visualizing complex flows and energy balances.
 
-<ins>Other tips:</ins>
 
-- Especially for plots that take different processes, inputs/outputs etc. in consideration, coloring can be very helpful. 
-You can set the characteristic by which the colors are to be differentiated, depending on what you want to display.
-
-- Make sure that the units of the selected data match.
-
-- You can adjust the x- and y-axis for bar and line plots to the right value you want to plot.
-
-- If you only want to represent input or output data in a sankey and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram.
-
-- Make use of subplots to compare different scenarios, years or sectors.
+!!! tip "Other Tips"
+      - Especially for plots that take different processes, inputs/outputs etc. in consideration, coloring can be very helpful. 
+        You can set the characteristic by which the colors are to be differentiated, depending on what you want to display.
+      - Make sure that the units of the selected data match.
+      - You can adjust the x- and y-axis for bar and line plots to the right value you want to plot.
+      - If you only want to represent input or output data in a sankey and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram.
+      - Make use of subplots to compare different scenarios, years or sectors.
 
 
 
