@@ -16,7 +16,7 @@ In the following, the last point, the visualization of the data in the form of c
 
 ## Explore the Model Structure
 
-In this part, the structure of the data can be displayed graphically to build a better understanding of how the data is related
+In this part, the structure of the data can be displayed graphically to build a better understanding of how the data is related.
 
 First of all there are five different sectors:
 
@@ -45,16 +45,18 @@ To take a closer look at the structure of the data, there are the following four
 **Generate Networks:** 
 
 - Click here to display the data structure and their interrelations graphically.
-- Therefore, various filters are available on the left side of the GUI to adjust the clarity, e.g. with the help of aggregations.
+- Therefore, various filters are available on the left side of the GUI to adjust the clarity, e.g. with the help of three different aggregation steps.
 - This means, for example, that only selected sectors or processes can be displayed.
 
 **Look at Processes:**
 
 - Click here to find the corresponding data
+- A list of all processes appears on the left-hand side: click on the desired process to view its details
 
 **Look at Artifacts:** 
 
 - Click here to find the corresponding data
+- A list of all artifacts sorted by sector appears on the left-hand side: click on the desired artifact to view its details
 
 **Aggregation Graph:** 
 
