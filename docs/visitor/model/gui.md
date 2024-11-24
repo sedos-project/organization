@@ -16,9 +16,11 @@ In the following, the last point, the visualization of the data in the form of c
 
 ## Explore the Model Structure
 
-In this part, the structure of the data can be displayed graphically to build a better understanding of how the data is related.
+### Overview
 
-First of all there are five different sectors:
+In this part of the GUI, the structure of the data can be displayed graphically to build a better understanding of how the data is related.
+
+<ins>First of all there are five different sectors that are considered in the data:</ins>
 
 - mobility
 - heat
@@ -26,9 +28,10 @@ First of all there are five different sectors:
 - industry
 - X2X
 
-Whereby the first four describe the different energy sectors and the last one includes those processes where the output of one sector is used as input in the other sector as well as the import and export of commodities.
+!!! note ""
+    Whereby the first four describe the different energy sectors and the last one includes those processes where the output of one sector is used as input in the other sector as well as the import and export of commodities.
 
-Furthermore, there are four main categories of commodities that occur in the respective processes: 
+<ins>Furthermore, there are four main categories of commodities that occur in the respective processes: </ins>
 
 - primary energy carriers (pri)
 - secondary energy carriers (sec)
@@ -40,13 +43,20 @@ Furthermore, there are four main categories of commodities that occur in the res
 
 ### GUI structure
 
-To take a closer look at the structure of the data, there are the following four different buttons on the start page that will take you to the respective GUI:
+To take a closer look at the structure of the data, there are the following four different buttons on the [start page](https://sedos.apps.rl-institut.de/) that will take you to the respective GUI:
 
 **Generate Networks:** 
 
-- Click here to display the data structure and their interrelations graphically.
-- Therefore, various filters are available on the left side of the GUI to adjust the clarity, e.g. with the help of three different aggregation steps.
-- This means, for example, that only selected sectors or processes can be displayed.
+- Click here to display the data structure and their interrelations graphically
+- At the top of the GUI you can find the 'Abbreviation Help', where the respective abbreviation can be selected, whereupon the meaning is shown next to it
+- Therefore, various filters are available on the left side of the GUI to adjust the clarity, e.g. with the help of three different aggregation steps. The filters are:
+    - Sectors: choose the sectors you want to display 
+    - Depth: select the level of detail
+    - Mapping:
+    - Display specific process: choose out of the list of processes 
+    - Display specific commodity: choose out of the list of commodities
+!!! note ""
+    This way it is possible to display for example only selected sectors or processes.
 
 **Look at Processes:**
 
@@ -60,8 +70,11 @@ To take a closer look at the structure of the data, there are the following four
 
 **Aggregation Graph:** 
 
-- Click here to display the defined aggregations graphically, which will help you to get an overview over which processes are mapped to which aggregation.
-- At the top of the GUI, you can filter by the desired level of detail and select the sector to be displayed.
+- Click here to display the defined aggregations graphically, which will help you to get an overview over which processes are mapped to which aggregation
+- At the top of the GUI you can find the 'Abbreviation Help', where the respective abbreviation can be selected, whereupon the meaning is shown next to it
+- Below this is a line where you can filter by the desired level of detail and select the sector to be displayed
+- Furthermore, the processes from all sectors for level of detail can be downloaded there
+- The resulting diagram can be zoomed in and out and the individual nodes can be moved manually by clicking on them
 
 ## Explore the Model Results
 
@@ -92,7 +105,9 @@ A distinction is also made between different parameters, depending on the type o
 - capacity_inst
 - capacity_new
 
-Whereby the first two parameters refer to process flows which are defined in the input/output groups while the other parameters describe the process itself.
+!!! note ""
+    Whereby the first two parameters refer to process flows which are defined in the input/output groups while the other parameters describe the process itself.
+
 In addition, the data is available for several years over decades, which makes it possible to analyze the development.
 
 ### GUI structure
@@ -123,6 +138,12 @@ In addition, the data is available for several years over decades, which makes i
 
 - **Embed Chart**: The "Embed Chart" feature generates a unique link for a customized chart by storing the parameter settings in a central database, allowing users to easily revisit or share it. 
 Opening the link recreates the chart with the exact same settings. This makes sharing data insights simple and accessible. 
+
+
+!!! info "At the top of the page the abbreviation search function is located, which displays the meaning of the respective abbreviation."
+
+
+
 
 ### How to create a plot
 
