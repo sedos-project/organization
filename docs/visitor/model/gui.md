@@ -22,7 +22,7 @@ In this part of the GUI, the structure of the data can be displayed graphically 
 
 <ins>First of all there are five different sectors that are considered in the data:</ins>
 
-- mobility
+- transport
 - heat
 - power
 - industry
