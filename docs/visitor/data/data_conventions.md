@@ -1,5 +1,26 @@
 # Data conventions
 
+
+## Datamodel
+
+The **oedatamodel-parameter** ([docs](https://github.com/sedos-project/oedatamodel#oedatamodel-parameter)) has to 
+be used to provide input data in SEDOS. This choice was made to allow ontological annotation of data. The data 
+model consists of two table types: "[scalar](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_scalar.csv)" and "[timeseries](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/oedatamodel-parameter-datapackage_timeseries.csv)". Please choose the table type accordingly, depending on the data you want to upload:
+
+- Use scalar tables to provide parameters with no relation to a timeindex. <br>To properly fill the table, read the 
+  [scalar model column description](https://github.com/sedos-project/oedatamodel#scalar-description). <br>Use the 
+  [example scalar package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_scalars.json) to write your own metadata 
+  (see section [How to contribute data - 2. Create metadata](../how_to_contribute_data.md#create-metadata)
+- Use a timeseries table to provide parameters with relation to a timeindex. <br>Use the [timeseries model column description](https://github.com/sedos-project/oedatamodel#timeseries-description) to make yourself familiar with the 
+  fields and add metadata to your tables using the [example timeseries package metadata](https://github.com/sedos-project/oedatamodel/blob/main/oedatamodel-parameter/datamodel_timeseries.json) as a reference.
+
+**Datamodel features**
+
+- [type]() - use to specify multiple processes in one csv table (see [example](https://github.com/sedos-project/oedatamodel#example-table)) 
+- [bandwidth_type](https://github.com/sedos-project/oedatamodel#bandwidth-types-and-cell-methods) - specify how the 
+  data bandwidths are interpreted
+
+
 ## Background information
 
 This section provides additional information on parameters and on the interpretation of their possible values.
@@ -376,12 +397,12 @@ Standard units should be harmonized as far as possible to improve transparency a
 The data adapters also convert the units to ensure compatibility with the frameworks. 
 There may also be exceptions to the suggestions below.
 
-| Size                              | Unit            |
-|-----------------------------------|-----------------|
-| Power                             | MW              |
-| Energy                            | GWh / PJ        |
-| Costs                             | Euro            |
-| Weight (products)                 | Million tonnes  |
-| Weight (CO2-equivalent emissions) | tonnes          |
-| Transport Service                 | Billion pkm/tkm |
-| Percent (range: [0,100])          | -               |
+| Size                              | Unit                     |
+|-----------------------------------|--------------------------|
+| Power                             | MW                       |
+| Energy                            | GWh / PJ                 |
+| Costs                             | Euro                     |
+| Weight (products)                 | Million tonnes           |
+| Weight (CO2-equivalent emissions) | tonnes                   |
+| Transport Service                 | Billion pkm, Billion tkm |
+| Percent (range: [0,100])          | -                        |

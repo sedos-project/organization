@@ -9,6 +9,7 @@ nav:
             - 'Sectors':
                 - 'Transport': 'visitor/structure/transport.md'
         - 'Emission Concept': 'visitor/structure/emissions.md'
+        - 'Multiple Inputs and Outputs': 'visitor/structure/mimo.md'
         - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
 #        - 'Model Structure': ''
 #        - 'Aggregations': ''
@@ -24,13 +25,11 @@ nav:
         - 'Results': 'visitor/model/results.md'
     - Developer Instructions:
         - '(Meta)Data Requirements':
-            - 'Overview': 'developer/data_requirements/overview.md'
             - 'Data': 'developer/data_requirements/input_data.md'
             - 'Metadata': 'developer/data_requirements/metadata.md'
             - 'Ontology': 'developer/data_requirements/ontology.md'
             - 'Licensing': 'developer/data_requirements/licensing.md'
         - 'How to Contribute Data?': 'developer/how_to_contribute_data.md'
-        - 'Data Preface': 'developer/data_preface.md'
         - 'FAQ': 'developer/faq.md'
     - 'Further Reading': 'publications.md'
     - 'Glossary': 'glossary.md'
