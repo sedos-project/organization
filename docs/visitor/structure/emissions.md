@@ -19,6 +19,7 @@ General information:
 ![emission_concept](../../graphics/emission_concept.jpg)
 
 Summarized, this means:
+
   - Fossil: CO2 emissions from combustion
   - Biogen: CO2 emissions from combustion & negative emissions from production/source processes of biogenic energy sources.
   - Synthetic: CO2 emissions from combustion & model-endogenous negative emissions for import and production with carbon captured CO2.

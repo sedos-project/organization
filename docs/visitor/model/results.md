@@ -1,134 +1,3 @@
-[//]: # (# Description GUI)
-
-[//]: # ()
-[//]: # (## Why this GUI?)
-
-[//]: # (To improve the transparency and reproducibility of the open source structure this GUI provides a few basic functionalities to explore the derived modeling base:)
-
-[//]: # ()
-[//]: # (- Looking into the underlying model structure of our reference energy system with the network graph.)
-
-[//]: # ()
-[//]: # (- Exploring the underlying input data of our model with an integrated table view.)
-
-[//]: # ()
-[//]: # (- See the aggregations steps defined in our model structure and download the different levels of detail .)
-
-[//]: # ()
-[//]: # (- Create charts based on possible model results as an outcome of different frameworks and scenarios using the same data.)
-
-[//]: # ()
-[//]: # (In the following, the last point, the presentation of the data in the form of charts, will be examined in more detail.)
-
-[//]: # ()
-[//]: # (To do this, a scenario must first be selected at the bottom right of the start page under “Explore the Model results” and the gui for creating charts can be accessed by clicking on “Explore Diagrams”.)
-
-[//]: # ()
-[//]: # (## Explore the Model results)
-
-[//]: # ()
-[//]: # (### What the GUI can do)
-
-[//]: # ()
-[//]: # (The data fed in can be displayed graphically using the GUI. )
-
-[//]: # (This can be filtered in various degrees of detail to adapt the display to your own requirements. )
-
-[//]: # (In this way, it is possible to display anything from a general overview of an entire sector to a detailed representation of an individual process.)
-
-[//]: # ()
-[//]: # (### Structure of the data)
-
-[//]: # ()
-[//]: # (The data describe different sectors with the respective processes and their input and output groups. )
-
-[//]: # (The processes can be aggregated, on the one hand with the help of categories that divide the sectors into individual areas, or through the specifications.)
-
-[//]: # (A distinction is also made between different parameters, depending on the type of data being considered.)
-
-[//]: # (In addition, the data is available for several years over decades, which makes it possible to analyze the development.)
-
-[//]: # ()
-[//]: # (### Structure of the GUI)
-
-[//]: # ()
-[//]: # (- **Scenario**: set the filters to get the data to be displayed)
-
-[//]: # ()
-[//]: # (- **Other**: if necessary, the scaling of the y-axis can be changed here by changing the unit as well as a change in the order e.g. of the bars in a bar diagram can be made; labels can be added and the data can be normalized)
-
-[//]: # ()
-[//]: # (- **Graph**: selection of the plot type and display; if required, add subplots; define x- and y-axis and if helpful change the coloring depending on the different choosing options under scenario)
-
-[//]: # ()
-[//]: # (- **Display**: illustration of the plot; change x- and y-title and add a legend if required)
-
-[//]: # ()
-[//]: # (- **Load Filter Settings**: load ready-made and saved diagrams)
-
-[//]: # ()
-[//]: # (- **Save Filer Settings**: If you have filter settings that you want to save for later analysis, you can enter a title in the box next to this button and save it after you have finished setting the filters)
-
-[//]: # ()
-[//]: # (- **Render chart and table**: load the chart)
-
-[//]: # ()
-[//]: # (- **Chart**: displays the diagram)
-
-[//]: # ()
-[//]: # (- **Table**: list of the data used in the diagram)
-
-[//]: # ()
-[//]: # (- **Embed Chart**: )
-
-[//]: # ()
-[//]: # (### How to create a plot)
-
-[//]: # ()
-[//]: # (There are three types of plots, all with different advantages and disadvantages, depending on what you want to display:)
-
-[//]: # ()
-[//]: # (- bar: )
-
-[//]: # (    - simple, easy to interpret)
-
-[//]: # (    - representation of discrete data)
-
-[//]: # (- line:)
-
-[//]: # (      - simple, easy to interpret)
-
-[//]: # (      - representation of continuous data)
-
-[//]: # (      - suitable for displaying temporal progressions)
-
-[//]: # (- sankey:)
-
-[//]: # (      - "flow-diagram")
-
-[//]: # (      - especially helpful for representing input and output flows of processes, categories etc.)
-
-[//]: # ()
-[//]: # (Thus while bar and line charts are well suited for comparing discrete/continuous data, sankey Diagrams can be used to visualize more complex flows and relationships.)
-
-[//]: # ()
-[//]: # (So before starting to create a plot, think about what type of diagram best suits your simulation and depending on that choose the right filters.)
-
-[//]: # ()
-[//]: # (Other tips:)
-
-[//]: # ()
-[//]: # (- especially for plots that take different processes, inputs/outputs etc. in consideration, coloring can be very helpful. You can set the characteristic by which the colors are to be differentiated, depending on what you want to display)
-
-[//]: # ()
-[//]: # (- Make sure that the units of the selected data match)
-
-[//]: # ()
-[//]: # (- If you only want to represent input or output data and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram)
-
-[//]: # ()
-[//]: # (- for bar and line plots: make sure to change the x- and y-axis to the right value you want to plot)
-
 # Results
 
 ## Changes in technology
@@ -213,69 +82,122 @@ More complex sankey variations:
 
 
 
+[//]: # ()
+[//]: # (# Emissions)
 
-# Emissions
+[//]: # ()
+[//]: # (The following four diagrams show the different emissions of the processes aluminum_sec_0 and its successor aluminum_sec_1. )
 
-The following four diagrams show the different emissions of the processes aluminum_sec_0 and its successor aluminum_sec_1. 
-In general, it can be seen that the emissions decrease over the years and level off at a relatively constant value.
+[//]: # (In general, it can be seen that the emissions decrease over the years and level off at a relatively constant value.)
 
-<div style="display: flex; flex-direction: column;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="flex: 1; padding-right: 20px;">
-      <h3>aluminium_sec CO2</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1010" width="800" height="450"></iframe>
-    </div>
-    <div style="flex: 1; padding-left: 20px;">
-      <h3>aluminium_sec N2O</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1014" width="800" height="450"></iframe>
-    </div>
-  </div>
-</div>
+[//]: # ()
+[//]: # (<div style="display: flex; flex-direction: column;">)
 
-<div style="display: flex; flex-direction: column;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="flex: 1; padding-right: 20px;">
-      <h3>aluminium_sec CH4</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1017" width="800" height="450"></iframe>
-    </div>
-    <div style="flex: 1; padding-left: 20px;">
-      <h3>aluminium_sec total</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1022" width="800" height="450"></iframe>
-    </div>
-  </div>
-</div>
+[//]: # (  <div style="display: flex; justify-content: space-between; align-items: flex-start;">)
 
+[//]: # (    <div style="flex: 1; padding-right: 20px;">)
 
-Same for glass_spec:
+[//]: # (      <h3>aluminium_sec CO2</h3>)
 
-<div style="display: flex; flex-direction: column;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="flex: 1; padding-right: 20px;">
-      <h3>glass_spec CO2_f</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1027" width="800" height="450"></iframe>
-    </div>
-    <div style="flex: 1; padding-left: 20px;">
-      <h3>glass_spec CO2_p</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1030" width="800" height="450"></iframe>
-    </div>
-  </div>
-</div>
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1010" width="800" height="450"></iframe>)
 
-<div style="display: flex; flex-direction: column;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="flex: 1; padding-right: 20px;">
-      <h3>glass_spec N2O</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1034" width="800" height="450"></iframe>
-    </div>
-    <div style="flex: 1; padding-left: 20px;">
-      <h3>glass_spec CH4</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1036" width="800" height="450"></iframe>
-    </div>
-  </div>
-</div>
+[//]: # (    </div>)
 
-glass_spec total emissions: 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1040" width="800" height="450"></iframe>
+[//]: # (    <div style="flex: 1; padding-left: 20px;">)
+
+[//]: # (      <h3>aluminium_sec N2O</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1014" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (  </div>)
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # (<div style="display: flex; flex-direction: column;">)
+
+[//]: # (  <div style="display: flex; justify-content: space-between; align-items: flex-start;">)
+
+[//]: # (    <div style="flex: 1; padding-right: 20px;">)
+
+[//]: # (      <h3>aluminium_sec CH4</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1017" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (    <div style="flex: 1; padding-left: 20px;">)
+
+[//]: # (      <h3>aluminium_sec total</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1022" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (  </div>)
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # ()
+[//]: # (Same for glass_spec:)
+
+[//]: # ()
+[//]: # (<div style="display: flex; flex-direction: column;">)
+
+[//]: # (  <div style="display: flex; justify-content: space-between; align-items: flex-start;">)
+
+[//]: # (    <div style="flex: 1; padding-right: 20px;">)
+
+[//]: # (      <h3>glass_spec CO2_f</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1027" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (    <div style="flex: 1; padding-left: 20px;">)
+
+[//]: # (      <h3>glass_spec CO2_p</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1030" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (  </div>)
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # (<div style="display: flex; flex-direction: column;">)
+
+[//]: # (  <div style="display: flex; justify-content: space-between; align-items: flex-start;">)
+
+[//]: # (    <div style="flex: 1; padding-right: 20px;">)
+
+[//]: # (      <h3>glass_spec N2O</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1034" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (    <div style="flex: 1; padding-left: 20px;">)
+
+[//]: # (      <h3>glass_spec CH4</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1036" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (  </div>)
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # (glass_spec total emissions: )
+
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1040" width="800" height="450"></iframe>)
 
 
 [//]: # ()
