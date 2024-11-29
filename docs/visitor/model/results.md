@@ -65,6 +65,24 @@ energy-intensive industries.
   </div>
 </div>
 
+
+Update: more data
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>Industry Energy Supply 2021</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1180" width="800" height="450"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>Industry Energy Supply 2050</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1182" width="800" height="450"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
 More complex sankey variations:
 
 - Variation 1: primary/secondary inputs to specifications (no outputs):
