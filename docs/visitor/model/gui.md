@@ -52,11 +52,15 @@ To take a closer look at the structure of the data, there are the following four
 - Therefore, various filters are available on the left side of the GUI to adjust the clarity, e.g. with the help of three different aggregation steps. The filters are:
     - Sectors: choose the sectors you want to display 
     - Depth: select the level of detail
-    - Mapping:
-    - Display specific process: choose out of the list of processes 
+    - Mapping: choose the algorithm you want to use to display the graphs out of three different possibilities: 
+        - fr: Layout with "Fruchterman-Reingold" algorithm test
+        - go: Layout with "graphopt"-algorithm 
+        - kk: Layout with  "Kamada-Kawai"-algorithm
+    - Display specific process: choose out of the list of processes
     - Display specific commodity: choose out of the list of commodities
+
 !!! note ""
-    This way it is possible to display for example only selected sectors or processes.
+      This way it is possible to display for example only selected sectors or processes.
 
 **Look at Processes:**
 
@@ -66,6 +70,7 @@ To take a closer look at the structure of the data, there are the following four
 **Look at Artifacts:** 
 
 - Click here to find the corresponding data
+- The artifacts are a collection of processes; groupings were uploaded here, in which the individual processes are integrated
 - A list of all artifacts sorted by sector appears on the left-hand side: click on the desired artifact to view its details
 
 **Aggregation Graph:** 
