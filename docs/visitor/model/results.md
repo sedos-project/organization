@@ -66,7 +66,7 @@ energy-intensive industries.
 </div>
 
 
-Update: more data
+Update: more data (t_all_tokio)
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
@@ -96,6 +96,15 @@ More complex sankey variations:
 - Variation 3: primary/secondary inputs to processes (no outputs):
 
 <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=785" width="1000" height="750"></iframe>
+
+
+
+## Representations of the energy flow
+
+- Connection between pri/sec-inputs and categories:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1247" width="1000" height="750"></iframe>
+
 
 
 
