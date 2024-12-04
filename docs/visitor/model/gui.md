@@ -135,6 +135,8 @@ In addition, the data is available for several years over decades, which makes i
 
 - **Table**: Tabular display of the data used in the chart.
 
+- **Download Data**: Download the tabular with the used data as csv-file
+
 <ins>Additional features to ease the use of this GUI are:</ins>
 
 - **Save Filer Settings**: To save your filter settings for later use, enter a title and save the configuration once filters are set.

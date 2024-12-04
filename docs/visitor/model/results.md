@@ -103,9 +103,17 @@ More complex sankey variations:
 
 - Connection between pri/sec-inputs and categories:
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1247" width="1000" height="750"></iframe>
+All years:
 
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1247" width="1000" height="850"></iframe>
 
+Year 2021:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1294" width="1000" height="750"></iframe>
+
+Year 2050:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1296" width="1000" height="750"></iframe>
 
 
 
