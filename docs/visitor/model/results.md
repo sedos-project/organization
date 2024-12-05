@@ -72,11 +72,11 @@ Update: more data (t_all_tokio)
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Industry Energy Supply 2021</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1180" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1327" width="800" height="450"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Industry Energy Supply 2050</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1182" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1329" width="800" height="450"></iframe>
     </div>
   </div>
 </div>
@@ -114,6 +114,35 @@ Year 2021:
 Year 2050:
 
 <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1296" width="1000" height="750"></iframe>
+
+
+## Flow of Imports
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>Imports pri/sec 2021</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1349" width="800" height="600"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>Imports iip 2021</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1341" width="800" height="600"></iframe>
+    </div>
+  </div>
+</div>
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>Imports pri/sec 2050</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1351" width="800" height="600"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>Imports iip 2050</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1345" width="800" height="600"></iframe>
+    </div>
+  </div>
+</div>
 
 
 
