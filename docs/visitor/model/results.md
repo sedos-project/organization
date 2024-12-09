@@ -116,6 +116,18 @@ Year 2050:
 <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1296" width="1000" height="750"></iframe>
 
 
+- Connection between pri/sec-inputs and specifications:
+
+Year 2021:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1365" width="1000" height="750"></iframe>
+
+Year 2050:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1370" width="1000" height="750"></iframe>
+
+
+
 ## Flow of Imports
 
 <div style="display: flex; flex-direction: column;">
