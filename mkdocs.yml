@@ -6,13 +6,15 @@ nav:
         - 'Overview': 'visitor/structure/overview.md'
         - 'Model Base': 
             - 'General features': 'visitor/structure/model_frame.md'
-            - 'Sectors':
-                - 'Transport': 'visitor/structure/transport.md'
-        - 'Emission Concept': 'visitor/structure/emissions.md'
-        - 'Multiple Inputs and Outputs': 'visitor/structure/mimo.md'
-        - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
-#        - 'Model Structure': ''
-#        - 'Aggregations': ''
+            - 'Multiple Inputs and Outputs': 'visitor/structure/mimo.md'
+            - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
+            - 'Emission Concept': 'visitor/structure/emissions.md'
+        - 'Sectors':
+            - 'Transport': 'visitor/structure/transport.md'
+        - 'Aggregations': 'visitor/structure/aggregations.md'
+        - 'Levels of Detail': 'visitor/structure/lods.md'
+
+
     - 'Reference Dataset':
         - 'Overview': 'visitor/data/overview.md'
         - 'Nomenclature': 'visitor/data/nomenclature.md'

@@ -2,7 +2,7 @@
 
 !!! Note "input_output insertion conventions"
 
-    * Enclose substituting inputs or outputs in squared brackets `[ ]`. E.g. 
+    * Enclose substituting inputs or outputs in squared brackets `[ ]`
     * separate inputs or outputs with `,` (comma)
 
 For processes with multiple input and/or output energy vectors it might not always be clear to which energy vector a 

@@ -12,4 +12,4 @@ Key components of the model structure are defined in this Section. For further i
 
 The different sectors and their general interfaces are shown in the figure below:
 
-![sector_overview](../../graphics/sector_overview_without-chapters.jpg){ width=1000px }
+![sector_overview](../../graphics/sector_overview_without-chapters.svg)
