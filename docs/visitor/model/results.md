@@ -110,17 +110,17 @@ More complex sankey variations:
 [//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=783" width="1000" height="500"></iframe>)
 <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1461" width="1000" height="500"></iframe>
 
-- Variation 2: primary/secondary inputs to specifications to waste-heat output:
+[//]: # (- Variation 2: primary/secondary inputs to specifications to waste-heat output:)
 
 [//]: # (sankey_pri-sec-inputs_to_specifitcations_to_sec-waste-heat)
 [//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=793" width="1000" height="500"></iframe>)
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1457" width="1000" height="500"></iframe>
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1457" width="1000" height="500"></iframe>)
 
-- Variation 3: primary/secondary inputs to processes (no outputs):
+[//]: # (- Variation 3: primary/secondary inputs to processes (no outputs:)
 
 [//]: # (sankey_pri-sec-inputs_to_specifications and then switch the node of the sankey to process)
 [//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=785" width="1000" height="750"></iframe>)
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1463" width="1000" height="750"></iframe>
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1463" width="1000" height="750"></iframe>)
 
 
 
@@ -128,8 +128,6 @@ More complex sankey variations:
 
 In the following, the energy flow of the primary/secondary inputs between the different categories is to be illustrated with the help of Sankey diagrams. 
 As before, the years 2021, 2030 and 2050 are considered in order to be able to recognize a development over the years.
-
-Here, too, it can be observed that the demand of hydrogen has increased significantly over the years and plays an especially important role in the steel sector.
 
 [//]: # (the following diagrams: sankey_pri-sec-flow_to_category and then select the respective year)
 
@@ -201,11 +199,11 @@ The following diagrams show the import flows for 2021 and 2050 to see which impo
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Imports 2021</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1391" width="800" height="750"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1474" width="800" height="750"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Imports 2050</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1389" width="800" height="750"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1472" width="800" height="750"></iframe>
     </div>
   </div>
 </div>
