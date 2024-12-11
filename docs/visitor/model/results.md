@@ -6,6 +6,10 @@ One interesting question is how the technologies used in the industry will chang
 The two sub-sectors of copper and aluminum were selected for a closer look at this development. 
 The following diagrams show the installed capacity per year in each case, with the colored background describing the technology used.
 
+
+[//]: # (both diagrams: bar_x-year_y-capacity_inst_neu and then select the respective category)
+
+
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
@@ -50,6 +54,10 @@ source, especially in the steel sector, where it completely replaces coal. The r
 evident as the transition toward cleaner energy sources reshapes the entire industry. This shift underscores the 
 declining relevance of coal in industrial processes and highlights hydrogen’s growing importance in decarbonizing 
 energy-intensive industries.
+
+
+[//]: # (the following diagrams: sankey_ind_pri-sec-inputs_to_category and then select the respective year)
+
 
 
 [//]: # (<div style="display: flex; flex-direction: column;">)
@@ -98,15 +106,21 @@ More complex sankey variations:
 
 - Variation 1: primary/secondary inputs to specifications (no outputs):
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=783" width="1000" height="500"></iframe>
+[//]: # (sankey_pri-sec-inputs_to_specifications)
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=783" width="1000" height="500"></iframe>)
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1461" width="1000" height="500"></iframe>
 
 - Variation 2: primary/secondary inputs to specifications to waste-heat output:
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=793" width="1000" height="500"></iframe>
+[//]: # (sankey_pri-sec-inputs_to_specifitcations_to_sec-waste-heat)
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=793" width="1000" height="500"></iframe>)
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1457" width="1000" height="500"></iframe>
 
 - Variation 3: primary/secondary inputs to processes (no outputs):
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=785" width="1000" height="750"></iframe>
+[//]: # (sankey_pri-sec-inputs_to_specifications and then switch the node of the sankey to process)
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=785" width="1000" height="750"></iframe>)
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1463" width="1000" height="750"></iframe>
 
 
 
@@ -179,9 +193,9 @@ This development in the steel sector is illustrated in detail in the following t
 
 ## Flow of Imports
 
-[//]: # (both diagrams: sankey_imports_to_category and then select the respective year)
-
 The following diagrams show the import flows for 2021 and 2050 to see which imports are used where and how the import changes over the years.  
+
+[//]: # (both diagrams: sankey_imports_to_category and then select the respective year)
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
