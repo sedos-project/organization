@@ -4,11 +4,17 @@ nav:
     - Welcome: index.md
     - 'Model Structure':
         - 'Overview': 'visitor/structure/overview.md'
-        - 'Model Base': 'visitor/structure/model_frame.md'
-        - 'Emission Concept': 'visitor/structure/emissions.md'
-        - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
-#        - 'Model Structure': ''
-#        - 'Aggregations': ''
+        - 'Model Base': 
+            - 'General features': 'visitor/structure/model_frame.md'
+            - 'Multiple Inputs and Outputs': 'visitor/structure/mimo.md'
+            - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
+            - 'Emission Concept': 'visitor/structure/emissions.md'
+        - 'Sectors':
+            - 'Transport': 'visitor/structure/transport.md'
+        - 'Aggregations': 'visitor/structure/aggregations.md'
+        - 'Levels of Detail': 'visitor/structure/lods.md'
+
+
     - 'Reference Dataset':
         - 'Overview': 'visitor/data/overview.md'
         - 'Nomenclature': 'visitor/data/nomenclature.md'
@@ -17,17 +23,15 @@ nav:
         - 'Ontology': 'visitor/data/ontology.md'
     - 'Model Application':
         - 'Scenarios': 'visitor/model/scenarios.md'
-#        - 'GUI': 'visitor/model/gui.md'
+        - 'GUI': 'visitor/model/gui.md'
         - 'Results': 'visitor/model/results.md'
     - Developer Instructions:
         - '(Meta)Data Requirements':
-            - 'Overview': 'developer/data_requirements/overview.md'
             - 'Data': 'developer/data_requirements/input_data.md'
             - 'Metadata': 'developer/data_requirements/metadata.md'
             - 'Ontology': 'developer/data_requirements/ontology.md'
             - 'Licensing': 'developer/data_requirements/licensing.md'
         - 'How to Contribute Data?': 'developer/how_to_contribute_data.md'
-        - 'Data Preface': 'developer/data_preface.md'
         - 'FAQ': 'developer/faq.md'
     - 'Further Reading': 'publications.md'
     - 'Glossary': 'glossary.md'

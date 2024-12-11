@@ -247,11 +247,7 @@ Thus, thorough annotation and following the conventions are important for fricti
 
 The technology and technology_type columns from the oedatamodel-concrete are filled with the information from the `subject` key.
 
-### B) input and output energy vectors for MiMo technologies
-
-Moved to [Input and output energy vectors](input_data.md#Input-and-output-energy-vectors).
-
-### C) parameter names
+### B) parameter names
 
 #### Case1 
 **_In cases where there is a single suitable ontology concept in the OEO_** we'll use the keys `isAbout`, `valueReference` as explained above.

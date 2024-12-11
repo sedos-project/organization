@@ -39,25 +39,16 @@ GitHub actions.
 
    Once started, mkdocs shows your local edits live in the browser without further do.
 
-6. Add all your local changes `git add .`
+6. Depending on the amount of changes you want to add, consider creating your own feature branch.
+   However, if you only add an independent docs module, you can push it to develop.
+   Make sure to checkout the branch you want to work on.
 
-7. Commit your local changes `git commit -m 'Extend documentation'`
+7. Add all your local changes `git add .`
 
-8. Check if other SEDOS members uploaded changes before pushing yours `git pull`  
+8. Commit your local changes `git commit -m 'Extend documentation`
 
-9. Push your commits, to share them with the team `git push`
+9. If you have not created your own branch, check if other SEDOS members uploaded changes before pushing yours `git pull`  
 
+10. Push your commits, to share them with the team `git push`.
 
-## DEPRECIATED - How to update documentation on sedos-project.github.io/.github/ ?
-
-1. On your local machine, navigate to `~/.github`
-1. On `main` brachen, run `git pull` to download latest docs-version and to avoid merge conflicts later
-1. On your local machine, navigate to `~/organization` and checkout branch `main`
-2. Run `git pull`
-3. In `~/organization`, In your local conda environment run `mkdocs build -d ../.github` (or specify the absolute path to `.github`)
-4. Navigate to `~/.github` and run `git add .` to add all updated files
-5. Run `git commit -am 'Update docs with PR #'` and add PR-number from organisation repo to track changes better. 
-   If changes were implemented without PR, write helpful commit message. All changes are now saved to one commit.
-1. Run `git push` to update docs on github pages
-1. Go to `sedos-project.github.io/.github/`, wait 2 min. for the page to deploy and press `CTRL + F5` to reload page ignoring browser cache
-1. You should now see the updated documentation.
+11. If you have created your own branch, start a pull request.
