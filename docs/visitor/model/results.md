@@ -6,6 +6,10 @@ One interesting question is how the technologies used in the industry will chang
 The two sub-sectors of copper and aluminum were selected for a closer look at this development. 
 The following diagrams show the installed capacity per year in each case, with the colored background describing the technology used.
 
+
+[//]: # (both diagrams: bar_x-year_y-capacity_inst_neu and then select the respective category)
+
+
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
@@ -52,33 +56,209 @@ declining relevance of coal in industrial processes and highlights hydrogen’s 
 energy-intensive industries.
 
 
+[//]: # (the following diagrams: sankey_ind_pri-sec-inputs_to_category and then select the respective year)
+
+
+
+[//]: # (<div style="display: flex; flex-direction: column;">)
+
+[//]: # (  <div style="display: flex; justify-content: space-between; align-items: flex-start;">)
+
+[//]: # (    <div style="flex: 1; padding-right: 20px;">)
+
+[//]: # (      <h3>Industry Energy Supply 2021</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=772" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (    <div style="flex: 1; padding-left: 20px;">)
+
+[//]: # (      <h3>Industry Energy Supply 2050</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=774" width="800" height="450"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (  </div>)
+
+[//]: # (</div>)
+
+
+[//]: # (Update: more data &#40;t_all_tokio&#41;)
+
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Industry Energy Supply 2021</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=772" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1327" width="800" height="450"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Industry Energy Supply 2050</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=774" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1329" width="800" height="450"></iframe>
     </div>
   </div>
 </div>
 
+
+
 More complex sankey variations:
 
-- Variation 1: primary/secondary inputs to specifications (no outputs):
+- primary/secondary inputs to specifications (no outputs):
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=783" width="1000" height="500"></iframe>
+[//]: # (sankey_pri-sec-inputs_to_specifications)
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=783" width="1000" height="500"></iframe>)
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1461" width="1000" height="500"></iframe>
 
-- Variation 2: primary/secondary inputs to specifications to waste-heat output:
+[//]: # (- Variation 2: primary/secondary inputs to specifications to waste-heat output:)
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=793" width="1000" height="500"></iframe>
+[//]: # (sankey_pri-sec-inputs_to_specifitcations_to_sec-waste-heat)
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=793" width="1000" height="500"></iframe>)
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1457" width="1000" height="500"></iframe>)
 
-- Variation 3: primary/secondary inputs to processes (no outputs):
+[//]: # (- Variation 3: primary/secondary inputs to processes (no outputs:)
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=785" width="1000" height="750"></iframe>
+[//]: # (sankey_pri-sec-inputs_to_specifications and then switch the node of the sankey to process)
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=785" width="1000" height="750"></iframe>)
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1463" width="1000" height="750"></iframe>)
 
+
+
+## Representations of the energy flow
+
+In the following, the energy flow of the primary/secondary inputs between the different categories is to be illustrated with the help of Sankey diagrams. 
+As before, the years 2021, 2030 and 2050 are considered in order to be able to recognize a development over the years.
+
+[//]: # (the following diagrams: sankey_pri-sec-flow_to_category and then select the respective year)
+
+
+[//]: # (- Connection between pri/sec-inputs and categories:)
+
+[//]: # (All years:)
+
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1247" width="1000" height="850"></iframe>)
+
+Year 2021:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1294" width="1000" height="750"></iframe>
+
+Year 2030:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1422" width="1000" height="750"></iframe>
+
+Year 2050:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1296" width="1000" height="750"></iframe>
+
+
+
+Here, too, it can be observed that the demand of hydrogen has increased significantly over the years and plays an especially important role in the steel sector.
+This development in the steel sector is illustrated in detail in the following two diagrams, where the demand of the primary/secondary inputs of the respective processes is shown.
+
+[//]: # (both diagrams: sankey_steel_pri-sec-inputs_to_processes and then select the respective year)
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>Year 2021</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1438" width="800" height="450"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>Year 2050</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1441" width="800" height="450"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
+
+[//]: # (- Connection between pri/sec-inputs and specifications:)
+
+[//]: # ()
+[//]: # (Year 2021:)
+
+[//]: # ()
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1365" width="1000" height="750"></iframe>)
+
+[//]: # ()
+[//]: # (Year 2050:)
+
+[//]: # ()
+[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1370" width="1000" height="750"></iframe>)
+
+
+
+## Flow of Imports
+
+The following diagrams show the import flows for 2021 and 2050 to see which imports are used where and how the import changes over the years.  
+
+[//]: # (both diagrams: sankey_imports_to_category and then select the respective year)
+
+<div style="display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; padding-right: 20px;">
+      <h3>Imports 2021</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1474" width="800" height="750"></iframe>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <h3>Imports 2050</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1472" width="800" height="750"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
+
+[//]: # (<div style="display: flex; flex-direction: column;">)
+
+[//]: # (  <div style="display: flex; justify-content: space-between; align-items: flex-start;">)
+
+[//]: # (    <div style="flex: 1; padding-right: 20px;">)
+
+[//]: # (      <h3>Imports pri/sec 2021</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1349" width="800" height="600"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (    <div style="flex: 1; padding-left: 20px;">)
+
+[//]: # (      <h3>Imports iip 2021</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1341" width="800" height="600"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (  </div>)
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # (<div style="display: flex; flex-direction: column;">)
+
+[//]: # (  <div style="display: flex; justify-content: space-between; align-items: flex-start;">)
+
+[//]: # (    <div style="flex: 1; padding-right: 20px;">)
+
+[//]: # (      <h3>Imports pri/sec 2050</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1351" width="800" height="600"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (    <div style="flex: 1; padding-left: 20px;">)
+
+[//]: # (      <h3>Imports iip 2050</h3>)
+
+[//]: # (      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1345" width="800" height="600"></iframe>)
+
+[//]: # (    </div>)
+
+[//]: # (  </div>)
+
+[//]: # (</div>)
 
 
 
