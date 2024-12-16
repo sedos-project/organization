@@ -104,7 +104,7 @@ energy-intensive industries.
 
 More complex sankey variations:
 
-- Variation 1: primary/secondary inputs to specifications (no outputs):
+- primary/secondary inputs to specifications (no outputs):
 
 [//]: # (sankey_pri-sec-inputs_to_specifications)
 [//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=783" width="1000" height="500"></iframe>)
