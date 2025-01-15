@@ -2,7 +2,12 @@
 
 !!! info "  Some results based on test data are presented below. This data does not yet constitute a final result, it is merely intended to show what is possible with the help of the GUI, which representations can be used and which interpretations can be drawn."
   
-## Changes in technology
+
+## Data based on the TIMES model
+
+The following diagrams are created out of the test data based on the TIMES model.
+
+### Changes in technology
 
 One interesting question is how the technologies used in the industry will change over the decades. 
 The two sub-sectors of copper and aluminum were selected for a closer look at this development. 
@@ -41,7 +46,7 @@ these technologies to dominate by mid-century, effectively replacing outdated sy
 production sector, a breakthrough occurs in 2035 with the introduction of a highly innovative technology, which rapidly 
 supplants the older methods within a decade. 
 
-## Energy supply of the energy-intensive industry sectors
+### Energy supply of the energy-intensive industry sectors
 
 
 The diagrams illustrate the models transformation of energy supply within various industrial subsectors between 
@@ -126,7 +131,7 @@ More complex sankey variations:
 
 
 
-## Representations of the energy flow
+### Representations of the energy flow
 
 In the following, the energy flow of the primary/secondary inputs between the different categories is to be illustrated with the help of Sankey diagrams. 
 As before, the years 2021, 2030 and 2050 are considered in order to be able to recognize a development over the years.
@@ -191,7 +196,7 @@ This development in the steel sector is illustrated in detail in the following t
 
 
 
-## Flow of Imports
+### Flow of Imports
 
 The following diagrams show the import flows for 2021 and 2050 to see which imports are used where and how the import changes over the years.  
 
@@ -210,6 +215,23 @@ The following diagrams show the import flows for 2021 and 2050 to see which impo
   </div>
 </div>
 
+
+
+## Data based on the OEMOF model
+
+The following diagrams are created out of the test data based on the OEMOF model with focus on the steel category.
+
+The diagram below describes the consumption of sec-inputs per year:
+
+[//]: # (bar_o_steel_x-year_y-sec-inputs)
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1914" width="800" height="450"></iframe>
+
+The next diagram describes the additional installed capacity per year in the steel category:
+
+[//]: # (bar_o_steel_x-year_y-capacity-new)
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1921" width="800" height="450"></iframe>
 
 
 
