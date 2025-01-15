@@ -20,7 +20,7 @@ In the following, the last point, the visualization of the data in the form of c
 
 In this part of the GUI, the structure of the data can be displayed graphically to build a better understanding of how the data is related.
 
-<ins>First of all there are five different sectors that are considered in the data:</ins>
+<ins>First of all, there are five different sectors that are considered in the data:</ins>
 
 - transport
 - heat

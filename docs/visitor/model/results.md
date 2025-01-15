@@ -217,9 +217,9 @@ The following diagrams show the import flows for 2021 and 2050 to see which impo
 
 
 
-## Data based on the OEMOF model
+## Data based on the Oemof model
 
-The following diagrams are created out of the test data based on the OEMOF model with focus on the steel category.
+The following diagrams are created out of the test data based on the Oemof model with focus on the steel category.
 
 The diagram below describes the consumption of sec-inputs per year:
 
