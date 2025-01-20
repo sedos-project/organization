@@ -11,7 +11,7 @@ The following diagrams are created out of the test data based on the TIMES model
 
 One interesting question is how the technologies used in the industry will change over the decades. 
 The two sub-sectors of copper and aluminum were selected for a closer look at this development. 
-The following diagrams show the installed capacity per year in each case, with the colored background describing the technology used.
+The following diagrams show the installed capacity per year in each case, with the coloring describing the technology used.
 
 
 [//]: # (both diagrams: bar_x-year_y-capacity_inst_neu and then select the respective category)
@@ -112,7 +112,7 @@ Year 2050:
 
 
 
-Here, too, it can be observed that the demand of hydrogen has increased significantly over the years and plays an especially important role in the steel sector.
+Here, too, it can be observed that the demand of hydrogen will increase significantly over the years and plays an especially important role in the steel sector.
 This development in the steel sector is illustrated in detail in the following two diagrams, where the demand of the primary/secondary inputs of the respective processes is shown.
 
 [//]: # (both diagrams: sankey_steel_pri-sec-inputs_to_processes and then select the respective year)
