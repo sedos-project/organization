@@ -1,7 +1,7 @@
 # Transport sector
 
 ## Naming convention
-The transport sector in the SEDOS dataset is divided into road, water, air and rail modes. The road-based vehicles include light (*l*), medium (*m*) and heavy (*h*) cars and trucks as well as coaches (*long* distance) and buses (*short* distance), motorcycles and special vehicles in the agricultural (*agri*) and construction (*const*) industries. For waterway transport, the focus is on inland freight shipping. In the field of aviation, a distinction is made between domestic flights (*natio*), European flights (*europ*) and intercontinental (*inter*) flights and passenger transportation alone is accounted for. Finally, a distinction is made between short-haul (streetcars, shunting operations) and long-haul (long-distance trains) for both passenger (*pass*) and freight (*frei*) rail transport. A suitable selection of drive technologies (internal combustion engine vehicle – *ice*, hybrids – *hyb*, fuel cell electric vehicle – *fcev*, battery electric multiple unit meaning a combination of batteries and overhead cables – *bemu*, battery electric vehicles – *bev* and overhead electric vehicles – *oev*) and fuels is combined for all vehicle types and organized as separate processes in the model structure. The nomenclature for process naming follows the system below, that is further explained in Table 1:
+The transport sector in the SEDOS dataset is divided into road, water, air and rail modes. The road-based vehicles include light (*l*), medium (*m*) and heavy (*h*) cars and trucks as well as coaches (*long* distance) and buses (*short* distance), motorcycles and special vehicles in the agricultural (*agri*) and construction (*const*) industries. For waterway transport, the focus is on inland freight shipping. High seas bunkering is not included in the energy balance, because the fuel is consumed outside national borders in international waters, and it is therefore not considered part of domestic energy usage. In the field of aviation, a distinction is made between domestic flights (*natio*), European flights (*europ*) and intercontinental (*inter*) flights and passenger transportation alone is accounted for. Finally, a distinction is made between short-haul (streetcars, shunting operations) and long-haul (long-distance trains) for both passenger (*pass*) and freight (*frei*) rail transport. A suitable selection of drive technologies (internal combustion engine vehicle – *ice*, hybrids – *hyb*, fuel cell electric vehicle – *fcev*, battery electric multiple unit meaning a combination of batteries and overhead cables – *bemu*, battery electric vehicles – *bev* and overhead electric vehicles – *oev*) and fuels is combined for all vehicle types and organized as separate processes in the model structure. The nomenclature for process naming follows the system below, that is further explained in Table 1:
 tra_rail_hyb_pass_short_hydrogen_0.
 
 *Table 1: Nomenclature for the transport sector process naming.*
@@ -70,18 +70,18 @@ The general modeling follows the scheme below:
 
 The input energy is transformed into the output commodities via indicators. Accordingly, the ratio of input to output flows is specified, taking into account the occupancy rate for passenger transport and the tonnage for freight transport in the information on transport services. For example the energy balance of a diesel car: 
         
-|                  | Input                                      | Output                                      |
-|------------------|--------------------------------------------|---------------------------------------------|
+|                    | Input                                      | Output                                        |
+|--------------------|--------------------------------------------|-----------------------------------------------|
 | **Parameter Name** | sec_diesel                                 | exo_road_car_pkm            +   emi_co2_f_tra |
 | **Value Example**  | 1 kWh                                      | 10 vehicle_km * 3 p/vehicle +      0.005 t    |
 
             
 is transformed to
 
-|                  | Input                                      | Output                                      |
-|------------------|--------------------------------------------|---------------------------------------------|
-| **Parameter Name** | sec_diesel                                 | exo_road_car_pkm    + emi_co2_f_tra |
-| **Value Example**  | 1 kWh                                      | 30 pkm              +   0.005 t     |
+|                    | Input                                      | Output                                      |
+|--------------------|--------------------------------------------|---------------------------------------------|
+| **Parameter Name** | sec_diesel                                 | exo_road_car_pkm    + emi_co2_f_tra         |
+| **Value Example**  | 1 kWh                                      | 30 pkm              +   0.005 t             |
 
 This means that the direct efficiencies are not given as a percentage but rather by indicator ratios.
 
@@ -113,14 +113,15 @@ The resulting indicator ratios are as follows and can also be found in Figure 2:
 
 There are four kinds of time series given in order to describe and limit the transport sectors dispatch (see Table 3):
 
-| Name                                | Type         | Unit                                       |
-|-------------------------------------|--------------|--------------------------------------------|
-| demand_timeseries                   | Fixed        | Normalized sum 1                           |
+| Name                                | Type         | Unit                                          |
+|-------------------------------------|--------------|-----------------------------------------------|
+| demand_timeseries                   | Fixed        | Normalized sum 1                              |
 | sto_min_timeseries                  | Lower        | Normalized between 0 and 1 as fraction of SOC |
 | sto_max_timeseries                  | Upper        | Normalized between 0 and 1 as fraction of SOC |
 | availability_timeseries_fixed / availability_timeseries_max | Fixed/Upper  | Normalized to maximum                      |
 
-All vehicles have to serve a given driving profile (*demand_timeseries*) that describes the normalized fraction of the scalar annual demand (*demand_annual*) that is given in the tra_scalar table. 
+All vehicles have to serve a given demand profile (*demand_timeseries*) that describes the normalized fraction of the scalar annual demand (*demand_annual*) that is given in the tra_scalar table. For cars and trucks, this demand profile is a driving profile, as it is assumed that the refueling of the fuel vehicles is balanced across the fleet and takes place during the driving time. For the flexibly modeled e-vehicles, the driving profile specifies when the storage tank is discharged and is a boundary condition for optimization. Overhead line trains also have a driving profile as a demand time series, as the energy demand occurs at the same time as the vehicle is in motion. For all other vehicles (buses, ships, airplanes, special vehicles), however, a tank profile is specified, as it is assumed that the driving process is decoupled from the tank process in terms of time. The vehicles are refueled at the depot after the working day. Refueling is therefore more concentrated in the afternoon. 
+
 The flexibly modelled vehicles (cars and trucks) are furthermore constrained. The SOC of the vehicle batteries are restricted by a band (*sto_max_timeseries*/*sto_min_timeseries*) that represents the maximum/minimum SOC that the fleet should be able to provide in order to fulfill user demands (see Figure 2). 
 
 ![Figure 3: Exemplary development of the battery SOC over one day. Source: Miorelli, F. (2024): “Aggregation and normalisation methods in venco.py” © DLR | CC BY 4.0.](../../graphics/SOC_BEV_battery.png)
