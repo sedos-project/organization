@@ -20,7 +20,7 @@ In the following, the last point, the visualization of the data in the form of c
 
 In this part of the GUI, the structure of the data can be displayed graphically to build a better understanding of how the data is related.
 
-<ins>First of all there are five different sectors that are considered in the data:</ins>
+<ins>First of all, there are five different sectors that are considered in the data:</ins>
 
 - transport
 - heat
@@ -173,7 +173,7 @@ Opening the link recreates the chart with the exact same settings. This makes sh
         You can set the characteristic by which the colors are to be differentiated, depending on what you want to display.
       - Make sure that the units of the selected data match.
       - You can adjust the x- and y-axis for bar and line plots to the right value you want to plot.
-      - If you only want to represent input or output data in a sankey and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram.
+      - If you only want to represent input or output data in a sankey and not both, make sure to select 'Filter all', otherwise they will be considered in the diagram.
       - Make use of subplots to compare different scenarios, years or sectors.
 
 
