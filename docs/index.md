@@ -9,9 +9,9 @@ open source structure.
 The documentation is structured in the following four main parts 
 
 1. [Model Structure](visitor/structure/model_frame.md)
-2. [Reference Dataset](./visitor/data_requirements/input_data.md)
-3. [Model Application](./visitor/data_requirements/input_data.md)
-4. [Developer Instructions](./developer/how_to_contribute_data.md)
+2. [Reference Dataset](visitor/data_requirements/input_data.md)
+3. [Model Application](visitor/data_requirements/input_data.md)
+4. [Developer Instructions](developer/how_to_contribute_data.md)
 
 
 ??? question "Just here for the data?" 
