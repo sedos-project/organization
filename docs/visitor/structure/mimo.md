@@ -8,17 +8,12 @@
 For processes with multiple input and/or output energy vectors it might not always be clear to which energy vector a 
 parameter column refers.
 
-By `default`, parameters of a process are assigned to the main (first) output of a process from the BW 
-Sync&Share table - sheet: [Process_Set](https://bwsyncandshare.kit.edu/f/2458081675)
-(the `default` does not appear in the input_output sheet, but is used in the backend of the data pipeline).
+By `default`, parameters of a process are assigned to the main (first) output of a process from the Process_Set sheet in the 
+main model_structure.xlsx available on [Zenodo](TODO: Add Link). If the default is incorrect or needs to be overridden, simply use the Parameter_Input-Output sheet to specify or reassign 
+the process parameters’ inputs and outputs. It is for the data providers (WP4-8) to assess whether this is correct for each process with respect to the 
+modelling. Accordingly, the parameter `defaults` do not appear in the input_output sheet, but are identified in the data pipeline.
 <br>
-If needed, the `default` can be overwritten, simply by assigning other input(s) and output(s) to a specific 
-parameter of the process in the [Parameter_Input-Output](https://bwsyncandshare.kit.edu/f/2458081675) sheet.
 
-It is for the data providers (WP4-8) to assess whether this is correct for each process with respect to the 
-modelling.
-<br>
-If the `default` is incorrect, the [Parameter_Input-Output](https://bwsyncandshare.kit.edu/f/2458081675) sheet should be used to specify process parameters' inputs and outputs accordingly.
 
 ??? info "Example for parameter input-output specification"
 
