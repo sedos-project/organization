@@ -1,16 +1,14 @@
 # SEDOS Documentation
 
-Welcome to the documentation of the SEDOS project!
-We developed an open-source model structure taking into account the relevant future technologies 
+Welcome to the documentation of the SEDOS project! We developed an open-source model structure taking into account the relevant future technologies 
 for electricity, heat, other conversions, transport and industry in a sector-coupled energy world. 
-We set a strong focus on a streamlined data management process that fosters the transparency and reproducibility of the 
-open source structure. 
+We set a strong focus on a streamlined data management process that fosters the transparency and reproducibility of the open source structure. 
 
-The documentation is structured in the following four main parts 
+The documentation is structured in the following four main parts:
 
 1. [Model Structure](visitor/structure/model_frame.md)
-2. [Reference Dataset](visitor/data_requirements/input_data.md)
-3. [Model Application](visitor/data_requirements/input_data.md)
+2. [Reference Dataset](visitor/data/overview.md)
+3. [Model Application](visitor/model/overview.md)
 4. [Developer Instructions](developer/how_to_contribute_data.md)
 
 

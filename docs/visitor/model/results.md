@@ -1,4 +1,4 @@
-# Results
+# Preliminary Results
 
 !!! info "  Some results based on test data are presented below. This data does not yet constitute a final result, it is merely intended to show what is possible with the help of the GUI, which representations can be used and which interpretations can be drawn."
   
