@@ -13,8 +13,7 @@ nav:
             - 'Transport': 'visitor/structure/transport.md'
         - 'Aggregations': 'visitor/structure/aggregations.md'
         - 'Levels of Detail': 'visitor/structure/lods.md'
-
-
+#        - 'Network Graphs': 'visitor/structure/network_graphs.md'
     - 'Reference Dataset':
         - 'Overview': 'visitor/data/overview.md'
         - 'Nomenclature': 'visitor/data/nomenclature.md'
@@ -22,7 +21,7 @@ nav:
         - 'Metadata': 'visitor/data/metadata.md'
         - 'Ontology': 'visitor/data/ontology.md'
     - 'Model Application':
-        - 'Scenarios': 'visitor/model/scenarios.md'
+        - 'Overview': 'visitor/model/scenarios.md'
         - 'GUI': 'visitor/model/gui.md'
         - 'Results': 'visitor/model/results.md'
     - Developer Instructions:

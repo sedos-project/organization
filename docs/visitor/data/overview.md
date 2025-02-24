@@ -1,6 +1,4 @@
-# Overview of the SEDOS data
-
-## Data architecture
+# Overview of the SEDOS data architecture
 
 This section provides an introductory overview of SEDOS' data architecture and its elements, which you will find 
 explained more detailed in this documentation.
@@ -27,16 +25,3 @@ the databus via the OEDatamodel-API. Thus, the latest data versions from all WPs
 ready for further processing in the SEDOS data pipeline.
 
 [//]: # (## TODO: Umfang der Daten beschreiben)
-
-## Sectors
-
-The SEDOS Reference Dataset (SRD) entails technology data across five sectors (power, heat, x2x, industry, transport) 
-and various aggregation levels. The sectors and the used abbreviations within the data are listed below:
-
-| Sector abbreviation | Sector     | SEDOS workpackage |
-|---------------------|------------|-------------------|
-| pow                 | Power      | AP4               |
-| hea                 | Heat       | AP6               |
-| x2x                 | Power to X | AP5               |
-| ind                 | Industry   | AP7               |
-| tra                 | Transport  | AP8               |
