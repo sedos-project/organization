@@ -1,6 +1,7 @@
 # Nomenclature
 
-<h2 id="process-nomenclature">Process Nomenclature</h2>
+<h2 id="process-nomenclature"></h2>
+## Process Nomenclature
 
 As the process and therefore the specifications of the processes are very detailed, a consistent nomenclature has been
 defined within the SEDOS project. e.g. the process "pow_combustion_cc_chp_methane_1" consists of elements of all the 
@@ -63,7 +64,7 @@ th {
 |          | air              | [ice, fcev, bev, hyb], [pass, frei], [natio, europ, inter],                                                                   | [kerosene, hydrogen]                                                 |                |                       |
 |          | water            | [ice, fcev], frei, [up, down]                                                                                                 | [lng, methanol, ethanol, ammonia, diesel, hydrogen]                  |                |                       |
 
-
+<h2 id="commodity-nomenclature"></h2>
 ## Commodity Nomenclature
 
 The SEDOS commodities are categorized as follows:
@@ -166,7 +167,8 @@ These are not listed above.
 The structure of the emission commodities is elaborated in [Emission Concept](./visitor/structure/emissions.md)
 
 
-<h2 id="parameter-nomenclature">Parameter Nomenclature</h2>
+<h2 id="parameter-nomenclature"></h2>
+## Parameter Nomenclature
 
 Moreover, the nomenclature of the parameters that are being used in the SEDOS data is introduced together with the
 description of the applied parameters and their units.
