@@ -1,5 +1,6 @@
 # Nomenclature
 
+<h2 id="process-nomenclature"></h2>
 ## Process Nomenclature
 
 As the process and therefore the specifications of the processes are very detailed, a consistent nomenclature has been
@@ -63,7 +64,7 @@ th {
 |          | air              | [ice, fcev, bev, hyb], [pass, frei], [natio, europ, inter],                                                                   | [kerosene, hydrogen]                                                 |                |                       |
 |          | water            | [ice, fcev], frei, [up, down]                                                                                                 | [lng, methanol, ethanol, ammonia, diesel, hydrogen]                  |                |                       |
 
-
+<h2 id="commodity-nomenclature"></h2>
 ## Commodity Nomenclature
 
 The SEDOS commodities are categorized as follows:
@@ -166,6 +167,7 @@ These are not listed above.
 The structure of the emission commodities is elaborated in [Emission Concept](./visitor/structure/emissions.md)
 
 
+<h2 id="parameter-nomenclature"></h2>
 ## Parameter Nomenclature
 
 Moreover, the nomenclature of the parameters that are being used in the SEDOS data is introduced together with the
@@ -237,12 +239,12 @@ th {
 |                  | cost_var_e                               | Variable costs per throughput energy unit output. (excluding fuel costs).                                                                                                                                               |
 |                  | cost_var_tra                             |                                                                                                                                                                                                                         |
 |                  | cost_var_w                               | Variable costs per throughput weight unit output. (excluding fuel costs).                                                                                                                                               |
-| process          | conversion_factor_<commodity>            | Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).                                                                                                 |
-|                  | flow_share_min_<commodity>               | Minimum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                      |
-|                  | flow_share_max_<commodity>               | Maximum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                      |
-|                  | flow_share_fix_<commodity>               | Fixed share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                        |
-|                  | conversion_factor_timeseries_<commodity> | Time-variable commodity-specific conversion factor.                                                                                                                                                                     |
-|                  | ef_<commodity>_<emission>                | Commodity-specific emission factor.                                                                                                                                                                                     |
+| process          | conversion_factor_commodity              | Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).                                                                                                 |
+|                  | flow_share_min_commodity               | Minimum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                      |
+|                  | flow_share_max_commodity               | Maximum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                      |
+|                  | flow_share_fix_commodity               | Fixed share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                        |
+|                  | conversion_factor_timeseries_commodity | Time-variable commodity-specific conversion factor.                                                                                                                                                                     |
+|                  | ef_commodity_emission                | Commodity-specific emission factor.                                                                                                                                                                                     |
 |                  | cb_coefficient                           | The Cb-coefficient (backpressure coefficient) is defined as the maximum power generation capacity in backpressure mode divided by the maximum heat production capacity (including flue gas condensation if applicable). |
 |                  | cv_coefficient                           | The Cv-value for an extraction steam turbine is defined as the loss of electricity production, when the heat production is increased one unit at constant fuel input.                                                   |
 |                  | efficiency_sto_in                        | Energy efficiency of power input.                                                                                                                                                                                       |

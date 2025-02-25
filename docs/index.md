@@ -8,7 +8,7 @@ The documentation is structured in the following four main parts:
 
 1. [Model Structure](visitor/structure/model_frame.md)
 2. [Reference Dataset](visitor/data/overview.md)
-3. [Model Application](visitor/model/overview.md)
+3. [Model Application](visitor/model/scenarios.md)
 4. [Developer Instructions](developer/how_to_contribute_data.md)
 
 
