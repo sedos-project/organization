@@ -1,6 +1,6 @@
 # Nomenclature
 
-## Process Nomenclature
+<h2 id="process-nomenclature">Process Nomenclature</h2>
 
 As the process and therefore the specifications of the processes are very detailed, a consistent nomenclature has been
 defined within the SEDOS project. e.g. the process "pow_combustion_cc_chp_methane_1" consists of elements of all the 
@@ -166,7 +166,7 @@ These are not listed above.
 The structure of the emission commodities is elaborated in [Emission Concept](./visitor/structure/emissions.md)
 
 
-## Parameter Nomenclature
+<h2 id="parameter-nomenclature">Parameter Nomenclature</h2>
 
 Moreover, the nomenclature of the parameters that are being used in the SEDOS data is introduced together with the
 description of the applied parameters and their units.
