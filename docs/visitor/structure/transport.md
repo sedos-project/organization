@@ -27,33 +27,33 @@ The scalar parameters provided are described in Table 2.
 
 *Table 2: Scalar parameters provided for the transport sector.*
 
-| Parameter                     | Unit                      | Explanation                                                                                               |
-|-------------------------------|---------------------------|-----------------------------------------------------------------------------------------------------------|
-| demand_annual                 | Gpkm, Gtkm               | Link to projected annual demand for a transport service demand.                                          |
-| capacity_p_inst_0             | kW                       | Existing power output capacity of a wallbox in a certain year.                                           |
-| capacity_p_unit               | kW/vehicle               | Fixed installed wallbox capacity per unit.                                                               |
-| capacity_e_inst_0             | kWh                      | Existing fleet battery capacity.                                                                         |
-| capacity_e_unit               | kW/vehicle               | Capacity per fixed storage unit.                                                                         |
-| capacity_tra_inst_0           | vehicles                 | Number of vehicles (middle of year).                                                                     |
-| capacity_tra_min              | vehicles                 | Minimum expansion of fleet per vehicle type per process. Based on minimum market share range, stock, and transport service demand. |
-| capacity_tra_max              | vehicles                 | Maximum expansion of fleet per vehicle type per process. Based on maximum market share range, stock, and transport service demand. |
-| conversion_factor_<commodity> | kWh, pkm, tkm            | Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process). |
-| ef_<commodity>_<emission>     | kg/MWh                   | Commodity-specific emission factor.                                                                      |
-| exo_<commodity>               | Gpkm, Gtkm               | Projected annual demand for a transport service demand.                                                  |
-| lifetime                      | a                        | Technical lifetime of a process.                                                                         |
-| mileage                       | km/(vehicle*a)           | Yearly mileage of a vehicle.                                                                             |
-| market_share_range            | [percent_min, percent_max] | Range of market share for vehicle expansion.                                                            |
-| occupancy_rate                | persons/vehicle          | Occupancy rate of a vehicle.                                                                             |
-| tonnage                       | tons/vehicle             | Tonnes transported per vehicle.                                                                          |
-| share_tra_charge_mode         | -                        | Proportion of fleet that load with a specific charge mode.                                               |
-| cost_inv_tra                  | EUR/vehicle              | Investment costs for new vehicle unit.                                                                   |
-| cost_fix_tra                  | EUR/(vehicle*a)          | Operation independent costs for existing and new vehicle units.                                          |
-| cost_var_tra                  | EUR/pkm, EUR/tkm         | Variable costs per pkm/tkm.                                                                              |
-| cost_inv_p                    | EUR/kW                   | Investment costs for new wallbox power output capacity.                                                  |
-| wacc                          | percent                  | Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.      |
-| efficiency_sto_in             | percent                  | Energy efficiency of power input.                                                                        |
-| efficiency_sto_out            | percent                  | Energy efficiency of power output.                                                                       |
-| sto_self_discharge            | percent/h                | Storage losses over time.                                                                                |
+| Parameter             | Unit                      | Explanation                                                                                               |
+|-----------------------|---------------------------|-----------------------------------------------------------------------------------------------------------|
+| demand_annual         | Gpkm, Gtkm               | Link to projected annual demand for a transport service demand.                                          |
+| capacity_p_inst_0     | kW                       | Existing power output capacity of a wallbox in a certain year.                                           |
+| capacity_p_unit       | kW/vehicle               | Fixed installed wallbox capacity per unit.                                                               |
+| capacity_e_inst_0     | kWh                      | Existing fleet battery capacity.                                                                         |
+| capacity_e_unit       | kW/vehicle               | Capacity per fixed storage unit.                                                                         |
+| capacity_tra_inst_0   | vehicles                 | Number of vehicles (middle of year).                                                                     |
+| capacity_tra_min      | vehicles                 | Minimum expansion of fleet per vehicle type per process. Based on minimum market share range, stock, and transport service demand. |
+| capacity_tra_max      | vehicles                 | Maximum expansion of fleet per vehicle type per process. Based on maximum market share range, stock, and transport service demand. |
+| conversion_factor_commodity | kWh, pkm, tkm            | Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process). |
+| ef_commodity_emission | kg/MWh                   | Commodity-specific emission factor.                                                                      |
+| exo_commodity         | Gpkm, Gtkm               | Projected annual demand for a transport service demand.                                                  |
+| lifetime              | a                        | Technical lifetime of a process.                                                                         |
+| mileage               | km/(vehicle*a)           | Yearly mileage of a vehicle.                                                                             |
+| market_share_range    | [percent_min, percent_max] | Range of market share for vehicle expansion.                                                            |
+| occupancy_rate        | persons/vehicle          | Occupancy rate of a vehicle.                                                                             |
+| tonnage               | tons/vehicle             | Tonnes transported per vehicle.                                                                          |
+| share_tra_charge_mode | -                        | Proportion of fleet that load with a specific charge mode.                                               |
+| cost_inv_tra          | EUR/vehicle              | Investment costs for new vehicle unit.                                                                   |
+| cost_fix_tra          | EUR/(vehicle*a)          | Operation independent costs for existing and new vehicle units.                                          |
+| cost_var_tra          | EUR/pkm, EUR/tkm         | Variable costs per pkm/tkm.                                                                              |
+| cost_inv_p            | EUR/kW                   | Investment costs for new wallbox power output capacity.                                                  |
+| wacc                  | percent                  | Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.      |
+| efficiency_sto_in     | percent                  | Energy efficiency of power input.                                                                        |
+| efficiency_sto_out    | percent                  | Energy efficiency of power output.                                                                       |
+| sto_self_discharge    | percent/h                | Storage losses over time.                                                                                |
 
 All costs are presented excluding taxes and subsidies, based on 2021 price levels.
 
