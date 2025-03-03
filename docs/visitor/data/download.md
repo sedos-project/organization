@@ -1,10 +1,7 @@
 # How to download data?
 
-You can have a look at available datasets on the [SEDOS Dashboard](https://sedos.apps.rl-institut.de/) at section "Explore the Model Structure".
-There, you can  select a model structure and see related dataset by clicking on "Look at Artifacts":
-![](../../graphics/look_at_artifacts.png)
-
-On the artifacts page you can explore the different files of the dataset and have a look at underlying data.
+You can have a look at the reference datasets and all related files on the [SEDOS Dashboard](https://sedos.apps.rl-institut.de/energysystem/artifacts/?collection=sedos-project&structure=SEDOS-structure-all).
+On this page you can explore the different files of the dataset and have a look at underlying data.
 In order to download the dataset to your local computer you need the so-called "collection". 
 The collection on the databus can be visited by clicking on the external link "View collection":
 
