@@ -16,6 +16,7 @@ nav:
         - 'Network Graphs': 'visitor/structure/network_graph.md'
     - 'Reference Dataset':
         - 'Overview': 'visitor/data/overview.md'
+        - 'Download': 'visitor/data/download.md'
         - 'Nomenclature': 'visitor/data/nomenclature.md'
         - 'Metadata': 'visitor/data/metadata.md'
         - 'Ontology': 'visitor/data/ontology.md'
