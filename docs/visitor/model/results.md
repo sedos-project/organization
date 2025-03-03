@@ -14,7 +14,7 @@ The two sub-sectors of copper and aluminum were selected for a closer look at th
 The following diagrams show the installed capacity per year in each case, with the coloring describing the technology used.
 
 
-[//]: # (both diagrams: bar_x-year_y-capacity_inst_neu and then select the respective category)
+[//]: # (both diagrams: ind-pre_bar_x-year_y-capacity_inst and then select the respective category)
 
 
 
@@ -64,7 +64,7 @@ declining relevance of coal in industrial processes and highlights hydrogen’s 
 energy-intensive industries.
 
 
-[//]: # (the following diagrams: sankey_ind_pri-sec-inputs_to_category_new and then select the respective year)
+[//]: # (the following diagrams: ind-pre_sankey_pri-sec-inputs_to_category and then select the respective year)
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
@@ -85,7 +85,7 @@ More complex sankey variations:
 
 - primary/secondary inputs to specifications (no outputs):
 
-[//]: # (sankey_pri-sec-inputs_to_specifications_new)
+[//]: # (ind-pre_sankey_pri-sec-inputs_to_specifications)
 <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1970" width="1000" height="500"></iframe>
 
 
@@ -95,7 +95,7 @@ More complex sankey variations:
 In the following, the energy flow of the primary/secondary inputs between the different categories is to be illustrated with the help of Sankey diagrams. 
 As before, the years 2021, 2030 and 2050 are considered in order to be able to recognize a development over the years.
 
-[//]: # (the following diagrams: sankey_pri-sec-flow_to_category_new and then select the respective year)
+[//]: # (the following diagrams: ind-pre_sankey_pri-sec-flow_to_category and then select the respective year)
 
 
 Year 2021:
@@ -115,7 +115,7 @@ Year 2050:
 Here, too, it can be observed that the demand of hydrogen will increase significantly over the years and plays an especially important role in the steel sector.
 This development in the steel sector is illustrated in detail in the following two diagrams, where the demand of the primary/secondary inputs of the respective processes is shown.
 
-[//]: # (both diagrams: sankey_steel_pri-sec-inputs_to_processes and then select the respective year)
+[//]: # (both diagrams: ind-pre_sankey_steel_pri-sec-inputs_to_processes and then select the respective year)
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
@@ -136,7 +136,7 @@ This development in the steel sector is illustrated in detail in the following t
 
 The following diagrams show the import flows for 2021 and 2050 to see which imports are used where and how the import changes over the years.  
 
-[//]: # (both diagrams: sankey_imports_to_category_new and then select the respective year)
+[//]: # (both diagrams: ind-pre_sankey_imports_to_category and then select the respective year)
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
@@ -160,7 +160,7 @@ The following diagrams are created out of the test data based on the Oemof model
 
 The diagram below describes the consumption of sec-inputs per year:
 
-[//]: # (bar_o_steel_x-year_y-sec-inputs)
+[//]: # (o_steel_tokio_bar_x-year_y-sec-inputs)
 
 <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1914" width="800" height="450"></iframe>
 
@@ -168,7 +168,7 @@ Here, too, the trend away from fossil fuels and particularly the increase in the
 
 The next diagram describes the additional installed capacity per year in the steel category:
 
-[//]: # (bar_o_steel_x-year_y-capacity-new)
+[//]: # (o_steel_tokio_bar_x-year_y-capacity-new)
 
 <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1921" width="800" height="450"></iframe>
 

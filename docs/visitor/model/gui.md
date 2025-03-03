@@ -101,6 +101,7 @@ In addition, the data is available for several milestone year until 2070, which 
 <ins>Additional features to ease the use of this GUI are:</ins>
 
 * **Save Filer Settings**: To save your filter settings for later use, enter a title and save the configuration once filters are set.
+For the titles we suggest the following nomenclature convention: scenario-name_chart-type_x-axis-description_y-axis-description
 * **Load Filter Settings**: Load saved filter settings to create ready-made diagrams.
 * **Embed Chart**: The "Embed Chart" feature generates a unique link for a customized chart by storing the parameter settings in a central database, allowing users to easily revisit or share it. 
 Opening the link recreates the chart with the exact same settings. This makes sharing data insights simple and accessible. 
