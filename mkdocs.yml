@@ -13,13 +13,13 @@ nav:
             - 'Transport': 'visitor/structure/transport.md'
         - 'Technological Aggregations': 'visitor/structure/aggregations.md'
         - 'Levels of Detail': 'visitor/structure/lods.md'
-#        - 'Network Graphs': 'visitor/structure/network_graphs.md'
+        - 'Network Graphs': 'visitor/structure/network_graph.md'
     - 'Reference Dataset':
         - 'Overview': 'visitor/data/overview.md'
         - 'Nomenclature': 'visitor/data/nomenclature.md'
-        - 'Data Conventions': 'visitor/data/data_conventions.md'
         - 'Metadata': 'visitor/data/metadata.md'
         - 'Ontology': 'visitor/data/ontology.md'
+        - 'Data Conventions': 'visitor/data/data_conventions.md'
     - 'Model Application':
         - 'Overview': 'visitor/model/scenarios.md'
         - 'GUI': 'visitor/model/gui.md'
