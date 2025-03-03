@@ -35,7 +35,13 @@ We propose three different methods to download the dataset:
 
     This will download related files into current working directory.
 
-3. By downloading the files **manually**:
+3. By downloading the files **manually** from **OpenenergyPlatform**:
+
+    Visit https://openenergyplatform.org/dataedit/view/model_draft?tags=246 to see all database tables tagged with the keyword "SEDOS".
+    From there, you can click on a table to see and query/filter related data and to take a look at related metadata.
+    Additionally, you can download (filtered) data from there as CSV or datapackage.
+
+4. By downloading the files **manually** from **Databus**:
 
     On the databus you can find related file URLs  in section "DOWNLOAD URLS". 
     From there, you can select file paths individually and open the path in your browser.
