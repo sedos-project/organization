@@ -30,5 +30,5 @@ The documentation is structured in the following four main parts:
 !!! example "Use the search bar to find information quicker!" 
 
 <div style="text-align: center;">
-  <img src="../graphics/bmwk.svg" alt="BMWK" width="200px"/>
+  <img src="graphics/bmwk.svg" alt="BMWK" width="200px"/>
 </div>
