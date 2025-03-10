@@ -10,6 +10,7 @@ nav:
             - 'Emission Concept': 'visitor/structure/emissions.md'
             - 'Multiple Inputs and Outputs': 'visitor/structure/mimo.md'
         - 'Sectors':
+            - 'X2X': 'visitor/structure/x2x.md'
             - 'Transport': 'visitor/structure/transport.md'
         - 'Technological Aggregations': 'visitor/structure/aggregations.md'
         - 'Levels of Detail': 'visitor/structure/lods.md'
