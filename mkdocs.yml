@@ -121,11 +121,7 @@ plugins:
   - include-markdown
 
 repo_url: https://github.com/sedos-project/organization
-site_description: The documentation of the SEDOS data management
+site_description: The documentation of the SEDOS project
 
 copyright: |
-  &copy; 2024 - SEDOS Project Team
-
-# in case hyperlinks are wanted
-#<a href="https://reiner-lemoine-institut.de/"  target="_blank" rel="noopener">RLI</a> and <a
-#href="https://fortiss.org"  target="_blank" rel="noopener">fortiss GmbH</a>
+  &copy; 2025 - SEDOS Project Team
