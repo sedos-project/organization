@@ -19,7 +19,7 @@ The X2X sector in the SEDOS dataset contains technologies that are traditionally
 
 ## Provided parameters
 
-Conversly to other sectors in the SEDOS model structure, the X2X sector has no sector-specific scalar parameters but only generally defined parameters. Please refer to the corresponding section in the documentation for more information. All costs are presented excluding taxes and subsidies, based on 2021 price levels. The X2X sector has only scalar data and no time series data as it serves as an intermediate sector connecting supply and demand (which themselves have time series data)
+Conversly to other sectors in the SEDOS model structure, the X2X sector has no sector-specific scalar parameters but only generally defined parameters. Please refer to the corresponding section in the documentation for more information. All costs are presented excluding taxes and subsidies, based on 2021 price levels. The X2X sector has only scalar data and no time series data as it serves as an intermediate sector connecting supply and demand (which themselves have time series data).
 
 
 ## General modeling approach
