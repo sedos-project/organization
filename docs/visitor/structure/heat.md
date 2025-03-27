@@ -53,14 +53,14 @@ All costs are presented excluding taxes and subsidies, based on 2021 price level
 ## General modeling approach
 The modeled heating processes can be categorized into three different types. The first are heating processes that have one input commodity and one output commodity. Then there are heating processes that either have one or two input commodities and one or two output commodities. The last type are cooling technologies. Furthermore there will be an in depth explenation for the district heating grid.
 
-## Single heating technologies
+### Single heating technologies
 For the processes with one input and one output commodity, they can be modeled by having a fixed ratio of conversion factors. In this model the output commodity is normalized to 1 and the input is 1 divided by the efficiency of the process.
 
-## Dual heating technologies
+### Dual heating technologies
 For the first subtype, two inputs one output commodity, the processes have conversion factors and fixed flow shares. Both conversion factors of the input commodities are set to 1. Also both input commodites have a fixed flow share set from 0 to 1 that adds up to 1. The output commodity has the efficiency set as the conversion factor. Processes with one input and two outputs the input conversion factor is set to 1. The output commodities conversion factors are set to their commodity specific efficiency. Both output commodites have a fixed flow share from 0 to 1 that adds up to 1. For processes with two input and two output commodites the input commodities conversion factors are set to one. Both commodities have a fixed flow share from 0 to 1 that add up to 1. The output commodites conversion factors are set to the commodity specific efficiency. Both commodities have a fixed flow share from 0 to 1 that add up to 1. 
 
-## Cooling technologies
+### Cooling technologies
+Cooling processes have one input and one output commodity, they can be modelled by having a fixed ratio of conversion factors. In this model the input commodity is normalized to 1 and the output is given by the conversion factor of the process.
 
-
-## District heating grids
+### District heating grids
 The costs of district heating is depending on the amount of demand in a specific area. The more dense an area is, the lower is the delivery costs for district heating. This means that the model has to take into account a varying cost level depending on the building type and the area where the district heating grid would be build. In SEDOS every building type has its own district heating grid modeled with different steps. The first step is the already existing district heating network in Germany. Every next step has a fixed capacity that can be build. Each step is getting increasingly more expensive due to the less dense area it would be build in. Therefore there is a point where building new grids for specific building types isn't cost efficient anymore and the model will change to different heating methods.

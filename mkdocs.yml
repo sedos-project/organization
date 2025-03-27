@@ -122,6 +122,7 @@ plugins:
             show_source: false
             docstring_style: numpy
             docstring_section_style: spacy
+          paths: [src]
   - include-markdown
 
 repo_url: https://github.com/sedos-project/organization
