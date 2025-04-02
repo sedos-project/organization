@@ -4,33 +4,38 @@ nav:
     - Welcome: index.md
     - 'Model Structure':
         - 'Overview': 'visitor/structure/overview.md'
-        - 'Model Base': 
-            - 'General features': 'visitor/structure/model_frame.md'
-            - 'Sectors':
-                - 'Transport': 'visitor/structure/transport.md'
-        - 'Emission Concept': 'visitor/structure/emissions.md'
-        - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
-#        - 'Model Structure': ''
-#        - 'Aggregations': ''
+        - 'Model Base':
+            - 'General Assumptions': 'visitor/structure/model_frame.md'
+            - 'Exogenous Values': 'visitor/structure/exogenous_values.md'
+            - 'Emission Concept': 'visitor/structure/emissions.md'
+            - 'Multiple Inputs and Outputs': 'visitor/structure/mimo.md'
+        - 'Sectors':
+            - 'Power': 'visitor/structure/power.md'
+            - 'Heat': 'visitor/structure/heat.md'
+            - 'Industry': 'visitor/structure/industry.md'
+            - 'X2X': 'visitor/structure/x2x.md'
+            - 'Transport': 'visitor/structure/transport.md'
+        - 'Technological Aggregations': 'visitor/structure/aggregations.md'
+        - 'Levels of Detail': 'visitor/structure/lods.md'
+        - 'Network Graphs': 'visitor/structure/network_graph.md'
     - 'Reference Dataset':
         - 'Overview': 'visitor/data/overview.md'
+        - 'Download': 'visitor/data/download.md'
         - 'Nomenclature': 'visitor/data/nomenclature.md'
-        - 'Data Conventions': 'visitor/data/data_conventions.md'
         - 'Metadata': 'visitor/data/metadata.md'
         - 'Ontology': 'visitor/data/ontology.md'
+        - 'Data Conventions': 'visitor/data/data_conventions.md'
     - 'Model Application':
-        - 'Scenarios': 'visitor/model/scenarios.md'
+        - 'Overview': 'visitor/model/scenarios.md'
         - 'GUI': 'visitor/model/gui.md'
         - 'Results': 'visitor/model/results.md'
     - Developer Instructions:
         - '(Meta)Data Requirements':
-            - 'Overview': 'developer/data_requirements/overview.md'
             - 'Data': 'developer/data_requirements/input_data.md'
             - 'Metadata': 'developer/data_requirements/metadata.md'
             - 'Ontology': 'developer/data_requirements/ontology.md'
             - 'Licensing': 'developer/data_requirements/licensing.md'
         - 'How to Contribute Data?': 'developer/how_to_contribute_data.md'
-        - 'Data Preface': 'developer/data_preface.md'
         - 'FAQ': 'developer/faq.md'
     - 'Further Reading': 'publications.md'
     - 'Glossary': 'glossary.md'
@@ -117,14 +122,11 @@ plugins:
             show_source: false
             docstring_style: numpy
             docstring_section_style: spacy
+          paths: [src]
   - include-markdown
 
 repo_url: https://github.com/sedos-project/organization
-site_description: The documentation of the SEDOS data management
+site_description: The documentation of the SEDOS project
 
 copyright: |
-  &copy; 2024 - SEDOS Project Team
-
-# in case hyperlinks are wanted
-#<a href="https://reiner-lemoine-institut.de/"  target="_blank" rel="noopener">RLI</a> and <a
-#href="https://fortiss.org"  target="_blank" rel="noopener">fortiss GmbH</a>
+  &copy; 2025 - SEDOS Project Team

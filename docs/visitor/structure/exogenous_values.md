@@ -4,12 +4,14 @@ In our approach exogenous assumptions are reduced by defining a technology-open 
 processes that are generally expected to prevail on the market under current assumptions on future developments but 
 defines multiple parallel technologies that can also highly depend on the interactions between sectors.
 However, the optimization problem still needs various exogenous parameters that should be consistent across different sectors.
-Therefore, these exogenous values that can be related to each other are collected in the list below.
+Therefore, these exogenous values that can be related to each other are collected in the list below. To be consistent we try to use
+the ["Projection report"](https://www.umweltbundesamt.de/publikationen/technischer-anhang-der-treibhausgas-projektionen)
+ from the German Umweltbundesamt for as many assumptions as possible.
 
 ## General developments
 
-- Macroeconomic development
-- Demographic development
+- Macroeconomic development (gdp, gdp per capita)
+- Demographic development (population, households, person per household)
 - Development of living and usable space
 - Development of passenger & freight transport performance
 - Development of primary energy prices
@@ -23,12 +25,12 @@ Therefore, these exogenous values that can be related to each other are collecte
 ## Political framework
 
 - Renewable energy target
-- Emission targets
-- Supply reliability of imports
+- Emission targets (Without land use, land-use change, and forestry)
+- GHG equivalence factors
 
 ## Technological values
 
-- Installed capacities on first milestone year
+- Installed capacities on first milestone year (brownfield)
 - Decomissioning of installed capacities by lifetime
 - Expansion limits per milestone year
 - Efficiencies
@@ -46,10 +48,10 @@ Therefore, these exogenous values that can be related to each other are collecte
 
 - Annual potential
 - Hourly potential
-- Subsidy costs
+- Resource costs
 
 ## Import / Export
 
-- Electricity and commodity prices of neighbouring countries
-- Restrictions on all imports from neighboring countries
-- Ccost-potential ratios for imports of PtG and PtL products
+- Commodity prices of neighbouring countries
+- Cost-potential ratios for imports of PtG and PtL products
+- Simplified European electricity system model

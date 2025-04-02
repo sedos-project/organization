@@ -1,5 +1,6 @@
 # Nomenclature
 
+<h2 id="process-nomenclature"></h2>
 ## Process Nomenclature
 
 As the process and therefore the specifications of the processes are very detailed, a consistent nomenclature has been
@@ -63,8 +64,110 @@ th {
 |          | air              | [ice, fcev, bev, hyb], [pass, frei], [natio, europ, inter],                                                                   | [kerosene, hydrogen]                                                 |                |                       |
 |          | water            | [ice, fcev], frei, [up, down]                                                                                                 | [lng, methanol, ethanol, ammonia, diesel, hydrogen]                  |                |                       |
 
+<h2 id="commodity-nomenclature"></h2>
+## Commodity Nomenclature
+
+The SEDOS commodities are categorized as follows:
+
+- ??? info "primary energy carriers (pri) "
+    
+        solar_radiation, wind_energy, hydro_energy, hydro_nat_inflow_seasonal,
+        hydro_nat_inflow_openloop, geoth_heat, envir_heat, biomass_stemwood,
+        biomass_pellets_pp, biomass_wood_chips_pp, biomass_wood_chips_pr,
+        biomass_straw_bales_pr, biomass_wood_chips_sr, biomass_pellets_sr,
+        waste_other_bio_sr, waste_municipal_bio, waste_wood, waste_animal,
+        sewage_gas, sewage_sludge, waste_non_bio, landfill_gas, cbm,
+        natural_gas, lignite, coal, crude_oil, uran, deuterium
+
+- ??? info "secondary energy carriers (sec)"
+
+        elec, elec_ind, elec_wallbox, elec_battery, biogas, natural_gas_syn,
+        lng, cng, lpg, methane, hydrogen, syngas, syngas_sr,
+        heating_oil, heavy_fuel_oil, diesel, diesel_fos, diesel_syn,
+        biodiesel, gasoline, gasoline_fos, gasoline_syn, ammonia, naphtha,
+        naphtha_syn, naphtha_fos, kerosene, kerosene_fos, kerosene_syn,
+        refinery_gas, biokerosene, ethanol, methanol, biomethanol,
+        heat_low, heat_high, heat_district_low_hh, heat_district_high_hh,
+        heat_district_low_cts, heat_district_high_cts, heat_district_high_ind,
+        saving, waste_heat_high_chemi, waste_heat_high_aluminum,
+        waste_heat_high_cement, waste_heat_high_copper, waste_heat_high_glass,
+        waste_heat_high_paper, waste_heat_high_steel
+
+- ??? info "industrial intermediate products (iip)"
+
+        aluminum_alumina, aluminum_crude, aluminum_scrap, auto_btry_hcv_bev,
+        auto_btry_hcv_fcev, auto_btry_hcv_icev, auto_btry_lcv_bev, auto_btry_lcv_fcev,
+        auto_btry_lcv_icev, auto_btry_pc_bev, auto_btry_pc_fcev, auto_btry_pc_icev,
+        auto_btry_pc_phev, auto_heat_proc, auto_hvlt, auto_mcmp, auto_painted_hcv_bev,
+        auto_painted_hcv_fcev, auto_painted_hcv_icev, auto_painted_lcv_bev, auto_painted_lcv_fcev,
+        auto_painted_lcv_icev, auto_painted_pc_bev, auto_painted_pc_fcev, auto_painted_pc_icev,
+        auto_painted_pc_phev, auto_parts_hcv_bev, auto_parts_hcv_fcev, auto_parts_hcv_icev,
+        auto_parts_lcv_bev, auto_parts_lcv_fcev, auto_parts_lcv_icev, auto_parts_pc_bev,
+        auto_parts_pc_fcev, auto_parts_pc_icev, auto_parts_pc_phev, auto_space_heat,
+        auto_hot_water, biogas_ind, black_liquor, steel_blafu_gas, steel_blafu_gas_in,
+        cement_clinker, cement_rawmeal, chemi_biomass, chemi_biomethanol,
+        chemi_electro_chem, chemi_heavy_fuel_oil, chemi_machine_drive,
+        chemi_meoh_f_h2, chemi_meoh_h2, chemi_methane, chemi_methanol,
+        chemi_naphtha, chemi_nh3_h2, chemi_mtg_mtk_h2, chemi_lpg,
+        chemi_processes_others, chemi_process_heat, chemi_steam, coke,
+        steel_coke_oven_gas, steel_coke_oven_gas_in, copper_crude, copper_scrap,
+        elec, glass_cont_batch, glass_cont_melt, glass_flat_batch, glass_flat_form,
+        glass_flat_melt, heat_proc, hot_water, paper_pulp, paper_recycle,
+        steam, steel_blafu_slag, steel_crudesteel, steel_iron_pellets, steel_raw_iron,
+        steel_scrap, steel_sinter, steel_sponge_iron, heat_high, heat_high_other,
+        cooling, heat_kiln, ict, lighting, machine_drive,
+        pump_fans_compression
+
+- ??? info "exogenous demand (exo)"
+
+          air_pkm, air_natio_pkm, air_europ_pkm, air_inter_pkm,
+          rail_pkm, rail_short_pkm, rail_long_pkm, rail_tkm,
+          rail_short_tkm, rail_long_tkm, rail_steam_pkm, water_tkm,
+          road_car_pkm, road_lcar_pkm, road_mcar_pkm, road_hcar_pkm,
+          road_motorc_pkm, road_truck_tkm, road_ltruck_tkm, road_mtruck_tkm,
+          road_htruck_tkm, road_bus_pkm, road_bus_short_pkm, road_bus_long_pkm,
+          road_agri_diesel, road_const_diesel, hh_space_heat, hh_hot_water,
+          hh_space_cooling, hh_re1_space_heat, hh_re1_hot_water, hh_re1_space_cooling,
+          hh_re2_space_heat, hh_re2_hot_water, hh_re2_space_cooling, hh_re3_space_heat,
+          hh_re3_hot_water, hh_re3_space_cooling, hh_rn1_space_heat, hh_rn1_hot_water,
+          hh_rn1_space_cooling, hh_ue1_space_heat, hh_ue1_hot_water, hh_ue1_space_cooling,
+          hh_ue2_space_heat, hh_ue2_hot_water, hh_ue2_space_cooling, hh_ue3_space_heat,
+          hh_ue3_hot_water, hh_ue3_space_cooling, hh_un1_space_heat, hh_un1_hot_water,
+          hh_un1_space_cooling, hh_me1_space_heat, hh_me1_hot_water, hh_me1_space_cooling,
+          hh_me2_space_heat, hh_me2_hot_water, hh_me2_space_cooling, hh_me3_space_heat,
+          hh_me3_hot_water, hh_me3_space_cooling, hh_mn1_space_heat, hh_mn1_hot_water,
+          hh_mn1_space_cooling, cts_space_heat, cts_hot_water, cts_space_cooling,
+          cts_proc_cooling, cts_t1e_space_heat, cts_t1e_hot_water, cts_t1e_space_cooling,
+          cts_t1n_space_heat, cts_t1n_hot_water, cts_t1n_space_cooling, cts_t2e_space_heat,
+          cts_t2e_hot_water, cts_t2e_space_cooling, cts_t2n_space_heat, cts_t2n_hot_water,
+          cts_t2n_space_cooling, aluminum, cement, copper, glass_cont,
+          glass_fibe, glass_flat, glass_spec, paper_hq, paper_lq, steel,
+          auto_pc_icev, auto_pc_phev, auto_pc_bev, auto_pc_fcev, auto_lcv_icev,
+          auto_lcv_bev, auto_lcv_fcev, auto_hcv_icev, auto_hcv_bev, auto_hcv_fcev,
+          chemi_olefins, chemi_btx, chemi_nh3, chemi_cl2, chemi_methanol,
+          chemi_others, other_ind, agri_livestock
+
+- ??? info "emissions (emi)"
+
+        co2_f_pow, co2_f_hea, co2_f_x2x, co2_f_tra, co2_f_ind, co2_p_ind, co2_p_x2x,
+        ch4_f_pow, ch4_f_hea, ch4_f_x2x, ch4_p_x2x, ch4_f_tra, ch4_f_ind, ch4_p_ind,
+        n2o_f_ind, n2o_f_pow, n2o_f_hea, n2o_f_tra, n2o_f_x2x, n2o_p_x2x,
+        co2_neg_air_dacc, co2_neg_fuel_cc_pow, co2_neg_fuel_cc_ind, co2_neg_fuel_cc_x2x,
+        co2_neg_proc_cc_ind, co2_neg_air_bio, co2_neg_imp, co2_reusable, co2_stored
+        
+
+The abbreviation of these categories are added as prefix to all commodities to identify them easily.
+The exogenous demand in the model is defined in such a way that the model has maximum degrees of freedom to choose 
+between the technologies to meet the demand. The final energy in the system is thus determined endogenously in the model.
+In the model structure additionally the "_orig" suffix can be found. This has been used to describe delivery 
+processes e.g. for pipelines in a one node model approach. For example "sec_methane_orig" is converted to "sec_methane" 
+in the "x2x_delivery_methane_pipeline_0" process which is modelled with a simplified efficiency and costs.
+These are not listed above.
+
+The structure of the emission commodities is elaborated in [Emission Concept](./visitor/structure/emissions.md)
 
 
+<h2 id="parameter-nomenclature"></h2>
 ## Parameter Nomenclature
 
 Moreover, the nomenclature of the parameters that are being used in the SEDOS data is introduced together with the
@@ -136,12 +239,12 @@ th {
 |                  | cost_var_e                               | Variable costs per throughput energy unit output. (excluding fuel costs).                                                                                                                                               |
 |                  | cost_var_tra                             |                                                                                                                                                                                                                         |
 |                  | cost_var_w                               | Variable costs per throughput weight unit output. (excluding fuel costs).                                                                                                                                               |
-| process          | conversion_factor_<commodity>            | Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).                                                                                                 |
-|                  | flow_share_min_<commodity>               | Minimum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                      |
-|                  | flow_share_max_<commodity>               | Maximum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                      |
-|                  | flow_share_fix_<commodity>               | Fixed share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                        |
-|                  | conversion_factor_timeseries_<commodity> | Time-variable commodity-specific conversion factor.                                                                                                                                                                     |
-|                  | ef_<commodity>_<emission>                | Commodity-specific emission factor.                                                                                                                                                                                     |
+| process          | conversion_factor_commodity              | Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).                                                                                                 |
+|                  | flow_share_min_commodity               | Minimum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                      |
+|                  | flow_share_max_commodity               | Maximum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                      |
+|                  | flow_share_fix_commodity               | Fixed share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.                                                                                        |
+|                  | conversion_factor_timeseries_commodity | Time-variable commodity-specific conversion factor.                                                                                                                                                                     |
+|                  | ef_commodity_emission                | Commodity-specific emission factor.                                                                                                                                                                                     |
 |                  | cb_coefficient                           | The Cb-coefficient (backpressure coefficient) is defined as the maximum power generation capacity in backpressure mode divided by the maximum heat production capacity (including flue gas condensation if applicable). |
 |                  | cv_coefficient                           | The Cv-value for an extraction steam turbine is defined as the loss of electricity production, when the heat production is increased one unit at constant fuel input.                                                   |
 |                  | efficiency_sto_in                        | Energy efficiency of power input.                                                                                                                                                                                       |

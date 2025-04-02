@@ -12,13 +12,40 @@ General information:
 - Exogenous demand and carbon-carrying by-products are allowed, with limited CO2 sinks; the system boundary is set at the product demand level.
 - Emissions are differentiated globally (CO2): a foreign key links to the global table of emission factors per energy source.
 - Sector- and process-specific emission factors are used for CH4 and N2O, as they are more dependent on specific process conditions (e.g., firing temperature for N2O, material moisture for CH4).
+- Negative emissions are implemented within the model structure
+- The emission variables as indicated in the  depict the flow sums over all considered timesteps (not the remaining commodities at the last timestep).
 
+[//]: # (pip install python-markdown-math==0.2)
+[//]: # (add markdown.extensions.math in yml extensions)
 
-- Negative emissions are implemented within the model structure, as demonstrated by the following visualized emission concept.
+[//]: # ($$\Delta \epsilon = \sum_{s \in \mathrm{sectors}})
+
+[//]: # (  \epsilon_{fuel,s}^{CO_{2}})
+
+[//]: # (+ \epsilon_{process,s}^{CO})
+
+[//]: # (+ 2\,\Delta N_{s}^{CH_{4}}\,\epsilon_{fuel,s}^{CH_{4}})
+
+[//]: # (+ 2\,\Delta N_{s}^{CH_{4}}\,\epsilon_{process,s}^{CH_{4}})
+
+[//]: # (+ 2\,\Delta S_{s}^{N_{2}O}\,\epsilon_{fuel,s}^{N_{2}O})
+
+[//]: # (\;-\;)
+
+[//]: # (\epsilon_{\mathrm{neg},s}^{\mathrm{doc}})
+
+[//]: # (+ \epsilon_{\mathrm{neg},s}^{\mathrm{ac}})
+
+[//]: # (+ \epsilon_{\mathrm{neg},s}^{\mathrm{bio}})
+
+[//]: # (+ \epsilon_{\mathrm{neg},s}^{\mathrm{lump}}$$)
+
+The following graphic visualizes the SEDOS emission concept:
 
 ![emission_concept](../../graphics/emission_concept.jpg)
 
 Summarized, this means:
+
   - Fossil: CO2 emissions from combustion
   - Biogen: CO2 emissions from combustion & negative emissions from production/source processes of biogenic energy sources.
   - Synthetic: CO2 emissions from combustion & model-endogenous negative emissions for import and production with carbon captured CO2.

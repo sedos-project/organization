@@ -1,141 +1,22 @@
-[//]: # (# Description GUI)
+# Preliminary Results
 
-[//]: # ()
-[//]: # (## Why this GUI?)
+!!! info "  Some results based on test data are presented below. This data does not yet constitute a final result, it is merely intended to show what is possible with the help of the GUI, which representations can be used and which interpretations can be drawn."
+  
 
-[//]: # (To improve the transparency and reproducibility of the open source structure this GUI provides a few basic functionalities to explore the derived modeling base:)
+## Data based on the TIMES model
 
-[//]: # ()
-[//]: # (- Looking into the underlying model structure of our reference energy system with the network graph.)
+The following diagrams are created out of the test data based on the TIMES model.
 
-[//]: # ()
-[//]: # (- Exploring the underlying input data of our model with an integrated table view.)
-
-[//]: # ()
-[//]: # (- See the aggregations steps defined in our model structure and download the different levels of detail .)
-
-[//]: # ()
-[//]: # (- Create charts based on possible model results as an outcome of different frameworks and scenarios using the same data.)
-
-[//]: # ()
-[//]: # (In the following, the last point, the presentation of the data in the form of charts, will be examined in more detail.)
-
-[//]: # ()
-[//]: # (To do this, a scenario must first be selected at the bottom right of the start page under “Explore the Model results” and the gui for creating charts can be accessed by clicking on “Explore Diagrams”.)
-
-[//]: # ()
-[//]: # (## Explore the Model results)
-
-[//]: # ()
-[//]: # (### What the GUI can do)
-
-[//]: # ()
-[//]: # (The data fed in can be displayed graphically using the GUI. )
-
-[//]: # (This can be filtered in various degrees of detail to adapt the display to your own requirements. )
-
-[//]: # (In this way, it is possible to display anything from a general overview of an entire sector to a detailed representation of an individual process.)
-
-[//]: # ()
-[//]: # (### Structure of the data)
-
-[//]: # ()
-[//]: # (The data describe different sectors with the respective processes and their input and output groups. )
-
-[//]: # (The processes can be aggregated, on the one hand with the help of categories that divide the sectors into individual areas, or through the specifications.)
-
-[//]: # (A distinction is also made between different parameters, depending on the type of data being considered.)
-
-[//]: # (In addition, the data is available for several years over decades, which makes it possible to analyze the development.)
-
-[//]: # ()
-[//]: # (### Structure of the GUI)
-
-[//]: # ()
-[//]: # (- **Scenario**: set the filters to get the data to be displayed)
-
-[//]: # ()
-[//]: # (- **Other**: if necessary, the scaling of the y-axis can be changed here by changing the unit as well as a change in the order e.g. of the bars in a bar diagram can be made; labels can be added and the data can be normalized)
-
-[//]: # ()
-[//]: # (- **Graph**: selection of the plot type and display; if required, add subplots; define x- and y-axis and if helpful change the coloring depending on the different choosing options under scenario)
-
-[//]: # ()
-[//]: # (- **Display**: illustration of the plot; change x- and y-title and add a legend if required)
-
-[//]: # ()
-[//]: # (- **Load Filter Settings**: load ready-made and saved diagrams)
-
-[//]: # ()
-[//]: # (- **Save Filer Settings**: If you have filter settings that you want to save for later analysis, you can enter a title in the box next to this button and save it after you have finished setting the filters)
-
-[//]: # ()
-[//]: # (- **Render chart and table**: load the chart)
-
-[//]: # ()
-[//]: # (- **Chart**: displays the diagram)
-
-[//]: # ()
-[//]: # (- **Table**: list of the data used in the diagram)
-
-[//]: # ()
-[//]: # (- **Embed Chart**: )
-
-[//]: # ()
-[//]: # (### How to create a plot)
-
-[//]: # ()
-[//]: # (There are three types of plots, all with different advantages and disadvantages, depending on what you want to display:)
-
-[//]: # ()
-[//]: # (- bar: )
-
-[//]: # (    - simple, easy to interpret)
-
-[//]: # (    - representation of discrete data)
-
-[//]: # (- line:)
-
-[//]: # (      - simple, easy to interpret)
-
-[//]: # (      - representation of continuous data)
-
-[//]: # (      - suitable for displaying temporal progressions)
-
-[//]: # (- sankey:)
-
-[//]: # (      - "flow-diagram")
-
-[//]: # (      - especially helpful for representing input and output flows of processes, categories etc.)
-
-[//]: # ()
-[//]: # (Thus while bar and line charts are well suited for comparing discrete/continuous data, sankey Diagrams can be used to visualize more complex flows and relationships.)
-
-[//]: # ()
-[//]: # (So before starting to create a plot, think about what type of diagram best suits your simulation and depending on that choose the right filters.)
-
-[//]: # ()
-[//]: # (Other tips:)
-
-[//]: # ()
-[//]: # (- especially for plots that take different processes, inputs/outputs etc. in consideration, coloring can be very helpful. You can set the characteristic by which the colors are to be differentiated, depending on what you want to display)
-
-[//]: # ()
-[//]: # (- Make sure that the units of the selected data match)
-
-[//]: # ()
-[//]: # (- If you only want to represent input or output data and not both, make sure to select no_input/no_output, otherwise they will be considered in the diagram)
-
-[//]: # ()
-[//]: # (- for bar and line plots: make sure to change the x- and y-axis to the right value you want to plot)
-
-# Results
-
-## Changes in technology
+### Changes in technology
 
 One interesting question is how the technologies used in the industry will change over the decades. 
 The two sub-sectors of copper and aluminum were selected for a closer look at this development. 
-The following diagrams show the installed capacity per year in each case, with the colored background describing the technology used.
+The following diagrams show the installed capacity per year in each case, with the coloring describing the technology used.
+
+
+[//]: # (both diagrams: ind-pre_bar_x-year_y-capacity_inst and then select the respective category)
+
+
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
@@ -166,7 +47,7 @@ these technologies to dominate by mid-century, effectively replacing outdated sy
 production sector, a breakthrough occurs in 2035 with the introduction of a highly innovative technology, which rapidly 
 supplants the older methods within a decade. 
 
-## Energy supply of the energy-intensive industry sectors
+### Energy supply of the energy-intensive industry sectors
 
 
 The diagrams illustrate the models transformation of energy supply within various industrial subsectors between 
@@ -183,123 +64,116 @@ declining relevance of coal in industrial processes and highlights hydrogen’s 
 energy-intensive industries.
 
 
+[//]: # (the following diagrams: ind-pre_sankey_pri-sec-inputs_to_category and then select the respective year)
+
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Industry Energy Supply 2021</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=772" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1962" width="800" height="450"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Industry Energy Supply 2050</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=774" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1964" width="800" height="450"></iframe>
     </div>
   </div>
 </div>
+
+
 
 More complex sankey variations:
 
-- Variation 1: primary/secondary inputs to specifications (no outputs):
+- primary/secondary inputs to specifications (no outputs):
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=783" width="1000" height="500"></iframe>
-
-- Variation 2: primary/secondary inputs to specifications to waste-heat output:
-
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=793" width="1000" height="500"></iframe>
-
-- Variation 3: primary/secondary inputs to processes (no outputs):
-
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=785" width="1000" height="750"></iframe>
+[//]: # (ind-pre_sankey_pri-sec-inputs_to_specifications)
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1970" width="1000" height="500"></iframe>
 
 
 
+### Representations of the energy flow
+
+In the following, the energy flow of the primary/secondary inputs between the different categories is to be illustrated with the help of Sankey diagrams. 
+As before, the years 2021, 2030 and 2050 are considered in order to be able to recognize a development over the years.
+
+[//]: # (the following diagrams: ind-pre_sankey_pri-sec-flow_to_category and then select the respective year)
 
 
-# Emissions
+Year 2021:
 
-The following four diagrams show the different emissions of the processes aluminum_sec_0 and its successor aluminum_sec_1. 
-In general, it can be seen that the emissions decrease over the years and level off at a relatively constant value.
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1881" width="1000" height="750"></iframe>
 
-<div style="display: flex; flex-direction: column;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="flex: 1; padding-right: 20px;">
-      <h3>aluminium_sec CO2</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1010" width="800" height="450"></iframe>
-    </div>
-    <div style="flex: 1; padding-left: 20px;">
-      <h3>aluminium_sec N2O</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1014" width="800" height="450"></iframe>
-    </div>
-  </div>
-</div>
+Year 2030:
 
-<div style="display: flex; flex-direction: column;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="flex: 1; padding-right: 20px;">
-      <h3>aluminium_sec CH4</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1017" width="800" height="450"></iframe>
-    </div>
-    <div style="flex: 1; padding-left: 20px;">
-      <h3>aluminium_sec total</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1022" width="800" height="450"></iframe>
-    </div>
-  </div>
-</div>
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1884" width="1000" height="750"></iframe>
+
+Year 2050:
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1886" width="1000" height="750"></iframe>
 
 
-Same for glass_spec:
+
+Here, too, it can be observed that the demand of hydrogen will increase significantly over the years and plays an especially important role in the steel sector.
+This development in the steel sector is illustrated in detail in the following two diagrams, where the demand of the primary/secondary inputs of the respective processes is shown.
+
+[//]: # (both diagrams: ind-pre_sankey_steel_pri-sec-inputs_to_processes and then select the respective year)
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
-      <h3>glass_spec CO2_f</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1027" width="800" height="450"></iframe>
+      <h3>Year 2021</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1438" width="800" height="450"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
-      <h3>glass_spec CO2_p</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1030" width="800" height="450"></iframe>
+      <h3>Year 2050</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1441" width="800" height="450"></iframe>
     </div>
   </div>
 </div>
+
+
+
+### Flow of Imports
+
+The following diagrams show the import flows for 2021 and 2050 to see which imports are used where and how the import changes over the years.  
+
+[//]: # (both diagrams: ind-pre_sankey_imports_to_category and then select the respective year)
 
 <div style="display: flex; flex-direction: column;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
-      <h3>glass_spec N2O</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1034" width="800" height="450"></iframe>
+      <h3>Imports 2021</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1474" width="800" height="750"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
-      <h3>glass_spec CH4</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1036" width="800" height="450"></iframe>
+      <h3>Imports 2050</h3>
+      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1472" width="800" height="750"></iframe>
     </div>
   </div>
 </div>
 
-glass_spec total emissions: 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=1040" width="800" height="450"></iframe>
+The sharp increase in hydrogen consumption is also particularly striking here, which will be the most imported energy source in 2050 and, as previously stated, will play a major role in the steel sector in particular or will be used in combustion.
 
 
-[//]: # ()
-[//]: # (sec-pri-inputs to process to sec waste heat output:)
+## Data based on the Oemof model
 
-[//]: # ()
-[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=795" width="1000" height="1050"></iframe>)
+The following diagrams are created out of the test data based on the Oemof model with focus on the steel category.
 
-[//]: # (Year 2024:)
+The diagram below describes the consumption of sec-inputs per year:
 
-[//]: # ()
-[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=749" width="800" height="500"></iframe>)
+[//]: # (o_steel_tokio_bar_x-year_y-sec-inputs)
 
-[//]: # ()
-[//]: # (Year 2045:)
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1914" width="800" height="450"></iframe>
 
-[//]: # ()
-[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=751" width="800" height="500"></iframe>)
+Here, too, the trend away from fossil fuels and particularly the increase in the use of hydrogen (es-pecially in the years 2045 and 2050) is clear, while biogas will no longer be consumed as early as 2035.
 
-[//]: # ()
-[//]: # (Year 2070:)
+The next diagram describes the additional installed capacity per year in the steel category:
 
-[//]: # ()
-[//]: # (<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=755" width="800" height="500"></iframe>)
+[//]: # (o_steel_tokio_bar_x-year_y-capacity-new)
+
+<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1921" width="800" height="450"></iframe>
+
+This shows that there will be a strong expansion of newer technologies, particularly in the years 2035 and 2045.
+
 
 
 
