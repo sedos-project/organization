@@ -51,25 +51,151 @@ Emission occurs in the processes that generate process heat, steam, hot water, a
 Combustion emission coefficients are provided in terms of input flow and in thousand tonnes (*Kt*) per PJ. Base year processes with existing capacity and best available and innovative technologies as new invest processes are also introduced, where it is assumed that base year processes stock decreases linearly and new processes can take place with given investment cost. To summarize the modeling approach of the automobile industry process chain, process heat, steam, hot water, and space heat are produced by respective technologies. Then the parts production process produces parts (*e.g., iip_auto_parts_bev*) for a specific automobile by consuming energy (*iip_auto_heat_proc and sec_elec_ind*), then the parts (*e.g., iip_auto_parts_bev*) go into the painting process alongside energy carriers (iip_auto_hot_water, iip_auto steam, and sec_elec_ind) and produce painted commodities for the specific automobile (*e.g., iip_auto_painted_bev*). The battery production process for the specific automobile produces batteries as an output with the input flow of steam and electricity (*iip_auto_steam and sec_elec_ind*). At the end of the process chain, painted automobile commodities(*e.g., iip_auto_painted_bev*), batteries for the specific automobile (*e.g., iip_auto_btry_pc_bev*), energy carriers(*iip_auto_space_heat and sec_elec_ind*), and other commodities such as material handling and compressed air(*iip_auto_mcmp*) as well as HVAC and lighting (*iip_auto_hvlt*) are taken as input in the assembly process,and final exogenous demand is produced as output (*e.g. exo_auto_pc_bev*).
  
 ### Cement Industry
+Cement production is modeled through a series of aggregated processes representing its three main production steps: raw material preparation, clinker production, and cement production (finishing). Each of these aggregated steps features different technology levels to reflect current practices and future innovation. For each of the three steps, a base year process (2021) and an upgrade process to Best Available Technology (BAT) standard are considered.
+The raw material preparation process encompasses the grinding and homogenization of raw materials (such as limestone and clay) into raw meal. This process primarily consumes electricity.
+Clinker production is the core and most energy-intensive stage, involving the rotary kiln furnace and subsequent clinker cooling. This stage is crucial not only for its high energy demand but also for the significant process emissions of CO2 released from the calcination of limestone, in addition to combustion emissions from fuels. To address these, beyond the base and BAT rotary kiln technologies, the model includes an additional five innovative clinker production processes:
+
+- A retrofit of the BAT rotary kiln with carbon capture (oxyfuel capture), specifically designed to capture both combustion and process CO2 emissions. For this investment, investment costs and emissions factors are adjusted to reflect the capture process and the resulting captured CO2.
+- A rotary kiln option utilizing CO2 for CO2-curing cement, representing a carbon capture and utilization (CCU) pathway.
+- A kiln incorporating an electric pre-calciner, enabling a shift of a portion of the thermal energy demand to electricity.
+- A pathway focusing on low-limestone clinker production using adapted OPC (Ordinary Portland Cement) equipment, which inherently reduces process CO2 emissions.
+- A fully electric kiln, representing a transformative shift to electricity as the primary heat source for clinker production.
+
+Finally, the cement production (finishing) process involves the grinding of clinker and the integration of additives to produce the final cement product, primarily consuming electricity. The finished cement product is then an exogenous demand that the model must satisfy.
+The complex production process chains described above are aggregated within the model for streamlined analysis. For instance, the clinker production processes represent the combined energy consumption and emissions associated with the kiln operation, including heat supply. Electricity and various fuels (coal, heavy fuel oil, biomass, sewage sludge) are input commodities into these production processes. While process emissions are directly attributed to the clinker production process itself, combustion emissions are linked to the specific fuel inputs. High-temperature waste heat is also an output from clinker production, which can be utilized elsewhere in the energy system.
+No negative emissions are assumed directly within the basic production processes themselves, but are explicitly handled by the specialized carbon capture technology (ind_cement_rk_cc_2) where captured CO2 is routed for storage (emi_co2_neg_fuel_cc_ind), contributing to the overall climate neutrality target. 
+
+![Figure 4: Simplified representation of Cement Industry process chain.](../../graphics/SEDOS_RES_Cement.jpg)
+*Figure 4: Simplified representation of Cement Industry process chain.*
+
+Each of these production processes (raw material preparation, clinker production, and cement finishing) is defined with specific techno-economic data. Base year processes are assumed to have existing capacity that decreases linearly over time, while BAT and innovative technologies are introduced as new investment options with their respective investment costs and operational costs.
+
 ### Chemical Industry
 The chemical industry in SEDOS covers the data set of chemical industry production in Germany to be utilized in an energy system model.  Hundreds of different chemical processes are in operation to produce thousands of different chemicals, which means the production path of the chemical industry is complex.  The data set and the modeling approach of the chemical industry can be differentiated in terms of the exogenous demand of the chemical industry. The basic chemicals- chlorine, ammonia, methanol, olefins (*ethylene, propylene, butadiene*), and aromatics (*benzene, toluene, xylene*) make up the largest share of the chemical industry. The exogenous demand for these basic chemicals is given in million tons (*Mt*), so the energy consumption and techno-economic data are directly related to the production volume of these basic chemicals. Then, the rest of the chemical industry demand is represented by the energy service demand, which is given in Petajoule (*PJ*). 
 The chemical industry heavily relies on fossils, both for energy and feedstock, aka non-energetic consumption.  In SEDOS chemical industry data, the flow of energy and feedstock into processes to produce chemicals is distinguished, where it is significant. That means feedstock flows separately integrated not only for carbon-contained fossil feedstocks (*e.g. natural gas, naphtha, heavy fuel oil, etc*) but also alternative low-carbon or green feedstocks (*e.g. hydrogen from electrolysis, green methanol*). On the other hand, feedstock flow for chlorine production, nitrogen as feedstock in the Haber-Bosch process, or water in the electrolysis process are not included in this work. The emission from fuel combustion and the emission from feedstocks or process-related emissions are categorized as combustion and process emissions, respectively. The combustion emission is usually input-specific and process emission is related to output. Techno-economic data are provided for conventional technologies, best available technologies (*BAT*), and innovative technologies accordingly. Use of captured Carbon-di-oxide (*CO2*) as feedstock is also enabled with carbon-capture technologies, and those captured CO2 are made available to be utilized as feedstock through the delivery process (*helper_co2_delivery*). 
-Relevant technologies are provided to produce hydrogen, which will be used as feedstock in the chemical industry to produce ammonia and methanol. The hydrogen production technologies and hydrogen commodities names are created accordingly, considering hydrogen as input flow into the methanol synthesis process and Haber Bosch process, respectively. The ammonia production modeling schema is presented in Figure 4. 
+Relevant technologies are provided to produce hydrogen, which will be used as feedstock in the chemical industry to produce ammonia and methanol. The hydrogen production technologies and hydrogen commodities names are created accordingly, considering hydrogen as input flow into the methanol synthesis process and Haber Bosch process, respectively. The ammonia production modeling schema is presented in Figure 5. 
 
-![Figure 4: Modeling approach of ammonia production process chain.](../../graphics/chemi_nh3.png)
-*Figure 4: Modeling approach of ammonia production process chain.*
+![Figure 5: Modeling approach of ammonia production process chain.](../../graphics/chemi_nh3.png)
+*Figure 5: Modeling approach of ammonia production process chain.*
 
 Hydrogen commodities for methanol production are specified variably, whether the hydrogen (iip_chemi_meoh_f_h2) is generated from fossil feedstock (*natural gas, heavy fuel oil*) or biomass or the hydrogen (*iip_chemi_meoh_h2*) is green hydrogen. Two different methanol commodities are introduced, one (*exo_chemi_methanol*) represents exogenous methanol demand and another (*iip_chemi_methanol*) can be used further in the chemical industry as feedstock into methanol-to-olefins or methanol-2-aromatics processes. High-value chemical production processes are differentiated to satisfy the exogenous demand for aromatics and olefins. Figure 5 shows the modeling approach of exogenous demand for methanol and methanol flow as feedstock for high-value chemicals production, including a simplified feedstock flow of CO2. 
 
-![Figure 5: Modeling approach of methanol and high value chemicals production process chain.](../../graphics/chemi_methanol_hvc.png)
-*Figure 5: Modeling approach of methanol and high value chemicals production process chain.*
+![Figure 6: Modeling approach of methanol and high value chemicals production process chain.](../../graphics/chemi_methanol_hvc.png)
+*Figure 6: Modeling approach of methanol and high value chemicals production process chain.*
 
 The production volume of ethylene is considered to represent the exogenous olefins demand due to the coupled production of conventional process (*steam cracking*).  Processes and energy service commodities- steam (*iip_chemi_steam*), process heat(*iip_chemi_process_heat*), other processes(*iip_chemi_processes_others*), electro-chemicals (*iip_chemi_electro_chem*) and machine drive (iip_chemi_machine_drive)  are introduced accordingly to meet the exogenous energy service demand (*exo_chemi_others*) of rest of the chemical industry. 
 
-### Glass and Ceramics Industry
+### Glass Industry
+The German glass industry module within the SEDOS is categorized into four distinct branches based on the type of glass produced: hollow glass (container glass), flat glass, fiber glass, and special glass. Each branch is modeled with its specific production processes and technological pathways.
+The complex production process chains for each glass type are portrayed through processes within the energy system model. For hollow glass and flat glass, the production chain is typically disaggregated into three or four primary stages: batch preparation, melting, forming, and, for flat glass, an additional finishing (annealing) step. For fiber glass and special glass, the production is represented by aggregated production processes, encompassing all stages from raw material processing to final product.
+For the base production steps across all branches, a base year process (2021) is included, representing typical technology and efficiency levels. Additionally, an investment option into the Best Available Technology (BAT) standard is provided for most stages, offering more efficient and advanced current technologies for new investments.
+Melting is the most energy and emission intensive stage in glass production. The model captures different melting technologies and innovative pathways:
+
+- Recuperative and regenerative furnaces: These represent common thermal melting technologies for hollow and flat glass.
+- Full electric melting: An innovative process route is included for the melting step across hollow and flat glass, allowing melting to be achieved primarily or entirely using electricity.
+- Carbon capture integration: To address CO2 emissions, particularly for hollow glass, further investment steps are available to integrate carbon capture (oxyfuel capture) technology with both recuperative and full electric melting processes. This allows for the capture of CO2 from the melting process, which includes both combustion emissions and, importantly, inherent process emissions that arise from the decomposition of raw materials like carbonates in the glass batch.
+For fiber glass and special glass, the aggregated production processes also feature base, BAT, and specific electric furnace options, indicating pathways for deep decarbonization through electrification.
+Useful outputs, such as high-temperature waste heat, are also tracked for potential usage within the overall energy system. The demand for each type of glass (e.g., exo_glas_cont for container glass, exo_glas_flat for flat glass, exo_glas_fibe for fiber glass, exo_glas_spec for special glass) is provided as an exogenous demand that the model must satisfy. 
+The process chains for each glass industry branch, illustrating the various technological pathways and energy flows, are depicted in the following figures:
+
+![Figure 7: Reference Energy System for Hollow Glass (Container Glass).](../../graphics/SEDOS_RES_Glas_cont.jpg)
+*Figure 7: Reference Energy System for Hollow Glass (Container Glass).*
+
+
+![Figure 8: Reference Energy System for Flat Glass production process chain.](../../graphics/SEDOS_RES_Glass_flat.jpg)
+*Figure 8: Reference Energy System for Flat Glass production process chain.*
+
+
+![Figure 9: Reference Energy System for Fiber Glass and Special Glass production processes.](../../graphics/SEDOS_RES_Glass_fs.jpg)
+*Figure 9: Reference Energy System for Fiber Glass and Special Glass production processes.*
+
+Base year processes are assumed to have existing capacity that decreases linearly over time, while BAT and innovative technologies are available as new investment options to drive the decarbonization pathway.
+
 ### Iron and Steel Industry
+The Iron and Steel industry module distinguishes between existing and innovative production routes, reflecting the complex pathways for decarbonization in this energy-intensive sector.
+The core of steel production in the model is divided into two primary conventional routes: the blast furnace-basic oxygen furnace (BF-BOF) route and the electric arc furnace (EAF) route. Additionally, two crucial innovative production routes are considered: direct reduced iron (DRI) route and hydrogen direct reduced iron (H-DRI) route. The specific production steps and technologies vary significantly depending on the chosen route.
+For the blast furnace-basic oxygen furnace (BF-BOF) route, which is the predominant current method for primary steel production, five distinct aggregated steps have been considered:
+
+- Coking plant production: Converts coal into coke, a necessary reducing agent and fuel for the blast furnace.
+- Sinter production: Agglomerates fine iron ore particles into larger pieces (sinter) suitable for the blast furnace.
+- Blast furnace (BF): Reduces iron ore (and sinter) using coke to produce hot metal (molten iron).
+- Oxygen furnace (BOF): Converts hot metal from the blast furnace into crude steel by blowing oxygen through it to remove impurities.
+- Casting plant & hot rolling mill: Shapes the crude steel into semi-finished or finished steel products.
+
+Maintaining the modeling standard, each of these base processes within the BF-BOF route has the possibility to be replaced by a Best Available Technology (BAT) standard process. On top of these, the blast furnace process, being a significant source of emissions, features two further innovative process investment options for carbon capture:
+
+- Amine capture (advanced solvent): Represents a post-combustion capture technology applied to the blast furnace gas.
+- Vacuum pressure swing adsorption (VPSA): Another carbon capture technology, specifically for CO2 separation from blast furnace top gas.
+
+The second existing route, the electric arc furnace (EAF) route, is characterized by its flexibility in using scrap metal. It consists of three main aggregated processes:
+
+- Iron scrap source: Represents the sourcing and preparation of iron scrap as the primary feedstock. This process contains no economical information and does not account for any energy consumption, but rather is used to limit the availability of steel scrap.
+- Electric arc furnace (EAF): Melts iron scrap using electricity to produce crude steel.
+- Casting plant & hot rolling mill: Similar to the BOF route, shapes the crude steel into final products.
+For the direct reduced iron (DRI) route, which is considered an innovative process for primary steel production, four production steps are modeled:
+
+- Iron pellets production for DRI: Prepares iron ore into pellets suitable for direct reduction.
+- Sponge iron production for DRI: Produces sponge iron (DRI) from iron pellets, typically using natural gas as a reducing agent.
+- Electric arc furnace for DRI: Processes the sponge iron in an electric arc furnace to produce crude steel.
+- Casting plant & hot rolling mill: Shapes the crude steel.
+
+Similarly, the hydrogen direct reduced iron (H-DRI) route represents a major decarbonization pathway. It consists of equivalent processes to the DRI route but with the necessary techno-economic adjustments to primarily use hydrogen as the energy carrier and reducing agent.
+The process chains for the iron and steel industry, illustrating the various technological pathways and energy flows, are depicted in the following figure:
+
+![Figure 10: Reference Energy System for the Iron and Steel Industry.](../../graphics/SEDOS_RES_Steel.jpg)
+*Figure 10: Reference Energy System for the Iron and Steel Industry.*
+
+Base year processes have existing capacities that decrease linearly over time, while BAT and innovative technologies are available as new investment options with their respective investment costs and operational costs.
+
 ### Non-ferrous metals Industry
+The non-ferrous metal industry module within the SEDOS focusses on aluminum and copper. The model aims to portray the sector's transformation towards climate neutrality by 2045, accounting for both primary and secondary (recycled) production routes and their respective technological advancements.
+
+#### Aluminum Production
+Aluminum production in the model is primarily divided into three main process stages: alumina production, primary aluminum production (electrolysis), and secondary (recycled) aluminum production.
+
+- Alumina production: This initial stage involves the processing of bauxite ore to produce alumina (aluminum oxide), typically through the Bayer process. The model includes both a base and a Best Available Technology (BAT) process for alumina Bayer, primarily consuming electricity, natural gas, heavy fuel oil, and steam.
+- Primary aluminum production (Hall-Heroult): This is the most energy-intensive step, where alumina is converted into aluminum metal through electrolysis in Hall-Heroult cells. The module captures both a Base and a BAT Hall-Heroult process. In addition, a novel Hall-Heroult process with innovative anode wett cathodes is included, representing a next-generation technology designed to improve efficiency and potentially reduce emissions from the electrolysis process.
+- Secondary (recycled) aluminum production: This route involves melting aluminum scrap to produce recycled aluminum. The model distinguishes between a base and a BAT recycled production process, which are typically less energy-intensive and have lower direct emissions compared to primary production. The source process for aluminum scrap contains no economical information and does not account for any energy consumption, but rather is used to limit the availability of aluminum scrap.
+
+The Hall-Heroult process is a significant source of process emissions (emi_co2p_ind) from the anode consumption, in addition to combustion emissions. The module also tracks the generation of high-temperature waste heat (sec_waste_heat_high_aluminum). 
+The process chain for aluminum production, illustrating the various technological pathways and energy flows, is depicted in the following figure:
+
+![Figure 11: Reference Energy System for the Aluminum production process chain.](../../graphics/SEDOS_RES_Aluminum.jpg)
+*Figure 11: Reference Energy System for the Aluminum production process chain.*
+
+#### Copper Production
+Copper production in the model also distinguishes between primary copper production and secondary (recycled) copper production.
+
+- Primary copper production: This route involves smelting and refining copper ores. The model includes base and Best Available Technology (BAT) processes for primary copper production. An innovative copper electrowinning process is also included, representing a more energy-efficient and cleaner method for copper refining, which relies heavily on electricity. 
+- Secondary (recycled) copper production: This route involves melting and refining copper scrap. The model includes base and BAT processes for secondary production, drawing input from copper scrap. The source process for copper scrap contains no economical information and does not account for any energy consumption, but rather is used to limit the availability of copper scrap.
+The process chain for copper production, illustrating the various technological pathways and energy flows, is depicted in the following figure:
+
+![Figure 12: Reference Energy System for the Copper production process chain.](../../graphics/SEDOS_RES_Copper.jpg)
+*Figure 12: Reference Energy System for the Copper production process chain.*
+
 ### Paper Industry
+The pulp and paper Industry branch within the specifically differentiates between the production of high quality paper and low quality paper, reflecting their distinct production routes and energy intensities.
+Paper production in the model is generally broken down into two main stages: pulp production and paper production (finishing).
+
+1. Pulp production: This initial stage involves the conversion of raw materials into pulp. The model accounts for three distinct pulp production routes, each with its base and Best Available Technology (BAT) process options:
+    - Chemical pulp production: This route involves chemical processes to separate cellulose fibers from wood, producing pulp.
+    - Mechanical pulp production: This route mechanically grinds wood to produce pulp, typically resulting in higher yields but lower strength compared to chemical pulp.
+    - Recycling pulp production: This increasingly important route processes recycled paper to produce pulp, significantly reducing the demand for virgin wood pulp. The source process for recycled paper contains no economical information and does not account for any energy consumption, but rather is used to limit the availability recycled paper.
+
+2. Paper production (finishing): Following pulp production, these processes convert the pulp into final paper products. The model differentiates based on the final product quality:
+    - High quality paper production: This process transforms pulp (primarily chemical and/or mechanical pulp) into higher-grade paper products.
+    - Low quality paper production: This process uses pulp (often recycled pulp) to produce lower-grade paper products.
+
+Both high quality and low quality paper production stages also include base and BAT process options, allowing for efficiency improvements and technological upgrades.
+The production processes also generate waste heat (sec_waste_heat_high_paper), which can be used within the heat sector. Moreover, the production of black liqueur as an energy carrier byproduct of chemical pulp production is accounted for and integrated into the self generation model section.
+The process chain for the pulp and paper Industry, illustrating the various pulp production routes and paper finishing stages, is depicted in the following figure:
+
+![Figure 13: Reference Energy System for the Pulp and Paper Industry process chain.](../../graphics/SEDOS_RES_Copper.jpg)
+*Figure 13: Reference Energy System for the Pulp and Paper Industry process chain.*
+
+Base year processes have existing capacities that decrease linearly over time, while BAT technologies are available as new investment options, enabling the model to explore cost-optimal decarbonization pathways for the sector.
+
+
 ### Rest of the Industry
 The Rest of the Industry in SEDOS consists of the following industrial branches, as also depicted in the energy balance for Germany:
 
