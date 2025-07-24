@@ -10,7 +10,7 @@ nav:
             - 'Emission Concept': 'visitor/structure/emissions.md'
             - 'Multiple Inputs and Outputs': 'visitor/structure/mimo.md'
         - 'Sectors':
-            - 'Power': 'visitor/structure/power.md'
+#            - 'Power': 'visitor/structure/power.md'
             - 'Heat': 'visitor/structure/heat.md'
             - 'Industry': 'visitor/structure/industry.md'
             - 'X2X': 'visitor/structure/x2x.md'
@@ -122,6 +122,7 @@ plugins:
             show_source: false
             docstring_style: numpy
             docstring_section_style: spacy
+          paths: [src]
   - include-markdown
 
 repo_url: https://github.com/sedos-project/organization
