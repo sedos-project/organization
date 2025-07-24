@@ -1,0 +1,1915 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The documentation of the SEDOS project">
+      
+      
+      
+      
+        <link rel="prev" href="../x2x/">
+      
+      
+        <link rel="next" href="../aggregations/">
+      
+      
+      <link rel="icon" href="../../../graphics/sedos_favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Transport - SEDOS Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transport#sector" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SEDOS Project" class="md-header__button md-logo" aria-label="SEDOS Project" data-md-component="logo">
+      
+  <img src="../../../graphics/sedos.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SEDOS Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Transport
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sedos-project/organization" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Model Structure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data/overview/" class="md-tabs__link">
+          
+  
+  Reference Dataset
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../model/scenarios/" class="md-tabs__link">
+          
+  
+  Model Application
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../developer/data_requirements/input_data/" class="md-tabs__link">
+          
+  
+  Developer Instructions
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../publications/" class="md-tabs__link">
+        
+  
+    
+  
+  Further Reading
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SEDOS Project" class="md-nav__button md-logo" aria-label="SEDOS Project" data-md-component="logo">
+      
+  <img src="../../../graphics/sedos.png" alt="logo">
+
+    </a>
+    SEDOS Project
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sedos-project/organization" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Model Structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Model Structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Model Base
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Model Base
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model_frame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Assumptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exogenous_values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exogenous Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emission Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mimo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Inputs and Outputs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sectors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    X2X
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Transport
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Transport
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming#convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming convention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provided#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provided parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general#modeling#approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      General modeling approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery#electric#vehicle#bev#modeling#approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery electric vehicle (BEV) modeling approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time#series#provided" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time series provided
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aggregations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technological Aggregations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levels of Detail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network_graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference Dataset
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reference Dataset
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/nomenclature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nomenclature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/data_conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Model Application
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Model Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/scenarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Instructions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Instructions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    (Meta)Data Requirements
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            (Meta)Data Requirements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/input_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/licensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/how_to_contribute_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Contribute Data?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../publications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Further Reading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="transport#sector">Transport sector<a class="headerlink" href="#transport#sector" title="Permanent link">&para;</a></h1>
+<h2 id="naming#convention">Naming convention<a class="headerlink" href="#naming#convention" title="Permanent link">&para;</a></h2>
+<p>The transport sector in the SEDOS dataset is divided into road, water, air and rail modes. The road-based vehicles include light (<em>l</em>), medium (<em>m</em>) and heavy (<em>h</em>) cars and trucks as well as coaches (<em>long</em> distance) and buses (<em>short</em> distance), motorcycles and special vehicles in the agricultural (<em>agri</em>) and construction (<em>const</em>) industries. For waterway transport, the focus is on inland freight shipping. High seas bunkering is not included in the energy balance, because the fuel is consumed outside national borders in international waters, and it is therefore not considered part of domestic energy usage. In the field of aviation, a distinction is made between domestic flights (<em>natio</em>), European flights (<em>europ</em>) and intercontinental (<em>inter</em>) flights and passenger transportation alone is accounted for. Finally, a distinction is made between short-haul (streetcars, shunting operations) and long-haul (long-distance trains) for both passenger (<em>pass</em>) and freight (<em>frei</em>) rail transport. A suitable selection of drive technologies (internal combustion engine vehicle – <em>ice</em>, hybrids – <em>hyb</em>, fuel cell electric vehicle – <em>fcev</em>, battery electric multiple unit meaning a combination of batteries and overhead cables – <em>bemu</em>, battery electric vehicles – <em>bev</em> and overhead electric vehicles – <em>oev</em>) and fuels is combined for all vehicle types and organized as separate processes in the model structure. The nomenclature for process naming follows the system below, that is further explained in Table 1:
+tra_rail_hyb_pass_short_hydrogen_0.</p>
+<p><em>Table 1: Nomenclature for the transport sector process naming.</em></p>
+<table>
+<thead>
+<tr>
+<th>Sector</th>
+<th>Mode</th>
+<th>Type (including information on weight)</th>
+<th>Drive Technology</th>
+<th>Transported Unit</th>
+<th>Specification</th>
+<th>Fuel</th>
+<th>Stock/Expansion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tra</td>
+<td>road</td>
+<td>car/lcar/mcar/hcar</td>
+<td>ice</td>
+<td>pass</td>
+<td>long</td>
+<td>ammonia</td>
+<td>0</td>
+</tr>
+<tr>
+<td></td>
+<td>water</td>
+<td>truck/ltruck/mtruck/htruck</td>
+<td>hyb</td>
+<td>frei</td>
+<td>short</td>
+<td>gasoline</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>air</td>
+<td>bus</td>
+<td>fcev</td>
+<td></td>
+<td>natio</td>
+<td>diesel</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>rail</td>
+<td>motorc</td>
+<td>bemu</td>
+<td></td>
+<td>europe</td>
+<td>hydrogen</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>agri</td>
+<td>bev</td>
+<td></td>
+<td>inter</td>
+<td>methanol</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>const</td>
+<td>oev</td>
+<td></td>
+<td>wallbox</td>
+<td>ethanol</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>engine</td>
+<td>cng</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>battery</td>
+<td>lpg</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>inflex</td>
+<td>lng</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>flex</td>
+<td>elec</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>g2v</td>
+<td>kerosene</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>v2g</td>
+<td>flex (flex fuel using gasoline + ethanol)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="provided#parameters">Provided parameters<a class="headerlink" href="#provided#parameters" title="Permanent link">&para;</a></h2>
+<p>The scalar parameters provided are described in Table 2. </p>
+<p><em>Table 2: Scalar parameters provided for the transport sector.</em></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Unit</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>demand_annual</td>
+<td>Gpkm, Gtkm</td>
+<td>Link to projected annual demand for a transport service demand.</td>
+</tr>
+<tr>
+<td>capacity_p_inst_0</td>
+<td>kW</td>
+<td>Existing power output capacity of a wallbox in a certain year.</td>
+</tr>
+<tr>
+<td>capacity_p_unit</td>
+<td>kW/vehicle</td>
+<td>Fixed installed wallbox capacity per unit.</td>
+</tr>
+<tr>
+<td>capacity_e_inst_0</td>
+<td>kWh</td>
+<td>Existing fleet battery capacity.</td>
+</tr>
+<tr>
+<td>capacity_e_unit</td>
+<td>kW/vehicle</td>
+<td>Capacity per fixed storage unit.</td>
+</tr>
+<tr>
+<td>capacity_tra_inst_0</td>
+<td>vehicles</td>
+<td>Number of vehicles (middle of year).</td>
+</tr>
+<tr>
+<td>capacity_tra_min</td>
+<td>vehicles</td>
+<td>Minimum expansion of fleet per vehicle type per process. Based on minimum market share range, stock, and transport service demand.</td>
+</tr>
+<tr>
+<td>capacity_tra_max</td>
+<td>vehicles</td>
+<td>Maximum expansion of fleet per vehicle type per process. Based on maximum market share range, stock, and transport service demand.</td>
+</tr>
+<tr>
+<td>conversion_factor_commodity</td>
+<td>kWh, pkm, tkm</td>
+<td>Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).</td>
+</tr>
+<tr>
+<td>ef_commodity_emission</td>
+<td>kg/MWh</td>
+<td>Commodity-specific emission factor.</td>
+</tr>
+<tr>
+<td>exo_commodity</td>
+<td>Gpkm, Gtkm</td>
+<td>Projected annual demand for a transport service demand.</td>
+</tr>
+<tr>
+<td>lifetime</td>
+<td>a</td>
+<td>Technical lifetime of a process.</td>
+</tr>
+<tr>
+<td>mileage</td>
+<td>km/(vehicle*a)</td>
+<td>Yearly mileage of a vehicle.</td>
+</tr>
+<tr>
+<td>market_share_range</td>
+<td>[percent_min, percent_max]</td>
+<td>Range of market share for vehicle expansion.</td>
+</tr>
+<tr>
+<td>occupancy_rate</td>
+<td>persons/vehicle</td>
+<td>Occupancy rate of a vehicle.</td>
+</tr>
+<tr>
+<td>tonnage</td>
+<td>tons/vehicle</td>
+<td>Tonnes transported per vehicle.</td>
+</tr>
+<tr>
+<td>share_tra_charge_mode</td>
+<td>-</td>
+<td>Proportion of fleet that load with a specific charge mode.</td>
+</tr>
+<tr>
+<td>cost_inv_tra</td>
+<td>EUR/vehicle</td>
+<td>Investment costs for new vehicle unit.</td>
+</tr>
+<tr>
+<td>cost_fix_tra</td>
+<td>EUR/(vehicle*a)</td>
+<td>Operation independent costs for existing and new vehicle units.</td>
+</tr>
+<tr>
+<td>cost_var_tra</td>
+<td>EUR/pkm, EUR/tkm</td>
+<td>Variable costs per pkm/tkm.</td>
+</tr>
+<tr>
+<td>cost_inv_p</td>
+<td>EUR/kW</td>
+<td>Investment costs for new wallbox power output capacity.</td>
+</tr>
+<tr>
+<td>wacc</td>
+<td>percent</td>
+<td>Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.</td>
+</tr>
+<tr>
+<td>efficiency_sto_in</td>
+<td>percent</td>
+<td>Energy efficiency of power input.</td>
+</tr>
+<tr>
+<td>efficiency_sto_out</td>
+<td>percent</td>
+<td>Energy efficiency of power output.</td>
+</tr>
+<tr>
+<td>sto_self_discharge</td>
+<td>percent/h</td>
+<td>Storage losses over time.</td>
+</tr>
+</tbody>
+</table>
+<p>All costs are presented excluding taxes and subsidies, based on 2021 price levels.</p>
+<h2 id="general#modeling#approach">General modeling approach<a class="headerlink" href="#general#modeling#approach" title="Permanent link">&para;</a></h2>
+<p>When modeling all vehicles apart from battery electric cars and trucks, a simplified and inflexible approach is used. This means that these vehicles have a fixed, exogenously specified driving profile and the fuel tank is not taken into account as a possible buffer between fuel energy demand and the provision of driving power. This is based on the assumption that, in contrast to BEVs, the refueling process is evened out across the fleet and takes place during the driving process rather than being decoupled during parking times. In addition, the fuel supply chain is seen as having a high storage capacity that is not available in the electricity grid in the same form, which is why a detailed consideration of batteries and the charging process is considered for BEVs (trucks and cars). </p>
+<p>In the case of inflexible vehicles, only the composition of the fleet is optimized, i.e. the choice of drive technology and fuel type for medium sized cars. The modal split, i.e. the distribution of demand between vehicle types (hcars, mcars, lcars, buses, trains, etc.), is specified in exogenous demand variables, e.g. exo_road_car_pkm.
+The general modeling follows the scheme below: </p>
+<p><img alt="Figure 1: Modeling schema for vehicles without explicitly modelled storage/tank." src="../../../graphics/nomenclature_transport.png" /></p>
+<p><em>Figure 1: Modeling schema for vehicles without explicitly modelled storage/tank.</em></p>
+<p>The input energy is transformed into the output commodities via indicators. Accordingly, the ratio of input to output flows is specified, taking into account the occupancy rate for passenger transport and the tonnage for freight transport in the information on transport services. For example the energy balance of a diesel car: </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Parameter Name</strong></td>
+<td>sec_diesel</td>
+<td>exo_road_car_pkm            +   emi_co2_f_tra</td>
+</tr>
+<tr>
+<td><strong>Value Example</strong></td>
+<td>1 kWh</td>
+<td>10 vehicle_km * 3 p/vehicle +      0.005 t</td>
+</tr>
+</tbody>
+</table>
+<p>is transformed to</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Parameter Name</strong></td>
+<td>sec_diesel</td>
+<td>exo_road_car_pkm    + emi_co2_f_tra</td>
+</tr>
+<tr>
+<td><strong>Value Example</strong></td>
+<td>1 kWh</td>
+<td>30 pkm              +   0.005 t</td>
+</tr>
+</tbody>
+</table>
+<p>This means that the direct efficiencies are not given as a percentage but rather by indicator ratios.</p>
+<h2 id="battery#electric#vehicle#bev#modeling#approach">Battery electric vehicle (BEV) modeling approach<a class="headerlink" href="#battery#electric#vehicle#bev#modeling#approach" title="Permanent link">&para;</a></h2>
+<p>The detailed modeling of the BEVs (cars and trucks) provides for a separation of the fleet into three parts representing the charging modes: user-controlled charging (no optimization possible), system-controlled charging and system-controlled charging with the option of feeding back into the grid (see dark blue boxes in Figure 2). Their ratio is given exogenously in form of the parameter <em>share_tra_charge_mode</em> and gives the percentage of the fleet charging in the respective mode. In 2021 it is assumed that all vehicles charge inflexibly (e.g. <em>share_tra_charge_mode</em> for tra_road_hcar_bev_pass_battery_infl_uni_0 is 100 %). In the scenario years the percentage of inflexible charged vehicles decreases because of electricity price incentives (e.g. <em>share_tra_charge_mode</em> for tra_road_hcar_bev_pass_battery_flex_uni_1 is 65 %). In the data the electric vehicle process (and with it each of the charging modes) is furthermore divided into 3 sub-processes: wallbox, battery and engine that also contains overarching parameters, such as occupancy rate or tonnage.</p>
+<p>This results in a differentiation of 10 processes for each electric vehicle type: 3 modes times 3 sub-processes plus a further wallbox process, which represents the feed-in of electricity back into the grid. Since the modeled wallbox, for example, does not differ in any of the cases, there is a certain redundancy of information, but this is necessary because the boundary conditions differ in the modeling and therefore these sub-processes can this way described accurately.</p>
+<p>The resulting indicator ratios are as follows and can also be found in Figure 2:</p>
+<p><img alt="Figure 2: Modeling schema for electric vehicles with flexible charging. Illustrating the interaction between the wallbox component (1), the battery (2), and the engine (3), along with the energy flows and the reverse electricity flow back to the grid (2.1) in the form of Vehicle-to-Grid (V2G) functionality." src="../../../graphics/BEV_modeling.png" /></p>
+<p><em>Figure 2: Modeling schema for electric vehicles with flexible charging. Illustrating the interaction between the wallbox component (1), the battery (2), and the engine (3), along with the energy flows and the reverse electricity flow back to the grid (2.1) in the form of Vehicle-to-Grid (V2G) functionality.</em></p>
+<ol>
+<li>
+<p><strong>Wallbox efficiency</strong> (sec_elec * ɳwallbox_G2V = sec_elec_mcar_flex_bi):
+                        sec_elec    --&gt; = sec_elec_mcar_flex_bi   </p>
+</li>
+<li>
+<p><strong>Charging/Discharging effiency</strong> (sec_elec_mcar_flex_bi * ɳbattery_in * ɳbattery_out = sec_elec_mcar_flex_bi):
+                        sec_elec_mcar_flex_bi --&gt; sec_elec_mcar_flex_bi
+    <br><strong>Grid Feed-in</strong> (sec_elec_mcar_flex_bi * ɳwallbox_V2G * ɳbattery_in* ɳbattery_out = sec_elec):
+                        sec_elec_mcar_flex_bi --&gt; sec_elec</p>
+</li>
+<li>
+<p><strong>Engine efficiency</strong> (sec_elec_mcar_flex_bi * ɳengine * occupancy_rate = exo_road_car_pkm):
+                        sec_elec_mcar_flex_bi --&gt; exo_road_car_pkm</p>
+</li>
+</ol>
+<h2 id="time#series#provided">Time series provided<a class="headerlink" href="#time#series#provided" title="Permanent link">&para;</a></h2>
+<p>There are four kinds of time series given in order to describe and limit the transport sectors dispatch (see Table 3):</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>demand_timeseries</td>
+<td>Fixed</td>
+<td>Normalized sum 1</td>
+</tr>
+<tr>
+<td>sto_min_timeseries</td>
+<td>Lower</td>
+<td>Normalized between 0 and 1 as fraction of SOC</td>
+</tr>
+<tr>
+<td>sto_max_timeseries</td>
+<td>Upper</td>
+<td>Normalized between 0 and 1 as fraction of SOC</td>
+</tr>
+<tr>
+<td>availability_timeseries_fixed / availability_timeseries_max</td>
+<td>Fixed/Upper</td>
+<td>Normalized to maximum</td>
+</tr>
+</tbody>
+</table>
+<p>All vehicles have to serve a given demand profile (<em>demand_timeseries</em>) that describes the normalized fraction of the scalar annual demand (<em>demand_annual</em>) that is given in the tra_scalar table. For cars and trucks, this demand profile is a driving profile, as it is assumed that the refueling of the fuel vehicles is balanced across the fleet and takes place during the driving time. For the flexibly modeled e-vehicles, the driving profile specifies when the storage tank is discharged and is a boundary condition for optimization. Overhead line trains also have a driving profile as a demand time series, as the energy demand occurs at the same time as the vehicle is in motion. For all other vehicles (buses, ships, airplanes, special vehicles), however, a tank profile is specified, as it is assumed that the driving process is decoupled from the tank process in terms of time. The vehicles are refueled at the depot after the working day. Refueling is therefore more concentrated in the afternoon. </p>
+<p>The flexibly modelled vehicles (cars and trucks) are furthermore constrained. The SOC of the vehicle batteries are restricted by a band (<em>sto_max_timeseries</em>/<em>sto_min_timeseries</em>) that represents the maximum/minimum SOC that the fleet should be able to provide in order to fulfill user demands (see Figure 2). </p>
+<p><img alt="Figure 3: Exemplary development of the battery SOC over one day. Source: Miorelli, F. (2024): “Aggregation and normalisation methods in venco.py” © DLR | CC BY 4.0." src="../../../graphics/SOC_BEV_battery.png" /></p>
+<p><em>Figure 3: Exemplary development of the battery SOC over one day. Source: Miorelli, F. (2024): “Aggregation and normalisation methods in venco.py” © DLR | CC BY 4.0.</em></p>
+<p>The charging power of an electric vehicle is limited by the maximum output capacity of the wallbox when charging a single vehicle. It furthermore varies over time when considering a whole fleet since the number of vehicles connected to the grid is not constant during the day. To take this circumstance into account the maximum power a single car can be charges with is given exogeniously with the parameter capacity_p_unit, describing the maximum power of a wallbox. The percentage of the fleet that can charge with this maximum power at each point of time is represented by the time series <em>availability_timeseries_max</em>. In order to calculate the maximum power the fleet can charge at a certain point of time, the time normalized time series needs to be multiplied by <em>capacity_p_unit</em> (individual wallbox capacity) as well as with the vehicle number.</p>
+<p>As an exception, the inflexible charging vehicles (e.g. tra_road_mcar_inflex_uni) are not limited by a maximum charging capacity, but the charging capacity is specified by a fixed time series (<em>availability_timeseries_fixed</em>). There is no optimization intended. Otherwise, the principle is identical. 
+All BEV-profiles are calculated with the DLR open source tool <a href="https://dlr-ve.gitlab.io/esy/vencopy/vencopy/">venco.py</a>. The tool takes assumptions for a charging infrastructure development as well as a large number of trip data by the [MiD] (https://www.mobilitaet-in-deutschland.de/archive/pdf/MiD2017_Tabellenband_Deutschland.pdf) /[KiD] (https://www.forschungsinformationssystem.de/servlet/is/503443/) as inputs. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 - SEDOS Project Team
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>

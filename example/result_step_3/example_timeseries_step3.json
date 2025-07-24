@@ -1,0 +1,344 @@
+{
+	"name": "example_timeseries_step3",
+	"title": "sedos_example_timeseries_step3",
+	"id": "http://openenergyplatform.org/dataedit/view/model_draft/example_timeseries_step3",
+	"description": "Example for SEDOS timeseries metadata. Techno-economic parameter for medium sized electric cars.",
+	"language": [
+		"en-GB"
+	],
+	"subject": [
+		{
+			"name": "plug-in hybrid electric car",
+			"path": "http://openenergy-platform.org/ontology/oeo/OEO_00320050"
+		}
+	],
+	"keywords": [
+		"SEDOS",
+		"oedatamodel-parameter",
+		"input_data",
+		"mobility",
+		"example"
+	],
+	"publicationDate": "2023-08-09",
+	"context": {
+		"homepage": "https://sedos-project.github.io/.github/",
+		"documentation": "https://sedos-project.github.io/.github/",
+		"sourceCode": "https://github.com/sedos-project",
+		"contact": "hedda.gardian@dlr.de",
+		"grantNo": "03EI1040D",
+		"fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+		"fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg",
+		"publisherLogo": null
+	},
+	"spatial": {
+		"location": null,
+		"extent": "Germany",
+		"resolution": "NUTS-0"
+	},
+	"temporal": {
+		"referenceDate": "2021",
+		"timeseries": [
+			{
+				"start": "2021-01-01",
+				"end": "2021-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2024-01-01",
+				"end": "2024-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2027-01-01",
+				"end": "2027-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2030-01-01",
+				"end": "2030-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2035-01-01",
+				"end": "2035-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2040-01-01",
+				"end": "2040-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2045-01-01",
+				"end": "2045-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2050-01-01",
+				"end": "2050-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2060-01-01",
+				"end": "2060-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			},
+			{
+				"start": "2070-01-01",
+				"end": "2070-12-31",
+				"resolution": "hourly",
+				"alignment": "left"
+			}
+		]
+	},
+	"sources": [
+		{
+			"title": "OEDatamodel-parameter",
+			"description": "Parameter data model for secondary input scalars and timeseries",
+			"path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+			"licenses": [
+				{
+					"name": "CC0-1.0",
+					"title": "Creative Commons Zero v1.0 Universal",
+					"path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+					"instruction": "You are free: To Share, To Create, To Adapt",
+					"attribution": null
+				}
+			]
+		},
+		{
+			"title": "Impact of electric vehicles on a future renewable energy-based power system in Europe with a focus on Germany",
+			"description": "Paper on novel modelling approach comprising a detailed representation of electric vehicles based on real driving patterns and interactions between the power systems of Germany and other European regions.",
+			"path": "https://doi.org/10.1002/er.4056",
+			"licenses": [
+				{
+					"instruction": "null",
+					"attribution": "copyright. John Wiley & Sons, Ltd. 2018",
+					"name": "null",
+					"title": "null",
+					"path": "null"
+				}
+			]
+		},
+		{
+			"title": "Mobilität in Deutschland: Tabellarische Grundauswertung",
+			"description": "Mobilität in Deutschland (MiD) ist eine bundesweite Befragung von Haushalten zu ihrem alltäglichen Verkehrsverhalten im Auftrag des Bundesministeriums für Digitales und Verkehr (BMDV).",
+			"path": "https://bmdv.bund.de/SharedDocs/DE/Anlage/G/mid-2017-tabellenband.pdf?__blob=publicationFile",
+			"licenses": [
+				{
+					"instruction": "null",
+					"attribution": "copyright. Meier, Schindler, Gustav. 2011",
+					"name": "null",
+					"title": "null",
+					"path": "null"
+				}
+			]
+		}
+	],
+	"licenses": [
+		{
+			"name": null,
+			"title": null,
+			"path": null,
+			"instruction": null,
+			"attribution": null
+		}
+	],
+	"contributors": [
+		{
+			"title": "Christoph Muschner",
+			"email": "christoph.muschner@rl-institut.de",
+			"object": "data and metadata",
+			"comment": "Example preparation",
+			"date": "2023-08-09"
+		}
+	],
+	"resources": [
+		{
+			"profile": "tabular-data-resource",
+			"name": "model_draft.example_timeseries_step3",
+			"path": null,
+			"format": "PostgreSQL",
+			"encoding": "UTF-8",
+			"schema": {
+				"fields": [
+					{
+						"name": "id",
+						"description": "Unique identifier",
+						"type": "bigint",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "region",
+						"description": "Country or region",
+						"type": "text",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "type",
+						"description": "Type of process",
+						"type": "text",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "timeindex_start",
+						"description": "Start timestamp",
+						"type": "timestamp",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "timeindex_stop",
+						"description": "Stop timestamp",
+						"type": "timestamp",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "timeindex_resolution",
+						"description": "Timesteps",
+						"type": "interval",
+						"unit": "Percent",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "uncontrolled_charging",
+						"description": "Timeseries for uncontrolled charging",
+						"type": "float array",
+						"unit": "Percent",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "charge_availability",
+						"description": "Timeseries for charging availability",
+						"type": "float array",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "drive_power",
+						"description": "Timeseries for drive power",
+						"type": "float array",
+						"unit": "Percent",
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "max_battery",
+						"description": "Timeseries for maximal vehicle battery storage level",
+						"type": "float array",
+						"unit": "Percent",
+						"isAbout": [],
+						"valueReference": [
+							{
+								"name": "charging",
+								"path": "http://openenergy-platform.org/ontology/oeo/OEO_00320064"
+							}
+						]
+					},
+					{
+						"name": "min_battery",
+						"description": "Timeseries for minimal vehicle battery storage level",
+						"type": "float array",
+						"unit": "Percent",
+						"isAbout": [
+							{
+								"name": "charging",
+								"path": "http://openenergy-platform.org/ontology/oeo/OEO_00320064"
+							},
+							{
+								"name": "maximum value",
+								"path": "http://openenergy-platform.org/ontology/oeo/OEO_00010256"
+							}
+						],
+						"valueReference": []
+					},
+					{
+						"name": "version",
+						"description": "Version",
+						"type": "text",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "method",
+						"description": "Method",
+						"type": "json",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "source",
+						"description": "Source",
+						"type": "json",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					},
+					{
+						"name": "comment",
+						"description": "Comment",
+						"type": "text",
+						"unit": null,
+						"isAbout": [],
+						"valueReference": []
+					}
+				],
+				"primaryKey": [
+					"id"
+				],
+				"foreignKeys": []
+			},
+			"dialect": {
+				"delimiter": ";",
+				"decimalSeparator": "."
+			}
+		}
+	],
+	"@id": null,
+	"@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/develop/metadata/latest/context.json",
+	"review": {
+		"path": null,
+		"badge": null
+	},
+	"metaMetadata": {
+		"metadataVersion": "oemetadata_v1.5.1",
+		"metadataLicense": {
+			"name": "CC0-1.0",
+			"title": "Creative Commons Zero v1.0 Universal",
+			"path": "https://creativecommons.org/publicdomain/zero/1.0/"
+		}
+	},
+	"_comment": {
+		"metadata": "Metadata documentation and explanation (https://github.com/OpenEnergyPlatform/oemetadata)",
+		"dates": "Dates and time must follow the ISO8601 including time zone (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss±hh)",
+		"units": "Use a space between numbers and units (100 m)",
+		"languages": "Languages must follow the IETF (BCP47) format (en-GB, en-US, de-DE)",
+		"licenses": "License name must follow the SPDX License List (https://spdx.org/licenses/)",
+		"review": "Following the OEP Data Review (https://github.com/OpenEnergyPlatform/data-preprocessing/blob/master/data-review/manual/review_manual.md)",
+		"null": "If not applicable use: null",
+		"todo": "If a value is not yet available, use: todo"
+	}
+}

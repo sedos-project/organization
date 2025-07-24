@@ -1,0 +1,1834 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The documentation of the SEDOS project">
+      
+      
+      
+      
+        <link rel="prev" href="../heat/">
+      
+      
+        <link rel="next" href="../x2x/">
+      
+      
+      <link rel="icon" href="../../../graphics/sedos_favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Industry - SEDOS Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#industry" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SEDOS Project" class="md-header__button md-logo" aria-label="SEDOS Project" data-md-component="logo">
+      
+  <img src="../../../graphics/sedos.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SEDOS Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Industry
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sedos-project/organization" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Model Structure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data/overview/" class="md-tabs__link">
+          
+  
+  Reference Dataset
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../model/scenarios/" class="md-tabs__link">
+          
+  
+  Model Application
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../developer/data_requirements/input_data/" class="md-tabs__link">
+          
+  
+  Developer Instructions
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../publications/" class="md-tabs__link">
+        
+  
+    
+  
+  Further Reading
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SEDOS Project" class="md-nav__button md-logo" aria-label="SEDOS Project" data-md-component="logo">
+      
+  <img src="../../../graphics/sedos.png" alt="logo">
+
+    </a>
+    SEDOS Project
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sedos-project/organization" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Model Structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Model Structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Model Base
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Model Base
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model_frame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Assumptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exogenous_values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exogenous Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emission Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mimo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Inputs and Outputs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sectors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Industry
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Industry
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming#convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming convention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provided#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provided parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general#modeling#approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      General modeling approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General modeling approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automobile#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automobile Industry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cement#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cement Industry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chemical#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chemical Industry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glass#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glass Industry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iron#and#steel#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iron and Steel Industry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-ferrous#metals#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-ferrous metals Industry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paper#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paper Industry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest#of#the#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rest of the Industry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-generation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    X2X
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aggregations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technological Aggregations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levels of Detail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network_graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference Dataset
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reference Dataset
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/nomenclature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nomenclature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/data_conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Model Application
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Model Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/scenarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Instructions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Instructions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    (Meta)Data Requirements
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            (Meta)Data Requirements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/input_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/licensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/how_to_contribute_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Contribute Data?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../publications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Further Reading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="industry">Industry<a class="headerlink" href="#industry" title="Permanent link">&para;</a></h1>
+<h2 id="naming#convention">Naming convention<a class="headerlink" href="#naming#convention" title="Permanent link">&para;</a></h2>
+<p>The industry dataset in SEDOS is categorized into sub-sectors of industry, which are aluminum, automobile, cement, copper, chemical, glass, paper, steel, and the rest of the industry (<em>ind_others_</em>). Moreover, industry also includes so-called 'autoproducer' processes (<em>ind_autoproducer_</em>) as self-generation technologies and two simplified agricultural processes (<em>ind_agri_standard_0</em>, <em>ind-agri_improved_1</em>) to account for emissions from livestock harvesting. The complex heterogeneity of industry sectors is represented by individual sub-sector process chains. Each sub-sector contains a bunch of processes within the process chains to capture the best possible energy consumption characteristics of the respective sub-sector, and the processes are driven by the exogenous demand of production (<em>exo_commodity</em>).  Furthermore, source processes (<em>ind_source_</em>) are also introduced where necessary to supply commodities (<em>e.g. raw materials, scraps</em>) the beginning of the process chain. 
+The table below shows the nomenclature of process naming in industry. <br />
+<em>Table 1: Nomenclature for the industry sector process naming.</em></p>
+<table>
+<thead>
+<tr>
+<th>Sector</th>
+<th>sub-sector</th>
+<th>Process type/specification</th>
+<th>Stock/Expansion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ind</td>
+<td>aluminum</td>
+<td>[pri, sec, aluminabayer]</td>
+<td>0</td>
+</tr>
+<tr>
+<td></td>
+<td>automobile</td>
+<td>[pc, hcv, lcv][icev, phev, bev, fcev], prtp, bdys, pnts, hvlt, mcmp,fasmbl</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>cement</td>
+<td>[rk, rawmats, novel, finish, novelfinish],ccs</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>copper</td>
+<td>[pri, sec]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>chemical</td>
+<td>[nh3, methanol, cl2, olefins, btx], hb, [msyn, mhydr], [memb, diaph], [scrac, ecrac, mto, mta], [smr, aec, pemec, biog, mpyr]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>glass</td>
+<td>[flat, cont, spec, fibe], [batchplant, oxyf, oxyh, fulle, rege, recu, forming]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>paper</td>
+<td>[hchem, lchem, lmech]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>steel</td>
+<td>[blafu, elefu, dirred, hyddri, oxyfu, pellet, sinter, sponge, casting]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>others</td>
+<td>[heat_pump, mdrive, heat_proc, steam, cool, kiln, light, pump_fans, solar_heat, ind_boiler, ict]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>autoproducer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="provided#parameters">Provided parameters<a class="headerlink" href="#provided#parameters" title="Permanent link">&para;</a></h2>
+<p>Generally defined parameters are used in industry to provide the data. More details on parameters can be found in the relevant section of the documentation. In industry, only demand time series data are provided in a simplified manner. In SEDOS, no variation of production quantity is considered depending on temporal data. The demand profile is simply a normalized fraction of 1, which is calculated by dividing 1 by 8760 for the value of an hourly timeslice.</p>
+<h2 id="general#modeling#approach">General modeling approach<a class="headerlink" href="#general#modeling#approach" title="Permanent link">&para;</a></h2>
+<p>The industry sector has been classified into 12 major branches, with detailed modeling applied to eight of them, including automotive, cement, chemicals, glass and ceramics, iron and steel, non-ferrous metals, and paper. The remaining four branches food and tobacco, rubber and plastic, metalworking, and machinery equipment are included in the model structure in a simplified manner.
+Figure 1 depicts a comprehensive overview of the representation of the industrial sector,including the 11 branches, their main exogenous demand products,and the considered existing and relevant novel production routes for each of those demands. The inclusion of self-generation technologies, particularly for electricity, is a key component of the industry model structure. This model differentiates between externally supplied electricity and self-generation within the industry, providing insight into energy generation-related investments and potential grid infrastructure needs. Self-generation technologies are used across the entire industrial sector, with no regard for industry branch specificity.</p>
+<p><img alt="Figure 1: Categorization of the industry subsectors (dark gray), its products (light gray) and the possible production routes (blue). *are modeled in an aggregated manner. **Food and tobacco, rubber and plastic, metalworking and machinery equipment industries are modeled individually yet in a simplified manner.Abbreviations: LCV: Light Commercial Vehicle; HCV: Heavy Commercial Vehicle; ICEV: Internal Combustion Engine Vehicle; PHEV: Plug-in Hybrid Electric Vehicle; BEV: Battery Electric Vehicle; FCEV: Fuel Cell Electric Vehicle." src="../../../graphics/industry_overview.png" />
+<em>Figure 1: Categorization of the industry subsectors (dark gray), its products (light gray) and the possible production routes (blue). </em>are modeled in an aggregated manner. *<em>Food and tobacco, rubber and plastic, metalworking and machinery equipment industries are modeled individually yet in a simplified manner.Abbreviations: LCV: Light Commercial Vehicle; HCV: Heavy Commercial Vehicle; ICEV: Internal Combustion Engine Vehicle; PHEV: Plug-in Hybrid Electric Vehicle; BEV: Battery Electric Vehicle; FCEV: Fuel Cell Electric Vehicle. Source: Reveron Baecker, B. et al. (2024) "Comprehensive and open model structure for the design of future energy systems with sector coupling"</em></p>
+<h3 id="automobile#industry">Automobile Industry<a class="headerlink" href="#automobile#industry" title="Permanent link">&para;</a></h3>
+<p>The automobile industry in SEDOS consists of energy consumption, techno-economic and emission data to produce automobiles in Germany. First, the types of automobiles are divided based on usage into passenger cars (<em>PC</em>), light commercial vehicles (<em>LCV</em>), and heavy commercial vehicles (<em>HCV</em>). Then these are also subdivided into based on drive types. So four different types of passenger cars are considered: internal combustion engine vehicles (<em>ICEV</em>), plug-in hybrid electric vehicles (<em>PHEV</em>), battery electric vehicles (<em>BEV</em>), and fuel cell electric vehicles (<em>FCEV</em>). Light commercial vehicles and heavy commercial vehicles are categorised into internal combustion engine vehicles (<em>ICEV</em>), battery electric vehicles (<em>BEV</em>), and fuel cell electric vehicles (<em>FCEV</em>). As per category of each automobile, production volume in million units is provided as an exogenous demand. <br />
+The complex production process chains of the above-mentioned automobiles are portrayed through aggregated processes such as the parts production process, battery production, painting, and assembly in energy system model. The parts production process represents energy consumption data of most of the energy-intensive processes to produce components or parts of automobiles. Parts production processes hold aggregated energy consumption data for metal forming (stamping, extruding, casting, drawing, machining, forging), polymer forming (injection molding, compression molding, blow molding, extruding, calendering), glass and carbon fiber reinforced plastic fabrication, welding, and others. Electricity and process heat (400–1250 °C) as input commodities flow into the part production process. Different process heat technologies, such as furnaces based on energy carriers, are available to generate process heat for the parts production process. The battery production process includes energy consumption of drying, dry room, notching, stacking, final sealing, and other processes to produce the battery. Electricity and steam (110-200 °C) are input commodities for battery production. The energy consumption of pretreatment, painting, undersealing, cavity protection, drying, and other processes is depicted by the painting process, where electricity, hot water (up to 60 °C), and steam (110-200 °C) are input commodities for painting processes. Similar to technologies for process heat, techno-economic data for hot water and steam generation technologies are prepared and made available accordingly. Finally, the assembly process completes the chain by producing exogenous demand (<em>automobile</em>). The simplified process chain of automobile production processes is depicted in Figure 2.</p>
+<p><img alt="Figure 2: Simplified representation of Automobile industry process chain." src="../../../graphics/automobile_simplified.png" />
+<em>Figure 2: Simplified representation of Automobile industry process chain.</em></p>
+<p>Parts production, battery production, painting, and assembly processes are distinguished and prepared for each automobile type as categorized so that the energy consumption burden is specific to each automobile type. It is important because energy consumption varies depending on the automobile type, as the size, components, and materials of the automobile are different for individual automobile types. During the data preprocessing, these factors are considered, and data are processed accordingly. Which means required energy consumption in SEDOS data to produce parts for internal combustion passenger car (<em>ICEV</em>) is different than any other different automobile whether it is passenger car (<em>PHEV, BEV or FCEV</em>) or commercial automobile (<em>LCV or HCV</em>). This approach is also true for battery production, painting and assembly process so that energy requirements to produce automobile specific to each category. An overview of the passenger car production chain in modeling schema follows in figure 3, with distinguished production processes based on automobile type.</p>
+<p><img alt="Figure 3: Modeling schema of passenger car production chain." src="../../../graphics/automobile_detailed.png" />
+<em>Figure 3: Modeling schema of passenger car production chain.</em></p>
+<p>Input commodity flows into the processes are given in petajoules (<em>when a commodity is an energy carrier</em>) and in million units (<em>when a commodity is material, e.g., a battery or parts</em>) per million units of output. No emissions are assumed in these processes. 
+Emission occurs in the processes that generate process heat, steam, hot water, and space heat, depending on the technology. Input flow for these heat generation technologies is given in petajoules (<em>PJ</em>) per PJ output. As an example, for a gas boiler whose efficiency is considered 85 percent, the input and output flow conversion factors are given as follows:</p>
+<div class="highlight"><pre><span></span><code>        input (1 PJ) -&gt; boiler -&gt; output (0.85 PJ) + emissions 
+        sec_methane (1 PJ) -&gt; boiler -&gt; iip_auto_steam (0.85 PJ) + emi_co2_ind (55.8 Kt) + 
+                                        emi_ch4_ind (0.002 Kt)  + emi_n2o_ind (00005 Kt)
+</code></pre></div>
+<p>Combustion emission coefficients are provided in terms of input flow and in thousand tonnes (<em>Kt</em>) per PJ. Base year processes with existing capacity and best available and innovative technologies as new invest processes are also introduced, where it is assumed that base year processes stock decreases linearly and new processes can take place with given investment cost. To summarize the modeling approach of the automobile industry process chain, process heat, steam, hot water, and space heat are produced by respective technologies. Then the parts production process produces parts (<em>e.g., iip_auto_parts_bev</em>) for a specific automobile by consuming energy (<em>iip_auto_heat_proc and sec_elec_ind</em>), then the parts (<em>e.g., iip_auto_parts_bev</em>) go into the painting process alongside energy carriers (iip_auto_hot_water, iip_auto steam, and sec_elec_ind) and produce painted commodities for the specific automobile (<em>e.g., iip_auto_painted_bev</em>). The battery production process for the specific automobile produces batteries as an output with the input flow of steam and electricity (<em>iip_auto_steam and sec_elec_ind</em>). At the end of the process chain, painted automobile commodities(<em>e.g., iip_auto_painted_bev</em>), batteries for the specific automobile (<em>e.g., iip_auto_btry_pc_bev</em>), energy carriers(<em>iip_auto_space_heat and sec_elec_ind</em>), and other commodities such as material handling and compressed air(<em>iip_auto_mcmp</em>) as well as HVAC and lighting (<em>iip_auto_hvlt</em>) are taken as input in the assembly process,and final exogenous demand is produced as output (<em>e.g. exo_auto_pc_bev</em>).</p>
+<h3 id="cement#industry">Cement Industry<a class="headerlink" href="#cement#industry" title="Permanent link">&para;</a></h3>
+<p>Cement production is modeled through a series of aggregated processes representing its three main production steps: raw material preparation, clinker production, and cement production (finishing). Each of these aggregated steps features different technology levels to reflect current practices and future innovation. For each of the three steps, a base year process (2021) and an upgrade process to Best Available Technology (BAT) standard are considered.
+The raw material preparation process encompasses the grinding and homogenization of raw materials (such as limestone and clay) into raw meal. This process primarily consumes electricity.
+Clinker production is the core and most energy-intensive stage, involving the rotary kiln furnace and subsequent clinker cooling. This stage is crucial not only for its high energy demand but also for the significant process emissions of CO2 released from the calcination of limestone, in addition to combustion emissions from fuels. To address these, beyond the base and BAT rotary kiln technologies, the model includes an additional five innovative clinker production processes:</p>
+<ul>
+<li>A retrofit of the BAT rotary kiln with carbon capture (oxyfuel capture), specifically designed to capture both combustion and process CO2 emissions. For this investment, investment costs and emissions factors are adjusted to reflect the capture process and the resulting captured CO2.</li>
+<li>A rotary kiln option utilizing CO2 for CO2-curing cement, representing a carbon capture and utilization (CCU) pathway.</li>
+<li>A kiln incorporating an electric pre-calciner, enabling a shift of a portion of the thermal energy demand to electricity.</li>
+<li>A pathway focusing on low-limestone clinker production using adapted OPC (Ordinary Portland Cement) equipment, which inherently reduces process CO2 emissions.</li>
+<li>A fully electric kiln, representing a transformative shift to electricity as the primary heat source for clinker production.</li>
+</ul>
+<p>Finally, the cement production (finishing) process involves the grinding of clinker and the integration of additives to produce the final cement product, primarily consuming electricity. The finished cement product is then an exogenous demand that the model must satisfy.
+The complex production process chains described above are aggregated within the model for streamlined analysis. For instance, the clinker production processes represent the combined energy consumption and emissions associated with the kiln operation, including heat supply. Electricity and various fuels (coal, heavy fuel oil, biomass, sewage sludge) are input commodities into these production processes. While process emissions are directly attributed to the clinker production process itself, combustion emissions are linked to the specific fuel inputs. High-temperature waste heat is also an output from clinker production, which can be utilized elsewhere in the energy system.
+No negative emissions are assumed directly within the basic production processes themselves, but are explicitly handled by the specialized carbon capture technology (ind_cement_rk_cc_2) where captured CO2 is routed for storage (emi_co2_neg_fuel_cc_ind), contributing to the overall climate neutrality target. </p>
+<p><img alt="Figure 4: Simplified representation of Cement Industry process chain." src="../../../graphics/SEDOS_RES_Cement.jpg" />
+<em>Figure 4: Simplified representation of Cement Industry process chain.</em></p>
+<p>Each of these production processes (raw material preparation, clinker production, and cement finishing) is defined with specific techno-economic data. Base year processes are assumed to have existing capacity that decreases linearly over time, while BAT and innovative technologies are introduced as new investment options with their respective investment costs and operational costs.</p>
+<h3 id="chemical#industry">Chemical Industry<a class="headerlink" href="#chemical#industry" title="Permanent link">&para;</a></h3>
+<p>The chemical industry in SEDOS covers the data set of chemical industry production in Germany to be utilized in an energy system model.  Hundreds of different chemical processes are in operation to produce thousands of different chemicals, which means the production path of the chemical industry is complex.  The data set and the modeling approach of the chemical industry can be differentiated in terms of the exogenous demand of the chemical industry. The basic chemicals- chlorine, ammonia, methanol, olefins (<em>ethylene, propylene, butadiene</em>), and aromatics (<em>benzene, toluene, xylene</em>) make up the largest share of the chemical industry. The exogenous demand for these basic chemicals is given in million tons (<em>Mt</em>), so the energy consumption and techno-economic data are directly related to the production volume of these basic chemicals. Then, the rest of the chemical industry demand is represented by the energy service demand, which is given in Petajoule (<em>PJ</em>). 
+The chemical industry heavily relies on fossils, both for energy and feedstock, aka non-energetic consumption.  In SEDOS chemical industry data, the flow of energy and feedstock into processes to produce chemicals is distinguished, where it is significant. That means feedstock flows separately integrated not only for carbon-contained fossil feedstocks (<em>e.g. natural gas, naphtha, heavy fuel oil, etc</em>) but also alternative low-carbon or green feedstocks (<em>e.g. hydrogen from electrolysis, green methanol</em>). On the other hand, feedstock flow for chlorine production, nitrogen as feedstock in the Haber-Bosch process, or water in the electrolysis process are not included in this work. The emission from fuel combustion and the emission from feedstocks or process-related emissions are categorized as combustion and process emissions, respectively. The combustion emission is usually input-specific and process emission is related to output. Techno-economic data are provided for conventional technologies, best available technologies (<em>BAT</em>), and innovative technologies accordingly. Use of captured Carbon-di-oxide (<em>CO2</em>) as feedstock is also enabled with carbon-capture technologies, and those captured CO2 are made available to be utilized as feedstock through the delivery process (<em>helper_co2_delivery</em>). 
+Relevant technologies are provided to produce hydrogen, which will be used as feedstock in the chemical industry to produce ammonia and methanol. The hydrogen production technologies and hydrogen commodities names are created accordingly, considering hydrogen as input flow into the methanol synthesis process and Haber Bosch process, respectively. The ammonia production modeling schema is presented in Figure 5. </p>
+<p><img alt="Figure 5: Modeling approach of ammonia production process chain." src="../../../graphics/chemi_nh3.png" />
+<em>Figure 5: Modeling approach of ammonia production process chain.</em></p>
+<p>Hydrogen commodities for methanol production are specified variably, whether the hydrogen (iip_chemi_meoh_f_h2) is generated from fossil feedstock (<em>natural gas, heavy fuel oil</em>) or biomass or the hydrogen (<em>iip_chemi_meoh_h2</em>) is green hydrogen. Two different methanol commodities are introduced, one (<em>exo_chemi_methanol</em>) represents exogenous methanol demand and another (<em>iip_chemi_methanol</em>) can be used further in the chemical industry as feedstock into methanol-to-olefins or methanol-2-aromatics processes. High-value chemical production processes are differentiated to satisfy the exogenous demand for aromatics and olefins. Figure 5 shows the modeling approach of exogenous demand for methanol and methanol flow as feedstock for high-value chemicals production, including a simplified feedstock flow of CO2. </p>
+<p><img alt="Figure 6: Modeling approach of methanol and high value chemicals production process chain." src="../../../graphics/chemi_methanol_hvc.png" />
+<em>Figure 6: Modeling approach of methanol and high value chemicals production process chain.</em></p>
+<p>The production volume of ethylene is considered to represent the exogenous olefins demand due to the coupled production of conventional process (<em>steam cracking</em>).  Processes and energy service commodities- steam (<em>iip_chemi_steam</em>), process heat(<em>iip_chemi_process_heat</em>), other processes(<em>iip_chemi_processes_others</em>), electro-chemicals (<em>iip_chemi_electro_chem</em>) and machine drive (iip_chemi_machine_drive)  are introduced accordingly to meet the exogenous energy service demand (<em>exo_chemi_others</em>) of rest of the chemical industry. </p>
+<h3 id="glass#industry">Glass Industry<a class="headerlink" href="#glass#industry" title="Permanent link">&para;</a></h3>
+<p>The German glass industry module within the SEDOS is categorized into four distinct branches based on the type of glass produced: hollow glass (container glass), flat glass, fiber glass, and special glass. Each branch is modeled with its specific production processes and technological pathways.
+The complex production process chains for each glass type are portrayed through processes within the energy system model. For hollow glass and flat glass, the production chain is typically disaggregated into three or four primary stages: batch preparation, melting, forming, and, for flat glass, an additional finishing (annealing) step. For fiber glass and special glass, the production is represented by aggregated production processes, encompassing all stages from raw material processing to final product.
+For the base production steps across all branches, a base year process (2021) is included, representing typical technology and efficiency levels. Additionally, an investment option into the Best Available Technology (BAT) standard is provided for most stages, offering more efficient and advanced current technologies for new investments.
+Melting is the most energy and emission intensive stage in glass production. The model captures different melting technologies and innovative pathways:</p>
+<ul>
+<li>Recuperative and regenerative furnaces: These represent common thermal melting technologies for hollow and flat glass.</li>
+<li>Full electric melting: An innovative process route is included for the melting step across hollow and flat glass, allowing melting to be achieved primarily or entirely using electricity.</li>
+<li>Carbon capture integration: To address CO2 emissions, particularly for hollow glass, further investment steps are available to integrate carbon capture (oxyfuel capture) technology with both recuperative and full electric melting processes. This allows for the capture of CO2 from the melting process, which includes both combustion emissions and, importantly, inherent process emissions that arise from the decomposition of raw materials like carbonates in the glass batch.
+For fiber glass and special glass, the aggregated production processes also feature base, BAT, and specific electric furnace options, indicating pathways for deep decarbonization through electrification.
+Useful outputs, such as high-temperature waste heat, are also tracked for potential usage within the overall energy system. The demand for each type of glass (e.g., exo_glas_cont for container glass, exo_glas_flat for flat glass, exo_glas_fibe for fiber glass, exo_glas_spec for special glass) is provided as an exogenous demand that the model must satisfy. 
+The process chains for each glass industry branch, illustrating the various technological pathways and energy flows, are depicted in the following figures:</li>
+</ul>
+<p><img alt="Figure 7: Reference Energy System for Hollow Glass (Container Glass)." src="../../../graphics/SEDOS_RES_Glas_cont.jpg" />
+<em>Figure 7: Reference Energy System for Hollow Glass (Container Glass).</em></p>
+<p><img alt="Figure 8: Reference Energy System for Flat Glass production process chain." src="../../../graphics/SEDOS_RES_Glass_flat.jpg" />
+<em>Figure 8: Reference Energy System for Flat Glass production process chain.</em></p>
+<p><img alt="Figure 9: Reference Energy System for Fiber Glass and Special Glass production processes." src="../../../graphics/SEDOS_RES_Glass_fs.jpg" />
+<em>Figure 9: Reference Energy System for Fiber Glass and Special Glass production processes.</em></p>
+<p>Base year processes are assumed to have existing capacity that decreases linearly over time, while BAT and innovative technologies are available as new investment options to drive the decarbonization pathway.</p>
+<h3 id="iron#and#steel#industry">Iron and Steel Industry<a class="headerlink" href="#iron#and#steel#industry" title="Permanent link">&para;</a></h3>
+<p>The Iron and Steel industry module distinguishes between existing and innovative production routes, reflecting the complex pathways for decarbonization in this energy-intensive sector.
+The core of steel production in the model is divided into two primary conventional routes: the blast furnace-basic oxygen furnace (BF-BOF) route and the electric arc furnace (EAF) route. Additionally, two crucial innovative production routes are considered: direct reduced iron (DRI) route and hydrogen direct reduced iron (H-DRI) route. The specific production steps and technologies vary significantly depending on the chosen route.
+For the blast furnace-basic oxygen furnace (BF-BOF) route, which is the predominant current method for primary steel production, five distinct aggregated steps have been considered:</p>
+<ul>
+<li>Coking plant production: Converts coal into coke, a necessary reducing agent and fuel for the blast furnace.</li>
+<li>Sinter production: Agglomerates fine iron ore particles into larger pieces (sinter) suitable for the blast furnace.</li>
+<li>Blast furnace (BF): Reduces iron ore (and sinter) using coke to produce hot metal (molten iron).</li>
+<li>Oxygen furnace (BOF): Converts hot metal from the blast furnace into crude steel by blowing oxygen through it to remove impurities.</li>
+<li>Casting plant &amp; hot rolling mill: Shapes the crude steel into semi-finished or finished steel products.</li>
+</ul>
+<p>Maintaining the modeling standard, each of these base processes within the BF-BOF route has the possibility to be replaced by a Best Available Technology (BAT) standard process. On top of these, the blast furnace process, being a significant source of emissions, features two further innovative process investment options for carbon capture:</p>
+<ul>
+<li>Amine capture (advanced solvent): Represents a post-combustion capture technology applied to the blast furnace gas.</li>
+<li>Vacuum pressure swing adsorption (VPSA): Another carbon capture technology, specifically for CO2 separation from blast furnace top gas.</li>
+</ul>
+<p>The second existing route, the electric arc furnace (EAF) route, is characterized by its flexibility in using scrap metal. It consists of three main aggregated processes:</p>
+<ul>
+<li>Iron scrap source: Represents the sourcing and preparation of iron scrap as the primary feedstock. This process contains no economical information and does not account for any energy consumption, but rather is used to limit the availability of steel scrap.</li>
+<li>Electric arc furnace (EAF): Melts iron scrap using electricity to produce crude steel.</li>
+<li>
+<p>Casting plant &amp; hot rolling mill: Similar to the BOF route, shapes the crude steel into final products.
+For the direct reduced iron (DRI) route, which is considered an innovative process for primary steel production, four production steps are modeled:</p>
+</li>
+<li>
+<p>Iron pellets production for DRI: Prepares iron ore into pellets suitable for direct reduction.</p>
+</li>
+<li>Sponge iron production for DRI: Produces sponge iron (DRI) from iron pellets, typically using natural gas as a reducing agent.</li>
+<li>Electric arc furnace for DRI: Processes the sponge iron in an electric arc furnace to produce crude steel.</li>
+<li>Casting plant &amp; hot rolling mill: Shapes the crude steel.</li>
+</ul>
+<p>Similarly, the hydrogen direct reduced iron (H-DRI) route represents a major decarbonization pathway. It consists of equivalent processes to the DRI route but with the necessary techno-economic adjustments to primarily use hydrogen as the energy carrier and reducing agent.
+The process chains for the iron and steel industry, illustrating the various technological pathways and energy flows, are depicted in the following figure:</p>
+<p><img alt="Figure 10: Reference Energy System for the Iron and Steel Industry." src="../../../graphics/SEDOS_RES_Steel.jpg" />
+<em>Figure 10: Reference Energy System for the Iron and Steel Industry.</em></p>
+<p>Base year processes have existing capacities that decrease linearly over time, while BAT and innovative technologies are available as new investment options with their respective investment costs and operational costs.</p>
+<h3 id="non-ferrous#metals#industry">Non-ferrous metals Industry<a class="headerlink" href="#non-ferrous#metals#industry" title="Permanent link">&para;</a></h3>
+<p>The non-ferrous metal industry module within the SEDOS focusses on aluminum and copper. The model aims to portray the sector's transformation towards climate neutrality by 2045, accounting for both primary and secondary (recycled) production routes and their respective technological advancements.</p>
+<h4 id="aluminum#production">Aluminum Production<a class="headerlink" href="#aluminum#production" title="Permanent link">&para;</a></h4>
+<p>Aluminum production in the model is primarily divided into three main process stages: alumina production, primary aluminum production (electrolysis), and secondary (recycled) aluminum production.</p>
+<ul>
+<li>Alumina production: This initial stage involves the processing of bauxite ore to produce alumina (aluminum oxide), typically through the Bayer process. The model includes both a base and a Best Available Technology (BAT) process for alumina Bayer, primarily consuming electricity, natural gas, heavy fuel oil, and steam.</li>
+<li>Primary aluminum production (Hall-Heroult): This is the most energy-intensive step, where alumina is converted into aluminum metal through electrolysis in Hall-Heroult cells. The module captures both a Base and a BAT Hall-Heroult process. In addition, a novel Hall-Heroult process with innovative anode wett cathodes is included, representing a next-generation technology designed to improve efficiency and potentially reduce emissions from the electrolysis process.</li>
+<li>Secondary (recycled) aluminum production: This route involves melting aluminum scrap to produce recycled aluminum. The model distinguishes between a base and a BAT recycled production process, which are typically less energy-intensive and have lower direct emissions compared to primary production. The source process for aluminum scrap contains no economical information and does not account for any energy consumption, but rather is used to limit the availability of aluminum scrap.</li>
+</ul>
+<p>The Hall-Heroult process is a significant source of process emissions (emi_co2p_ind) from the anode consumption, in addition to combustion emissions. The module also tracks the generation of high-temperature waste heat (sec_waste_heat_high_aluminum). 
+The process chain for aluminum production, illustrating the various technological pathways and energy flows, is depicted in the following figure:</p>
+<p><img alt="Figure 11: Reference Energy System for the Aluminum production process chain." src="../../../graphics/SEDOS_RES_Aluminum.jpg" />
+<em>Figure 11: Reference Energy System for the Aluminum production process chain.</em></p>
+<h4 id="copper#production">Copper Production<a class="headerlink" href="#copper#production" title="Permanent link">&para;</a></h4>
+<p>Copper production in the model also distinguishes between primary copper production and secondary (recycled) copper production.</p>
+<ul>
+<li>Primary copper production: This route involves smelting and refining copper ores. The model includes base and Best Available Technology (BAT) processes for primary copper production. An innovative copper electrowinning process is also included, representing a more energy-efficient and cleaner method for copper refining, which relies heavily on electricity. </li>
+<li>Secondary (recycled) copper production: This route involves melting and refining copper scrap. The model includes base and BAT processes for secondary production, drawing input from copper scrap. The source process for copper scrap contains no economical information and does not account for any energy consumption, but rather is used to limit the availability of copper scrap.
+The process chain for copper production, illustrating the various technological pathways and energy flows, is depicted in the following figure:</li>
+</ul>
+<p><img alt="Figure 12: Reference Energy System for the Copper production process chain." src="../../../graphics/SEDOS_RES_Copper.jpg" />
+<em>Figure 12: Reference Energy System for the Copper production process chain.</em></p>
+<h3 id="paper#industry">Paper Industry<a class="headerlink" href="#paper#industry" title="Permanent link">&para;</a></h3>
+<p>The pulp and paper Industry branch within the specifically differentiates between the production of high quality paper and low quality paper, reflecting their distinct production routes and energy intensities.
+Paper production in the model is generally broken down into two main stages: pulp production and paper production (finishing).</p>
+<ol>
+<li>
+<p>Pulp production: This initial stage involves the conversion of raw materials into pulp. The model accounts for three distinct pulp production routes, each with its base and Best Available Technology (BAT) process options:</p>
+<ul>
+<li>Chemical pulp production: This route involves chemical processes to separate cellulose fibers from wood, producing pulp.</li>
+<li>Mechanical pulp production: This route mechanically grinds wood to produce pulp, typically resulting in higher yields but lower strength compared to chemical pulp.</li>
+<li>Recycling pulp production: This increasingly important route processes recycled paper to produce pulp, significantly reducing the demand for virgin wood pulp. The source process for recycled paper contains no economical information and does not account for any energy consumption, but rather is used to limit the availability recycled paper.</li>
+</ul>
+</li>
+<li>
+<p>Paper production (finishing): Following pulp production, these processes convert the pulp into final paper products. The model differentiates based on the final product quality:</p>
+<ul>
+<li>High quality paper production: This process transforms pulp (primarily chemical and/or mechanical pulp) into higher-grade paper products.</li>
+<li>Low quality paper production: This process uses pulp (often recycled pulp) to produce lower-grade paper products.</li>
+</ul>
+</li>
+</ol>
+<p>Both high quality and low quality paper production stages also include base and BAT process options, allowing for efficiency improvements and technological upgrades.
+The production processes also generate waste heat (sec_waste_heat_high_paper), which can be used within the heat sector. Moreover, the production of black liqueur as an energy carrier byproduct of chemical pulp production is accounted for and integrated into the self generation model section.
+The process chain for the pulp and paper Industry, illustrating the various pulp production routes and paper finishing stages, is depicted in the following figure:</p>
+<p><img alt="Figure 13: Reference Energy System for the Pulp and Paper Industry process chain." src="../../../graphics/SEDOS_RES_Copper.jpg" />
+<em>Figure 13: Reference Energy System for the Pulp and Paper Industry process chain.</em></p>
+<p>Base year processes have existing capacities that decrease linearly over time, while BAT technologies are available as new investment options, enabling the model to explore cost-optimal decarbonization pathways for the sector.</p>
+<h3 id="rest#of#the#industry">Rest of the Industry<a class="headerlink" href="#rest#of#the#industry" title="Permanent link">&para;</a></h3>
+<p>The Rest of the Industry in SEDOS consists of the following industrial branches, as also depicted in the energy balance for Germany:</p>
+<ul>
+<li>Food and Tobacco</li>
+<li>Rubber and Plastics</li>
+<li>Metal processing</li>
+<li>Machine manufacturing</li>
+<li>Other manufacturing</li>
+</ul>
+<p>The processes in these industry branches contain detailed information on energy consumption, techno-economic and emission data for the relevant steps in the production of goods. The demand is expressed in Petajoules (<em>PJ</em>) and represents the energy service that amounts to the production within these branches. </p>
+<p>The Rest of the Industry is modeled using 57 distinct processes, each depicting specific energy applications: machine drives, lighting, information and communication technology (<em>ICT</em>), process heat and process cooling. The total useful energy required for each energy application flows in the demand processes. For process heating a variety of technologies are used, including boilers, kilns, heat pumps, solar heat and heat exchangers. These technologies generate steam, high temperature heat or directly process heat. Heat exchangers are used to transform district heat into process heat.</p>
+<h3 id="self-generation">Self-generation<a class="headerlink" href="#self-generation" title="Permanent link">&para;</a></h3>
+<p>The  Self-generation or autoproducer can be distinguished by the sector they are used in and the energy type they are using. They are also split up into already existing autoproducers and autoproducers that will be created in the future. The future technologies are only categorized by the fuel type. Because they can be used in every industry sector, there would be too many individual processes if the were all individual for each sector. 
+The existing autoproducers are used in five different sectors. In the steel, chemical, food and tobacco, aluminium and paper industry. In the steel industry only cokeovengas is used as an energy carrier. In the chemical industry coal, methane and heavy fuel oil is used.In the food and tobacco industry coal and methane is used. In the aluminium industry only methane is used. In the paper industry coal, methane, stem wood, black liquor, heavy fuel oil and naphtha autoproducers exist. For future autoproducer, the energy carriers are methane, biomass pellets, stem wood, hydrogen, coal, bio and non bio waste, biogas, oil, sewage sludge and black liquor. There are aggregated autoproducers in the model structure as well. These aggregated processes are categorized by their energy carrier. For the existing autoproducers there are for coal ,methane and heavy fuel oil processes combined. In the future autoproducer processes we have small and large coal and small, medium and large methane autoproducers. Those are aggregated to two processes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 - SEDOS Project Team
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>
