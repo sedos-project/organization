@@ -10,7 +10,7 @@ nav:
             - 'Emission Concept': 'visitor/structure/emissions.md'
             - 'Multiple Inputs and Outputs': 'visitor/structure/mimo.md'
         - 'Sectors':
-            - 'Power': 'visitor/structure/power.md'
+#            - 'Power': 'visitor/structure/power.md'
             - 'Heat': 'visitor/structure/heat.md'
             - 'Industry': 'visitor/structure/industry.md'
             - 'X2X': 'visitor/structure/x2x.md'
