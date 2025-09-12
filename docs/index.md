@@ -14,7 +14,8 @@ The documentation is structured in the following four main parts:
 
 ??? question "Just here for the data?" 
 
-    Find the SEDOS Reference Dataset on the **[Databus](https://databus.openenergyplatform.org/sedos-project/collections/sedos-project)** or the **[OpenEnergyPlatform](https://openenergy-platform.org/dataedit/view/model_draft?query=sedos&tags=246)**
+    Find the SEDOS Reference Dataset with all model parameters on the **[Databus](https://databus.openenergyplatform.org/sedos-project/collections/sedos-project)** or the **[OpenEnergyPlatform](https://openenergy-platform.org/dataedit/view/model_draft?query=sedos&tags=246)**  
+    Find the SEDOS model structure with process relations on **[Zenodo](https://doi.org/10.5281/zenodo.17105060)**
 
 ??? info "How to cite our work?"
 
