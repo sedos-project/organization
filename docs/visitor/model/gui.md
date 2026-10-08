@@ -1,5 +1,5 @@
 # GUI
-!!! note "Try out our interactive SEDOS [GUI](https://sedos.apps.rl-institut.de/)"
+!!! note "Try out our interactive SEDOS [GUI](https://sedos.apps2.rl-institut.de/)"
 
 ## Why this GUI?
 To improve the transparency and reproducibility of the open source structure this GUI provides a few basic functionalities to explore the derived modeling base:
@@ -20,7 +20,7 @@ The GUI functionalities are divided into two main parts, the exploration of the 
 ## Explore the Model Structure
 
 In this part of the GUI, the structure of the data can be displayed graphically to build a better understanding of the model structure and its related data.
-To take a closer look at the structure of the data, there are the following four different buttons on the [start page](https://sedos.apps.rl-institut.de/) that will take you to the respective GUI application:
+To take a closer look at the structure of the data, there are the following four different buttons on the [start page](https://sedos.apps2.rl-institut.de/) that will take you to the respective GUI application:
 
 ### First Button: Generate Networks 
 - First choose your model structure of interest. We provide different [levels of detail](../structure/lods.md) or predefined case study models with chosen sectors and its processes.

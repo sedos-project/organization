@@ -22,11 +22,11 @@ The following diagrams show the installed capacity per year in each case, with t
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Copper Industry Transition</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=734" width="800" height="500"></iframe>
+      <iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=734" width="800" height="500"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Aluminium Industry Transition</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=736" width="800" height="500"></iframe>
+      <iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=8&parameters_id=736" width="800" height="500"></iframe>
     </div>
   </div>
 </div>
@@ -70,11 +70,11 @@ energy-intensive industries.
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Industry Energy Supply 2021</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1962" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1962" width="800" height="450"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Industry Energy Supply 2050</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1964" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1964" width="800" height="450"></iframe>
     </div>
   </div>
 </div>
@@ -86,7 +86,7 @@ More complex sankey variations:
 - primary/secondary inputs to specifications (no outputs):
 
 [//]: # (ind-pre_sankey_pri-sec-inputs_to_specifications)
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1970" width="1000" height="500"></iframe>
+<iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=21&parameters_id=1970" width="1000" height="500"></iframe>
 
 
 
@@ -100,15 +100,15 @@ As before, the years 2021, 2030 and 2050 are considered in order to be able to r
 
 Year 2021:
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1881" width="1000" height="750"></iframe>
+<iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1881" width="1000" height="750"></iframe>
 
 Year 2030:
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1884" width="1000" height="750"></iframe>
+<iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1884" width="1000" height="750"></iframe>
 
 Year 2050:
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1886" width="1000" height="750"></iframe>
+<iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=31&parameters_id=1886" width="1000" height="750"></iframe>
 
 
 
@@ -121,11 +121,11 @@ This development in the steel sector is illustrated in detail in the following t
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Year 2021</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1438" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1438" width="800" height="450"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Year 2050</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1441" width="800" height="450"></iframe>
+      <iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1441" width="800" height="450"></iframe>
     </div>
   </div>
 </div>
@@ -142,11 +142,11 @@ The following diagrams show the import flows for 2021 and 2050 to see which impo
   <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1; padding-right: 20px;">
       <h3>Imports 2021</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1474" width="800" height="750"></iframe>
+      <iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1474" width="800" height="750"></iframe>
     </div>
     <div style="flex: 1; padding-left: 20px;">
       <h3>Imports 2050</h3>
-      <iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1472" width="800" height="750"></iframe>
+      <iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=9&parameters_id=1472" width="800" height="750"></iframe>
     </div>
   </div>
 </div>
@@ -162,7 +162,7 @@ The diagram below describes the consumption of sec-inputs per year:
 
 [//]: # (o_steel_tokio_bar_x-year_y-sec-inputs)
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1914" width="800" height="450"></iframe>
+<iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1914" width="800" height="450"></iframe>
 
 Here, too, the trend away from fossil fuels and particularly the increase in the use of hydrogen (es-pecially in the years 2045 and 2050) is clear, while biogas will no longer be consumed as early as 2035.
 
@@ -170,7 +170,7 @@ The next diagram describes the additional installed capacity per year in the ste
 
 [//]: # (o_steel_tokio_bar_x-year_y-capacity-new)
 
-<iframe src="https://sedos.apps.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1921" width="800" height="450"></iframe>
+<iframe src="https://sedos.apps2.rl-institut.de/scalars/chart/?scenario_id=23&parameters_id=1921" width="800" height="450"></iframe>
 
 This shows that there will be a strong expansion of newer technologies, particularly in the years 2035 and 2045.
 
