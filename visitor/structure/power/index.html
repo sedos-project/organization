@@ -1,0 +1,1994 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The documentation of the SEDOS project">
+      
+      
+      
+      
+        <link rel="prev" href="../mimo/">
+      
+      
+        <link rel="next" href="../heat/">
+      
+      
+      <link rel="icon" href="../../../graphics/sedos_favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Power - SEDOS Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#power#sector" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SEDOS Project" class="md-header__button md-logo" aria-label="SEDOS Project" data-md-component="logo">
+      
+  <img src="../../../graphics/sedos.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SEDOS Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Power
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sedos-project/organization" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Model Structure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data/overview/" class="md-tabs__link">
+          
+  
+  Reference Dataset
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../model/scenarios/" class="md-tabs__link">
+          
+  
+  Model Application
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../developer/data_requirements/input_data/" class="md-tabs__link">
+          
+  
+  Developer Instructions
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../publications/" class="md-tabs__link">
+        
+  
+    
+  
+  Further Reading
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SEDOS Project" class="md-nav__button md-logo" aria-label="SEDOS Project" data-md-component="logo">
+      
+  <img src="../../../graphics/sedos.png" alt="logo">
+
+    </a>
+    SEDOS Project
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sedos-project/organization" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Model Structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Model Structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Model Base
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Model Base
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model_frame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Assumptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exogenous_values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exogenous Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emission Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mimo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Inputs and Outputs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sectors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Power
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Power
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming#convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming convention
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming convention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table#1#nomenclature#for#the#power#sector#process#naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 1: Nomenclature for the power sector process naming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provided#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provided parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general#modeling#approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      General modeling approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregation#of#the#european#power#generation#stock#and#expansion#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregation of the European power generation stock and expansion options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelling#of#power#flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of power flows
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    X2X
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aggregations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technological Aggregations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levels of Detail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network_graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference Dataset
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reference Dataset
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/nomenclature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nomenclature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/data_conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Model Application
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Model Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/scenarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Instructions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Instructions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    (Meta)Data Requirements
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            (Meta)Data Requirements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/input_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/data_requirements/licensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/how_to_contribute_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Contribute Data?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../publications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Further Reading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="power#sector">Power sector<a class="headerlink" href="#power#sector" title="Permanent link">&para;</a></h1>
+<h2 id="naming#convention">Naming convention<a class="headerlink" href="#naming#convention" title="Permanent link">&para;</a></h2>
+<p>The power sector in the SEDOS dataset is dominated by power generation processes
+which are mainly classified based on the input commodity for the conversion
+processes and the conversion type. Besides of combustion processes, which may
+convert various energy carriers (fossil, biogene or synthetic) of different
+states (solid, liquid or gaseous) into power and require an additional
+specification of the main fuel type in the naming convention, the dataset is
+mainly structured according to processes which are directly associated with a
+primal energy carrier-based conversion, such as photovoltaics, wind turbines,
+marine, geothermal and hydro, as well as nuclear power. Further, the dataset
+includes power storage processes, sink and source processes and flow processes.
+With a focus on modelling the German energy system within a the single-node
+approach in SEDOS, a country prefix is added to all foreign power (pow)
+processes for modelling the European power system. A two-digit country code is
+added to non-German processes in case of a detailed modelling of the European
+power sector on a country basis, while a single digit prefix is assigned to
+country groups, aggregating multiple countries. Only for crossborder power
+flows, which are modelled as conversion processes between country (or
+country-group) specific electricity commodities, a prefix defining the from-to
+power flow relation is added.</p>
+<p>For power generation and storage processes, the naming further includes the
+technology class and the conversion specification as well as the fuel type
+class, in case of combustion processes. For combustion and geothermal processes,
+the technology type differentiates between steam turbines (st), gas turbines
+(gt), combines cycle (cc), organic rankine cycle (orc) and internal combustion
+(ic) processes. Without further specification an electricity only conversion
+process, which convert one or multiple fuels to electricity as well as process
+and fuel related emissions, is assumed. For combined heat and power (chp)
+processes, producing additionally heat or carbon capture and storage (ccs)
+processes, which allow for a reduction of greenhouse gas emissions, a
+specification is added to the naming. For combustion processes, finally the main
+fuel type is added in the naming convention, allowing a differentiation between
+primary hydrogen, methane, oil, coal, lignite, biomass, biogas, waste and
+syngas fueled processes.</p>
+<p>Concerning the modelling of renewable power generation processes a specification
+of the location or the applying sector is added for a further differentiation of
+the primary energy conversion processes. For wind-turbines this includes a
+differentiation between onshore (on) and offshore (off) turbines with a further
+differentiated between floating (fl) and fixed-bed (fb) installations in case of
+offshore applications. PV is diffentiated in ground-mouted (gm) field (fiel) and
+rooftop (roof) installations on buildings belonging to the household sector
+(hh), commercial trande and sevices sector (cts) and industry sector (ind). An
+analogous differentiation is made for battery (batt) storages, allowing a
+differentiation between utility (util) application and hh, cts and ind
+applications. Besides of battery storages, the class of electricity storage also
+includes hydro storages, which are further differentiated in pure seasonal
+storages without a pump process and pump-storages (ps). For pump-storages the
+naming differentiation between open cycle processes, which include a natural
+inflow and closed cycle processes, without a natural inflow.</p>
+<p>For all processes a differentiation between existing installations (0) and
+expansion options (1) is made. In order to allow a distinction of varying
+resource classes (e.g., for intermittent renewables) or varying feedstocks
+(e.g., for different biomass resources) the stock or expansion classification
+might be further differentiated. This is done by an increasing counter at the
+process ending, enumerating different existing ([01,..0XX]) or potential
+[(11,..,1XX]) options.</p>
+<h3 id="table#1#nomenclature#for#the#power#sector#process#naming">Table 1: Nomenclature for the power sector process naming<a class="headerlink" href="#table#1#nomenclature#for#the#power#sector#process#naming" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Sector</th>
+<th>Mode/Process Type</th>
+<th>Technology/Location</th>
+<th>Specification</th>
+<th>Fuel</th>
+<th>Stock/Expansion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[ ],[xx,yy],[a,b]</td>
+<td>pow</td>
+<td>combustion</td>
+<td>gt, st, cc, ic</td>
+<td>chp, ccs</td>
+<td>methane, hydrogen, oil, coal, lignite, syngas, biomass, biogas, waste</td>
+<td>0, [01…0XX]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>photovoltaic</td>
+<td>fiel</td>
+<td>gm</td>
+<td></td>
+<td>1, [11---1XX]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>hh, cts, ind roof</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>wind_turbine</td>
+<td>on</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>off</td>
+<td>fl, fb</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>nuclear</td>
+<td>fis, fus</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>marine</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>geothermal</td>
+<td>orc, st</td>
+<td>chp, ccs</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>hydro</td>
+<td>ror</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>storage</td>
+<td>batt</td>
+<td>util, hh, ind, cts</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>hydro</td>
+<td>seasonal, ps_ol, ps_cl</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>source</td>
+<td></td>
+<td>hydro_energy, hydro_nat_inflow_seasonal, hydro_nat_inflow_openloop, lignite, bioenergy, sewage, landfill, waste, cbm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>sink</td>
+<td></td>
+<td>exo_sec_elec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[xx_yy],[a_b],[a_de]</td>
+<td></td>
+<td>flow</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="provided#parameters">Provided parameters<a class="headerlink" href="#provided#parameters" title="Permanent link">&para;</a></h2>
+<p>The scalar parameters provided are described in Table 2.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Unit</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lifetime</td>
+<td>a</td>
+<td>Technical lifetime of a process.</td>
+</tr>
+<tr>
+<td>potential_annual_max</td>
+<td>GWh</td>
+<td>Maximum annual energy use of a commodity.</td>
+</tr>
+<tr>
+<td>demand_timeseries</td>
+<td>-</td>
+<td>normalized demand timeseries which gets multiplied with demand_annual</td>
+</tr>
+<tr>
+<td>demand_annual</td>
+<td>GWh</td>
+<td>Projected annual demand for a commodity.</td>
+</tr>
+<tr>
+<td>shared_potential_id</td>
+<td>str</td>
+<td>Specifies a name for a potential group in which all components share the same potential (e.g. wind turibine)</td>
+</tr>
+<tr>
+<td>capacity_p_inst_0</td>
+<td>MW</td>
+<td>Existing throughput power output capacity per process in a certain year.</td>
+</tr>
+<tr>
+<td>capacity_p_min</td>
+<td>MW</td>
+<td>Minimum installable capacity per process.</td>
+</tr>
+<tr>
+<td>capacity_p_max</td>
+<td>MW</td>
+<td>Maximum installable capacity per process.</td>
+</tr>
+<tr>
+<td>capacity_e_inst_0</td>
+<td>MWh</td>
+<td>Existing storage energy capacity.</td>
+</tr>
+<tr>
+<td>capacity_e_min</td>
+<td>MWh</td>
+<td>Minimum required storage energy capacity.</td>
+</tr>
+<tr>
+<td>capacity_e_max</td>
+<td>MWh</td>
+<td>Maximum allowed storage energy capacity.</td>
+</tr>
+<tr>
+<td>capacity_p_abs_new_max</td>
+<td>MW</td>
+<td>Absolute upper bound on level of investment in new power output capacity for a period.</td>
+</tr>
+<tr>
+<td>availability_timeseries_max</td>
+<td>-</td>
+<td>Time series of maximum capacity factor in relation to installed capacity.</td>
+</tr>
+<tr>
+<td>cost_inv_p</td>
+<td>EUR/MW</td>
+<td>Investment costs for new throughput power output capacity.</td>
+</tr>
+<tr>
+<td>cost_fix_p</td>
+<td>-</td>
+<td>Operation independent costs for existing and new throughput power output capacity.</td>
+</tr>
+<tr>
+<td>cost_var_e</td>
+<td>EUR/MWh</td>
+<td>Variable costs per throughput energy unit output. (excluding fuel costs).</td>
+</tr>
+<tr>
+<td>conversion_factor_<commodity></td>
+<td>MWh/MWh</td>
+<td>Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).</td>
+</tr>
+<tr>
+<td>ef_<commodity>_<emission></td>
+<td>kg/MWh</td>
+<td>Commodity-specific emission factor.</td>
+</tr>
+<tr>
+<td>cb_coefficient</td>
+<td>-</td>
+<td>The Cb-coefficient (backpressure coefficient) is defined as the maximum power generation capacity in backpressure mode divided by the maximum heat production capacity (including flue gas condensation if applicable).</td>
+</tr>
+<tr>
+<td>cv_coefficient</td>
+<td>-</td>
+<td>The Cv-value for an extraction steam turbine is defined as the loss of electricity production, when the heat production is increased one unit at constant fuel input.</td>
+</tr>
+<tr>
+<td>efficiency_sto_in</td>
+<td>percent</td>
+<td>Energy efficiency of power input.</td>
+</tr>
+<tr>
+<td>efficiency_sto_out</td>
+<td>percent</td>
+<td>Energy efficiency of power output.</td>
+</tr>
+<tr>
+<td>sto_ep_ratio_binding</td>
+<td>MWh/MW</td>
+<td>Fixed ratio of the storage energy capacity to its power output capacity.</td>
+</tr>
+<tr>
+<td>sto_io_ratio_binding</td>
+<td>MW/MW</td>
+<td>Fixed ratio of the storage power output capacity to its input capacity.</td>
+</tr>
+</tbody>
+</table>
+<p>All costs are presented excluding taxes and subsidies, based on 2021 price
+levels.</p>
+<h2 id="general#modeling#approach">General modeling approach<a class="headerlink" href="#general#modeling#approach" title="Permanent link">&para;</a></h2>
+<p>The considered power generation processes are modelled as
+multi-input/multi-output conversion processes which consume one or more input
+commodities and produce on or more output commodities. In general, these
+processes can be categorized into electricity only production (EOP) processes
+and combined heat and power (CHP) processes. Depending on the fuel and/or
+technology type, the conversion also leads to emissions, of which CO2, CH4 and
+N20 are considered in the dataset. In case of a carbon capture and storage
+specification (CCS) of a conversion process, a fraction of the emitted CO2
+emissions is balanced as a negative emission commodity. Besides of power
+generation processes, the dataset includes the parametrization of electricity
+storage processes, electricity sink and source processes and processes for
+modeling the electricity flow between different applications (sectors/ voltage
+levels) and between different countries within a single-node approach. In this
+context, electricity flows between countries and between different application
+areas are modelled in a single node approach by defining additional conversion
+processes that enable country-specific or application-specific flows of energy
+carriers and emissions, as well as their conversion processes, to be balanced.
+The conversion processes in the electricity sector are thus defined for each
+country and application field (industrial process or non-industrial conversion
+at distribution or transport network level) separately with the corresponding
+specific input and output commodities. Conversion across national borders and
+application levels is represented by auxiliary processes, which can be
+parameterized with corresponding losses, expenses, inventory capacities, and
+investment options</p>
+<h2 id="aggregation#of#the#european#power#generation#stock#and#expansion#options">Aggregation of the European power generation stock and expansion options<a class="headerlink" href="#aggregation#of#the#european#power#generation#stock#and#expansion#options" title="Permanent link">&para;</a></h2>
+<p>The aggregation of processes is technology- and country-specific. For wind and
+PV technologies, existing profiles are consolidated into a single profile of the
+remaining stock in each modelled year. This implicitly takes into account the
+technology and regional distribution changes of the existing stock within a
+country, resulting in varying profiles of the remaining stock in different model
+periods. For expansion options, the potential generation is aggregated into nine
+classes according to project status (repowering, planned, expected, greenfield)
+and LCOE. It is assumed that a replacement investment (repowering) will take
+place at the end of the technical service life, whereby the optimal wind turbine
+will be placed on the existing site, taking into account distance restrictions
+and shadowing effects (wind ellipse). Planned projects are based on literature
+research (e.g., GEM). In order to better estimate future capacities and
+profiles, the remaining potential on open land (greenfield), which is clustered
+according to LCOE (levelized cost of electricity), is reduced by the expected
+additional capacity according to a reference scenario. PV processes are
+additionally differentiated according to sectoral application (e.g., residential
+roofs, commercial roofs, open space) and building typology, while wind turbines
+are only differentiated between onshore and offshore (floating or fixed-bed)
+technologies. </p>
+<p>In the field of combustion technologies, the challenge lies in the meaningful
+aggregation of the large number of existing plants. Here, processes are
+classified according to fuel type, technology type, and other specifics (e.g.,
+CHP, CCS). By differentiating according to technology class and the unique
+combinations of input variables (fuels) and output variables (electricity,
+heat, emissions, etc.), the tradeoff between accuracy and a reduced number of
+processes is balanced as much as possible. Thus, the parameters correspond to a
+capacity-weighted average, as plants of different types and ages are aggregated
+within a country. This results in weighted averaged efficiencies of the
+conventional generation stock of a country of the same technology and fuel
+class. In consequence the merit order of existing powerplants is less accurate
+and a clean modelling of between different CHP characteristics, such as a clean
+differentiation between back-pressure and steam-extraction turbines, is not
+possible, as back-pressure (cb) coefficients and power loss factors (cv) are
+averaged. For expansion options of combustion technologies, potential local
+characteristics, such as varying fuel cost or availability restrictions within a
+country are ignored and power plant type specific investment options from the
+literature are taken</p>
+<h2 id="modelling#of#power#flows">Modelling of power flows<a class="headerlink" href="#modelling#of#power#flows" title="Permanent link">&para;</a></h2>
+<p>Network restrictions are mapped in the simplified single-node approach by
+assigning all power conversion processes to national nodes and application
+fields. This allows energy flows between countries and between different levels
+(e.g., industry, distribution network, transport network) to be mapped via
+additional conversion processes. The TYNDP 2024 serves as the basis for
+determining the existing transfer capacity and possible expansion options. Since
+country-specific modeling of the electricity sector can be computationally
+challenging depending on the application, SEDOS also offers the option of
+aggregating national electricity conversion processes in Europe at the level of
+country groups. This involves defining seven country groups, each of which is
+linked to each other and to Germany via aggregated exchange processes and which
+approximate the structure of the European foreign sector from Germany's
+perspective: 
+- <strong>Aggregation option for countries:</strong> <br />
+  A (AT, CH, HR, IT, SI)<br />
+  B (FR, ES, PT)<br />
+  C (BE, LU, NL)<br />
+  D (DK, EE, FI, LT, LV, NO, SE)<br />
+  E (CZ, HU, PL, SK)<br />
+  F (AL, BA, BG, GR, ME, MK, RO, RS)<br />
+  G (UK, IE, CY, IS, MT)</p>
+<p>The modelling of power flows between different levels of the network within a
+country is illustrated in the following figure:
+<img alt="Figure 1: Assignment of power generation and consumption processes to different grid levels." src="../../../graphics/pow_proc_to_gridlevel.png" /></p>
+<p><em>Figure 1: Assignment of power generation and consumption processes to different
+grid levels.</em> </p>
+<p>In this case, all large thermal power plants and all electricity generators and
+consumers that are not explicitly assigned to a sector (industry, households,
+commercial, transport, or heating) are assumed to be connected to the
+transmission grid. On the other hand, there are industrial consumers and
+industry owned generators, which produce and consume an industry specific
+electricity commodity (iip_elec). Similarly, all decentralized consumers
+(households, commercial, transport, heat), generators, and storage facilities
+are modelled. This means that these processes convert a distribution network
+specific electricity commodity (sec_elec_distr) which allows to represent the
+feed-in or load on distribution grid level. By introducing auxiliary conversion
+processes between the dedicated electricity commodity of industrial and
+decentral processes and the general electricity commodity on transmission grid
+level, a balancing of power flows within a country is possible.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 - SEDOS Project Team
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>
